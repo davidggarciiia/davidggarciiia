@@ -269,6 +269,18 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 .s2 .crew .us b { color: var(--pink); }
 
 /* ===========================================
+   02b · CRONOLOGÍA
+   =========================================== */
+.sTl .tl { position: absolute; left: 120px; right: 120px; top: 440px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; z-index: 4; }
+.sTl .ev { position: relative; padding: 44px 26px 0 0; border-top: 1px solid var(--line-pink); }
+.sTl .ev::before { content: ""; position: absolute; left: 0; top: -7px; width: 13px; height: 13px; background: var(--ink); border: 1px solid var(--pink); }
+.sTl .ev.hot::before { background: var(--pink); }
+.sTl .ev b { display: block; font: 400 72px/1 var(--serif); color: var(--paper); }
+.sTl .ev.hot b { color: var(--pink); text-shadow: 0 0 80px rgba(237,61,140,.18); }
+.sTl .ev .l { display: block; margin-top: 14px; font: 400 19px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pink); }
+.sTl .ev p { margin-top: 14px; font-size: 24px; line-height: 1.42; color: var(--mute); }
+
+/* ===========================================
    03 · IMPACTO
    =========================================== */
 .s3 .giant { position: absolute; left: 700px; top: 800px; z-index: 3; font: 400 270px/1 var(--serif); color: transparent; -webkit-text-stroke: 1px rgba(237,61,140,.45); letter-spacing: -.03em; }
@@ -295,6 +307,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
    =========================================== */
 .s4 .col-l { width: 960px; }
 .s4 h2 { font-size: 104px; }
+.s4 .story { font-size: 28px; max-width: 900px; }
 .s4 .radar { position: absolute; left: 1150px; top: 130px; width: 600px; height: 600px; z-index: 4; border-radius: 50%; border: 1px solid var(--pink);
     background:
         repeating-radial-gradient(circle at 50% 50%, transparent 0 96px, var(--line-pink) 97px 98px),
@@ -522,23 +535,41 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 02 · EL CASO (inventado) ================= -->
-<section class="slide s2" data-time="14:02" data-tag="El caso">
+<section class="slide s2" data-time="13:10" data-tag="El caso">
     <div class="content">
         <div class="col-l">
             <p class="kicker reveal">Historia inventada</p>
             <h2 class="reveal" style="--d:.1s">Vuelo <em>SV-217</em></h2>
-            <p class="story reveal" style="--d:.25s">Un bimotor de Lima a Iquitos, un jueves de octubre. Somos la jefa de cabina y la auxiliar de a bordo. Llevamos el briefing de seguridad aprendido de memoria y no esperamos usarlo.</p>
+            <p class="story reveal" style="--d:.25s">Un turbohélice regional de dos motores en la ruta Pucallpa-Iquitos, un jueves de octubre. Poco más de una hora de vuelo sobre selva casi todo el trayecto. Somos la jefa de cabina y la auxiliar de a bordo.</p>
         </div>
         <div class="rows">
             <div class="statrow reveal" style="--d:.3s"><b>43</b><div><div class="l">A bordo</div><div class="d">39 pasajeros y 4 tripulantes: comandante, copiloto y nosotras dos.</div></div></div>
-            <div class="statrow reveal" style="--d:.42s"><b>40<sup>min</sup></b><div><div class="l">Para aterrizar</div><div class="d">Una línea de tormentas cierra el camino a Iquitos.</div></div></div>
-            <div class="statrow reveal" style="--d:.54s"><b>0</b><div><div class="l">Aviso previo</div><div class="d">Un fallo de motor y poco margen. Todo pasa en minutos.</div></div></div>
+            <div class="statrow reveal" style="--d:.42s"><b>1<sup>h 20</sup></b><div><div class="l">Duración prevista</div><div class="d">Despegue a las 13:25 y llegada a las 14:45. Una tarde normal.</div></div></div>
+            <div class="statrow reveal" style="--d:.54s"><b>6</b><div><div class="l">Atención especial</div><div class="d">Cuatro niños, un bebé y una persona con movilidad reducida.</div></div></div>
         </div>
         <div class="crew reveal" style="--d:.7s">
             <div><b>Comandante</b><span>Al mando</span></div>
             <div><b>Copiloto</b><span>Segundo de a bordo</span></div>
             <div class="us"><b>Jefa de cabina</b><span>Nosotras</span></div>
             <div class="us"><b>Auxiliar de a bordo</b><span>Nosotras</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 02b · CRONOLOGÍA ================= -->
+<section class="slide sTl" data-time="13:25" data-tag="Cronología">
+    <div class="content">
+        <div class="col-l" style="width:1500px">
+            <p class="kicker reveal">Vuelo SV-217</p>
+            <h2 class="reveal" style="--d:.1s">Del despegue a la <em>noche</em></h2>
+        </div>
+        <div class="tl">
+            <div class="ev reveal" style="--d:.3s"><b>13:25</b><span class="l">Despegue</span><p>Sale de Pucallpa sin incidencias. El cielo está cubierto al norte.</p></div>
+            <div class="ev reveal" style="--d:.42s"><b>14:05</b><span class="l">Desvío</span><p>Una línea de tormentas bloquea la ruta. El comandante pide desviarse al oeste.</p></div>
+            <div class="ev hot reveal" style="--d:.54s"><b>14:31</b><span class="l">Mayday</span><p>Los dos motores pierden potencia en plena tormenta. Última posición al controlador.</p></div>
+            <div class="ev hot reveal" style="--d:.66s"><b>14:42</b><span class="l">Impacto</span><p>Planea hasta las copas de los árboles, junto a un río. La cola se separa del fuselaje.</p></div>
+            <div class="ev reveal" style="--d:.78s"><b>14:50</b><span class="l">Sin contacto</span><p>Iquitos da la aeronave por desaparecida y empieza a movilizar la búsqueda.</p></div>
+            <div class="ev reveal" style="--d:.9s"><b>18:07</b><span class="l">Anochece</span><p>Los helicópteros no vuelan de noche sobre la selva. La búsqueda espera al amanecer.</p></div>
         </div>
     </div>
 </section>
@@ -563,21 +594,21 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
     <div class="content">
         <div class="col-l">
             <h2 class="reveal">Un golpe <em>seco</em></h2>
-            <p class="story reveal" style="--d:.2s">El avión pierde potencia, las luces parpadean y el comandante da la orden por megafonía. Gritamos lo que hemos ensayado cien veces: <strong>«¡Cabeza abajo, agárrense los tobillos!»</strong></p>
-            <p class="story reveal" style="--d:.4s">El impacto contra las copas dura unos segundos. Después, el silencio.</p>
+            <p class="story reveal" style="--d:.2s">Los dos motores se apagan dentro de la tormenta. El comandante lanza el Mayday y planea hacia un claro junto al río. Por megafonía llega la orden, y nosotras gritamos lo ensayado cien veces: <strong>«¡Cabeza abajo, agárrense los tobillos!»</strong></p>
+            <p class="story reveal" style="--d:.4s">El avión roza las copas, la cola se parte y sale despedida. Después, el silencio.</p>
         </div>
     </div>
 </section>
 
 <!-- ================= 04 · DESPERTAR ================= -->
 <section class="slide s4" data-time="15:20" data-tag="Despertar">
-    <div class="radar" aria-hidden="true"><div class="sweep"></div><div class="nosig">SIN COBERTURA<small>baliza de emergencia rota</small></div></div>
+    <div class="radar" aria-hidden="true"><div class="sweep"></div><div class="nosig">SIN COBERTURA<small>la baliza iba en la cola</small></div></div>
     <p class="coords mono">≈ 4° S · 73° O · Amazonía peruana</p>
     <div class="content">
         <div class="col-l">
-            <p class="kicker reveal">Lo primero: contar</p>
+            <p class="kicker reveal">Después de evacuar</p>
             <h2 class="reveal" style="--d:.1s">Despertamos entre <em>helechos</em></h2>
-            <p class="story reveal" style="--d:.25s">Huele a queroseno y a tierra mojada. Íbamos 43 y 31 respiran: 28 pasajeros, el copiloto herido y nosotras dos. El comandante no lo ha logrado.</p>
+            <p class="story reveal" style="--d:.25s">Huele a queroseno. Sacamos a todos del fuselaje roto: el entrenamiento habla de 90 segundos y se impone solo. Luego, contar. Íbamos 43 y 31 respiran, 11 con heridas y 4 graves. El comandante no lo ha logrado. La baliza iba en la cola, y la cola ya no está.</p>
         </div>
         <div class="stats">
             <div class="stat reveal" style="--d:.3s"><b>31 °C</b><span>máxima media de día</span></div>
@@ -912,7 +943,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
             <li><b>Hormiga bala</b><span>Live Science: dolor de 12 a 24 horas según la fuente</span></li>
             <li><b>Caminar en círculos</b><span>Souman et al., «Walking Straight into Circles», Current Biology, 2009</span></li>
             <li><b>Sudor y calor</b><span>Análisis de 2007 (PMC): 0,5 a 2 litros por hora al hacer ejercicio</span></li>
-            <li><b>El caso</b><span>Inventado: vuelo, pasajeros, tripulación y supervivientes no existen</span></li>
+            <li><b>El caso</b><span>Inventado: vuelo, pasajeros y tripulación no existen. Ruta y tiempos de búsqueda son verosímiles</span></li>
         </ul>
         <p class="srcnote reveal" style="--d:.4s">Los datos de la zona son reales. La historia no.</p>
     </div>
