@@ -253,7 +253,7 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
    02 · IMPACTO
    =========================================== */
 .s2 { background: radial-gradient(ellipse at 80% 70%, #3a1a10 0%, #0b1810 45%, var(--night) 80%); }
-.s2 .giant { position: absolute; left: 90px; top: 700px; z-index: 2; font: 800 italic 360px/1 var(--serif); color: transparent; -webkit-text-stroke: 3px rgba(184,255,60,.28); letter-spacing: -.04em; }
+.s2 .giant { position: absolute; left: 90px; top: 790px; z-index: 2; font: 800 italic 330px/1 var(--serif); color: transparent; -webkit-text-stroke: 3px rgba(184,255,60,.28); letter-spacing: -.04em; }
 .s2 .scene { position: absolute; left: 900px; top: 130px; width: 960px; height: 820px; z-index: 3; }
 .s2 .trail { stroke-dasharray: 1100; stroke-dashoffset: 1100; }
 .s2.visible .trail { animation: draw 2.8s ease-in .5s forwards; }
@@ -292,6 +292,20 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
 .stat span { display: block; margin-top: 8px; font-size: 24px; color: var(--mute); }
 .s3 .col-l { width: 980px; }
 .s3 h2 { font-size: 96px; }
+
+/* ===========================================
+   03b · CASO REAL
+   =========================================== */
+.sCase .grid4 { position: absolute; left: 1040px; top: 150px; width: 760px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; z-index: 4; }
+.sCase .stat { padding: 26px 30px; }
+.sCase .stat b { font-size: 104px; }
+.sCase .stat span { font-size: 28px; }
+.sCase .days { position: absolute; left: 1040px; top: 720px; width: 760px; z-index: 4; }
+.sCase .dots { display: flex; gap: 14px; }
+.sCase .dots i { flex: 1; height: 26px; border-radius: 13px; background: rgba(184,255,60,.25); border: 1px solid rgba(184,255,60,.5); }
+.sCase .dots i.last { background: var(--lime); box-shadow: 0 0 20px var(--lime); }
+.sCase .days p { margin-top: 18px; font-size: 28px; line-height: 1.4; color: #dcd6c3; }
+.sCase .src { position: absolute; left: 120px; bottom: 56px; z-index: 6; font-size: 18px; letter-spacing: .1em; color: var(--mute); text-transform: none; }
 
 /* ===========================================
    04 · LAS CUATRO PLANTAS
@@ -456,6 +470,16 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
 .s14 .pgn { color: var(--bone); }
 
 /* ===========================================
+   16 · FUENTES
+   =========================================== */
+.sSrc { background: radial-gradient(ellipse at 70% 30%, #12301f 0%, var(--night) 70%); }
+.srcs { position: absolute; left: 120px; right: 120px; top: 360px; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 60px; z-index: 4; }
+.srcs li { padding-left: 24px; border-left: 3px solid var(--lime); }
+.srcs b { display: block; font: 800 36px/1.1 var(--serif); }
+.srcs span { display: block; margin-top: 8px; font-size: 25px; line-height: 1.35; color: #cfc9b6; }
+.srcnote { position: absolute; left: 120px; bottom: 66px; z-index: 6; font: 500 22px var(--mono); letter-spacing: .08em; color: var(--amber); }
+
+/* ===========================================
    MODO EDICIÓN (tecla E)
    =========================================== */
 [contenteditable="true"] { outline: 2px dashed var(--lime); outline-offset: 6px; cursor: text; }
@@ -516,27 +540,50 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
     <div class="content">
         <div class="col-l" style="width:760px">
             <h2 class="reveal">Un golpe <em>seco</em></h2>
-            <p class="story reveal" style="--d:.2s">El motor izquierdo se apaga a 9.000 pies. El comandante pide calma por megafonía y después deja de hablar. Por las ventanillas suben las copas de los árboles.</p>
-            <p class="story reveal" style="--d:.4s; margin-top:26px">Como tripulantes, hemos dado ese briefing mil veces. Nunca pensamos que lo tendríamos que usar.</p>
+            <p class="story reveal" style="--d:.2s">Faltan cuarenta minutos para aterrizar en Iquitos y una línea de tormentas nos cierra el paso. El avión pierde potencia, las luces parpadean y el comandante da la orden por megafonía.</p>
+            <p class="story reveal" style="--d:.4s; margin-top:26px">Gritamos lo que hemos ensayado cien veces en simulacro: <strong>«¡Cabeza abajo, agárrense los tobillos!»</strong> Después, el impacto contra las copas dura unos segundos.</p>
         </div>
     </div>
 </section>
 
 <!-- ================= 03 · DESPERTAR ================= -->
 <section class="slide s3" data-time="15:20" data-tag="DESPERTAR" data-treeline>
-    <div class="radar" aria-hidden="true"><div class="sweep"></div><div class="nosig">SIN SEÑAL<small>0 barras · 0 balizas</small></div></div>
-    <p class="coords mono">4° S · 73° O · Amazonía peruana</p>
+    <div class="radar" aria-hidden="true"><div class="sweep"></div><div class="nosig">SIN COBERTURA<small>baliza de emergencia rota</small></div></div>
+    <p class="coords mono">≈ 4° S · 73° O · Amazonía peruana</p>
     <div class="content">
         <div class="col-l">
             <h2 class="reveal">Despertamos entre <em>helechos</em></h2>
-            <p class="story reveal" style="--d:.2s">Huele a queroseno y a tierra mojada. Íbamos 43 a bordo y contamos 31 vivos entre los restos. No hay camino ni torre a la vista, solo un muro verde en todas direcciones.</p>
+            <p class="story reveal" style="--d:.2s">Huele a queroseno y a tierra mojada. Hacemos lo primero que nos enseñaron: contar. Íbamos 43 a bordo y 31 respiran. El móvil no tiene cobertura y la baliza está destrozada.</p>
         </div>
         <div class="stats">
-            <div class="stat reveal" style="--d:.3s"><b>35 °C</b><span>temperatura de día</span></div>
-            <div class="stat reveal" style="--d:.4s"><b>90 %</b><span>de humedad en el aire</span></div>
-            <div class="stat reveal" style="--d:.5s"><b>3.000 mm</b><span>de lluvia cada año</span></div>
-            <div class="stat reveal" style="--d:.6s"><b>0</b><span>carreteras ni pueblos cerca</span></div>
+            <div class="stat reveal" style="--d:.3s"><b>31 °C</b><span>máxima media de día</span></div>
+            <div class="stat reveal" style="--d:.4s"><b>85-88 %</b><span>de humedad en el aire</span></div>
+            <div class="stat reveal" style="--d:.5s"><b>2.900 mm</b><span>de lluvia al año, aprox.</span></div>
+            <div class="stat reveal" style="--d:.6s"><b>12 de 12</b><span>meses con lluvia</span></div>
         </div>
+    </div>
+</section>
+
+<!-- ================= 03b · CASO REAL ================= -->
+<section class="slide sCase" data-time="1971" data-tag="CASO REAL · LANSA 508" data-treeline>
+    <div class="grid4">
+        <div class="stat reveal" style="--d:.3s"><b>92</b><span>personas a bordo</span></div>
+        <div class="stat reveal" style="--d:.4s"><b>1</b><span>superviviente</span></div>
+        <div class="stat reveal" style="--d:.5s"><b>3.000</b><span>metros de caída, aprox.</span></div>
+        <div class="stat reveal" style="--d:.6s"><b>17</b><span>años tenía ella</span></div>
+    </div>
+    <div class="days reveal" style="--d:.8s">
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="last"></i></div>
+        <p>11 días siguiendo un arroyo hasta que la encontraron unos leñadores.</p>
+    </div>
+    <p class="src mono">Fuentes: Wikipedia (LANSA Flight 508) · memorias de J. Koepcke, 2011</p>
+    <div class="content">
+        <div class="col-l" style="width:880px">
+            <h2 class="reveal">Esto ya <em>ocurrió</em></h2>
+            <p class="story reveal" style="--d:.2s">El 24 de diciembre de 1971, un Lockheed Electra de LANSA, de camino de Lima a Pucallpa, se rompió en el aire en plena tormenta. Solo sobrevivió Juliane Koepcke. Cayó atada a su asiento sobre la selva peruana y salió andando.</p>
+            <p class="story reveal" style="--d:.35s; margin-top:24px">Nuestra historia es inventada. Lo que le pasó a ella no.</p>
+        </div>
+    </div>
     </div>
 </section>
 
@@ -565,17 +612,17 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
         <g transform="translate(250 770)"><circle cx="0" cy="-34" r="9" fill="#efe8d6"/><path d="M0 -24 L0 6 M-12 -12 L12 -12 M0 6 L-10 24 M0 6 L10 24" stroke="#efe8d6" stroke-width="4" stroke-linecap="round" fill="none"/><circle class="pulse" cx="0" cy="-6" r="22" fill="none" stroke="#ffb62e" stroke-width="3"/></g>
         <text class="svg-m" x="222" y="775" text-anchor="end" style="fill:#ffb62e;stroke:#071b0f;stroke-width:8px;paint-order:stroke">ESTAMOS AQUÍ</text>
         <!-- textos de cada piso -->
-        <text class="svg-t" x="440" y="58">Emergentes</text><text class="svg-m" x="440" y="94">45 A 60 M</text><text class="svg-d" x="440" y="136">Gigantes que asoman. Águila arpía.</text>
-        <text class="svg-t" x="440" y="232">Dosel</text><text class="svg-m" x="440" y="268">30 A 40 M</text><text class="svg-d" x="440" y="314">El techo. Filtra casi toda la luz</text><text class="svg-d" x="440" y="350">y esconde el avión desde el aire.</text>
-        <text class="svg-t" x="440" y="462">Sotobosque</text><text class="svg-m" x="440" y="498">5 A 20 M</text><text class="svg-d" x="440" y="544">Penumbra, palmeras y lianas.</text><text class="svg-d" x="440" y="580">Aquí empieza la humedad.</text>
-        <text class="svg-t" x="440" y="678">Suelo</text><text class="svg-m" x="440" y="714">0 M · SOLO EL 2 % DE LUZ</text><text class="svg-d" x="440" y="760">Hojarasca, raíces y barro.</text>
+        <text class="svg-t" x="440" y="58">Emergentes</text><text class="svg-m" x="440" y="94">HASTA 60 M</text><text class="svg-d" x="440" y="136">Castaños y ceibas sobre el techo.</text>
+        <text class="svg-t" x="440" y="232">Dosel</text><text class="svg-m" x="440" y="268">EL TECHO</text><text class="svg-d" x="440" y="314">El techo. Filtra casi toda la luz</text><text class="svg-d" x="440" y="350">y esconde el avión desde el aire.</text>
+        <text class="svg-t" x="440" y="462">Sotobosque</text><text class="svg-m" x="440" y="498">≈ 5 % DE LUZ</text><text class="svg-d" x="440" y="544">Penumbra, palmeras y lianas.</text><text class="svg-d" x="440" y="580">Aquí empieza la humedad.</text>
+        <text class="svg-t" x="440" y="678">Suelo</text><text class="svg-m" x="440" y="714">1 A 2 % DE LUZ</text><text class="svg-d" x="440" y="760">Hojarasca, raíces y barro.</text>
     </svg>
     <div class="content">
         <div class="col-l">
             <h2 class="reveal">Cuatro pisos de <em>selva</em></h2>
             <p class="story reveal" style="--d:.2s">La selva funciona como un edificio vertical. Hemos entrado por el tejado y ahora estamos en el sótano, donde casi no llega el sol y todo gotea.</p>
         </div>
-        <div class="light reveal" style="--d:.5s">2 %<small>de la luz del sol llega hasta el suelo donde estamos.</small></div>
+        <div class="light reveal" style="--d:.5s">1-2 %<small>de la luz del sol llega hasta el suelo donde estamos.</small></div>
     </div>
 </section>
 
@@ -584,7 +631,7 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
     <svg class="thermo" viewBox="0 0 300 820" aria-hidden="true">
         <defs><clipPath id="tube"><rect x="110" y="40" width="80" height="640" rx="40"/></clipPath></defs>
         <rect x="110" y="40" width="80" height="640" rx="40" fill="rgba(255,255,255,.06)" stroke="#efe8d6" stroke-width="4"/>
-        <g clip-path="url(#tube)"><rect class="merc" x="126" y="140" width="48" height="560" fill="#ff4a36"/></g>
+        <g clip-path="url(#tube)"><rect class="merc" x="126" y="376" width="48" height="324" fill="#ff4a36"/></g>
         <circle cx="150" cy="728" r="72" fill="#ff4a36" stroke="#efe8d6" stroke-width="4"/>
         <g stroke="#efe8d6" stroke-width="3" font-family="Spline Sans Mono" font-size="24" fill="#8fa89a">
             <line x1="204" y1="640" x2="240" y2="640"/><text x="250" y="648" stroke="none">20</text>
@@ -594,15 +641,15 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
             <line x1="204" y1="160" x2="240" y2="160"/><text x="250" y="168" stroke="none">40</text>
         </g>
     </svg>
-    <div class="bigtemp reveal" style="--d:.3s">35°<small>MEDIA DE DÍA</small></div>
-    <p class="hum reveal" style="--d:.5s"><b>90 %</b>de humedad: el sudor no se evapora y el cuerpo no se enfría.</p>
+    <div class="bigtemp reveal" style="--d:.3s">31°<small>MÁXIMA MEDIA DE DÍA</small></div>
+    <p class="hum reveal" style="--d:.5s"><b>85-88 %</b>de humedad: el sudor casi no se evapora y el cuerpo no se enfría.</p>
     <span class="drop" style="left:1456px;top:300px;--o:0s"></span><span class="drop" style="left:1520px;top:330px;--o:1.2s"></span><span class="drop" style="left:1590px;top:290px;--o:2.1s"></span>
     <div class="content">
         <div class="col-l" style="width:960px">
             <h2 class="reveal" style="font-size:92px">El calor que no <em>se va</em></h2>
-            <p class="story reveal" style="--d:.2s">Sudamos sin parar y la ropa se nos pega a la piel. Cada hora sin beber nos cuesta más de lo que parece, y la cabeza empieza a notarlo antes que la boca.</p>
+            <p class="story reveal" style="--d:.2s">Sudamos sin parar y la ropa se nos pega a la piel. Con tanta humedad el sudor no se seca, así que perdemos agua sin llegar a refrescarnos. La cabeza lo nota antes que la boca.</p>
             <ul class="facts reveal" style="--d:.35s">
-                <li>Hasta <b>1 litro</b> de sudor por hora al moverse</li>
+                <li>Entre <b>0,5 y 2 litros</b> de sudor por hora al esforzarse</li>
                 <li>Golpe de calor: <span>confusión, piel roja, pulso rápido</span></li>
             </ul>
         </div>
@@ -666,7 +713,8 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
             <p class="story reveal" style="--d:.2s">Para pasarlo mal no hace falta un jaguar. Basta un zumbido en la oreja al caer la tarde, justo cuando salen todos a la vez.</p>
             <ul class="facts reveal" style="--d:.35s">
                 <li>Mosquitos <span>· malaria, dengue, fiebre amarilla</span></li>
-                <li>Hormiga bala <span>· dolor de hasta 24 horas</span></li>
+                <li>Loreto <span>· más del 80 % de la malaria de Perú</span></li>
+                <li>Hormiga bala <span>· dolor de 12 a 24 horas</span></li>
                 <li>Mosca de arena <span>· leishmaniasis</span></li>
             </ul>
         </div>
@@ -758,8 +806,8 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
     <div class="content">
         <div class="col-l">
             <h2 class="reveal">Todo se ve <em>igual</em></h2>
-            <p class="story reveal" style="--d:.2s">Sin horizonte, sin sol y sin senda, la cabeza nos engaña. Caminamos convencidos de ir en línea recta y volvemos a pasar junto al mismo tronco caído.</p>
-            <p class="story reveal" style="--d:.35s; margin-top:24px">Desde el aire el dosel se cierra sobre nosotros. Si el avión no se ve, tampoco nos ven a nosotros.</p>
+            <p class="story reveal" style="--d:.2s; font-size:33px">Sin horizonte ni senda y con el cielo tapado, la cabeza nos engaña. Un experimento de 2009 lo midió con GPS: voluntarios sin ver el sol caminaron en círculos por un bosque alemán convencidos de ir rectos.</p>
+            <p class="story reveal" style="--d:.35s; margin-top:22px; font-size:33px">Y desde el aire el dosel se cierra sobre nosotros. Si el avión no se ve, tampoco nos ven a nosotros.</p>
         </div>
     </div>
     <div class="threat n5" data-n="5"><span class="lab">AMENAZA</span></div>
@@ -790,7 +838,7 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
     <span class="eyes" style="left:1860px;top:560px;--g:18px;--ec:#ffb62e;--o:-2.5s"></span>
     <span class="eyes" style="left:700px;top:820px;--g:28px;--ec:#ff4a36;--o:-3.5s"></span>
     <div class="beasts">
-        <div class="beast reveal" style="--d:.2s"><h3>Jergón<small>BOTHROPS ATROX</small></h3><div class="threat mini n4" data-n="4"></div><p>Camuflada entre la hojarasca. Muerde si la pisamos sin verla.</p></div>
+        <div class="beast reveal" style="--d:.2s"><h3>Jergón<small>BOTHROPS ATROX</small></h3><div class="threat mini n4" data-n="4"></div><p>Causa más del 90 % de las mordeduras de Bothrops en Perú. Se camufla en la hojarasca.</p></div>
         <div class="beast reveal" style="--d:.32s"><h3>Jaguar<small>PANTHERA ONCA</small></h3><div class="threat mini n2" data-n="2"></div><p>Prefiere huir. Nos oye mucho antes de que lo veamos nosotros.</p></div>
         <div class="beast reveal" style="--d:.44s"><h3>Caimán negro<small>MELANOSUCHUS NIGER</small></h3><div class="threat mini n3" data-n="3"></div><p>Espera en ríos y lagunas. Ir a por agua de noche es mala idea.</p></div>
         <div class="beast reveal" style="--d:.56s"><h3>Rana dardo<small>DENDROBATIDAE</small></h3><div class="threat mini n2" data-n="2"></div><p>Colores de alarma: su piel lleva veneno. Mejor no tocarla.</p></div>
@@ -840,6 +888,26 @@ h2 em, h1 em { font-style: italic; font-weight: 500; color: var(--lime); }
             <p class="story reveal" style="--d:.2s; color:#f4ecd4">Hemos sobrevivido a la primera noche. Ya sabemos dónde estamos y qué nos rodea. Falta decidir qué hacemos con ello.</p>
         </div>
         <div class="next mono reveal" style="--d:.5s">Siguiente parte · cómo salir de aquí →</div>
+    </div>
+</section>
+
+<!-- ================= 16 · FUENTES ================= -->
+<section class="slide sSrc" data-time="FIN" data-tag="FUENTES Y DATOS" data-nofly>
+    <div class="content">
+        <div class="col-l" style="width:1500px">
+            <h2 class="reveal" style="font-size:96px">De dónde salen los <em>datos</em></h2>
+        </div>
+        <ul class="srcs reveal" style="--d:.2s">
+            <li><b>Clima de Iquitos</b><span>Population Review y climate-data.org (temperatura, lluvia), Avionero (humedad)</span></li>
+            <li><b>Capas de la selva</b><span>National Geographic Education y Rainforest Concern (altura y luz)</span></li>
+            <li><b>Jergón (Bothrops atrox)</b><span>Revista Peruana de Medicina Experimental y Salud Pública (INS) y Curso Gorgas, UAB</span></li>
+            <li><b>Malaria en Loreto</b><span>Scientific Reports, 2024: 84 % de los casos de Perú en 2023</span></li>
+            <li><b>Hormiga bala</b><span>Live Science: dolor de 12 a 24 horas según la fuente</span></li>
+            <li><b>Caminar en círculos</b><span>Souman et al., «Walking Straight into Circles», Current Biology, 2009</span></li>
+            <li><b>Sudor y calor</b><span>Análisis de 2007 (PMC): 0,5 a 2 litros por hora al hacer ejercicio</span></li>
+            <li><b>Caso real</b><span>Wikipedia (LANSA Flight 508) y memorias de Juliane Koepcke, 2011</span></li>
+        </ul>
+        <p class="srcnote reveal" style="--d:.4s">El vuelo SV-217, el número de pasajeros y los supervivientes de la historia son ficticios.</p>
     </div>
 </section>
 
