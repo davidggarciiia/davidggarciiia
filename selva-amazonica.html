@@ -219,6 +219,9 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 .facts { list-style: none; margin-top: 30px; display: grid; gap: 16px; }
 .facts li { font-size: 28px; line-height: 1.3; padding-left: 28px; border-left: 1px solid var(--pink); }
 .facts li span { color: var(--mute); }
+.facts.tight { gap: 10px; margin-top: 22px; }
+.facts.tight li { font-size: 24px; line-height: 1.32; }
+.facts i { font-style: italic; }
 .facts li b { font-weight: 500; color: var(--pink); }
 
 /* Medidor de amenaza (se rellena con JS desde data-n) */
@@ -327,6 +330,33 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 .stat span { display: block; margin-top: 8px; font-size: 23px; color: var(--mute); }
 
 /* ===========================================
+   02-04 · CASO, AMAZONÍA Y CLIMA
+   =========================================== */
+.sCase .col-l { width: 860px; }
+.sCase h2 { font-size: 124px; }
+.sCase .story { font-size: 29px; }
+.sCase .rows, .sAmz .rows { position: absolute; left: 1040px; top: 170px; width: 760px; display: grid; gap: 34px; z-index: 4; }
+.sCase .tl { position: absolute; left: 120px; right: 120px; top: 690px; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 4; }
+.sCase .ev, .sTl .ev { position: relative; padding: 40px 28px 0 0; border-top: 1px solid var(--line-pink); }
+.sCase .ev::before { content: ""; position: absolute; left: 0; top: -7px; width: 13px; height: 13px; background: var(--ink); border: 1px solid var(--pink); }
+.sCase .ev.hot::before { background: var(--pink); }
+.sCase .ev b { display: block; font: 400 64px/1 var(--serif); color: var(--paper); }
+.sCase .ev.hot b { color: var(--pink); text-shadow: 0 0 80px rgba(237,61,140,.18); }
+.sCase .ev .l { display: block; margin-top: 12px; font: 400 19px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pink); }
+.sCase .ev p { margin-top: 12px; font-size: 24px; line-height: 1.42; color: var(--mute); }
+.sAmz .col-l { width: 800px; }
+.sAmz h2 { font-size: 124px; white-space: nowrap; }
+.sAmz .rows { top: 190px; gap: 44px; }
+.sAmz .statrow b sup { font-size: 30px; }
+.sClim h2 { font-size: 112px; }
+.grid6 { position: absolute; left: 120px; right: 120px; top: 510px; display: grid; grid-template-columns: repeat(3, 1fr); z-index: 4; border-top: 1px solid var(--line-pink); }
+.grid6 .stat { padding: 30px 28px 34px; border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+.grid6 .stat:nth-child(3n) { border-right: 0; }
+.grid6 .stat:nth-child(n+4) { border-bottom: 0; }
+.grid6 .stat b { font-size: 96px; }
+.grid6 .stat span { font-size: 25px; }
+
+/* ===========================================
    05 · CUATRO PISOS
    =========================================== */
 .s5 .col-l { width: 700px; }
@@ -375,8 +405,8 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
    08 · INSECTOS
    =========================================== */
 .s8 .col-l { width: 900px; }
-.s8 h2 { font-size: 100px; }
-.s8 .story { margin-top: 22px; font-size: 29px; }
+.s8 h2 { font-size: 88px; }
+.s8 .story { margin-top: 18px; font-size: 26px; }
 .s8 .facts { margin-top: 24px; gap: 12px; }
 .s8 .facts li { font-size: 27px; }
 .s8 .bugzone { position: absolute; left: 1150px; top: 150px; width: 620px; height: 700px; z-index: 4; }
@@ -494,10 +524,10 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
    16 · FUENTES
    =========================================== */
 .s16 h2 { font-size: 104px; }
-.srcs { position: absolute; left: 120px; right: 120px; top: 340px; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 70px; z-index: 4; }
+.srcs { position: absolute; left: 120px; right: 120px; top: 330px; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 70px; z-index: 4; }
 .srcs li { padding-left: 24px; border-left: 1px solid var(--pink); }
-.srcs b { display: block; font: 400 36px/1.1 var(--serif); }
-.srcs span { display: block; margin-top: 8px; font-size: 24px; line-height: 1.35; color: var(--mute); }
+.srcs b { display: block; font: 400 32px/1.1 var(--serif); }
+.srcs span { display: block; margin-top: 6px; font-size: 21px; line-height: 1.3; color: var(--mute); }
 .srcnote { position: absolute; left: 120px; bottom: 116px; z-index: 6; font: 400 21px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--pink); }
 
 /* ===========================================
@@ -519,7 +549,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 <main class="deck-stage" id="deckStage">
 
 <!-- ================= 01 · PORTADA ================= -->
-<section class="slide s1 active" data-time="14:31" data-tag="Vuelo SV-217">
+<section class="slide s1 active" data-time="" data-tag="Vuelo SV-217">
     <div class="moon" aria-hidden="true"></div>
     <svg class="plane1" viewBox="-40 -110 400 220" aria-hidden="true">
         <g fill="none" stroke="#F5EDF1" stroke-width="2" stroke-opacity=".6">
@@ -531,96 +561,68 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
     </svg>
     <p class="pre reveal">Supervivencia · TCP · Parte 1</p>
     <h1 class="hero script reveal" style="--d:.12s">Selva<span class="l2">amazónica</span></h1>
-    <p class="sub reveal" style="--d:.3s">La zona y sus peligros, explicados a través de un caso ficticio: el vuelo SV-217.</p>
+    <p class="sub reveal" style="--d:.3s">El entorno y sus peligros, a partir de un caso ficticio: el vuelo SV-217.</p>
 </section>
 
-<!-- ================= 02 · EL CASO (inventado) ================= -->
-<section class="slide s2" data-time="13:10" data-tag="El caso">
+<!-- ================= 02 · EL CASO (resumen) ================= -->
+<section class="slide sCase" data-time="" data-tag="El caso">
     <div class="content">
         <div class="col-l">
             <p class="kicker reveal">Caso ficticio</p>
             <h2 class="reveal" style="--d:.1s">Vuelo <em>SV-217</em></h2>
-            <p class="story reveal" style="--d:.25s">Vuelo regional en turbohélice bimotor, ruta Pucallpa-Iquitos, un jueves de octubre. Casi todo el trayecto es sobre selva. Esta es la versión de la jefa de cabina y la auxiliar de a bordo.</p>
+            <p class="story reveal" style="--d:.25s">Un ATR 72-600 en la ruta Pucallpa-Iquitos, un jueves de octubre. Pierde potencia en ambos motores en una zona de tormentas y toca las copas de los árboles. Somos la jefa de cabina y la auxiliar de a bordo.</p>
         </div>
         <div class="rows">
-            <div class="statrow reveal" style="--d:.3s"><b>43</b><div><div class="l">A bordo</div><div class="d">39 pasajeros y 4 tripulantes: comandante, copiloto y nosotras dos.</div></div></div>
-            <div class="statrow reveal" style="--d:.42s"><b>1<sup>h 20</sup></b><div><div class="l">Duración prevista</div><div class="d">Despegue a las 13:25 y llegada a las 14:45. Una tarde normal.</div></div></div>
-            <div class="statrow reveal" style="--d:.54s"><b>6</b><div><div class="l">Atención especial</div><div class="d">Cuatro niños, un bebé y una persona con movilidad reducida.</div></div></div>
-        </div>
-        <div class="crew reveal" style="--d:.7s">
-            <div><b>Comandante</b><span>Al mando</span></div>
-            <div><b>Copiloto</b><span>Segundo de a bordo</span></div>
-            <div class="us"><b>Jefa de cabina</b><span>Nosotras</span></div>
-            <div class="us"><b>Auxiliar de a bordo</b><span>Nosotras</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= 02b · CRONOLOGÍA ================= -->
-<section class="slide sTl" data-time="13:25" data-tag="Cronología">
-    <div class="content">
-        <div class="col-l" style="width:1500px">
-            <p class="kicker reveal">Vuelo SV-217</p>
-            <h2 class="reveal" style="--d:.1s">Cronología del <em>vuelo</em></h2>
+            <div class="statrow reveal" style="--d:.3s"><b>43</b><div><div class="l">A bordo</div><div class="d">39 pasajeros y 4 tripulantes.</div></div></div>
+            <div class="statrow reveal" style="--d:.42s"><b>31</b><div><div class="l">Supervivientes</div><div class="d">11 heridos, 4 de ellos graves. El comandante ha fallecido.</div></div></div>
         </div>
         <div class="tl">
-            <div class="ev reveal" style="--d:.3s"><b>13:25</b><span class="l">Despegue</span><p>Sale de Pucallpa sin incidencias. Hay nubosidad al norte de la ruta.</p></div>
-            <div class="ev reveal" style="--d:.42s"><b>14:05</b><span class="l">Desvío</span><p>Hay una línea de tormentas en la ruta. La tripulación técnica solicita un desvío hacia el oeste.</p></div>
-            <div class="ev hot reveal" style="--d:.54s"><b>14:31</b><span class="l">Mayday</span><p>Emergencia: pérdida de potencia en ambos motores. Se comunica la última posición al control.</p></div>
-            <div class="ev hot reveal" style="--d:.66s"><b>14:42</b><span class="l">Impacto</span><p>Toma de tierra forzosa sobre el dosel, cerca de un río. La cola se separa del fuselaje.</p></div>
-            <div class="ev reveal" style="--d:.78s"><b>14:50</b><span class="l">Sin contacto</span><p>Se pierde el contacto con la aeronave y se activa el protocolo de búsqueda.</p></div>
-            <div class="ev reveal" style="--d:.9s"><b>17:45</b><span class="l">Anochece</span><p>Hacia esta hora se pone el sol en octubre. La búsqueda aérea depende de la luz del día.</p></div>
+            <div class="ev reveal" style="--d:.5s"><b>13:25</b><span class="l">Despegue</span><p>Sale de Pucallpa sin incidencias.</p></div>
+            <div class="ev hot reveal" style="--d:.6s"><b>14:31</b><span class="l">Emergencia</span><p>Pérdida de potencia en ambos motores.</p></div>
+            <div class="ev hot reveal" style="--d:.7s"><b>14:42</b><span class="l">Impacto</span><p>Toma de tierra forzosa sobre el dosel, cerca de un río.</p></div>
+            <div class="ev reveal" style="--d:.8s"><b>15:20</b><span class="l">Recuento</span><p>Evacuación completada. La baliza iba en la cola y no se localiza.</p></div>
         </div>
     </div>
 </section>
 
-<!-- ================= 03 · IMPACTO ================= -->
-<section class="slide s3" data-time="14:42" data-tag="Impacto">
-    <div class="giant" aria-hidden="true">14:42</div>
-    <div class="scene" aria-hidden="true">
-        <svg viewBox="0 0 960 820" width="960" height="820" style="position:absolute;inset:0">
-            <path class="trail" d="M 40 90 C 280 50, 560 200, 760 560" fill="none" stroke="#ED3D8C" stroke-width="3" stroke-dasharray="1100" stroke-linecap="round"/>
-        </svg>
-        <svg class="plane2" viewBox="-40 -100 400 200">
-            <g fill="#060507" stroke="#F5EDF1" stroke-width="3" stroke-opacity=".7">
-                <path d="M40 0 L130 -12 L260 -12 Q310 -12 330 0 Q310 12 260 12 L130 12 Z"/>
-                <path d="M160 0 L120 -90 L148 -90 L232 -8 Z"/><path d="M160 0 L120 90 L148 90 L232 8 Z"/>
-                <path d="M44 0 L0 -40 L22 -40 L70 -8 Z"/><path d="M44 0 L0 40 L22 40 L70 8 Z"/>
-            </g>
-            <g fill="#ED3D8C"><circle cx="30" cy="0" r="14"/><circle cx="6" cy="0" r="10" opacity=".7"/></g>
-        </svg>
-        <div class="boom"><i></i><i></i><b></b></div>
-    </div>
+<!-- ================= 03 · LA AMAZONÍA ================= -->
+<section class="slide sAmz" data-time="" data-tag="El entorno">
     <div class="content">
         <div class="col-l">
-            <h2 class="reveal">El <em>accidente</em></h2>
-            <p class="story reveal" style="--d:.2s">Ambos motores pierden potencia en una zona de tormentas. La tripulación técnica comunica la emergencia y ordena la posición de impacto. Nosotras repetimos la orden en cabina y comprobamos cinturones y equipajes.</p>
-            <p class="story reveal" style="--d:.4s">El avión toca las copas de los árboles, el fuselaje se parte y la cola se separa.</p>
+            <p class="kicker reveal">El entorno</p>
+            <h2 class="reveal" style="--d:.1s">La <em>Amazonía</em></h2>
+            <p class="story reveal" style="--d:.25s">Es la mayor selva tropical del planeta. Nuestra zona está en el departamento de Loreto, en el noreste de Perú.</p>
+            <p class="muted reveal" style="--d:.4s; margin-top:26px; font-size:24px">Las cifras varían según la fuente y el método de medición.</p>
+        </div>
+        <div class="rows">
+            <div class="statrow reveal" style="--d:.3s"><b>6<sup>M km²</sup></b><div><div class="l">Superficie</div><div class="d">Más de seis millones de kilómetros cuadrados, más que Europa occidental.</div></div></div>
+            <div class="statrow reveal" style="--d:.42s"><b>10<sup>%</sup></b><div><div class="l">De las especies conocidas</div><div class="d">Al menos el 10 % de las especies conocidas del planeta viven aquí.</div></div></div>
+            <div class="statrow reveal" style="--d:.54s"><b>200<sup>km</sup></b><div><div class="l">Inundación en la época de lluvias</div><div class="d">De noviembre a junio los grandes ríos inundan el bosque hasta 200 km desde las orillas.</div></div></div>
         </div>
     </div>
 </section>
 
-<!-- ================= 04 · DESPERTAR ================= -->
-<section class="slide s4" data-time="15:20" data-tag="Tras el accidente">
-    <div class="radar" aria-hidden="true"><div class="sweep"></div><div class="nosig">SIN COBERTURA<small>baliza no localizada</small></div></div>
-    <p class="coords mono">≈ 4° S · 73° O · Amazonía peruana</p>
+<!-- ================= 04 · CLIMA ================= -->
+<section class="slide sClim" data-time="" data-tag="El entorno · Clima">
     <div class="content">
-        <div class="col-l">
-            <p class="kicker reveal">Evacuación y recuento</p>
-            <h2 class="reveal" style="--d:.1s">Estado tras el <em>accidente</em></h2>
-            <p class="story reveal" style="--d:.25s">Evacuamos por las salidas que se pueden abrir y alejamos a los pasajeros del combustible. Recuento: 43 a bordo, 31 supervivientes, 11 heridos y 4 de ellos graves. El comandante ha fallecido. La baliza de emergencia iba en la cola, que no hemos localizado.</p>
+        <div class="col-l" style="width:1500px">
+            <p class="kicker reveal">El entorno · Clima de Iquitos</p>
+            <h2 class="reveal" style="--d:.1s">Calor y lluvia <em>todo el año</em></h2>
+            <p class="story reveal" style="--d:.25s; max-width:1200px">Iquitos no tiene estación seca. Hace calor y llueve todos los meses, y las temperaturas casi no cambian de una estación a otra.</p>
         </div>
-        <div class="stats">
-            <div class="stat reveal" style="--d:.3s"><b>31 °C</b><span>máxima media de día</span></div>
-            <div class="stat reveal" style="--d:.4s"><b>85-88 %</b><span>de humedad en el aire</span></div>
-            <div class="stat reveal" style="--d:.5s"><b>2.900 mm</b><span>de lluvia al año, aprox.</span></div>
-            <div class="stat reveal" style="--d:.6s"><b>12 de 12</b><span>meses con lluvia</span></div>
+        <div class="grid6">
+            <div class="stat reveal" style="--d:.3s"><b>31 °C</b><span>máxima media de día (entre 30 y 32 °C)</span></div>
+            <div class="stat reveal" style="--d:.4s"><b>26 °C</b><span>temperatura media anual, aprox.</span></div>
+            <div class="stat reveal" style="--d:.5s"><b>85-88 %</b><span>de humedad (mínima en septiembre, máxima en junio)</span></div>
+            <div class="stat reveal" style="--d:.6s"><b>2.900 mm</b><span>de lluvia al año, aprox.</span></div>
+            <div class="stat reveal" style="--d:.7s"><b>Marzo</b><span>el mes más lluvioso</span></div>
+            <div class="stat reveal" style="--d:.8s"><b>163 mm</b><span>en agosto, el mes más seco</span></div>
         </div>
     </div>
 </section>
 
 <!-- ================= 05 · CUATRO PISOS ================= -->
-<section class="slide s5" data-time="15:30" data-tag="La zona">
+<section class="slide s5" data-time="" data-tag="La zona">
     <svg class="layers" viewBox="0 0 980 830" aria-label="Corte de la selva en cuatro pisos">
         <rect x="0" y="0" width="980" height="170" fill="rgba(237,61,140,.03)"/>
         <rect x="0" y="170" width="980" height="230" fill="rgba(237,61,140,.10)"/>
@@ -653,7 +655,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 06 · CALOR ================= -->
-<section class="slide s6" data-time="15:40" data-tag="Peligro 01 · Calor">
+<section class="slide s6" data-time="" data-tag="Peligro 01 · Calor">
     <svg class="thermo" viewBox="0 0 300 820" aria-hidden="true">
         <defs><clipPath id="tube"><rect x="110" y="40" width="80" height="640" rx="40"/></clipPath></defs>
         <rect x="110" y="40" width="80" height="640" rx="40" fill="none" stroke="#F5EDF1" stroke-opacity=".8" stroke-width="2"/>
@@ -675,9 +677,11 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
             <p class="kicker reveal">Peligro 01</p>
             <h2 class="reveal" style="--d:.1s">Calor y <em>deshidratación</em></h2>
             <p class="story reveal" style="--d:.25s">Con unos 31 °C de máxima y una humedad del 85-88 %, el sudor casi no se evapora y el cuerpo se enfría mal. Se pierde agua sin llegar a refrescarse.</p>
-            <ul class="facts reveal" style="--d:.4s">
+            <ul class="facts tight reveal" style="--d:.4s">
                 <li>Entre <b>0,5 y 2 litros</b> de sudor por hora al esforzarse</li>
-                <li>Golpe de calor: <span>confusión, piel roja, pulso rápido</span></li>
+                <li>Agotamiento por calor: <span>sudor intenso, piel fría y pálida, pulso rápido, náuseas y calambres</span></li>
+                <li>Golpe de calor: <span>temperatura corporal sobre <b>40 °C</b>, confusión, desmayo o convulsiones. Es una urgencia</span></li>
+                <li>Si el agotamiento no mejora en unos 30 minutos tras enfriarse, se trata como golpe de calor</li>
             </ul>
         </div>
     </div>
@@ -685,7 +689,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 07 · AGUA ================= -->
-<section class="slide s7" data-time="16:00" data-tag="Peligro 02 · Agua">
+<section class="slide s7" data-time="" data-tag="Peligro 02 · Agua">
     <svg class="dropsvg" viewBox="0 0 560 780" aria-hidden="true">
         <defs>
             <clipPath id="dropclip"><path d="M280 30 C 280 30, 70 300, 70 480 a210 210 0 0 0 420 0 C 490 300, 280 30, 280 30 Z"/></clipPath>
@@ -710,9 +714,11 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
             <p class="kicker reveal">Peligro 02</p>
             <h2 class="reveal" style="--d:.1s">Agua que <em>no es potable</em></h2>
             <p class="story reveal" style="--d:.25s">Hay ríos y llueve a diario, pero el agua de superficie puede contener bacterias y parásitos. Beberla sin tratar puede provocar diarrea, que agrava la deshidratación.</p>
-            <ul class="facts reveal" style="--d:.4s">
-                <li>Sin agua segura aguantamos unos <b>3 días</b></li>
-                <li>La diarrea gasta justo el agua que nos falta</li>
+            <ul class="facts tight reveal" style="--d:.4s">
+                <li>Sin agua segura se aguantan unos <b>3 días</b></li>
+                <li>Riesgos: <span>giardiasis, cólera y leptospirosis, esta última típica de zonas tropicales</span></li>
+                <li>El cólera puede matar con rapidez por <span>deshidratación y shock</span></li>
+                <li>Hervirla 1 minuto la hace segura (CDC). El cloro solo no elimina algunos parásitos</li>
             </ul>
         </div>
     </div>
@@ -720,7 +726,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 08 · INSECTOS ================= -->
-<section class="slide s8" data-time="16:20" data-tag="Peligro 03 · Insectos">
+<section class="slide s8" data-time="" data-tag="Peligro 03 · Insectos">
     <div class="bugzone" aria-hidden="true">
         <svg class="mos" viewBox="0 0 620 620">
             <g stroke="#F5EDF1" stroke-opacity=".8" stroke-width="4" stroke-linecap="round" fill="none">
@@ -739,12 +745,12 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
         <div class="col-l">
             <p class="kicker reveal">Peligro 03</p>
             <h2 class="reveal" style="--d:.1s">Insectos y <em>enfermedades</em></h2>
-            <p class="story reveal" style="--d:.25s">Los mosquitos transmiten enfermedades graves. Los que transmiten la malaria pican sobre todo al anochecer y de noche.</p>
-            <ul class="facts reveal" style="--d:.4s">
-                <li>Mosquitos <span>· malaria, dengue, fiebre amarilla</span></li>
-                <li>Loreto <span>· más del 80 % de la malaria de Perú</span></li>
-                <li>Hormiga bala <span>· dolor de 12 a 24 horas</span></li>
-                <li>Mosca de arena <span>· leishmaniasis</span></li>
+            <p class="story reveal" style="--d:.25s">Los mosquitos transmiten enfermedades graves. El que transmite la malaria (<i>Anopheles</i>) pica sobre todo al anochecer y de noche. El del dengue (<i>Aedes</i>) pica de día, al amanecer y antes del atardecer.</p>
+            <ul class="facts tight reveal" style="--d:.4s">
+                <li>Malaria <span>· síntomas entre 1 y 4 semanas después de la picadura. El tipo <i>vivax</i> puede reaparecer años más tarde</span></li>
+                <li>Dengue <span>· fiebre de hasta 40 °C, dolor de cabeza, tras los ojos, en músculos y articulaciones, a los 4-10 días</span></li>
+                <li>Loreto concentra <b>más del 80 %</b> de la malaria de Perú</li>
+                <li>Hormiga bala <span>· dolor de 12 a 24 horas</span>. Mosca de arena <span>· leishmaniasis</span></li>
             </ul>
         </div>
     </div>
@@ -752,7 +758,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 09 · PLANTAS ================= -->
-<section class="slide s9" data-time="16:40" data-tag="Peligro 04 · Plantas">
+<section class="slide s9" data-time="" data-tag="Peligro 04 · Plantas">
     <div class="cards3">
         <div class="card reveal" style="--d:.2s">
             <span class="pill">No comer</span>
@@ -799,7 +805,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 10 · TORMENTA ================= -->
-<section class="slide s10" data-time="17:00" data-tag="Peligro 05 · Tormenta">
+<section class="slide s10" data-time="" data-tag="Peligro 05 · Tormenta">
     <div class="rain"></div><div class="rain b"></div>
     <svg class="bolt" viewBox="0 0 200 400" aria-hidden="true"><path d="M120 0 L30 190 L96 190 L56 400 L176 150 L108 150 Z" fill="#ED3D8C"/></svg>
     <svg class="river" viewBox="0 0 1920 240" preserveAspectRatio="none" aria-hidden="true">
@@ -812,10 +818,11 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
             <p class="kicker reveal">Peligro 05</p>
             <h2 class="reveal" style="--d:.1s"><em>Tormentas</em> frecuentes</h2>
             <p class="story reveal" style="--d:.25s">Las lluvias son diarias y pueden ser muy intensas. Mojarse empeora la pérdida de calor por la noche y el terreno se vuelve intransitable.</p>
-            <ul class="facts reveal" style="--d:.4s">
-                <li>Rayos en zonas con árboles muy altos</li>
-                <li>Caída de ramas y árboles</li>
-                <li>Subidas rápidas del nivel de los ríos</li>
+            <ul class="facts tight reveal" style="--d:.4s">
+                <li>El <b>51 %</b> de los árboles amazónicos muere roto o arrancado, en buena parte por el viento</li>
+                <li>La Amazonía es una de las zonas con más rayos del planeta</li>
+                <li>Una sola línea de tormentas en 2005 mató unos <b>500 millones</b> de árboles (estudio financiado por la NASA)</li>
+                <li>De noviembre a junio los ríos inundan el bosque hasta 200 km desde las orillas</li>
             </ul>
         </div>
     </div>
@@ -823,7 +830,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 11 · PERDIDOS ================= -->
-<section class="slide s11" data-time="17:20" data-tag="Peligro 06 · Orientación">
+<section class="slide s11" data-time="" data-tag="Peligro 06 · Orientación">
     <svg class="compass" viewBox="0 0 700 700" aria-hidden="true">
         <defs><clipPath id="cc"><circle cx="350" cy="350" r="300"/></clipPath></defs>
         <circle cx="350" cy="350" r="330" fill="rgba(6,5,7,.6)" stroke="#F5EDF1" stroke-opacity=".7" stroke-width="2"/>
@@ -839,14 +846,14 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
             <p class="kicker reveal">Peligro 06</p>
             <h2 class="reveal" style="--d:.1s"><em>Desorientación</em></h2>
             <p class="story reveal" style="--d:.25s">Sin horizonte, sin sendas y con el cielo tapado, es difícil mantener una línea recta. En un estudio de 2009 con GPS, voluntarios que no veían el sol caminaron en círculos por un bosque alemán.</p>
-            <p class="story reveal" style="--d:.4s; margin-top:20px">Además, desde el aire el dosel puede ocultar el lugar del accidente.</p>
+            <p class="story reveal" style="--d:.4s; margin-top:20px">Con el sol visible, mantuvieron una trayectoria casi recta. La causa no era la longitud de las piernas, sino la incertidumbre sobre dónde está «recto». Además, el dosel puede ocultar desde el aire el lugar del accidente.</p>
         </div>
     </div>
     <div class="threat" data-n="5"><span class="lab">Amenaza</span></div>
 </section>
 
 <!-- ================= 12 · NOCHE ================= -->
-<section class="slide s12" data-time="17:45" data-tag="Peligro 07 · La noche">
+<section class="slide s12" data-time="" data-tag="Peligro 07 · La noche">
     <svg class="crescent" viewBox="0 0 280 280" aria-hidden="true"><path d="M170 20 A120 120 0 1 0 250 190 A98 98 0 1 1 170 20 Z" fill="#F5EDF1"/></svg>
     <div class="temp reveal" style="--d:.4s">22°C<small>Mínima media nocturna.<br>Con ropa mojada, pierde calor.</small></div>
     <p class="wavelab mono">ruido constante de fauna</p>
@@ -855,14 +862,19 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
         <div class="col-l">
             <p class="kicker reveal">Peligro 07</p>
             <h2 class="reveal" style="--d:.1s">La <em>noche</em></h2>
-            <p class="story reveal" style="--d:.25s">Cerca del ecuador anochece pronto todo el año: en octubre, hacia las 17:45. Bajo el dosel oscurece antes. La temperatura baja a unos 22 °C, y con la ropa mojada el cuerpo pierde calor.</p>
+            <p class="story reveal" style="--d:.25s">Cerca del ecuador anochece pronto todo el año: en octubre, hacia las 17:45. Bajo el dosel oscurece antes. La mínima ronda los 22 °C.</p>
+            <ul class="facts tight reveal" style="--d:.4s">
+                <li>El agua se lleva el calor mucho más rápido que el aire: con la ropa mojada aumenta mucho la pérdida de calor</li>
+                <li>La hipotermia puede aparecer incluso en climas cálidos y avanza sin que se note</li>
+                <li>Los mosquitos de la malaria están más activos de noche</li>
+            </ul>
         </div>
     </div>
     <div class="threat" data-n="4"><span class="lab">Amenaza</span></div>
 </section>
 
 <!-- ================= 13 · FAUNA ================= -->
-<section class="slide s13" data-time="22:30" data-tag="Peligro 08 · Fauna">
+<section class="slide s13" data-time="" data-tag="Peligro 08 · Fauna">
     <span class="eyes" style="left:60px;top:900px;--g:40px;--ec:#ED3D8C;--o:-1s"></span>
     <span class="eyes" style="left:520px;top:700px;--g:34px;--ec:#F5EDF1;--o:-3s"></span>
     <span class="eyes" style="left:300px;top:980px;--g:30px;--ec:#ED3D8C;--o:-2s"></span>
@@ -871,7 +883,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
     <span class="eyes" style="left:1860px;top:560px;--g:18px;--ec:#F5EDF1;--o:-2.5s"></span>
     <span class="eyes" style="left:700px;top:820px;--g:28px;--ec:#ED3D8C;--o:-3.5s"></span>
     <div class="beasts">
-        <div class="beast reveal" style="--d:.2s"><h3>Jergón<small>Bothrops atrox</small></h3><div class="threat mini" data-n="4"></div><p>Causa más del 90 % de las mordeduras de Bothrops en Perú. Se camufla en la hojarasca.</p></div>
+        <div class="beast reveal" style="--d:.2s"><h3>Jergón<small>Bothrops atrox</small></h3><div class="threat mini" data-n="4"></div><p>Más del 90 % de las mordeduras de Bothrops en Perú. Dolor, sangrado y una hinchazón que sube por la extremidad. No se corta la herida ni se aplica hielo.</p></div>
         <div class="beast reveal" style="--d:.32s"><h3>Jaguar<small>Panthera onca</small></h3><div class="threat mini" data-n="2"></div><p>Suele huir. Los ataques a personas son poco frecuentes.</p></div>
         <div class="beast reveal" style="--d:.44s"><h3>Caimán negro<small>Melanosuchus niger</small></h3><div class="threat mini" data-n="3"></div><p>Vive en ríos y lagunas. Conviene no acercarse al agua de noche.</p></div>
         <div class="beast reveal" style="--d:.56s"><h3>Rana dardo<small>Dendrobatidae</small></h3><div class="threat mini" data-n="2"></div><p>Sus colores avisan de que su piel es tóxica. No se debe tocar.</p></div>
@@ -887,7 +899,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 14 · BALANCE ================= -->
-<section class="slide s14" data-time="23:59" data-tag="Balance del primer día">
+<section class="slide s14" data-time="" data-tag="Balance del primer día">
     <div class="content">
         <div class="col-l">
             <p class="kicker reveal">Resumen del primer día</p>
@@ -908,7 +920,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 15 · AMANECER ================= -->
-<section class="slide s15" data-time="05:32" data-tag="Segundo día" data-nofly>
+<section class="slide s15" data-time="" data-tag="Segundo día" data-nofly>
     <div class="sun" aria-hidden="true"></div>
     <div class="horizon"></div><div class="ground"></div>
     <span class="smoke" style="--o:0s;--dx:30px"></span><span class="smoke" style="--o:-1.7s;--dx:-20px"></span><span class="smoke" style="--o:-3.3s;--dx:50px"></span>
@@ -929,21 +941,25 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
 </section>
 
 <!-- ================= 16 · FUENTES ================= -->
-<section class="slide s16" data-time="Fin" data-tag="Fuentes y datos" data-nofly>
+<section class="slide s16" data-time="" data-tag="Fuentes y datos" data-nofly>
     <div class="content">
         <div class="col-l" style="width:1500px">
             <p class="kicker reveal">Qué es real y qué no</p>
             <h2 class="reveal" style="--d:.1s">De dónde salen los <em>datos</em></h2>
         </div>
         <ul class="srcs reveal" style="--d:.25s">
-            <li><b>Clima de Iquitos</b><span>Population Review y climate-data.org (temperatura, lluvia), Avionero (humedad)</span></li>
-            <li><b>Capas de la selva</b><span>National Geographic Education y Rainforest Concern (altura y luz)</span></li>
-            <li><b>Jergón (Bothrops atrox)</b><span>Revista Peruana de Medicina Experimental y Salud Pública (INS) y Curso Gorgas, UAB</span></li>
-            <li><b>Malaria en Loreto</b><span>Scientific Reports, 2024: 84 % de los casos de Perú en 2023</span></li>
-            <li><b>Hormiga bala</b><span>Live Science: dolor de 12 a 24 horas según la fuente</span></li>
-            <li><b>Caminar en círculos</b><span>Souman et al., «Walking Straight into Circles», Current Biology, 2009</span></li>
-            <li><b>Sudor y calor</b><span>Análisis de 2007 (PMC): 0,5 a 2 litros por hora al hacer ejercicio</span></li>
-            <li><b>El caso</b><span>Ficticio: vuelo, pasajeros y tripulación no existen. Ruta, clima y horas de sol son reales. Sol: sunrise-sunset.net y WeatherSpark</span></li>
+            <li><b>La Amazonía</b><span>Greenpeace y Conservation International (superficie, especies, inundación)</span></li>
+            <li><b>Clima de Iquitos</b><span>Population Review, climate-data.org y Avionero</span></li>
+            <li><b>Capas de la selva</b><span>National Geographic Education y Rainforest Concern</span></li>
+            <li><b>Calor y sudor</b><span>Análisis de 2007 (PMC), MedicalNewsToday y Solv Health</span></li>
+            <li><b>Agua</b><span>CDC, NPS y Live Science (enfermedades del agua, hervido)</span></li>
+            <li><b>Malaria y dengue</b><span>Merck Manual, CDC, OMS y Scientific Reports 2024</span></li>
+            <li><b>Jergón e insectos</b><span>Rev. Peruana de Med. Exp. (INS), Curso Gorgas (UAB), protocolo UCSD y Live Science</span></li>
+            <li><b>Tormentas</b><span>Cary Institute y JPL/NASA</span></li>
+            <li><b>Desorientación</b><span>Souman et al., Current Biology, 2009 (y HealthDay)</span></li>
+            <li><b>Hipotermia</b><span>Fuentes divulgativas (Alberta Health y Kaiser Permanente)</span></li>
+            <li><b>Sol y luz</b><span>sunrise-sunset.net y WeatherSpark</span></li>
+            <li><b>El caso</b><span>Ficticio: vuelo, pasajeros y tripulación no existen</span></li>
         </ul>
         <p class="srcnote reveal" style="--d:.4s">Los datos de la zona son reales. El caso es ficticio.</p>
     </div>
@@ -974,7 +990,7 @@ h2 em, h3 em { color: var(--pink); font-style: normal; }
     slides.forEach((s, i) => {
         const n = String(i + 1).padStart(2, '0'), t = String(slides.length).padStart(2, '0');
         s.insertAdjacentHTML('beforeend',
-            `<div class="runner gen"><span class="brand">Selva amazónica</span><span>${s.dataset.time} · ${s.dataset.tag}</span></div>` +
+            `<div class="runner gen"><span class="brand">Selva amazónica</span><span>${s.dataset.time ? s.dataset.time + ' · ' : ''}${s.dataset.tag}</span></div>` +
             `<div class="footer gen"><span>Supervivencia · TCP</span><span><em>${n}</em> / ${t}</span></div>`);
     });
 
