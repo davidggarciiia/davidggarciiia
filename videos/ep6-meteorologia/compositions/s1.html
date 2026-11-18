@@ -1,0 +1,55 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s1" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g id="s1-sun"><circle cx="420" cy="420" r="70" fill="rgba(255,214,90,.75)" stroke="#23307a" stroke-width="5"/><path class="ink" stroke-width="5" d="M515,420 L550,420"/><path class="ink" stroke-width="5" d="M487,487 L512,512"/><path class="ink" stroke-width="5" d="M420,515 L420,550"/><path class="ink" stroke-width="5" d="M353,487 L328,512"/><path class="ink" stroke-width="5" d="M325,420 L290,420"/><path class="ink" stroke-width="5" d="M353,353 L328,328"/><path class="ink" stroke-width="5" d="M420,325 L420,290"/><path class="ink" stroke-width="5" d="M487,353 L512,328"/></g><g id="s1-cl" transform="translate(760,330) scale(1.4)"><path fill="rgba(255,255,255,.95)" stroke="#7d89b0" stroke-width="2.9" d="M0,60 C-10,20 40,0 70,20 C90,-20 160,-10 170,30 C210,25 230,70 200,90 L10,90 C-20,90 -20,62 0,60 Z"/></g><g id="s1-rain"><path class="bl" stroke-width="5" stroke-linecap="round" d="M800,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M840,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M880,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M920,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M960,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M1000,480 l-14,40"/><path class="bl" stroke-width="5" stroke-linecap="round" d="M1040,480 l-14,40"/></g><path id="s1-bolt" fill="rgba(255,214,90,.9)" stroke="#23307a" stroke-width="4" d="M1380,300 L1320,450 L1370,450 L1330,580 L1450,410 L1395,410 L1440,300 Z"/><g id="s1-cl2" transform="translate(1250,230) scale(1.2)"><path fill="rgba(255,255,255,.95)" stroke="#7d89b0" stroke-width="3.3" d="M0,60 C-10,20 40,0 70,20 C90,-20 160,-10 170,30 C210,25 230,70 200,90 L10,90 C-20,90 -20,62 0,60 Z"/></g></svg>
+<div id="s1-title" class="t h1 big" style="left:0px;top:700px;width:1920px;text-align:center"><span class="w">Meteorología para volar<span id="s1-title-hl" class="hl blue"></span></span></div><div id="s1-def" class="t lbl" style="left:0px;top:860px;width:1920px;text-align:center">ciencia que estudia el comportamiento de la atmósfera</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s1"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 6.219], D=11.237;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+
+
+tl.set(q("#s1-cl, #s1-rain, #s1-bolt, #s1-cl2"),{opacity:0},0);
+show("#s1-cl",T[0]+1.4,0.4); show("#s1-rain",T[0]+2.6,0.3); show("#s1-cl2",T[0]+3.4,0.3); show("#s1-bolt",T[0]+4.0,0.1);
+tl.fromTo(q("#s1-rain"),{y:0},{y:24,duration:0.3,repeat:Math.round((D-T[0]-2.6)/0.3),ease:"none"},T[0]+2.6);
+tl.to(q("#s1-bolt"),{opacity:0.2,duration:0.08,yoyo:true,repeat:5},T[0]+4.2);
+write("#s1-title",T[0]+0.6,1.4); hl("#s1-title-hl",T[0]+2.0,0.5);
+write("#s1-def",T[1]+0.6,2.2);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s1"]=tl;
+})();
+</script>
+</template>

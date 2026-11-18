@@ -1,0 +1,58 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln ink" pathLength="1" stroke-width="5" fill="none" d="M300,860 L1596,860 M300,860 L300,380" id="s2-ax"/><path class="ln pk" pathLength="1" stroke-width="6" fill="none" d="M300,860 L372,785 L480,785 L484,710 L660,710 L664,635 L840,635 L844,560 L1020,560 L1024,485 L1200,485 L1204,410 L1380,410" id="s2-st"/><circle class="s2-ex" id="s2-e0" cx="415" cy="785" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><circle class="s2-ex" id="s2-e1" cx="538" cy="710" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><circle class="s2-ex" id="s2-e2" cx="804" cy="635" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><circle class="s2-ex" id="s2-e3" cx="980" cy="560" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><circle class="s2-ex" id="s2-e4" cx="1139" cy="485" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><circle class="s2-ex" id="s2-e5" cx="1240" cy="410" r="14" fill="#1ea7e4" stroke="#23307a" stroke-width="3"/><path class="ln inkp" pathLength="1" stroke-width="4" fill="none" d="M370,860 L370,380" id="s2-19"/></svg>
+<div id="s2-title" class="t h1" style="left:200px;top:96px;"><span class="w">1 · ¿Cuántos TCP?<span id="s2-title-hl" class="hl pink"></span></span></div><div id="s2-x" class="t sm" style="left:1380.0px;top:890px;">asientos</div><div id="s2-y" class="t sm" style="left:220px;top:330px;">TCP</div><div id="s2-yl1" class="t sm" style="left:250px;top:757px;">1</div><div id="s2-yl2" class="t sm" style="left:250px;top:682px;">2</div><div id="s2-yl3" class="t sm" style="left:250px;top:607px;">3</div><div id="s2-yl4" class="t sm" style="left:250px;top:532px;">4</div><div id="s2-yl5" class="t sm" style="left:250px;top:457px;">5</div><div id="s2-yl6" class="t sm" style="left:250px;top:382px;">6</div><div id="s2-a" class="t lbl" style="left:420px;top:250px;">≤ 19 asientos → sin TCP</div><div id="s2-a2" class="t lbl" style="left:420px;top:320px;"><span class="w">≥ 20 → obligatorio<span id="s2-a2h" class="hl pink"></span></span></div><div id="s2-b" class="t lbl" style="left:1180px;top:230px;">+1 TCP cada 50 asientos</div><div id="s2-el0" class="t sm" style="left:435.2px;top:795px;">32→1</div><div id="s2-el1" class="t sm" style="left:557.6px;top:720px;">66→2</div><div id="s2-el2" class="t sm" style="left:824.0px;top:645px;">140→3</div><div id="s2-el3" class="t sm" style="left:1000.4px;top:570px;">189→4</div><div id="s2-el4" class="t sm" style="left:1158.8000000000002px;top:495px;">233→5</div><div id="s2-el5" class="t sm" style="left:1259.6px;top:420px;">261→6</div><div id="s2-c" class="t lbl" style="left:420px;top:400px;">2 o más → uno es <span class="w">sobrecargo<span id="s2-ch" class="hl blue"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s2"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.329, 11.049, 23.538], D=28.001;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s2-title",T[0]+0.1,0.8); hl("#s2-title-hl",T[0]+0.9);
+draw("#s2-ax",T[0]+0.4,0.8); write("#s2-x, #s2-y",T[0]+0.8,0.4);
+tl.fromTo(q("[id^=s2-yl]"),{opacity:0},{opacity:1,duration:0.2,stagger:0.08},T[0]+0.9);
+write("#s2-a",T[0]+1.0,1.4); draw("#s2-19",T[0]+2.2,0.5); write("#s2-a2",T[0]+4.0,0.9); hl("#s2-a2h",T[0]+4.9);
+draw("#s2-st",T[1]+0.4,2.4); write("#s2-b",T[1]+0.6,1.4);
+tl.set(q(".s2-ex"),{opacity:0},0);
+const et=[1.2,2.9,4.6,6.5,8.7,10.8];
+et.forEach((t,i)=>{tl.fromTo(q("#s2-e"+i),{opacity:0,scale:0.2,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.3,ease:"back.out(2)"},T[2]+t); write("#s2-el"+i,T[2]+t,0.5);});
+write("#s2-c",T[3]+0.4,1.4); hl("#s2-ch",T[3]+1.8);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s2"]=tl;
+})();
+</script>
+</template>

@@ -1,0 +1,57 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><ellipse class="s3-iA" cx="760" cy="640" rx="110" ry="70" fill="none" stroke="#1ea7e4" stroke-width="4"/><ellipse class="s3-iB" cx="1320" cy="640" rx="100" ry="70" fill="none" stroke="#ff3d96" stroke-width="4"/><ellipse class="s3-iA" cx="760" cy="640" rx="190" ry="130" fill="none" stroke="#1ea7e4" stroke-width="4"/><ellipse class="s3-iB" cx="1320" cy="640" rx="180" ry="130" fill="none" stroke="#ff3d96" stroke-width="4"/><ellipse class="s3-iA" cx="760" cy="640" rx="270" ry="190" fill="none" stroke="#1ea7e4" stroke-width="4"/><ellipse class="s3-iB" cx="1320" cy="640" rx="260" ry="190" fill="none" stroke="#ff3d96" stroke-width="4"/><g id="s3-drops"><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M1500,220 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M1560,260 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M1620,215 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/></g><g id="s3-dn" class="arr"><path class="ln bl shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M760.0,500.0 L760.0,600.0"/><path class="ln bl head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M749.6,578.4 L760.0,600.0 L770.4,578.4"/></g><g id="s3-up" class="arr"><path class="ln pk shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M1320.0,600.0 L1320.0,500.0"/><path class="ln pk head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M1330.4,521.6 L1320.0,500.0 L1309.6,521.6"/></g><circle id="s3-dana" cx="1580" cy="380" r="40" fill="rgba(255,92,168,.25)" stroke="#23307a" stroke-width="4"/></svg>
+<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Humedad y presión<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-h" class="t lbl" style="left:200px;top:240px;"><span class="w">Humedad<span id="s3-hh" class="hl blue"></span></span> = vapor de agua en el aire</div><div id="s3-h2" class="t sm" style="left:200px;top:306px;">baja la temperatura → <span class="w">rocío<span id="s3-h2h" class="hl pink"></span></span></div><div id="s3-is" class="t lbl" style="left:960px;top:880px;"><span class="w">isobaras<span id="s3-ish" class="hl blue"></span></span> · igual presión</div><div id="s3-A" class="t big" style="left:730px;top:610px;color:#0a7fb8">A</div><div id="s3-B" class="t big" style="left:1290px;top:610px;color:#ff3d96">B</div><div id="s3-a2" class="t lbl" style="left:200px;top:880px;"><span class="w">Anticiclón<span id="s3-a2h" class="hl blue"></span></span></div><div id="s3-a3" class="t sm" style="left:200px;top:946px;">aire frío que baja · estable</div><div id="s3-b2" class="t lbl" style="left:1480px;top:760px;"><span class="w">Borrasca<span id="s3-b2h" class="hl pink"></span></span></div><div id="s3-b3" class="t sm" style="left:1480px;top:826px;">aire cálido que sube</div><div id="s3-d" class="t sm" style="left:1480px;top:440px;">DANA · niveles altos</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s3"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 8.971, 13.097, 18.653, 22.48], D=26.58;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s3-title",T[0]+0.1,0.9); hl("#s3-title-hl",T[0]+1.0);
+write("#s3-h",T[0]+0.8,1.4); hl("#s3-hh",T[0]+2.2);
+tl.set(q("#s3-drops, .s3-iA, .s3-iB, #s3-dana"),{opacity:0},0);
+show("#s3-drops",T[0]+5.4,0.4); write("#s3-h2",T[0]+6.2,1.4); hl("#s3-h2h",T[0]+7.6);
+tl.to(q(".s3-iA, .s3-iB"),{opacity:1,duration:0.3,stagger:0.12},T[1]+0.4); write("#s3-is",T[1]+1.0,0.9); hl("#s3-ish",T[1]+1.9);
+write("#s3-A",T[2]+0.3,0.3); write("#s3-a2",T[2]+0.6,0.7); hl("#s3-a2h",T[2]+1.3); draw("#s3-dn path",T[2]+1.8,0.5); write("#s3-a3",T[2]+2.4,1.2);
+write("#s3-B",T[3]+0.3,0.3); write("#s3-b2",T[3]+0.6,0.7); hl("#s3-b2h",T[3]+1.3); draw("#s3-up path",T[3]+1.8,0.5); write("#s3-b3",T[3]+2.2,1.0);
+show("#s3-dana",T[4]+0.4,0.3); write("#s3-d",T[4]+0.6,1.0);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s3"]=tl;
+})();
+</script>
+</template>

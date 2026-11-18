@@ -1,0 +1,56 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s8" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln ink" pathLength="1" stroke-width="6" fill="none" d="M240,800 L420,800 C520,800 560,600 640,520 C740,420 800,340 960,340 L1180,340 C1220,340 1240,470 1280,520 C1340,600 1400,680 1460,700 C1520,740 1560,800 1600,800 L1720,800" id="s8-path"/><circle class="s8-p" id="s8-p0" cx="240" cy="800" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p1" cx="420" cy="800" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p2" cx="640" cy="520" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p3" cx="960" cy="340" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p4" cx="1280" cy="520" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p5" cx="1460" cy="700" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p6" cx="1600" cy="800" r="12" fill="#ff3d96"/><circle class="s8-p" id="s8-p7" cx="1720" cy="800" r="12" fill="#ff3d96"/><path id="s8-hold" fill="none" stroke="#1ea7e4" stroke-width="6" d="M1300,220 L1440,220 A50,50 0 0 1 1440,320 L1300,320 A50,50 0 0 1 1300,220 Z"/></svg>
+<div id="s8-title" class="t h1" style="left:200px;top:96px;"><span class="w">7 · Fases de vuelo<span id="s8-title-hl" class="hl pink"></span></span></div><div id="s8-l0" class="t sm" style="left:200px;top:840px;">taxi</div><div id="s8-l1" class="t sm" style="left:360px;top:830px;">despegue</div><div id="s8-l2" class="t sm" style="left:380px;top:480px;">ascenso</div><div id="s8-l3" class="t sm" style="left:920px;top:230px;">ruta</div><div id="s8-l4" class="t sm" style="left:1320px;top:460px;">descenso</div><div id="s8-l5" class="t sm" style="left:1500px;top:660px;">aproximación</div><div id="s8-l6" class="t sm" style="left:1480px;top:840px;">aterrizaje</div><div id="s8-l7" class="t sm" style="left:1660px;top:840px;">taxi</div><div id="s8-h" class="t lbl" style="left:1520px;top:250px;"><span class="w">holding<span id="s8-hh" class="hl blue"></span></span> · espera</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s8"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.755], D=12.453;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s8-title",T[0]+0.1,0.8); hl("#s8-title-hl",T[0]+0.9);
+draw("#s8-path",T[0]+0.6,5.6,"none");
+tl.set(q(".s8-p, #s8-hold"),{opacity:0},0);
+const at=[0.6,1.6,2.8,3.6,4.6,5.6,6.6,7.6];
+at.forEach((t,i)=>{tl.to(q("#s8-p"+i),{opacity:1,duration:0.2},T[0]+t); write("#s8-l"+i,T[0]+t,0.5);});
+tl.fromTo(q("#s8-hold"),{opacity:0,strokeDasharray:"1000 1000",strokeDashoffset:1000},{opacity:1,strokeDashoffset:0,duration:1.2},T[1]+1.0);
+write("#s8-h",T[1]+1.4,0.9); hl("#s8-hh",T[1]+2.3);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s8"]=tl;
+})();
+</script>
+</template>

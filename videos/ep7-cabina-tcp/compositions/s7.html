@@ -1,0 +1,59 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s7" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln ink" pathLength="1" stroke-width="5" fill="rgba(35,48,122,.9)" d="M240,300 L900,300 L900,420 L240,420 Z" id="s7-aip"/><rect id="s7-ag" x="270" y="330" width="280" height="60" rx="8" fill="#138a4f"/><rect id="s7-ar" x="590" y="330" width="280" height="60" rx="8" fill="#e8364f"/><path class="ln ink" pathLength="1" stroke-width="5" fill="rgba(35,48,122,.12)" d="M1060,560 L1660,560 L1660,640 L1060,640 Z" id="s7-acp"/><rect id="s7-c1" x="1080" y="575" width="560" height="50" rx="10" fill="#1e6fe4"/><rect id="s7-c2" x="1080" y="575" width="560" height="50" rx="10" fill="#e8364f"/><rect id="s7-c3" x="1080" y="575" width="560" height="50" rx="10" fill="#e8364f"/><rect id="s7-c4" x="1080" y="575" width="560" height="50" rx="10" fill="#ff8a2a"/><rect id="s7-c5" x="1080" y="575" width="560" height="50" rx="10" fill="#ff8a2a"/></svg>
+<div id="s7-title" class="t h1" style="left:200px;top:96px;"><span class="w">6 · Paneles AIP y ACP<span id="s7-title-hl" class="hl blue"></span></span></div><div id="s7-a" class="t lbl" style="left:960px;top:300px;"><span class="w">AIP<span id="s7-ah" class="hl blue"></span></span> · qué pasa y dónde</div><div id="s7-ag2" class="t sm" style="left:270px;top:440px;color:#138a4f">verde fijo · normal</div><div id="s7-ar2" class="t sm" style="left:590px;top:440px;color:#e8364f">rojo parpadeante · emergencia</div><div id="s7-sm" class="t sm" style="left:960px;top:380px;">también: detector de humos</div><div id="s7-c" class="t lbl" style="left:1060px;top:480px;"><span class="w">ACP<span id="s7-ch" class="hl pink"></span></span> · luces de llamada</div><div id="s7-r0" class="t lbl" style="left:200px;top:560px;font-size:50px;color:#1e6fe4">azul fijo → llamada de pasajero</div><div id="s7-r1" class="t lbl" style="left:200px;top:638px;font-size:50px;color:#e8364f">rojo fijo → llamada normal</div><div id="s7-r2" class="t lbl" style="left:200px;top:716px;font-size:50px;color:#e8364f">rojo parpadeante → llamada de emergencia</div><div id="s7-r3" class="t lbl" style="left:200px;top:794px;font-size:50px;color:#c2560a">naranja fijo → llamada desde el baño</div><div id="s7-r4" class="t lbl" style="left:200px;top:872px;font-size:50px;color:#c2560a">naranja parpadeante → fuego o humo</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s7"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 11.041, 14.42, 20.765], D=27.339;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s7-title",T[0]+0.1,0.9); hl("#s7-title-hl",T[0]+1.0);
+draw("#s7-aip",T[0]+0.4,0.8); write("#s7-a",T[0]+0.8,1.2); hl("#s7-ah",T[0]+2.0);
+tl.set(q("#s7-ag, #s7-ar, #s7-c1, #s7-c2, #s7-c3, #s7-c4, #s7-c5"),{opacity:0},0); tl.set(q("#s7-acp"),{opacity:1},0);
+tl.to(q("#s7-ag"),{opacity:1,duration:0.2},T[0]+3.6); write("#s7-ag2",T[0]+3.6,0.8);
+tl.to(q("#s7-ar"),{opacity:1,duration:0.1,yoyo:true,repeat:Math.round((D-T[0]-6.2)/0.3)},T[0]+6.0); write("#s7-ar2",T[0]+6.0,1.0);
+write("#s7-sm",T[0]+8.6,1.0);
+draw("#s7-acp",T[1]+0.2,0.6); write("#s7-c",T[1]+0.3,0.8); hl("#s7-ch",T[1]+1.1);
+const st=(i,t,flash,end)=>{ if(flash){tl.to(q("#s7-c"+i),{opacity:1,duration:0.1,yoyo:true,repeat:Math.max(1,Math.round((end-t)/0.3)-1)},t);} else {tl.to(q("#s7-c"+i),{opacity:1,duration:0.15},t);} tl.set(q("#s7-c"+i),{opacity:0},end); write("#s7-r"+(i-1),t,0.8); };
+st(1,T[2]+0.1,false,T[2]+2.6); st(2,T[2]+2.6,false,T[2]+4.9); st(3,T[2]+4.9,true,T[3]);
+st(4,T[3]+0.1,false,T[3]+3.6); st(5,T[3]+3.6,true,D);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s7"]=tl;
+})();
+</script>
+</template>

@@ -1,0 +1,75 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Y por último, lo más cercano a tu trabajo: la cabina de pasajeros y el tripulante de cabina, el TCP.",
+      "Su función principal es la seguridad."
+    ]},
+    {"id": "s2", "lines": [
+      "En aviones de diecinueve asientos o menos no hace falta TCP. A partir de veinte asientos, es obligatorio.",
+      "Después se añade un TCP más por cada cincuenta asientos.",
+      "Por ejemplo: con treinta y dos asientos, uno. Con sesenta y seis, dos. Con ciento cuarenta, tres. Con ciento ochenta y nueve, cuatro. Con doscientos treinta y tres, cinco. Y con doscientos sesenta y uno, seis.",
+      "Y si hay dos o más TCP, uno de ellos debe ser sobrecargo."
+    ]},
+    {"id": "s3", "lines": [
+      "La jerarquía de mando a bordo es: comandante, primer oficial, sobrecargo y TCP.",
+      "Un TCP puede ser sobrecargo a partir de un año de experiencia.",
+      "El certificado médico se renueva cada cinco años hasta los cuarenta, cada dos años entre los cuarenta y los cincuenta, y cada año a partir de los cincuenta.",
+      "Y el certificado de TCP caduca tras cinco años de inactividad."
+    ]},
+    {"id": "s4", "lines": [
+      "Los vuelos de corto recorrido, de menos de seis horas, usan aviones de un pasillo. Los de largo recorrido suelen tener dos.",
+      "En un avión de un pasillo, las puertas se nombran por número y lado: uno L, uno R, cuatro L y cuatro R. L es izquierda, y R, derecha.",
+      "Las salidas dos y tres son las overwings: salidas de emergencia sobre el ala, con forma de ventana.",
+      "El sobrecargo va en la uno L, un TCP en la uno R, el TCP con más experiencia en la cuatro L, y otro en la cuatro R.",
+      "Se embarca por la uno L. Y por el lado derecho llegan el catering, el bus de pasajeros y las asistencias."
+    ]},
+    {"id": "s5", "lines": [
+      "Desde el FAP, el flight attendant panel, el TCP controla los sistemas de la cabina. También hay un panel adicional: el AAP.",
+      "Con ellos se regulan las luces, la música y la temperatura.",
+      "Se comprueba el armado de las rampas, y el nivel de agua potable y de aguas residuales.",
+      "Y se revisan los asientos o señales inoperativas, y los fallos del sistema.",
+      "Encima de cada fila de asientos está la PSU, la passenger service unit."
+    ]},
+    {"id": "s6", "lines": [
+      "Las luces de cabina se ajustan siempre en concordancia con el exterior.",
+      "Bright, al cien por cien. Dim uno, al cincuenta por ciento. Y dim dos, al diez por ciento."
+    ]},
+    {"id": "s7", "lines": [
+      "El panel AIP indica qué pasa y dónde pasa. Una notificación normal se ve en verde fijo, y una de emergencia en rojo parpadeante. También se activa con el detector de humos.",
+      "En el panel ACP, cada color tiene su significado.",
+      "Azul fijo: llamada de pasajero. Rojo fijo: llamada normal. Rojo parpadeante: llamada de emergencia.",
+      "Naranja fijo: llamada desde el baño de un pasajero. Y naranja parpadeante: señal de fuego o humo."
+    ]},
+    {"id": "s8", "lines": [
+      "Un vuelo tiene varias fases: taxi, despegue, ascenso, ruta, descenso, aproximación, aterrizaje, y de nuevo taxi.",
+      "Y si todavía no se puede aterrizar, el avión hace holdings, o esperas."
+    ]},
+    {"id": "s9", "lines": [
+      "Los controladores aéreos previenen las colisiones entre aeronaves, en el aire y en el área de maniobras.",
+      "Dan fluidez y orden al tránsito aéreo, asesoran para que el vuelo sea seguro y eficaz, y avisan a búsqueda y salvamento cuando hace falta.",
+      "Y en el espacio aéreo existen zonas restringidas, peligrosas y prohibidas."
+    ]},
+    {"id": "s10", "lines": [
+      "Algo de vocabulario en el aeropuerto. El finger es la pasarela telescópica para subir y bajar del avión, y la cachonda, el tubo amarillo que le da aire frío o caliente.",
+      "Si el avión está en remoto, los pasajeros llegan en jardinera, un bus, y suben por escaleras.",
+      "El pushback empuja al avión hacia atrás, porque no puede retroceder por sí mismo. En el hangar recibe el mantenimiento.",
+      "El handling son los servicios de tierra, y el despachador o coordinador es el enlace entre la terminal y la tripulación."
+    ]},
+    {"id": "s11", "lines": [
+      "Y en vuelo. Un sector, salto o leg va desde que el avión despega hasta que aterriza. E te de es la hora estimada de salida, y e te a, la de llegada.",
+      "Una frustrada, o go around, es cuando el avión no puede aterrizar y vuelve al aire. El amerizaje, o ditching, es aterrizar sobre el agua.",
+      "El vuelo ferry va sin pasajeros. El posicionamiento, o DHC, es cuando la compañía te lleva a otro destino para operar un vuelo.",
+      "La PIL es la lista de información de pasajeros, y la MEL, la lista de equipo mínimo, que decide si el avión puede salir.",
+      "El jumpseat es el asiento plegable del TCP. Y fletear es alquilar un avión de otra compañía."
+    ]},
+    {"id": "s12", "lines": [
+      "Para deletrear sin errores por radio, se usa el alfabeto aeronáutico.",
+      "Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu.",
+      "Por ejemplo, E C se dice Echo Charlie."
+    ]},
+    {"id": "s13", "lines": [
+      "Seguridad, orden y comunicación: eso es el trabajo de un TCP. Mucha suerte en el examen."
+    ]}
+  ]
+}

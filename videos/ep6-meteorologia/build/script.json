@@ -1,0 +1,57 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Antes de cada vuelo se consulta el tiempo, porque afecta al despegue, al viaje y al aterrizaje.",
+      "La meteorología es la ciencia que estudia el comportamiento de la atmósfera."
+    ]},
+    {"id": "s2", "lines": [
+      "La atmósfera es la capa de gases que recubre la Tierra, y está formada por varias capas.",
+      "En la troposfera, la más baja, ocurren casi todos los fenómenos meteorológicos, y por ella vuelan los aviones comerciales.",
+      "Encima está la estratosfera, por donde volaban aviones supersónicos como el Concorde.",
+      "Después vienen la mesosfera, la termosfera o ionosfera, y la exosfera. Y alrededor, el campo magnético de la Tierra: la magnetosfera."
+    ]},
+    {"id": "s3", "lines": [
+      "La humedad es la cantidad de vapor de agua que contiene una masa de aire. Cuando la temperatura baja, ese vapor se condensa: es el rocío.",
+      "Las isobaras son líneas que unen puntos de igual presión atmosférica.",
+      "Con altas presiones tenemos un anticiclón: aire frío que desciende y trae estabilidad.",
+      "Con bajas presiones, una borrasca: aire cálido que asciende.",
+      "Y una DANA es una depresión aislada en niveles altos."
+    ]},
+    {"id": "s4", "lines": [
+      "Cuando se encuentran masas de aire distintas se forman frentes.",
+      "El frente cálido se dibuja en rojo, con semicírculos. Genera estratos: nubes bajas y extendidas.",
+      "El frente frío se dibuja en azul, con triángulos. Genera cumulonimbos: nubes de gran desarrollo vertical."
+    ]},
+    {"id": "s5", "lines": [
+      "Las tormentas se forman en los cumulonimbos.",
+      "Traen aparato eléctrico, precipitaciones, vientos muy fuertes, turbulencia y engelamiento. Por eso los aviones las rodean.",
+      "Los huracanes y los tornados son fenómenos todavía más violentos."
+    ]},
+    {"id": "s6", "lines": [
+      "El engelamiento es la formación de hielo sobre el avión. Se produce cuando hay humedad visible y temperaturas de cero grados o menos.",
+      "Puede ser hielo claro, o clear ice, transparente y duro.",
+      "O hielo granular, también llamado rime, blanco y opaco."
+    ]},
+    {"id": "s7", "lines": [
+      "La turbulencia se clasifica según su intensidad.",
+      "Ligera o débil, de cinco a quince nudos. Moderada, de quince a veinticinco. Fuerte, de más de veinticinco. Y severa.",
+      "Cerca de las corrientes en chorro aparece la turbulencia en aire claro, o CAT: no hay nubes que la anuncien, y por eso no se ve."
+    ]},
+    {"id": "s8", "lines": [
+      "Las corrientes en chorro, o jet streams, son corrientes de aire fuertes y estrechas, a gran altura.",
+      "Los aviones las aprovechan para ganar velocidad.",
+      "Y la cizalladura, o wind shear, es un cambio brusco en la dirección o en la velocidad del viento. Es especialmente peligrosa cerca del suelo, al despegar o aterrizar."
+    ]},
+    {"id": "s9", "lines": [
+      "La visibilidad también es clave. La niebla es una nube baja, con visibilidad de menos de mil metros.",
+      "La neblina es más tenue: de mil a tres mil metros.",
+      "La bruma es una nube de partículas con mucha humedad, con menos de dos mil metros.",
+      "La calima es polvo en suspensión, con visibilidad de dos mil a cinco mil metros.",
+      "El smog mezcla humo y niebla. Y el humo es contaminación, típica de zonas industriales y grandes ciudades."
+    ]},
+    {"id": "s10", "lines": [
+      "Presión, frentes, hielo, viento y visibilidad: saber leer el cielo es parte de volar seguro."
+    ]}
+  ]
+}

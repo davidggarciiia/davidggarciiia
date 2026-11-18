@@ -15,12 +15,12 @@ def lead(ident, d, cls="ink"):
 
 @scene
 def s1():
-    svg = f'<g transform="translate(420,470) scale(1.8)">{PLANE_SIDE}{GEAR}</g>'
+    svg = f'<g id="s1-pl"><g transform="translate(420,470) scale(1.8)">{PLANE_SIDE}{GEAR}</g></g>'
     html = text("s1-title", 200, 120, mark("El avión por dentro y por fuera", "blue", "s1-title-hl"), "h1 big")
     js = """
 tl.set(q(".ln"),{strokeDashoffset:0},0);
 write("#s1-title",T[1]+0.2,1.6); hl("#s1-title-hl",T[1]+1.9,0.5);
-tl.fromTo(q("svg g"),{x:0},{x:-30,duration:D,ease:"none"},0);
+tl.fromTo(q("#s1-pl"),{x:0},{x:-30,duration:D,ease:"none"},0);
 """
     return svg, html, js
 

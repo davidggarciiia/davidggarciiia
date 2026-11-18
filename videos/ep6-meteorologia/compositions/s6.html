@@ -1,0 +1,58 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g transform="translate(520,500)"><path class="ln ink" pathLength="1" stroke-width="5" fill="#fdfdff" d="M0,80 C0,30 110,0 280,0 C460,0 650,50 760,90 C650,92 460,108 280,112 C110,114 0,108 0,80 Z" id="s6-af"/></g><path id="s6-clear" fill="rgba(150,215,255,.55)" stroke="#1ea7e4" stroke-width="3" d="M528,540 C520,500 560,480 620,478 L640,494 C590,496 556,512 548,546 C546,570 560,590 600,600 L590,618 C540,606 530,580 528,540 Z"/><g id="s6-rime"><circle cx="512" cy="560" r="14" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="520" cy="530" r="12" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="540" cy="505" r="13" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="566" cy="488" r="11" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="596" cy="480" r="12" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="506" cy="590" r="12" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/><circle cx="522" cy="612" r="11" fill="#ffffff" stroke="#7d89b0" stroke-width="2"/></g><path class="ln ink" pathLength="1" stroke-width="5" fill="none" d="M1560,300 L1560,600 M1600,300 L1600,600 M1560,300 Q1580,270 1600,300" id="s6-th"/><circle cx="1580" cy="640" r="40" fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="5" id="s6-bulb"/><g id="s6-drops"><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M300,420 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M360,470 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/><path fill="rgba(66,188,240,.7)" stroke="#23307a" stroke-width="3" d="M290,520 c-14,22 -14,36 0,36 c14,0 14,-14 0,-36 Z"/></g></svg>
+<div id="s6-title" class="t h1" style="left:200px;top:96px;"><span class="w">5 · Engelamiento<span id="s6-title-hl" class="hl pink"></span></span></div><div id="s6-a" class="t lbl" style="left:200px;top:260px;">humedad visible + <span class="w">≤ 0 °C<span id="s6-ah" class="hl blue"></span></span></div><div id="s6-t" class="t lbl" style="left:1640px;top:560px;">0 °C</div><div id="s6-c" class="t lbl" style="left:300px;top:760px;"><span class="w">Clear ice<span id="s6-ch" class="hl blue"></span></span></div><div id="s6-c2" class="t sm" style="left:300px;top:830px;">transparente y duro</div><div id="s6-r" class="t lbl" style="left:1000px;top:760px;"><span class="w">Granular (rime)<span id="s6-rh" class="hl pink"></span></span></div><div id="s6-r2" class="t sm" style="left:1000px;top:830px;">blanco y opaco</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s6"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 8.609, 12.287], D=16.323;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s6-title",T[0]+0.1,0.8); hl("#s6-title-hl",T[0]+0.9);
+draw("#s6-af",T[0]+0.6,1.0);
+tl.set(q("#s6-clear, #s6-rime, #s6-drops, #s6-bulb"),{opacity:0},0);
+show("#s6-drops",T[0]+4.4,0.4); write("#s6-a",T[0]+4.4,1.4); hl("#s6-ah",T[0]+5.8);
+draw("#s6-th",T[0]+6.0,0.6); show("#s6-bulb",T[0]+6.4,0.3); write("#s6-t",T[0]+6.6,0.4);
+show("#s6-clear",T[1]+0.6,0.6); write("#s6-c",T[1]+0.4,0.6); hl("#s6-ch",T[1]+1.0); write("#s6-c2",T[1]+2.0,1.0);
+tl.to(q("#s6-clear"),{opacity:0,duration:0.4},T[2]-0.2);
+tl.to(q("#s6-rime circle"),{opacity:1,duration:0.15,stagger:0.1},T[2]+0.4); tl.set(q("#s6-rime"),{opacity:1},T[2]+0.4);
+write("#s6-r",T[2]+0.4,0.8); hl("#s6-rh",T[2]+1.2); write("#s6-r2",T[2]+1.5,0.8);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s6"]=tl;
+})();
+</script>
+</template>

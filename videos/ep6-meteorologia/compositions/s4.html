@@ -1,0 +1,58 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s4" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln " pathLength="1" stroke-width="7" fill="none" d="M240,540 L860,540" id="s4-wl" style="stroke:#e8364f"/><g id="s4-semi"><path fill="#e8364f" d="M260,540 a26,26 0 0 1 52,0 Z"/><path fill="#e8364f" d="M370,540 a26,26 0 0 1 52,0 Z"/><path fill="#e8364f" d="M480,540 a26,26 0 0 1 52,0 Z"/><path fill="#e8364f" d="M590,540 a26,26 0 0 1 52,0 Z"/><path fill="#e8364f" d="M700,540 a26,26 0 0 1 52,0 Z"/><path fill="#e8364f" d="M810,540 a26,26 0 0 1 52,0 Z"/></g><path class="ln " pathLength="1" stroke-width="7" fill="none" d="M1080,540 L1700,540" id="s4-cl" style="stroke:#1e6fe4"/><g id="s4-tri"><path fill="#1e6fe4" d="M1100,540 L1126,494 L1152,540 Z"/><path fill="#1e6fe4" d="M1210,540 L1236,494 L1262,540 Z"/><path fill="#1e6fe4" d="M1320,540 L1346,494 L1372,540 Z"/><path fill="#1e6fe4" d="M1430,540 L1456,494 L1482,540 Z"/><path fill="#1e6fe4" d="M1540,540 L1566,494 L1592,540 Z"/><path fill="#1e6fe4" d="M1650,540 L1676,494 L1702,540 Z"/></g><path id="s4-st" fill="rgba(200,205,225,.8)" stroke="#23307a" stroke-width="4" d="M220,720 C260,690 840,690 880,720 C900,750 860,770 820,770 L280,770 C230,770 200,750 220,720 Z"/><g id="s4-cb"><g transform="translate(1520,960) scale(0.6)"><path fill="rgba(240,242,250,.95)" stroke="#23307a" stroke-width="8.3" d="M-160,0 C-200,-10 -190,-70 -140,-70 C-150,-140 -80,-170 -50,-130 C-60,-230 -20,-300 -40,-360 L-230,-380 C-260,-400 -230,-420 -200,-420 L230,-420 C260,-420 270,-395 240,-380 L50,-360 C30,-300 70,-230 60,-140 C100,-180 170,-140 150,-80 C200,-80 210,-10 160,0 Z"/></g></g></svg>
+<div id="s4-title" class="t h1" style="left:200px;top:96px;"><span class="w">3 · Frentes<span id="s4-title-hl" class="hl pink"></span></span></div><div id="s4-w" class="t lbl" style="left:240px;top:400px;"><span class="w">Frente cálido<span id="s4-wh" class="hl pink"></span></span></div><div id="s4-w2" class="t sm" style="left:240px;top:790px;">estratos · nubes bajas y extendidas</div><div id="s4-c" class="t lbl" style="left:1080px;top:400px;"><span class="w">Frente frío<span id="s4-ch" class="hl blue"></span></span></div><div id="s4-c2" class="t sm" style="left:1080px;top:630px;">cumulonimbos</div><div id="s4-c3" class="t sm" style="left:1080px;top:680px;">desarrollo vertical</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s4"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 4.47, 10.665], D=17.709;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s4-title",T[0]+0.1,0.6); hl("#s4-title-hl",T[0]+0.7);
+tl.set(q("#s4-semi path, #s4-tri path, #s4-st, #s4-cb"),{opacity:0},0);
+draw("#s4-wl",T[1]+0.4,0.8); tl.to(q("#s4-semi path"),{opacity:1,duration:0.15,stagger:0.12},T[1]+1.0);
+write("#s4-w",T[1]+0.2,0.7); hl("#s4-wh",T[1]+0.9);
+tl.fromTo(q("#s4-st"),{opacity:0,scaleX:0.3,transformOrigin:"50% 50%"},{opacity:1,scaleX:1,duration:0.8},T[1]+3.4); write("#s4-w2",T[1]+3.8,1.4);
+draw("#s4-cl",T[2]+0.4,0.8); tl.to(q("#s4-tri path"),{opacity:1,duration:0.15,stagger:0.12},T[2]+1.0);
+write("#s4-c",T[2]+0.2,0.7); hl("#s4-ch",T[2]+0.9);
+tl.fromTo(q("#s4-cb"),{opacity:0,scaleY:0.2,transformOrigin:"50% 100%"},{opacity:1,scaleY:1,duration:1.2,ease:"power2.out"},T[2]+3.4);
+write("#s4-c2",T[2]+3.6,0.8); write("#s4-c3",T[2]+4.6,0.9);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s4"]=tl;
+})();
+</script>
+</template>
