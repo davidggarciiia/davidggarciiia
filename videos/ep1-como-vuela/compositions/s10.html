@@ -1,0 +1,88 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s10" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<path class="ink" fill="none" stroke-width="4" d="M0,790 L1920,790"/>
+<path id="s10-dash" class="ink" fill="none" stroke-width="5" stroke-dasharray="70 60" d="M0,822 L1920,822"/>
+<g id="s10-lift"><g id="s10-rot"><g transform="translate(640,614) scale(1.2)">
+<path class="ln ink" pathLength="1" stroke-width="4" d="M28,112 C24,92 52,80 96,78 L462,74 L528,22 L566,22 L556,76 L584,80 C598,84 598,98 584,102 L520,114 L110,124 C60,126 30,124 28,112 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3" d="M56,92 L84,85 L90,95 L60,99 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M240,110 L392,102 L346,140 L262,142 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M262,124 L322,124 C334,124 334,146 322,146 L262,146 C250,146 250,124 262,124 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M494,86 L580,72 L586,82 L518,94 Z"/>
+<path class="ink" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 22" d="M128,93 L440,89"/>
+
+<path class="ink" fill="none" stroke-width="3.5" d="M150,124 L150,140 M390,116 L390,140"/>
+<circle class="ink" fill="#fdfdff" stroke-width="3.5" cx="150" cy="146" r="7"/>
+<circle class="ink" fill="#fdfdff" stroke-width="3.5" cx="390" cy="146" r="7"/>
+
+<path class="pk" fill="none" stroke-width="5" stroke-linecap="round" d="M346,140 L362,154 M98,98 L84,110"/></g></g></g>
+<path class="ink" fill="none" stroke-width="4" d="M1000,330 L1720,330 L1720,380 L1000,380 Z"/>
+<rect id="s10-speed" x="1000" y="330" width="720" height="50" fill="rgba(66,188,240,.55)"/>
+<path class="ln pk" pathLength="1" stroke-width="5" d="M1432,312 L1432,398" id="s10-m1"/>
+<path class="ln pk" pathLength="1" stroke-width="5" d="M1504,312 L1504,398" id="s10-m2"/>
+<path class="ln pk" pathLength="1" stroke-width="5" d="M1612,312 L1612,398" id="s10-m3"/>
+</svg>
+<div id="s10-title" class="t h1" style="left:200px;top:96px;"><span class="w">9 · El despegue<span id="s10-title-hl" class="hl pink"></span></span></div><div id="s10-vel" class="t sm" style="left:1000px;top:250px;">velocidad</div><div id="s10-k1" class="t lbl" style="left:1400px;top:404px;color:#ff3d96">V1</div><div id="s10-k2" class="t lbl" style="left:1478px;top:404px;color:#ff3d96">VR</div><div id="s10-k3" class="t lbl" style="left:1590px;top:404px;color:#ff3d96">V2</div><div id="s10-fl" class="t sm" style="left:200px;top:880px;">flaps y slats extendidos</div><div id="s10-d1" class="t lbl" style="left:200px;top:290px;"><span class="w">V1<span id="s10-d1-hl" class="hl pink"></span></span> · decisión: ya no se interrumpe</div><div id="s10-d2" class="t lbl" style="left:200px;top:370px;"><span class="w">VR<span id="s10-d2-hl" class="hl pink"></span></span> · rotación: morro arriba</div><div id="s10-d3" class="t lbl" style="left:200px;top:450px;"><span class="w">V2<span id="s10-d3-hl" class="hl pink"></span></span> · seguridad: asciende</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s10"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 3.105, 7.167, 12.423, 17.296], D=22.463;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s10-title",T[0]+0.1,0.9); hl("#s10-title-hl",T[0]+1.0);
+write("#s10-vel",T[0]+1.2,0.6);
+tl.fromTo(q("#s10-speed"),{scaleX:0,transformOrigin:"0% 50%"},{scaleX:0.6,duration:T[2]+0.6-T[1],ease:"power1.in"},T[1]);
+tl.to(q("#s10-speed"),{scaleX:0.7,duration:T[3]+0.4-(T[2]+0.6),ease:"none"},T[2]+0.6);
+tl.to(q("#s10-speed"),{scaleX:0.85,duration:T[4]+0.6-(T[3]+0.4),ease:"none"},T[3]+0.4);
+tl.to(q("#s10-speed"),{scaleX:0.92,duration:D-(T[4]+0.6),ease:"none"},T[4]+0.6);
+tl.fromTo(q("#s10-dash"),{strokeDashoffset:0},{strokeDashoffset:-6500,duration:D-T[1],ease:"power1.in"},T[1]);
+write("#s10-fl",T[1]+1.4,1.0);
+draw("#s10-m1",T[2]+0.5,0.3); write("#s10-k1",T[2]+0.6,0.3);
+write("#s10-d1",T[2]+0.8,1.4); hl("#s10-d1-hl",T[2]+1.0,0.3);
+draw("#s10-m2",T[3]+0.3,0.3); write("#s10-k2",T[3]+0.4,0.3);
+write("#s10-d2",T[3]+0.6,1.2); hl("#s10-d2-hl",T[3]+0.8,0.3);
+tl.set(q("#s10-rot"),{svgOrigin:"1108 790",rotation:0},0);
+tl.to(q("#s10-rot"),{rotation:9,svgOrigin:"1108 790",duration:1.4,ease:"power2.inOut"},T[3]+1.6);
+draw("#s10-m3",T[4]+0.5,0.3); write("#s10-k3",T[4]+0.6,0.3);
+write("#s10-d3",T[4]+0.8,1.2); hl("#s10-d3-hl",T[4]+1.0,0.3);
+tl.fromTo(q("#s10-lift"),{x:0,y:0},{x:-260,y:-330,duration:D-(T[4]+0.4),ease:"power2.in"},T[4]+0.4);
+tl.to(q("#s10-fl"),{opacity:0,duration:0.3},T[4]+0.4);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s10"]=tl;
+})();
+</script>
+</template>

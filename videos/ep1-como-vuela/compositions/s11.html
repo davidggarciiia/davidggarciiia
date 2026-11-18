@@ -1,0 +1,56 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s11" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<g transform="translate(560,300) scale(1.05)"><path class="ln ink" pathLength="1" stroke-width="5" fill="#fdfdff" d="M0,80 C0,30 110,0 280,0 C460,0 650,50 760,90 C650,92 460,108 280,112 C110,114 0,108 0,80 Z" id="s11-af"/></g>
+<g id="s11-L" class="arr"><path class="ln pk shaft" pathLength="1" stroke-width="9" stroke-linecap="round" d="M960.0,330.0 L960.0,130.0"/><path class="ln pk head" pathLength="1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M975.7,162.4 L960.0,130.0 L944.3,162.4"/></g>
+</svg>
+<div id="s11-m" class="t big" style="left:760px;top:170px;color:#ff3d96;font-size:170px">−</div><div id="s11-m2" class="t big" style="left:1180px;top:180px;color:#ff3d96;font-size:170px">−</div><div id="s11-p" class="t big" style="left:840px;top:410px;color:#1ea7e4;font-size:150px">+</div><div id="s11-p2" class="t big" style="left:1100px;top:410px;color:#1ea7e4;font-size:150px">+</div><div id="s11-l1" class="t big" style="left:0px;top:620px;width:1920px;text-align:center">Los aviones vuelan por la</div><div id="s11-l2" class="t big" style="left:0px;top:760px;width:1920px;text-align:center"><span class="w">diferencia de presión<span id="s11-hl" class="hl pink"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s11"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.094], D=10.746;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+draw("#s11-af",T[0]+0.2,1.0);
+show("#s11-m, #s11-m2",T[0]+1.6,0.3); show("#s11-p, #s11-p2",T[0]+3.6,0.3);
+draw("#s11-L path",T[0]+4.6,0.7);
+write("#s11-l1",T[1]+0.1,1.2); write("#s11-l2",T[1]+1.2,1.1); hl("#s11-hl",T[1]+2.3,0.5);
+
+
+tl.set({},{},D);
+window.__timelines["s11"]=tl;
+})();
+</script>
+</template>

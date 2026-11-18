@@ -1,0 +1,78 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<g id="s6-w1" class="arr"><path class="ln bl shaft" pathLength="1" stroke-width="5" stroke-linecap="round" d="M150.0,480.0 L400.0,480.0"/><path class="ln bl head" pathLength="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M378.4,490.4 L400.0,480.0 L378.4,469.6"/></g><g id="s6-w2" class="arr"><path class="ln bl shaft" pathLength="1" stroke-width="5" stroke-linecap="round" d="M150.0,560.0 L400.0,560.0"/><path class="ln bl head" pathLength="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M378.4,570.4 L400.0,560.0 L378.4,549.6"/></g><g id="s6-w3" class="arr"><path class="ln bl shaft" pathLength="1" stroke-width="5" stroke-linecap="round" d="M150.0,640.0 L400.0,640.0"/><path class="ln bl head" pathLength="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M378.4,650.4 L400.0,640.0 L378.4,629.6"/></g>
+<path class="ln inkp" pathLength="1" stroke-width="3" stroke-dasharray="1 1" d="M520,560 L1620,560" id="s6-ref"/>
+<g id="s6-rot"><g transform="translate(520,448) scale(1.4)">
+<path class="ln ink" pathLength="1" stroke-width="5" fill="#fdfdff" d="M0,80 C0,30 110,0 280,0 C460,0 650,50 760,90 C650,92 460,108 280,112 C110,114 0,108 0,80 Z" id="s6-af"/>
+<path class="inkp" fill="none" stroke-width="3" stroke-dasharray="10 10" d="M0,80 L760,90"/>
+</g></g>
+<path class="ln pk" pathLength="1" stroke-width="5" fill="none" d="M880,560 A360,360 0 0 1 858.3,683.1" id="s6-arc"/>
+<path class="ln pk" pathLength="1" stroke-width="5" d="M1150,690 c20,-30 50,-10 40,10 c-10,22 -40,10 -30,-10 M1260,720 c22,-32 54,-10 44,12 c-10,24 -44,10 -32,-12 M1370,755 c22,-30 52,-8 42,12 c-10,22 -40,8 -30,-12" id="s6-swirl"/>
+<g id="s6-liftg"><g id="s6-lift" class="arr"><path class="ln pk shaft" pathLength="1" stroke-width="10" stroke-linecap="round" d="M912.0,500.0 L912.0,230.0"/><path class="ln pk head" pathLength="1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M929.4,266.0 L912.0,230.0 L894.6,266.0"/></g></g>
+</svg>
+<div id="s6-title" class="t h1" style="left:200px;top:96px;"><span class="w">5 · Ángulo de ataque<span id="s6-title-hl" class="hl pink"></span></span></div><div id="s6-wind" class="t sm" style="left:120px;top:680px;">viento relativo</div><div id="s6-alpha" class="t lbl" style="left:900px;top:590px;color:#ff3d96">α</div><div id="s6-def" class="t lbl" style="left:200px;top:820px;"><span class="w">α<span id="s6-def-hl" class="hl pink"></span></span> = ángulo entre la cuerda y el viento</div><div id="s6-more" class="t lbl" style="left:1060px;top:220px;">+ ángulo → + sustentación</div><div id="s6-stall" class="t lbl" style="left:1060px;top:310px;"><span class="w">ENTRADA EN PÉRDIDA<span id="s6-stall-hl" class="hl pink"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s6"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.43, 8.639], D=16.088;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s6-title",T[0]+0.1,0.9); hl("#s6-title-hl",T[0]+1.0);
+draw("#s6-w1 path, #s6-w2 path, #s6-w3 path",T[0]+0.5,0.5); write("#s6-wind",T[0]+0.9,0.7);
+draw("#s6-af",T[0]+0.6,1.2); draw("#s6-ref",T[0]+1.6,0.6);
+const rot=(a,t,d)=>tl.to(q("#s6-rot"),{rotation:a,svgOrigin:"520 560",duration:d,ease:"power2.inOut"},t);
+tl.set(q("#s6-rot"),{rotation:0,svgOrigin:"520 560"},0);
+tl.set(q("#s6-arc"),{strokeDashoffset:1},0);
+const arc=(a,t,d)=>tl.to(q("#s6-arc"),{strokeDashoffset:1-a/20,duration:d,ease:"power2.inOut"},t);
+rot(6,T[0]+2.4,0.9); arc(6,T[0]+2.4,0.9); show("#s6-alpha",T[0]+3.0);
+write("#s6-def",T[0]+2.6,1.6); hl("#s6-def-hl",T[0]+4.2,0.3);
+tl.set(q("#s6-liftg"),{scaleY:0.55,svgOrigin:"912 500"},0);
+draw("#s6-lift path",T[1]+0.1,0.5);
+rot(12,T[1]+0.5,1.0); arc(12,T[1]+0.5,1.0);
+tl.to(q("#s6-liftg"),{scaleY:1,svgOrigin:"912 500",duration:1.0,ease:"power2.out"},T[1]+0.7);
+write("#s6-more",T[1]+1.0,1.0);
+rot(18,T[2]+1.4,1.0); arc(18,T[2]+1.4,1.0);
+draw("#s6-swirl",T[2]+2.6,1.0);
+tl.to(q("#s6-liftg"),{scaleY:0.3,svgOrigin:"912 500",duration:0.8,ease:"power2.in"},T[2]+3.2);
+tl.to(q("#s6-lift path"),{opacity:0.35,duration:0.5},T[2]+3.6);
+write("#s6-stall",T[2]+4.2,0.9); hl("#s6-stall-hl",T[2]+5.1,0.4);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s6"]=tl;
+})();
+</script>
+</template>

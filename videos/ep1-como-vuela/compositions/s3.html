@@ -1,0 +1,69 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<g id="s3-flowg"><path class="s3-flow bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 30" d="M250,520 L480,520 C560,520 590,590 660,590 L820,590 C890,590 920,520 1000,520 L1230,520"/><path class="s3-flow bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 30" d="M250,640 L1230,640"/><path class="s3-flow bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 30" d="M250,760 L480,760 C560,760 590,690 660,690 L820,690 C890,690 920,760 1000,760 L1230,760"/></g>
+<path class="ln ink" pathLength="1" stroke-width="5" d="M240,440 L480,440 C560,440 590,550 660,550 L820,550 C890,550 920,440 1000,440 L1240,440" id="s3-top"/>
+<path class="ln ink" pathLength="1" stroke-width="5" d="M240,840 L480,840 C560,840 590,730 660,730 L820,730 C890,730 920,840 1000,840 L1240,840" id="s3-bot"/>
+<g id="s3-a1" class="arr"><path class="ln ink shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M300.0,640.0 L440.0,640.0"/><path class="ln ink head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M416.6,651.3 L440.0,640.0 L416.6,628.7"/></g>
+<g id="s3-a2" class="arr"><path class="ln pk shaft" pathLength="1" stroke-width="9" stroke-linecap="round" d="M640.0,640.0 L880.0,640.0"/><path class="ln pk head" pathLength="1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M849.4,654.8 L880.0,640.0 L849.4,625.2"/></g>
+<g id="s3-a3" class="arr"><path class="ln ink shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M1060.0,640.0 L1200.0,640.0"/><path class="ln ink head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M1176.6,651.3 L1200.0,640.0 L1176.6,628.7"/></g>
+<path class="ln ink" pathLength="1" stroke-width="4" d="M342,440 L342,210 M378,210 L378,440" id="s3-m1-tube"/><rect id="s3-m1-liq" x="346" y="250" width="28" height="190" fill="rgba(66,188,240,.65)"/><path class="ln ink" pathLength="1" stroke-width="4" d="M722,550 L722,320 M758,320 L758,550" id="s3-m2-tube"/><rect id="s3-m2-liq" x="726" y="500" width="28" height="50" fill="rgba(66,188,240,.65)"/><path class="ln ink" pathLength="1" stroke-width="4" d="M1102,440 L1102,210 M1138,210 L1138,440" id="s3-m3-tube"/><rect id="s3-m3-liq" x="1106" y="270" width="28" height="170" fill="rgba(66,188,240,.65)"/>
+</svg>
+<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Venturi y Bernoulli<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-v1" class="t lbl" style="left:1320px;top:300px;"><span class="w">Venturi<span id="s3-v-hl" class="hl blue"></span></span></div><div id="s3-v2" class="t sm" style="left:1320px;top:372px;">paso estrecho</div><div id="s3-v3" class="t sm" style="left:1320px;top:428px;">→ el aire se acelera</div><div id="s3-b1" class="t lbl" style="left:1320px;top:540px;"><span class="w">Bernoulli<span id="s3-b-hl" class="hl pink"></span></span></div><div id="s3-b2" class="t sm" style="left:1320px;top:612px;">más velocidad</div><div id="s3-b3" class="t sm" style="left:1320px;top:668px;">→ menos presión</div><div id="s3-k" class="t lbl" style="left:1320px;top:790px;">+ velocidad</div><div id="s3-k2" class="t lbl" style="left:1320px;top:860px;"><span class="w">− presión<span id="s3-k-hl" class="hl pink"></span></span></div><div id="s3-p" class="t sm" style="left:560px;top:236px;">presión</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s3"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.323, 9.3, 13.618], D=17.739;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s3-title",T[0]+0.2,1.0); hl("#s3-title-hl",T[0]+1.2);
+draw("#s3-top",T[0]+1.4,1.2); draw("#s3-bot",T[0]+1.6,1.2);
+show("#s3-flowg",T[0]+2.6,0.6);
+tl.fromTo(q(".s3-flow"),{strokeDashoffset:0},{strokeDashoffset:-44*Math.round(D*2.2),duration:D,ease:"none"},0);
+draw("#s3-a1 path",T[1]+0.2,0.4); draw("#s3-a2 path",T[1]+1.3,0.6); draw("#s3-a3 path",T[1]+2.6,0.4);
+write("#s3-v1",T[1]+0.0,0.6); hl("#s3-v-hl",T[1]+0.6); write("#s3-v2",T[1]+0.9,0.6); write("#s3-v3",T[1]+1.9,0.9);
+const liq=(s,t)=>tl.fromTo(q(s),{scaleY:0,transformOrigin:"50% 100%"},{scaleY:1,duration:0.9,ease:"power2.out"},t);
+draw("#s3-m1-tube, #s3-m2-tube, #s3-m3-tube",T[2]-0.2,0.7);
+write("#s3-p",T[2]+0.3,0.6);
+liq("#s3-m1-liq",T[2]+0.9); liq("#s3-m2-liq",T[2]+1.4); liq("#s3-m3-liq",T[2]+1.9);
+write("#s3-b1",T[2]+0.1,0.7); hl("#s3-b-hl",T[2]+0.8); write("#s3-b2",T[2]+1.4,0.6); write("#s3-b3",T[2]+2.3,0.8);
+write("#s3-k",T[3]+0.1,0.6); write("#s3-k2",T[3]+0.8,0.6); hl("#s3-k-hl",T[3]+1.4,0.45);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s3"]=tl;
+})();
+</script>
+</template>

@@ -1,0 +1,78 @@
+{
+  "voice": "ef_dora",
+  "speed": 1.0,
+  "gap": 0.35,
+  "lead": 0.6,
+  "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Un avión comercial pesa decenas de toneladas.",
+      "Y aun así, se levanta del suelo y se mantiene en el aire.",
+      "¿Cómo lo consigue? Vamos a verlo paso a paso."
+    ]},
+    {"id": "s2", "lines": [
+      "Todo empieza con algo que no vemos: el aire.",
+      "La atmósfera tiene un setenta y ocho por ciento de nitrógeno, un veintiuno por ciento de oxígeno, y un uno por ciento de otros gases, sobre todo argón.",
+      "Para que todos usen la misma referencia, existe la atmósfera estándar internacional: la ISA.",
+      "A nivel del mar, marca quince grados y mil trece coma dos hectopascales.",
+      "Y por cada mil pies que subimos, la temperatura baja unos dos grados.",
+      "Con la altura bajan la temperatura, la presión y la densidad del aire."
+    ]},
+    {"id": "s3", "lines": [
+      "El aire se comporta como un fluido, y los fluidos cumplen dos reglas clave.",
+      "Efecto Venturi: cuando el paso se estrecha, el aire se acelera.",
+      "Principio de Bernoulli: cuando el aire va más rápido, su presión baja.",
+      "Más velocidad, menos presión. Quédate con esta idea."
+    ]},
+    {"id": "s4", "lines": [
+      "Ahora mira un ala de lado. Esta forma es su perfil.",
+      "Delante está el borde de ataque, y detrás, el borde de salida.",
+      "La parte de arriba se llama extradós, y la de abajo, intradós.",
+      "La línea recta que une los dos bordes es la cuerda.",
+      "Y la distancia de punta a punta de las alas es la envergadura."
+    ]},
+    {"id": "s5", "lines": [
+      "Cuando el ala avanza, el aire que pasa por encima recorre la curva y va más rápido.",
+      "Más velocidad, menos presión: encima del ala, la presión baja.",
+      "Por debajo, el aire va más lento y la presión es mayor.",
+      "Esa diferencia de presión empuja el ala hacia arriba. Es la sustentación."
+    ]},
+    {"id": "s6", "lines": [
+      "El ángulo de ataque es el ángulo que forma la cuerda del ala con el aire que le llega.",
+      "Si lo aumentamos, el ala genera más sustentación.",
+      "Pero si es demasiado grande, el aire se despega del extradós y la sustentación se pierde. Es la entrada en pérdida."
+    ]},
+    {"id": "s7", "lines": [
+      "En vuelo, sobre el avión actúan cuatro fuerzas.",
+      "La sustentación, hacia arriba, contra el peso, hacia abajo.",
+      "El empuje de los motores, hacia delante, contra la resistencia, hacia atrás.",
+      "La resistencia la genera el propio cuerpo del avión al moverse por el aire.",
+      "Para despegar, la sustentación tiene que vencer al peso, y el empuje, a la resistencia."
+    ]},
+    {"id": "s8", "lines": [
+      "Para dirigirlo, el avión gira sobre tres ejes.",
+      "Sobre el eje longitudinal, de morro a cola, el avión alabea. Lo controlan los alerones.",
+      "Sobre el eje transversal, de punta a punta de ala, cabecea. Lo controla el timón de profundidad.",
+      "Y sobre el eje vertical, guiña. Lo controla el timón de dirección, que el piloto mueve con los pedales.",
+      "Alerones, timón de profundidad y timón de dirección: son los mandos primarios."
+    ]},
+    {"id": "s9", "lines": [
+      "Los mandos secundarios ayudan en momentos concretos del vuelo.",
+      "Los flaps, en el borde de salida, aumentan la curvatura del ala, para dar más sustentación a poca velocidad.",
+      "Los slats, en el borde de ataque, permiten volar más despacio sin entrar en pérdida.",
+      "Los spoilers se levantan sobre el ala y frenan el avión: son el freno aerodinámico.",
+      "Y los compensadores contrarrestan la fuerza que el piloto tendría que hacer sobre los mandos."
+    ]},
+    {"id": "s10", "lines": [
+      "Ahora, juntémoslo todo en un despegue.",
+      "El avión acelera por la pista con los flaps y los slats extendidos.",
+      "Uve uno, la velocidad de decisión: a partir de aquí, el despegue ya no se interrumpe.",
+      "Uve erre, la rotación: el piloto levanta el morro y aumenta el ángulo de ataque.",
+      "Uve dos, la velocidad de seguridad: el avión ya asciende de forma segura."
+    ]},
+    {"id": "s11", "lines": [
+      "En resumen: el ala acelera el aire por encima, allí la presión baja, y esa diferencia sostiene el avión.",
+      "Los aviones vuelan por la diferencia de presión."
+    ]}
+  ]
+}

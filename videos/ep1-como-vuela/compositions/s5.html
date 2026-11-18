@@ -1,0 +1,68 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s5" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<g id="s5-lines">
+<path class="s5-up bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 28" d="M120,470 C300,470 400,420 820,410 C1150,405 1400,470 1780,500"/><path class="s5-up bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 28" d="M120,380 C320,380 420,340 820,330 C1150,325 1400,390 1780,420"/>
+<path class="s5-lo bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 28" d="M120,660 C300,660 400,700 820,700 C1150,700 1400,672 1780,660"/><path class="s5-lo bl" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 28" d="M120,760 C300,760 420,790 820,790 C1150,790 1400,770 1780,760"/>
+</g>
+<g transform="translate(380,500) scale(1.5)"><path class="ink" fill="#fdfdff" stroke-width="5" d="M0,80 C0,30 110,0 280,0 C460,0 650,50 760,90 C650,92 460,108 280,112 C110,114 0,108 0,80 Z"/></g>
+<g id="s5-lift" class="arr"><path class="ln pk shaft" pathLength="1" stroke-width="10" stroke-linecap="round" d="M990.0,540.0 L990.0,190.0"/><path class="ln pk head" pathLength="1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M1009.1,229.6 L990.0,190.0 L970.9,229.6"/></g>
+</svg>
+<div id="s5-title" class="t h1" style="left:200px;top:96px;"><span class="w">4 · La sustentación<span id="s5-title-hl" class="hl blue"></span></span></div><div id="s5-fast" class="t lbl" style="left:1240px;top:250px;">arriba: <span class="w">más rápido<span id="s5-fast-hl" class="hl blue"></span></span></div><div id="s5-m1" class="t big" style="left:640px;top:300px;color:#ff3d96;font-size:170px">−</div><div id="s5-m2" class="t big" style="left:880px;top:286px;color:#ff3d96;font-size:170px">−</div><div id="s5-m3" class="t big" style="left:1300px;top:302px;color:#ff3d96;font-size:170px">−</div><div id="s5-lowp" class="t lbl" style="left:1240px;top:320px;"><span class="w">menos presión<span id="s5-lowp-hl" class="hl pink"></span></span></div><div id="s5-p1" class="t big" style="left:620px;top:720px;color:#1ea7e4;font-size:150px">+</div><div id="s5-p2" class="t big" style="left:900px;top:720px;color:#1ea7e4;font-size:150px">+</div><div id="s5-p3" class="t big" style="left:1240px;top:700px;color:#1ea7e4;font-size:150px">+</div><div id="s5-slow" class="t lbl" style="left:260px;top:860px;">abajo: más lento → <span class="w">más presión<span id="s5-slow-hl" class="hl blue"></span></span></div><div id="s5-L" class="t lbl" style="left:1040px;top:170px;"><span class="w">SUSTENTACIÓN<span id="s5-L-hl" class="hl pink"></span></span> (Lift)</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s5"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.729, 9.663, 13.213], D=18.315;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s5-title",T[0]+0.1,0.9); hl("#s5-title-hl",T[0]+1.0);
+show("#s5-lines",T[0]+0.6,0.6);
+tl.fromTo(q(".s5-up"),{strokeDashoffset:0},{strokeDashoffset:-44*Math.round(D*3.4),duration:D,ease:"none"},0);
+tl.fromTo(q(".s5-lo"),{strokeDashoffset:0},{strokeDashoffset:-44*Math.round(D*1.5),duration:D,ease:"none"},0);
+write("#s5-fast",T[0]+2.8,0.9); hl("#s5-fast-hl",T[0]+3.7);
+const pop=(s,t)=>tl.fromTo(q(s),{scale:0.2,opacity:0},{scale:1,opacity:1,duration:0.35,ease:"back.out(2)"},t);
+pop("#s5-m1",T[1]+1.4); pop("#s5-m2",T[1]+1.65); pop("#s5-m3",T[1]+1.9);
+write("#s5-lowp",T[1]+2.0,0.8); hl("#s5-lowp-hl",T[1]+2.8);
+pop("#s5-p1",T[2]+0.9); pop("#s5-p2",T[2]+1.15); pop("#s5-p3",T[2]+1.4);
+write("#s5-slow",T[2]+0.4,1.4); hl("#s5-slow-hl",T[2]+1.9);
+draw("#s5-lift .shaft",T[3]+0.6,1.2,"power2.out"); draw("#s5-lift .head",T[3]+1.7,0.3);
+write("#s5-L",T[3]+2.9,0.9); hl("#s5-L-hl",T[3]+3.7,0.45);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s5"]=tl;
+})();
+</script>
+</template>
