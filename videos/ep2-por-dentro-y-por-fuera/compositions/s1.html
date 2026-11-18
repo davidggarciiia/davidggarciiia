@@ -1,0 +1,63 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s1" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g transform="translate(420,470) scale(1.8)">
+<path class="ln ink" pathLength="1" stroke-width="4" d="M28,112 C24,92 52,80 96,78 L462,74 L528,22 L566,22 L556,76 L584,80 C598,84 598,98 584,102 L520,114 L110,124 C60,126 30,124 28,112 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3" d="M56,92 L84,85 L90,95 L60,99 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M240,110 L392,102 L346,140 L262,142 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M262,124 L322,124 C334,124 334,146 322,146 L262,146 C250,146 250,124 262,124 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M494,86 L580,72 L586,82 L518,94 Z"/>
+<path class="ink" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 22" d="M128,93 L440,89"/>
+
+<path class="ink" fill="none" stroke-width="3.5" d="M150,124 L150,140 M390,116 L390,140"/>
+<circle class="ink" fill="#fdfdff" stroke-width="3.5" cx="150" cy="146" r="7"/>
+<circle class="ink" fill="#fdfdff" stroke-width="3.5" cx="390" cy="146" r="7"/>
+</g></svg>
+<div id="s1-title" class="t h1 big" style="left:200px;top:120px;"><span class="w">El avión por dentro y por fuera<span id="s1-title-hl" class="hl blue"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s1"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 3.553], D=11.386;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+
+
+tl.set(q(".ln"),{strokeDashoffset:0},0);
+write("#s1-title",T[1]+0.2,1.6); hl("#s1-title-hl",T[1]+1.9,0.5);
+tl.fromTo(q("svg g"),{x:0},{x:-30,duration:D,ease:"none"},0);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s1"]=tl;
+})();
+</script>
+</template>

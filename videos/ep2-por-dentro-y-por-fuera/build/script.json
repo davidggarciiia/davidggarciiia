@@ -1,0 +1,68 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Un avión de pasajeros parece una sola pieza.",
+      "Pero cada parte tiene un nombre y una función. Vamos a recorrerlo de la cabina a la cola, y después lo abriremos por dentro."
+    ]},
+    {"id": "s2", "lines": [
+      "Delante está la cabina de vuelo, el cockpit, donde van los pilotos.",
+      "Detrás viene el fuselaje central, donde viajan los pasajeros.",
+      "A los lados, las alas, que también se llaman planos, con los motores colgados debajo.",
+      "Y al final, el empenaje de cola. En su punta suele ir la APU, un pequeño motor auxiliar."
+    ]},
+    {"id": "s3", "lines": [
+      "Por dentro, el fuselaje es semimonocasco: un esqueleto cubierto por una piel.",
+      "Los largueros y larguerillos lo recorren a lo largo, siguiendo el eje longitudinal.",
+      "Las costillas o cuadernas lo rodean como aros, siguiendo el eje transversal.",
+      "Y por fuera va la piel, o recubrimiento, normalmente de aleación de aluminio."
+    ]},
+    {"id": "s4", "lines": [
+      "Según su anchura, hay aviones de fuselaje estrecho y de fuselaje ancho.",
+      "El estrecho tiene un solo pasillo. Es el típico de corto recorrido, en vuelos de menos de seis horas.",
+      "El ancho tiene dos pasillos. Es el de largo recorrido, en vuelos de más de seis horas."
+    ]},
+    {"id": "s5", "lines": [
+      "La forma del ala depende de la velocidad a la que vuela el avión.",
+      "El ala recta es propia de aviones lentos.",
+      "El ala en flecha, inclinada hacia atrás, es la de los aviones comerciales.",
+      "El ala en flecha invertida apunta hacia delante, y es muy poco común.",
+      "Y el ala en delta con canard, un pequeño plano delantero, es típica de aviones muy rápidos."
+    ]},
+    {"id": "s6", "lines": [
+      "Como un coche, cada avión lleva matrícula. Es obligatoria por la OACI, en su Anexo siete.",
+      "Y va acompañada del certificado de matrícula del país donde está registrado.",
+      "En España empieza por E C: la E de España y la C de civil, seguida de tres letras."
+    ]},
+    {"id": "s7", "lines": [
+      "Pasemos a los motores. Los más sencillos son los de pistón, o alternativos, y funcionan en cuatro tiempos.",
+      "Uno, admisión: el pistón baja y el cilindro se llena de aire y combustible.",
+      "Dos, compresión: el pistón sube y comprime la mezcla, que se calienta.",
+      "Tres, explosión: la bujía da la chispa, la mezcla explota y empuja el pistón hacia abajo.",
+      "Cuatro, escape: el pistón sube de nuevo y expulsa los gases quemados."
+    ]},
+    {"id": "s8", "lines": [
+      "Los aviones comerciales usan motores a reacción, con cuatro partes principales.",
+      "El compresor aspira el aire y lo comprime. Una parte sigue hacia el motor, y otra se reserva para otros sistemas del avión.",
+      "En la cámara de combustión, ese aire se mezcla con combustible y se quema.",
+      "Los gases calientes hacen girar la turbina, que a su vez mueve el compresor.",
+      "Y salen a gran velocidad por la tobera de escape. Ese chorro empuja el avión hacia delante."
+    ]},
+    {"id": "s9", "lines": [
+      "Hay tres tipos de motor a reacción.",
+      "El turborreactor puro: todo el empuje sale del chorro de gases.",
+      "El turbofán: un gran ventilador delantero mueve mucho aire alrededor del motor. Es el de los aviones comerciales de hoy.",
+      "Y el turbohélice: la turbina mueve una hélice. Es eficiente en vuelos cortos y a menor velocidad."
+    ]},
+    {"id": "s10", "lines": [
+      "Al aterrizar, los motores también ayudan a frenar con la reversa, que desvía hacia delante el aire que sale del motor.",
+      "Y en la cola está la APU, la unidad de potencia auxiliar.",
+      "Genera electricidad sin encender los motores principales, y aporta el aire comprimido para arrancarlos."
+    ]},
+    {"id": "s11", "lines": [
+      "Por último, cada avión tiene dos pesos máximos.",
+      "El eme te o uve doble, el peso máximo al despegue. Y el eme ele uve doble, el peso máximo al aterrizaje.",
+      "Estructura ligera, alas pensadas para su velocidad y motores que empujan: así está hecho un avión."
+    ]}
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Si la cabina pierde presión a gran altura, el oxígeno que respiramos se vuelve escaso.",
+      "Por eso el avión lleva sistemas de oxígeno, de comunicaciones y de registro. Vamos a verlos."
+    ]},
+    {"id": "s2", "lines": [
+      "Sin oxígeno, una persona solo puede actuar con normalidad durante un tiempo limitado.",
+      "Es el tiempo útil de consciencia, o TUC.",
+      "Y cuanto más alto está el avión, más corto es ese tiempo."
+    ]},
+    {"id": "s3", "lines": [
+      "En la cabina de pasajeros hay un sistema fijo: las máscaras que caen del techo.",
+      "Su oxígeno sale de un generador químico, y llega mezclado con el aire de la cabina.",
+      "Dura unos quince minutos: tiempo suficiente para que el avión baje a una altura donde se respira con normalidad."
+    ]},
+    {"id": "s4", "lines": [
+      "Los tripulantes de cabina tienen un sistema portátil: el PBE, protective breathing equipment.",
+      "Es una capucha que protege del humo y de los gases tóxicos.",
+      "Para los pasajeros también hay botellas portátiles de oxígeno terapéutico.",
+      "Su cantidad es limitada: según el caudal, duran entre veinte y sesenta minutos.",
+      "Y los pilotos tienen su propio sistema en la cabina de vuelo.",
+      "Les da oxígeno puro a presión, durante unas dos horas."
+    ]},
+    {"id": "s5", "lines": [
+      "Pasemos a las comunicaciones. Las radios permiten hablar aire-tierra, con los controladores, y aire-aire, con otros aviones.",
+      "Dentro del avión está el sistema de comunicación interno: el PA, la megafonía para los pasajeros, y los interfonos entre tripulantes.",
+      "El PA es obligatorio en aviones de más de diecinueve asientos."
+    ]},
+    {"id": "s6", "lines": [
+      "El transpondedor responde automáticamente al radar con la posición, el rumbo, la altitud y la velocidad del avión.",
+      "Además, el avión se identifica con un código de cuatro cifras: el squawk.",
+      "Algunos códigos son de emergencia. Siete siete cero cero: emergencia general.",
+      "Siete seis cero cero: fallo de radio.",
+      "Y siete cinco cero cero: interferencia ilícita."
+    ]},
+    {"id": "s7", "lines": [
+      "Y por último, los sistemas registradores, las famosas cajas negras, que en realidad son naranjas.",
+      "El CVR, cockpit voice recorder, graba las voces y los sonidos de la cabina de vuelo.",
+      "El FDR, flight data recorder, registra los datos del vuelo en tiempo real.",
+      "Se instalan lejos de los depósitos de combustible, y llevan una radiobaliza submarina para encontrarlas bajo el agua."
+    ]},
+    {"id": "s8", "lines": [
+      "Las balizas de emergencia emiten en tres frecuencias.",
+      "Ciento veintiuno coma cinco megahercios: la civil.",
+      "Doscientos cuarenta y tres: la militar.",
+      "Y cuatrocientos seis: la de satélite."
+    ]},
+    {"id": "s9", "lines": [
+      "Oxígeno para respirar, radios para hablar, y cajas negras para aprender de cada vuelo."
+    ]}
+  ]
+}

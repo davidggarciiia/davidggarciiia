@@ -1,0 +1,57 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln ink" pathLength="1" stroke-width="6" fill="none" d="M600,320 L1320,320" id="s3-ceil"/><g class="s3-m" id="s3-m0"><path class="ink" fill="none" stroke-width="3" d="M780,330 C790,420 770,480 780,560"/><path class="ink" fill="rgba(255,214,90,.55)" stroke-width="4" d="M746,560 L814,560 L806,610 Q780,632 754,610 Z"/></g><g class="s3-m" id="s3-m1"><path class="ink" fill="none" stroke-width="3" d="M960,330 C970,420 950,480 960,560"/><path class="ink" fill="rgba(255,214,90,.55)" stroke-width="4" d="M926,560 L994,560 L986,610 Q960,632 934,610 Z"/></g><g class="s3-m" id="s3-m2"><path class="ink" fill="none" stroke-width="3" d="M1140,330 C1150,420 1130,480 1140,560"/><path class="ink" fill="rgba(255,214,90,.55)" stroke-width="4" d="M1106,560 L1174,560 L1166,610 Q1140,632 1114,610 Z"/></g><rect id="s3-gen" x="1400" y="250" width="180" height="70" rx="10" fill="rgba(255,92,168,.3)" stroke="#23307a" stroke-width="4"/><path class="ln bl" pathLength="1" stroke-width="10" fill="none" d="M420,760 m0,-110 a110,110 0 1 1 -0.1,0" id="s3-clock"/><path id="s3-hand" class="ink" fill="none" stroke-width="6" d="M420,760 L420,680"/></svg>
+<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Máscaras de pasajeros<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-a" class="t lbl" style="left:200px;top:260px;">sistema <span class="w">fijo<span id="s3-ah" class="hl blue"></span></span></div><div id="s3-g" class="t sm" style="left:1380px;top:340px;">generador químico</div><div id="s3-mix" class="t lbl" style="left:1380px;top:420px;">O₂ + aire de cabina</div><div id="s3-t" class="t lbl" style="left:580px;top:700px;"><span class="w">≈ 15 min<span id="s3-th" class="hl pink"></span></span></div><div id="s3-t2" class="t sm" style="left:580px;top:770px;">hasta bajar a una altura</div><div id="s3-t3" class="t sm" style="left:580px;top:820px;">donde se respira bien</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s3"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.579, 10.452], D=17.795;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s3-title",T[0]+0.1,0.9); hl("#s3-title-hl",T[0]+1.0);
+draw("#s3-ceil",T[0]+0.4,0.6); write("#s3-a",T[0]+0.6,0.8); hl("#s3-ah",T[0]+1.4);
+tl.set(q(".s3-m"),{opacity:0},0);
+tl.fromTo(q(".s3-m"),{opacity:1,y:-220},{opacity:1,y:0,duration:0.7,ease:"bounce.out",stagger:0.15},T[0]+3.0);
+tl.fromTo(q("#s3-gen"),{opacity:0},{opacity:1,duration:0.3},T[1]+1.4); write("#s3-g",T[1]+1.5,0.8);
+write("#s3-mix",T[1]+3.0,1.0);
+draw("#s3-clock",T[2]+0.4,1.4); tl.fromTo(q("#s3-hand"),{rotation:0,svgOrigin:"420 760"},{rotation:360,svgOrigin:"420 760",duration:3,ease:"none"},T[2]+0.4);
+write("#s3-t",T[2]+0.6,0.7); hl("#s3-th",T[2]+1.3); write("#s3-t2",T[2]+3.2,0.9); write("#s3-t3",T[2]+4.2,0.9);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s3"]=tl;
+})();
+</script>
+</template>

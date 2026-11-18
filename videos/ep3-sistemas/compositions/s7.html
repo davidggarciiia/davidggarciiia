@@ -1,0 +1,76 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s7" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g transform="translate(330,330) scale(1.9)">
+<path class="ln ink" pathLength="1" stroke-width="4" d="M28,112 C24,92 52,80 96,78 L462,74 L528,22 L566,22 L556,76 L584,80 C598,84 598,98 584,102 L520,114 L110,124 C60,126 30,124 28,112 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3" d="M56,92 L84,85 L90,95 L60,99 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M240,110 L392,102 L346,140 L262,142 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M262,124 L322,124 C334,124 334,146 322,146 L262,146 C250,146 250,124 262,124 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M494,86 L580,72 L586,82 L518,94 Z"/>
+<path class="ink" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 22" d="M128,93 L440,89"/>
+</g>
+<g id="s7-ng"><path class="ink" fill="none" stroke-width="6" d="M610,560 L610,640"/><circle class="ink" fill="#fdfdff" stroke-width="6" cx="610" cy="652" r="14"/></g>
+<g id="s7-mg"><path class="ink" fill="none" stroke-width="6" d="M1070,545 L1070,640"/><circle class="ink" fill="#fdfdff" stroke-width="6" cx="1070" cy="652" r="14"/></g>
+<path class="ink" fill="none" stroke-width="4" d="M200,668 L1760,668" id="s7-ground"/>
+<circle id="s7-rat" cx="900" cy="640" r="20" fill="none" stroke="#ff3d96" stroke-width="5"/>
+<path id="s7-gpu" class="ln bl" pathLength="1" stroke-width="5" fill="none" d="M450,580 C420,640 360,660 300,700 L240,700 L240,760 L330,760 L330,700"/>
+</svg>
+<div id="s7-title" class="t h1" style="left:200px;top:96px;"><span class="w">6 · Tren y electricidad<span id="s7-title-hl" class="hl pink"></span></span></div><div id="s7-a" class="t lbl" style="left:200px;top:230px;"><span class="w">Tren triciclo y retráctil<span id="s7-ah" class="hl blue"></span></span></div><div id="s7-b" class="t lbl" style="left:200px;top:300px;">frenos con <span class="w">ABS y antiskid<span id="s7-bh" class="hl pink"></span></span></div><div id="s7-e1" class="t sm" style="left:960px;top:760px;">generadores (motores)</div><div id="s7-e2" class="t sm" style="left:1500px;top:440px;">APU</div><div id="s7-e3" class="t sm" style="left:300px;top:440px;">baterías</div><div id="s7-e4" class="t sm" style="left:200px;top:790px;">GPU (en tierra)</div><div id="s7-e5" class="t sm" style="left:820px;top:830px;color:#ff3d96">RAT (emergencia)</div><div id="s7-el" class="t lbl" style="left:1100px;top:230px;"><span class="w">Electricidad<span id="s7-elh" class="hl blue"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s7"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.606, 11.945], D=22.296;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s7-title",T[0]+0.1,0.9); hl("#s7-title-hl",T[0]+1.0);
+tl.set(q("svg > g:first-child .ln"),{strokeDashoffset:0},0);
+write("#s7-a",T[0]+0.6,1.4); hl("#s7-ah",T[0]+2.0);
+tl.fromTo(q("#s7-ng"),{opacity:0},{opacity:1,duration:0.3},T[0]+3.4); tl.fromTo(q("#s7-mg"),{opacity:0},{opacity:1,duration:0.3},T[0]+4.4);
+tl.to(q("#s7-ng"),{rotation:-80,svgOrigin:"610 560",duration:0.9,ease:"power2.inOut"},T[0]+6.0);
+tl.to(q("#s7-mg"),{rotation:-80,svgOrigin:"1070 545",duration:0.9,ease:"power2.inOut"},T[0]+6.2);
+tl.to(q("#s7-ng, #s7-mg"),{opacity:0,duration:0.3},T[0]+7.0);
+tl.set(q("#s7-ng"),{rotation:0,svgOrigin:"610 560"},T[1]-0.2);tl.set(q("#s7-mg"),{rotation:0,svgOrigin:"1070 545"},T[1]-0.2);
+tl.to(q("#s7-ng, #s7-mg"),{opacity:1,duration:0.3},T[1]);
+write("#s7-b",T[1]+0.4,1.2); hl("#s7-bh",T[1]+1.6);
+write("#s7-el",T[2]+0.4,0.8); hl("#s7-elh",T[2]+1.2);
+write("#s7-e1",T[2]+2.4,1.0); write("#s7-e2",T[2]+4.3,0.4); write("#s7-e3",T[2]+5.0,0.6);
+draw("#s7-gpu",T[2]+5.8,0.8); write("#s7-e4",T[2]+6.0,0.8);
+tl.fromTo(q("#s7-rat"),{opacity:0,y:-40},{opacity:1,y:0,duration:0.6,ease:"back.out(2)"},T[2]+7.6); write("#s7-e5",T[2]+7.8,0.9);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s7"]=tl;
+})();
+</script>
+</template>

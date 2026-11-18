@@ -1,0 +1,56 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s12" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln ink" pathLength="1" stroke-width="6" fill="none" d="M1080,430 L1560,430" id="s12-frac"/><g id="s12-sun"><circle cx="420" cy="800" r="50" fill="rgba(255,214,90,.7)" stroke="#23307a" stroke-width="4"/></g><path id="s12-cl" class="cl" fill="rgba(255,255,255,.9)" stroke="#9aa6c8" stroke-width="4" transform="translate(1100,740) scale(1.2)" d="M0,60 C-10,20 40,0 70,20 C90,-20 160,-10 170,30 C210,25 230,70 200,90 L10,90 C-20,90 -20,62 0,60 Z"/></svg>
+<div id="s12-title" class="t h1" style="left:200px;top:96px;"><span class="w">11 · Mach y reglas de vuelo<span id="s12-title-hl" class="hl pink"></span></span></div><div id="s12-s" class="t lbl" style="left:200px;top:250px;"><span class="w">Velocidad del sonido<span id="s12-sh" class="hl pink"></span></span></div><div id="s12-s2" class="t lbl" style="left:220px;top:320px;">1225 km/h · 340 m/s · 661 kt</div><div id="s12-m" class="t lbl" style="left:900px;top:400px;">Mach =</div><div id="s12-m1" class="t lbl" style="left:1080px;top:340px;width:480px;text-align:center">V avión</div><div id="s12-m2" class="t lbl" style="left:1080px;top:440px;width:480px;text-align:center">V sonido</div><div id="s12-m3" class="t lbl" style="left:1080px;top:540px;">comercial: <span class="w">M 0,70 – 0,88<span id="s12-m3h" class="hl blue"></span></span></div><div id="s12-v" class="t lbl" style="left:500px;top:760px;"><span class="w">VFR<span id="s12-vh" class="hl blue"></span></span> · visual</div><div id="s12-v2" class="t sm" style="left:500px;top:830px;">condiciones VMC</div><div id="s12-i" class="t lbl" style="left:1440px;top:760px;"><span class="w">IFR<span id="s12-ih" class="hl pink"></span></span> · instrumental</div><div id="s12-i2" class="t sm" style="left:1440px;top:830px;">condiciones IMC</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s12"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 9.739, 19.092, 25.202], D=30.902;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s12-title",T[0]+0.1,1.0); hl("#s12-title-hl",T[0]+1.1);
+write("#s12-s",T[0]+0.6,0.9); hl("#s12-sh",T[0]+1.5); write("#s12-s2",T[0]+2.6,4.6);
+write("#s12-m",T[1]+0.4,0.5); write("#s12-m1",T[1]+1.6,0.6); draw("#s12-frac",T[1]+2.2,0.4); write("#s12-m2",T[1]+2.8,0.7);
+write("#s12-m3",T[1]+5.0,1.2); hl("#s12-m3h",T[1]+6.2);
+tl.set(q("#s12-sun, #s12-cl"),{opacity:0},0);
+show("#s12-sun",T[2]+1.4,0.4); write("#s12-v",T[2]+1.4,0.8); hl("#s12-vh",T[2]+2.2); write("#s12-v2",T[2]+4.0,0.9);
+show("#s12-cl",T[3]+0.6,0.4); write("#s12-i",T[3]+0.6,0.9); hl("#s12-ih",T[3]+1.5); write("#s12-i2",T[3]+3.6,0.9);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s12"]=tl;
+})();
+</script>
+</template>

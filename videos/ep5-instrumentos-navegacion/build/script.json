@@ -1,0 +1,73 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "Dentro de las nubes, sin ver el suelo, ¿cómo sabe el piloto a qué velocidad va, a qué altura está y hacia dónde se dirige?",
+      "Con los instrumentos de cabina, y con las ayudas a la navegación."
+    ]},
+    {"id": "s2", "lines": [
+      "Todo empieza con dos tomas de aire en el exterior del avión.",
+      "Las tomas estáticas, en el costado, miden la presión ambiental exterior.",
+      "Y el tubo pitot, que apunta hacia delante, mide la presión de impacto del aire."
+    ]},
+    {"id": "s3", "lines": [
+      "El anemómetro, o air speed indicator, mide la velocidad del avión. Funciona con el tubo pitot y las tomas estáticas.",
+      "La velocidad se mide en nudos. Un nudo es una milla náutica por hora, y una milla náutica son mil ochocientos cincuenta y dos metros."
+    ]},
+    {"id": "s4", "lines": [
+      "El altímetro mide la altitud solo con las tomas estáticas: cuanto más subimos, menos presión.",
+      "La altitud se mide en pies. Un metro son tres coma veintiocho pies.",
+      "Y el variómetro, o vertical speed indicator, mide la velocidad vertical: lo rápido que subimos o bajamos, en pies por minuto."
+    ]},
+    {"id": "s5", "lines": [
+      "Otros instrumentos funcionan con giróscopos.",
+      "El horizonte artificial, o attitude indicator, muestra la posición del avión respecto al horizonte.",
+      "El giro direccional indica el rumbo.",
+      "Y el coordinador de giro, o turn coordinator, muestra cómo está girando el avión.",
+      "Hoy, todos estos datos aparecen juntos en las pantallas EFIS."
+    ]},
+    {"id": "s6", "lines": [
+      "Para navegar, el avión usa radioayudas en tierra.",
+      "El ene de be, non directional beacon, fue la primera radioayuda.",
+      "El uve o erre funciona como un faro. Tiene unos doscientos kilómetros de alcance, se identifica con código morse, se sintoniza en el equipo NAV, y con él se forman las aerovías.",
+      "El de eme e indica la distancia hasta la estación.",
+      "Y el i ele ese, el sistema de aterrizaje instrumental, guía al avión hasta la pista."
+    ]},
+    {"id": "s7", "lines": [
+      "Dos sistemas más ayudan a evitar accidentes.",
+      "El TCAS avisa de otros aviones cercanos, para evitar colisiones.",
+      "Y el ge pe uve doble ese avisa cuando el avión se acerca demasiado al terreno."
+    ]},
+    {"id": "s8", "lines": [
+      "Para situarse en el mundo se usan coordenadas. La Tierra no es una esfera perfecta: su forma se llama geoide.",
+      "Los paralelos son líneas paralelas al ecuador, y marcan la latitud: hasta noventa grados, norte o sur.",
+      "Los meridianos van de polo a polo. El de Greenwich es el cero, y marcan la longitud: hasta ciento ochenta grados, este u oeste.",
+      "Donde se cruzan un paralelo y un meridiano hay una coordenada geográfica. Se escribe en sistema decimal, o en sexagesimal, con grados, minutos y segundos."
+    ]},
+    {"id": "s9", "lines": [
+      "En aviación se usa una sola hora para todo el mundo: la u te ce, también llamada ge eme te, o hora Zulu.",
+      "Cada quince grados de longitud cambia una hora: hacia el este se suma una, y hacia el oeste se resta.",
+      "Y la hora de cada lugar es la hora local."
+    ]},
+    {"id": "s10", "lines": [
+      "El norte magnético y el geográfico no coinciden. El ángulo entre ellos es la declinación magnética.",
+      "El desvío es el error de la brújula causado por el magnetismo del propio avión.",
+      "Y la deriva es el ángulo que hay que corregir porque el viento desplaza al avión."
+    ]},
+    {"id": "s11", "lines": [
+      "Tres palabras que no significan lo mismo.",
+      "Altura: la distancia del avión al terreno.",
+      "Altitud: la distancia del avión al nivel del mar.",
+      "Y elevación: la altura del terreno sobre el nivel del mar."
+    ]},
+    {"id": "s12", "lines": [
+      "La velocidad del sonido es de unos mil doscientos veinticinco kilómetros por hora, trescientos cuarenta metros por segundo, o seiscientos sesenta y un nudos.",
+      "El número de Mach es la velocidad del avión dividida entre la del sonido. Un avión comercial vuela entre Mach cero coma setenta y cero coma ochenta y ocho.",
+      "Y se vuela con dos tipos de reglas. Uve efe erre, reglas de vuelo visual, en condiciones visuales.",
+      "O i efe erre, reglas de vuelo instrumental, cuando las condiciones son instrumentales."
+    ]},
+    {"id": "s13", "lines": [
+      "Instrumentos para saber cómo vuelas. Radioayudas y coordenadas para saber dónde estás y a dónde vas."
+    ]}
+  ]
+}

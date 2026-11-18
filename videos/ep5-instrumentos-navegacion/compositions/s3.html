@@ -1,0 +1,56 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g id="s3-asi"><circle class="ln ink" pathLength="1" cx="760" cy="600" r="260" fill="#fdfdff" stroke-width="6"/><path class="ink" fill="none" stroke-width="4" d="M1014.0,600.0 L996.0,600.0 M980.0,727.0 L964.4,718.0 M887.0,820.0 L878.0,804.4 M760.0,854.0 L760.0,836.0 M633.0,820.0 L642.0,804.4 M540.0,727.0 L555.6,718.0 M506.0,600.0 L524.0,600.0 M540.0,473.0 L555.6,482.0 M633.0,380.0 L642.0,395.6 M760.0,346.0 L760.0,364.0 M887.0,380.0 L878.0,395.6 M980.0,473.0 L964.4,482.0 "/><path id="s3-asi-n" class="pk" fill="none" stroke-width="8" stroke-linecap="round" d="M760,600 L760,374"/><circle cx="760" cy="600" r="10" fill="#23307a"/></g><path class="ln pk" pathLength="1" stroke-width="6" fill="none" d="M300,880 L300,720 L520,720" id="s3-pp"/><path class="ln bl" pathLength="1" stroke-width="6" fill="none" d="M300,940 L560,940 L620,840" id="s3-sp"/></svg>
+<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Anemómetro<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-a" class="t lbl" style="left:200px;top:270px;">air speed indicator → <span class="w">velocidad<span id="s3-ah" class="hl pink"></span></span></div><div id="s3-pt" class="t sm" style="left:200px;top:640px;color:#ff3d96">pitot</div><div id="s3-st" class="t sm" style="left:200px;top:860px;color:#0a7fb8">estáticas</div><div id="s3-k1" class="t lbl" style="left:1140px;top:440px;"><span class="w">1 nudo (kt)<span id="s3-k1h" class="hl blue"></span></span> = 1 NM/h</div><div id="s3-k2" class="t lbl" style="left:1140px;top:560px;"><span class="w">1 milla náutica<span id="s3-k2h" class="hl pink"></span></span></div><div id="s3-k3" class="t lbl" style="left:1160px;top:630px;">= 1,852 km</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s3"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.862], D=16.25;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s3-title",T[0]+0.1,0.8); hl("#s3-title-hl",T[0]+0.9);
+draw("#s3-asi .ln",T[0]+0.4,0.8); tl.fromTo(q("#s3-asi"),{opacity:0},{opacity:1,duration:0.3},T[0]+0.4);
+write("#s3-a",T[0]+1.4,1.2); hl("#s3-ah",T[0]+2.6);
+tl.fromTo(q("#s3-asi-n"),{rotation:-120,svgOrigin:"760 600"},{rotation:60,svgOrigin:"760 600",duration:3,ease:"power2.inOut"},T[0]+3.0);
+draw("#s3-pp",T[0]+4.4,0.6); write("#s3-pt",T[0]+4.6,0.4); draw("#s3-sp",T[0]+5.4,0.6); write("#s3-st",T[0]+5.6,0.5);
+write("#s3-k1",T[1]+0.6,1.4); hl("#s3-k1h",T[1]+2.0);
+write("#s3-k2",T[1]+3.4,0.9); hl("#s3-k2h",T[1]+4.3); write("#s3-k3",T[1]+5.4,0.9);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s3"]=tl;
+})();
+</script>
+</template>

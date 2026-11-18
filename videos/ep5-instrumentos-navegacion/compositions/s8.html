@@ -1,0 +1,59 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s8" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><circle class="ln ink" pathLength="1" id="s8-globe" cx="700" cy="630" r="270" fill="#fdfdff" stroke-width="6"/><ellipse class="s8-par" cx="700" cy="403" rx="146" ry="16" fill="none" stroke="#1ea7e4" stroke-width="3"/><ellipse class="s8-par" cx="700" cy="501" rx="237" ry="26" fill="none" stroke="#1ea7e4" stroke-width="3"/><ellipse class="s8-par" cx="700" cy="759" rx="237" ry="26" fill="none" stroke="#1ea7e4" stroke-width="3"/><ellipse class="s8-par" cx="700" cy="857" rx="146" ry="16" fill="none" stroke="#1ea7e4" stroke-width="3"/><ellipse class="s8-mer" cx="700" cy="630" rx="100" ry="270" fill="none" stroke="#5a3fb0" stroke-width="3"/><ellipse class="s8-mer" cx="700" cy="630" rx="200" ry="270" fill="none" stroke="#5a3fb0" stroke-width="3"/><ellipse id="s8-eq" cx="700" cy="630" rx="270" ry="34" fill="none" stroke="#ff3d96" stroke-width="7"/><path id="s8-gw" fill="none" stroke="#ff3d96" stroke-width="7" d="M700,360 L700,900"/><circle id="s8-pt" cx="800" cy="501" r="14" fill="#ff3d96"/></svg>
+<div id="s8-title" class="t h1" style="left:200px;top:96px;"><span class="w">7 · Coordenadas<span id="s8-title-hl" class="hl pink"></span></span></div><div id="s8-g" class="t lbl" style="left:200px;top:236px;"><span class="w">Geoide<span id="s8-gh" class="hl blue"></span></span> · la forma de la Tierra</div><div id="s8-eqt" class="t lbl" style="left:1060px;top:300px;"><span class="w">Paralelos<span id="s8-eqh" class="hl blue"></span></span> → latitud</div><div id="s8-eq2" class="t sm" style="left:1080px;top:370px;">0–90° · Norte / Sur</div><div id="s8-mt" class="t lbl" style="left:1060px;top:480px;"><span class="w">Meridianos<span id="s8-mh" class="hl pink"></span></span> → longitud</div><div id="s8-mt2" class="t sm" style="left:1080px;top:550px;">Greenwich = 0° · 0–180° E / O</div><div id="s8-c" class="t lbl" style="left:1060px;top:680px;">cruce = <span class="w">coordenada<span id="s8-ch" class="hl pink"></span></span></div><div id="s8-c2" class="t sm" style="left:1080px;top:760px;">decimal: 40,42° N · 3,70° O</div><div id="s8-c3" class="t sm" style="left:1080px;top:815px;">sexagesimal: 40° 25′ N · 3° 42′ O</div><div id="s8-c4" class="t sm" style="left:1080px;top:870px;">(ejemplo: Madrid)</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s8"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.286, 13.609, 21.127], D=31.158;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s8-title",T[0]+0.1,0.8); hl("#s8-title-hl",T[0]+0.9);
+draw("#s8-globe",T[0]+0.4,1.0); write("#s8-g",T[0]+4.0,1.2); hl("#s8-gh",T[0]+5.2);
+tl.set(q(".s8-par, .s8-mer, #s8-eq, #s8-gw, #s8-pt"),{opacity:0},0);
+show("#s8-eq",T[1]+1.2,0.3); tl.to(q(".s8-par"),{opacity:1,duration:0.2,stagger:0.15},T[1]+1.6);
+write("#s8-eqt",T[1]+0.6,0.9); hl("#s8-eqh",T[1]+1.5); write("#s8-eq2",T[1]+3.6,1.0);
+tl.to(q(".s8-mer"),{opacity:1,duration:0.2,stagger:0.15},T[2]+0.8); show("#s8-gw",T[2]+2.0,0.3);
+write("#s8-mt",T[2]+0.6,0.9); hl("#s8-mh",T[2]+1.5); write("#s8-mt2",T[2]+3.4,1.4);
+show("#s8-pt",T[3]+1.0,0.2); tl.fromTo(q("#s8-pt"),{scale:2.2,transformOrigin:"50% 50%"},{scale:1,duration:0.4,ease:"back.out(2)"},T[3]+1.0);
+write("#s8-c",T[3]+1.0,0.9); hl("#s8-ch",T[3]+1.9);
+write("#s8-c2",T[3]+4.0,1.0); write("#s8-c3",T[3]+5.6,1.2); write("#s8-c4",T[3]+6.8,0.6);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s8"]=tl;
+})();
+</script>
+</template>

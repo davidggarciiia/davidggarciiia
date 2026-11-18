@@ -1,0 +1,58 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s4" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="s4-sm" fill="none" stroke="#9aa0b8" stroke-width="5" d="M240,760 c20,-20 -20,-40 0,-60 c20,-20 -20,-40 0,-60"/><path class="s4-sm" fill="none" stroke="#9aa0b8" stroke-width="5" d="M280,790 c20,-20 -20,-40 0,-60 c20,-20 -20,-40 0,-60"/><path class="s4-sm" fill="none" stroke="#9aa0b8" stroke-width="5" d="M520,770 c20,-20 -20,-40 0,-60 c20,-20 -20,-40 0,-60"/><path class="ln ink" pathLength="1" stroke-width="5" fill="rgba(255,214,90,.35)" d="M260,700 C260,520 320,440 400,440 C480,440 540,520 540,700 L520,780 L280,780 Z" id="s4-hood"/><path class="ln bl" pathLength="1" stroke-width="5" fill="rgba(66,188,240,.25)" d="M320,560 L480,560 L480,640 L320,640 Z" id="s4-vis"/><path class="ln ink" pathLength="1" stroke-width="5" fill="rgba(66,188,240,.3)" d="M860,500 C860,470 880,460 900,460 L960,460 C980,460 1000,470 1000,500 L1000,780 L860,780 Z" id="s4-bot"/><path class="ln ink" pathLength="1" stroke-width="4" fill="none" d="M905,460 L905,420 L955,420 L955,460 M955,430 C1040,430 1060,520 1040,600" id="s4-valve"/><path class="ln ink" pathLength="1" stroke-width="4" fill="rgba(255,214,90,.55)" d="M1010,600 L1070,600 L1060,650 Q1040,665 1020,650 Z" id="s4-mask"/><path class="ln ink" pathLength="1" stroke-width="5" fill="none" d="M1480,780 C1480,640 1430,600 1430,540 C1430,450 1500,420 1560,420 C1630,420 1680,470 1680,540 C1680,620 1640,650 1640,780" id="s4-head"/><path class="ln pk" pathLength="1" stroke-width="5" fill="rgba(255,92,168,.3)" d="M1400,560 L1470,540 L1500,620 L1420,640 Z M1470,560 C1530,520 1600,500 1660,500" id="s4-qd"/></svg>
+<div id="s4-title" class="t h1" style="left:200px;top:96px;"><span class="w">3 · Oxígeno portátil y de cabina<span id="s4-title-hl" class="hl pink"></span></span></div><div id="s4-a" class="t lbl" style="left:200px;top:820px;"><span class="w">PBE<span id="s4-ah" class="hl blue"></span></span> · tripulantes</div><div id="s4-a2" class="t sm" style="left:200px;top:890px;">protege de humo y tóxicos</div><div id="s4-b" class="t lbl" style="left:780px;top:820px;"><span class="w">Terapéutico<span id="s4-bh" class="hl pink"></span></span></div><div id="s4-b2" class="t sm" style="left:780px;top:890px;">limitado · 20–60 min</div><div id="s4-c" class="t lbl" style="left:1340px;top:820px;"><span class="w">Cabina de vuelo<span id="s4-ch" class="hl blue"></span></span></div><div id="s4-c2" class="t sm" style="left:1340px;top:890px;">O₂ puro a presión · ≈ 2 h</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s4"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 6.561, 10.303, 15.026, 20.261, 23.939], D=27.933;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s4-title",T[0]+0.1,1.1); hl("#s4-title-hl",T[0]+1.2);
+draw("#s4-hood",T[0]+0.8,1.2); draw("#s4-vis",T[0]+1.8,0.5); write("#s4-a",T[0]+2.0,0.8); hl("#s4-ah",T[0]+2.8);
+tl.fromTo(q(".s4-sm"),{opacity:0},{opacity:0.8,duration:0.5,stagger:0.2},T[1]+0.6);
+tl.to(q(".s4-sm"),{y:-20,x:-10,duration:1.2,yoyo:true,repeat:3,ease:"sine.inOut"},T[1]+0.8);
+write("#s4-a2",T[1]+1.2,1.2);
+draw("#s4-bot",T[2]+0.3,0.9); draw("#s4-valve",T[2]+1.1,0.5); draw("#s4-mask",T[2]+1.5,0.4); write("#s4-b",T[2]+2.0,0.8); hl("#s4-bh",T[2]+2.8);
+write("#s4-b2",T[3]+0.6,1.6);
+draw("#s4-head",T[4]+0.3,1.0); draw("#s4-qd",T[4]+1.2,0.8); write("#s4-c",T[4]+1.4,0.9); hl("#s4-ch",T[4]+2.3);
+write("#s4-c2",T[5]+0.4,1.6);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s4"]=tl;
+})();
+</script>
+</template>

@@ -1,0 +1,77 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s5" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g transform="translate(240,420) scale(1.6)">
+<path class="ln ink" pathLength="1" stroke-width="4" d="M28,112 C24,92 52,80 96,78 L462,74 L528,22 L566,22 L556,76 L584,80 C598,84 598,98 584,102 L520,114 L110,124 C60,126 30,124 28,112 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3" d="M56,92 L84,85 L90,95 L60,99 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M240,110 L392,102 L346,140 L262,142 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M262,124 L322,124 C334,124 334,146 322,146 L262,146 C250,146 250,124 262,124 Z"/>
+<path class="ln ink" pathLength="1" stroke-width="3.5" d="M494,86 L580,72 L586,82 L518,94 Z"/>
+<path class="ink" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 22" d="M128,93 L440,89"/>
+</g>
+<path class="ln pk" pathLength="1" stroke-width="10" d="M284,596 L240,600" id="s5-pitot"/>
+<path class="ln pk" pathLength="1" stroke-width="10" opacity=".8" d="M624,596 L866,582" id="s5-le"/>
+<g transform="translate(640,770)"><path class="ln ink" pathLength="1" stroke-width="5" fill="#fdfdff" d="M0,60 C0,20 70,0 180,0 L360,10 L360,100 L180,110 C70,115 0,100 0,60 Z" id="s5-af"/>
+<path id="s5-boot" fill="rgba(255,92,168,.55)" stroke="#23307a" stroke-width="3" d="M-6,60 C-6,22 30,4 70,2 L72,18 C40,20 16,36 16,60 C16,84 40,98 72,100 L70,116 C30,114 -6,98 -6,60 Z"/></g>
+<g transform="translate(-180,0)"><g id="s5-truck"><path class="ink" fill="none" stroke-width="5" d="M1500,700 L1720,700 L1720,780 L1500,780 Z M1560,700 L1560,620 L1620,620 L1620,700 M1590,620 L1500,520"/>
+<circle class="ink" fill="#fdfdff" stroke-width="5" cx="1540" cy="790" r="18"/><circle class="ink" fill="#fdfdff" stroke-width="5" cx="1690" cy="790" r="18"/></g>
+<g transform="translate(0,60)"><g id="s5-drops"><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1420,470 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1380,430 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1460,420 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1340,480 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1500,470 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1400,380 l-14,-26"/><path class="s5-drop bl" fill="none" stroke-width="5" stroke-linecap="round" d="M1300,420 l-14,-26"/></g></g></g>
+</svg>
+<div id="s5-title" class="t h1" style="left:200px;top:96px;"><span class="w">4 · Antihielo<span id="s5-title-hl" class="hl pink"></span></span></div><div id="s5-a" class="t lbl" style="left:200px;top:270px;">calienta el exterior → <span class="w">no se forma hielo<span id="s5-ah" class="hl blue"></span></span></div><div id="s5-p" class="t sm" style="left:200px;top:650px;color:#ff3d96">tubo pitot</div><div id="s5-b" class="t lbl" style="left:200px;top:860px;"><span class="w">botas neumáticas<span id="s5-bh" class="hl pink"></span></span></div><div id="s5-b2" class="t sm" style="left:200px;top:926px;">se inflan y rompen el hielo</div><div id="s5-d" class="t lbl" style="left:1180px;top:830px;"><span class="w">de-icing<span id="s5-dh" class="hl blue"></span></span></div><div id="s5-d2" class="t sm" style="left:1180px;top:896px;">glicol + agua caliente</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s5"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 6.881, 14.057], D=20.035;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s5-title",T[0]+0.1,0.8); hl("#s5-title-hl",T[0]+0.9);
+draw("svg > g:first-child .ln",T[0]+0.4,1.2);
+write("#s5-a",T[0]+2.6,1.6); hl("#s5-ah",T[0]+4.2);
+draw("#s5-le",T[0]+4.0,0.6);
+draw("#s5-pitot",T[1]+1.4,0.4); write("#s5-p",T[1]+1.6,0.6);
+draw("#s5-af",T[1]+3.2,0.7);
+tl.fromTo(q("#s5-boot"),{opacity:0,scale:1,transformOrigin:"100% 50%"},{opacity:1,duration:0.3},T[1]+4.0);
+tl.to(q("#s5-boot"),{scale:1.25,transformOrigin:"100% 50%",duration:0.4,yoyo:true,repeat:3},T[1]+4.4);
+write("#s5-b",T[1]+4.0,0.9); hl("#s5-bh",T[1]+4.9); write("#s5-b2",T[1]+5.6,1.1);
+show("#s5-truck",T[2]+1.4,0.4);
+tl.fromTo(q(".s5-drop"),{opacity:0},{opacity:1,duration:0.15,stagger:0.08},T[2]+2.0);
+tl.fromTo(q("#s5-drops"),{x:0,y:0},{x:-30,y:-20,duration:0.35,yoyo:true,repeat:Math.max(1,Math.round((D-T[2]-2.2)/0.35)),ease:"sine.inOut"},T[2]+2.2);
+write("#s5-d",T[2]+2.4,0.6); hl("#s5-dh",T[2]+3.0); write("#s5-d2",T[2]+3.4,1.2);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s5"]=tl;
+})();
+</script>
+</template>

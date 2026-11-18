@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<script src="assets/lib/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#fbfbfe}
+#root{position:relative;width:1920px;height:1080px}
+#paper{position:absolute;inset:0;background-color:#fbfbfe;
+  background-image:linear-gradient(#d6deef 2px,transparent 2px),linear-gradient(90deg,#d6deef 2px,transparent 2px);
+  background-size:46px 46px;background-position:0px 0px}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="159.164" data-width="1920" data-height="1080">
+<div id="paper"></div>
+<div id="s1" data-composition-id="s1" data-composition-src="compositions/s1.html" data-start="0.0" data-duration="12.261" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s2" data-composition-id="s2" data-composition-src="compositions/s2.html" data-start="12.261" data-duration="12.653" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s3" data-composition-id="s3" data-composition-src="compositions/s3.html" data-start="24.914" data-duration="17.795" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s4" data-composition-id="s4" data-composition-src="compositions/s4.html" data-start="42.709" data-duration="27.933" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s5" data-composition-id="s5" data-composition-src="compositions/s5.html" data-start="70.642" data-duration="20.739" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s6" data-composition-id="s6" data-composition-src="compositions/s6.html" data-start="91.381" data-duration="24.063" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s7" data-composition-id="s7" data-composition-src="compositions/s7.html" data-start="115.444" data-duration="24.203" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s8" data-composition-id="s8" data-composition-src="compositions/s8.html" data-start="139.647" data-duration="13.089" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="s9" data-composition-id="s9" data-composition-src="compositions/s9.html" data-start="152.736" data-duration="6.428" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<audio id="vo-s1" class="clip" src="assets/voice/s1.wav" data-start="0.0" data-duration="12.261" data-track-index="2" data-volume="1"></audio>
+<audio id="vo-s2" class="clip" src="assets/voice/s2.wav" data-start="12.261" data-duration="12.653" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut1" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="11.811" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s3" class="clip" src="assets/voice/s3.wav" data-start="24.914" data-duration="17.795" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut2" class="clip" src="assets/sfx/whoosh.mp3" data-start="24.464" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s4" class="clip" src="assets/voice/s4.wav" data-start="42.709" data-duration="27.933" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut3" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="42.259" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s5" class="clip" src="assets/voice/s5.wav" data-start="70.642" data-duration="20.739" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut4" class="clip" src="assets/sfx/whoosh.mp3" data-start="70.192" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s6" class="clip" src="assets/voice/s6.wav" data-start="91.381" data-duration="24.063" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut5" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="90.931" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s7" class="clip" src="assets/voice/s7.wav" data-start="115.444" data-duration="24.203" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut6" class="clip" src="assets/sfx/whoosh.mp3" data-start="114.994" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s8" class="clip" src="assets/voice/s8.wav" data-start="139.647" data-duration="13.089" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut7" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="139.197" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+<audio id="vo-s9" class="clip" src="assets/voice/s9.wav" data-start="152.736" data-duration="6.428" data-track-index="2" data-volume="1"></audio>
+<audio id="sfx-cut8" class="clip" src="assets/sfx/whoosh.mp3" data-start="152.286" data-duration="0.57" data-track-index="3" data-volume="0.22"></audio>
+</div>
+<script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#paper",{backgroundPositionX:"0px"},{backgroundPositionX:"-700px",duration:0.5,ease:"power3.in",immediateRender:false},11.761);
+tl.fromTo("#paper",{backgroundPositionX:"-700px"},{backgroundPositionX:"-1400px",duration:0.55,ease:"power3.out",immediateRender:false},12.261);
+tl.fromTo("#paper",{backgroundPositionX:"-1400px"},{backgroundPositionX:"-2100px",duration:0.5,ease:"power3.in",immediateRender:false},24.414);
+tl.fromTo("#paper",{backgroundPositionX:"-2100px"},{backgroundPositionX:"-2800px",duration:0.55,ease:"power3.out",immediateRender:false},24.914);
+tl.fromTo("#paper",{backgroundPositionX:"-2800px"},{backgroundPositionX:"-3500px",duration:0.5,ease:"power3.in",immediateRender:false},42.209);
+tl.fromTo("#paper",{backgroundPositionX:"-3500px"},{backgroundPositionX:"-4200px",duration:0.55,ease:"power3.out",immediateRender:false},42.709);
+tl.fromTo("#paper",{backgroundPositionX:"-4200px"},{backgroundPositionX:"-4900px",duration:0.5,ease:"power3.in",immediateRender:false},70.142);
+tl.fromTo("#paper",{backgroundPositionX:"-4900px"},{backgroundPositionX:"-5600px",duration:0.55,ease:"power3.out",immediateRender:false},70.642);
+tl.fromTo("#paper",{backgroundPositionX:"-5600px"},{backgroundPositionX:"-6300px",duration:0.5,ease:"power3.in",immediateRender:false},90.881);
+tl.fromTo("#paper",{backgroundPositionX:"-6300px"},{backgroundPositionX:"-7000px",duration:0.55,ease:"power3.out",immediateRender:false},91.381);
+tl.fromTo("#paper",{backgroundPositionX:"-7000px"},{backgroundPositionX:"-7700px",duration:0.5,ease:"power3.in",immediateRender:false},114.944);
+tl.fromTo("#paper",{backgroundPositionX:"-7700px"},{backgroundPositionX:"-8400px",duration:0.55,ease:"power3.out",immediateRender:false},115.444);
+tl.fromTo("#paper",{backgroundPositionX:"-8400px"},{backgroundPositionX:"-9100px",duration:0.5,ease:"power3.in",immediateRender:false},139.147);
+tl.fromTo("#paper",{backgroundPositionX:"-9100px"},{backgroundPositionX:"-9800px",duration:0.55,ease:"power3.out",immediateRender:false},139.647);
+tl.fromTo("#paper",{backgroundPositionX:"-9800px"},{backgroundPositionX:"-10500px",duration:0.5,ease:"power3.in",immediateRender:false},152.236);
+tl.fromTo("#paper",{backgroundPositionX:"-10500px"},{backgroundPositionX:"-11200px",duration:0.55,ease:"power3.out",immediateRender:false},152.736);
+tl.set({},{},159.164);
+window.__timelines["main"]=tl;
+</script>
+</body>
+</html>

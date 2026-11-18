@@ -1,0 +1,85 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s7" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore>
+<path class="ln ink" pathLength="1" stroke-width="6" d="M700,380 L700,760 M1000,380 L1000,760 M700,380 L790,380 M910,380 L1000,380" id="s7-cyl"/>
+<rect id="s7-gas" x="704" y="380" width="292" height="260" fill="rgba(66,188,240,.45)"/>
+<g id="s7-pist"><rect x="708" y="640" width="284" height="80" rx="8" fill="#fdfdff" stroke="#23307a" stroke-width="5"/>
+<path class="ink" fill="none" stroke-width="10" d="M850,720 L850,840"/></g>
+<circle class="ln ink" pathLength="1" stroke-width="5" fill="none" cx="850" cy="880" r="56" id="s7-crank"/>
+<g id="s7-vin"><path class="ink" fill="none" stroke-width="6" d="M790,380 L760,380 M745,340 L745,384 M725,384 L800,384"/></g>
+<g id="s7-vex"><path class="ink" fill="none" stroke-width="6" d="M910,380 L940,380 M955,340 L955,384 M900,384 L975,384"/></g>
+<path class="ink" fill="none" stroke-width="6" d="M850,300 L850,372 M830,300 L870,300" id="s7-plug"/>
+<path id="s7-spark" fill="#ff3d96" d="M850,392 L862,420 L892,416 L870,438 L884,466 L856,452 L834,474 L836,444 L808,434 L838,424 Z"/>
+<g id="s7-ain" class="arr"><path class="ln bl shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M690.0,250.0 L745.0,350.0"/><path class="ln bl head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M723.8,334.9 L745.0,350.0 L743.6,324.0"/></g><g id="s7-aex" class="arr"><path class="ln inkp shaft" pathLength="1" stroke-width="6" stroke-linecap="round" d="M955.0,350.0 L1010.0,250.0"/><path class="ln inkp head" pathLength="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M1008.6,276.0 L1010.0,250.0 L988.8,265.1"/></g></svg>
+<div id="s7-title" class="t h1" style="left:200px;top:96px;"><span class="w">6 · Motor de pistón: 4 tiempos<span id="s7-title-hl" class="hl blue"></span></span></div><div id="s7-k" class="t sm" style="left:200px;top:260px;">alternativo o convencional</div><div id="s7-1" class="t lbl" style="left:1140px;top:360px;"><span class="w">1 · Admisión<span id="s7-1h" class="hl blue"></span></span></div><div id="s7-1b" class="t sm" style="left:1170px;top:424px;">entra aire + combustible</div><div id="s7-2" class="t lbl" style="left:1140px;top:500px;"><span class="w">2 · Compresión<span id="s7-2h" class="hl blue"></span></span></div><div id="s7-2b" class="t sm" style="left:1170px;top:564px;">la mezcla se calienta</div><div id="s7-3" class="t lbl" style="left:1140px;top:640px;"><span class="w">3 · Explosión<span id="s7-3h" class="hl pink"></span></span></div><div id="s7-3b" class="t sm" style="left:1170px;top:704px;">la bujía da la chispa</div><div id="s7-4" class="t lbl" style="left:1140px;top:780px;"><span class="w">4 · Escape<span id="s7-4h" class="hl blue"></span></span></div><div id="s7-4b" class="t sm" style="left:1170px;top:844px;">salen los gases quemados</div><div id="s7-bj" class="t sm" style="left:880px;top:270px;">bujía</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s7"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.137, 11.839, 16.199, 21.819], D=26.687;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s7-title",T[0]+0.1,1.2); hl("#s7-title-hl",T[0]+1.3);
+draw("#s7-cyl",T[0]+0.8,1.0); draw("#s7-crank",T[0]+1.4,0.5); write("#s7-k",T[0]+2.0,1.0); write("#s7-bj",T[0]+3.0,0.4);
+const piston=(y,t,d)=>{tl.to(q("#s7-pist"),{y:y-640,duration:d,ease:"sine.inOut"},t);
+  tl.to(q("#s7-gas"),{scaleY:(y-380)/260,transformOrigin:"50% 0%",duration:d,ease:"sine.inOut"},t);};
+tl.set(q("#s7-pist"),{y:-220},0); tl.set(q("#s7-gas"),{scaleY:40/260,transformOrigin:"50% 0%"},0);
+tl.set(q("#s7-spark"),{opacity:0,scale:0.3,transformOrigin:"50% 50%"},0);
+// 1 intake
+write("#s7-1",T[1]+0.1,0.7); hl("#s7-1h",T[1]+0.8); write("#s7-1b",T[1]+1.4,0.9);
+tl.to(q("#s7-vin"),{y:16,duration:0.3},T[1]+0.8); draw("#s7-ain path",T[1]+0.9,0.5);
+tl.to(q("#s7-gas"),{fill:"rgba(66,188,240,.5)",duration:0.1},T[1]+0.8);
+piston(640,T[1]+1.0,1.8);
+tl.to(q("#s7-vin"),{y:0,duration:0.3},T[2]-0.2); tl.to(q("#s7-ain path"),{opacity:0,duration:0.3},T[2]-0.2);
+// 2 compression
+write("#s7-2",T[2]+0.1,0.7); hl("#s7-2h",T[2]+0.8); write("#s7-2b",T[2]+1.4,0.9);
+piston(420,T[2]+1.0,1.8); tl.to(q("#s7-gas"),{fill:"rgba(255,150,90,.55)",duration:1.8},T[2]+1.0);
+// 3 power
+write("#s7-3",T[3]+0.1,0.7); hl("#s7-3h",T[3]+0.8); write("#s7-3b",T[3]+1.4,0.9);
+tl.to(q("#s7-spark"),{opacity:1,scale:1.2,duration:0.18,ease:"back.out(3)"},T[3]+1.6);
+tl.to(q("#s7-gas"),{fill:"rgba(255,61,150,.6)",duration:0.15},T[3]+1.7);
+tl.to(q("#s7-spark"),{opacity:0,scale:0.5,duration:0.4},T[3]+2.1);
+piston(640,T[3]+2.0,1.0);
+// 4 exhaust
+write("#s7-4",T[4]+0.1,0.7); hl("#s7-4h",T[4]+0.8); write("#s7-4b",T[4]+1.4,0.9);
+tl.to(q("#s7-vex"),{y:16,duration:0.3},T[4]+0.9); draw("#s7-aex path",T[4]+1.0,0.5);
+tl.to(q("#s7-gas"),{fill:"rgba(120,120,145,.45)",duration:0.6},T[4]+0.9);
+piston(420,T[4]+1.1,1.8);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s7"]=tl;
+})();
+</script>
+</template>

@@ -1,0 +1,61 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="6" fill="none" d="M300,820 L300,420 L1620,420 L1620,820 Z" id="s6-loop" /><path class="s6-flow" fill="none" stroke="#1ea7e4" stroke-width="8" stroke-dasharray="16 34" d="M300,820 L300,420 L1620,420 L1620,820 Z"/><circle class="s6-n" id="s6-n0" cx="300" cy="620" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><circle class="s6-n" id="s6-n1" cx="640" cy="420" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><circle class="s6-n" id="s6-n2" cx="1000" cy="420" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><circle class="s6-n" id="s6-n3" cx="1380" cy="420" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><circle class="s6-n" id="s6-n4" cx="1620" cy="620" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><circle class="s6-n" id="s6-n5" cx="960" cy="820" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="5"/><g id="s6-act"><path class="ink" fill="none" stroke-width="10" d="M1650,620 L1760,620"/></g></svg>
+<div id="s6-title" class="t h1" style="left:200px;top:96px;"><span class="w">5 · Sistema hidráulico<span id="s6-title-hl" class="hl blue"></span></span></div><div id="s6-u" class="t lbl" style="left:200px;top:230px;"><span class="w">líquido a presión<span id="s6-uh" class="hl blue"></span></span> → mueve piezas pesadas</div><div id="s6-u2" class="t lbl" style="left:520px;top:520px;">superficies · mandos · reversas</div><div id="s6-u3" class="t lbl" style="left:520px;top:600px;">tren · puertas · escaleras</div><div id="s6-t0" class="t sm" style="left:140px;top:600px;">bomba</div><div id="s6-t1" class="t sm" style="left:560px;top:330px;">filtro</div><div id="s6-t2" class="t sm" style="left:900px;top:330px;">acumulador</div><div id="s6-t3" class="t sm" style="left:1250px;top:330px;">válvula selectora</div><div id="s6-t4" class="t sm" style="left:1500px;top:670px;">actuador</div><div id="s6-t5" class="t sm" style="left:760px;top:860px;">válvula de liberación</div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s6"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.174, 13.353], D=21.379;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s6-title",T[0]+0.1,0.9); hl("#s6-title-hl",T[0]+1.0);
+draw("#s6-loop",T[0]+0.6,1.4); write("#s6-u",T[0]+1.4,1.4); hl("#s6-uh",T[0]+2.6);
+tl.fromTo(q(".s6-flow"),{opacity:0,strokeDashoffset:0},{opacity:1,duration:0.4},T[0]+2.0);
+tl.fromTo(q(".s6-flow"),{strokeDashoffset:0},{strokeDashoffset:-50*Math.round(D*2),duration:D,ease:"none",immediateRender:false},0);
+write("#s6-u2",T[1]+0.8,1.8); write("#s6-u3",T[1]+3.6,1.8);
+tl.to(q("#s6-u2, #s6-u3"),{opacity:0,duration:0.3},T[2]-0.2);
+const ns=["#s6-n0","#s6-n1","#s6-n2","#s6-n3","#s6-n5","#s6-n4"], ts=["#s6-t0","#s6-t1","#s6-t2","#s6-t3","#s6-t5","#s6-t4"];
+tl.set(q(".s6-n"),{opacity:0},0); tl.set(q("#s6-act"),{opacity:0},0);
+const at=[1.0,1.8,2.6,3.6,4.8,5.8];
+ns.forEach((n,i)=>{ tl.fromTo(q(n),{opacity:0,scale:0.3,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.3,ease:"back.out(2)"},T[2]+at[i]); write(ts[i],T[2]+at[i],0.6); });
+show("#s6-act",T[2]+5.8,0.2);
+tl.fromTo(q("#s6-act"),{x:0},{x:-50,duration:0.5,yoyo:true,repeat:3,ease:"sine.inOut"},T[2]+6.0);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s6"]=tl;
+})();
+</script>
+</template>

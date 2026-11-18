@@ -1,0 +1,55 @@
+{
+  "voice": "ef_dora", "speed": 1.0, "gap": 0.35, "lead": 0.6, "tail": 0.9,
+  "scenes": [
+    {"id": "s1", "lines": [
+      "A cuarenta mil pies, fuera hace más de cincuenta grados bajo cero, y el aire es demasiado fino para respirar.",
+      "Dentro, en cambio, viajamos cómodos. Lo consiguen los sistemas del avión."
+    ]},
+    {"id": "s2", "lines": [
+      "Todo empieza con el sistema neumático, que proporciona aire comprimido.",
+      "Ese aire sale del compresor de los motores, de la APU, o en tierra, de una unidad externa: la air service unit.",
+      "Con él se presuriza la cabina, se arrancan los motores, funciona el aire acondicionado y los sistemas antihielo."
+    ]},
+    {"id": "s3", "lines": [
+      "El aire acondicionado enfría ese aire caliente en unos equipos llamados packs.",
+      "Normalmente hay un pack por motor.",
+      "Cada zona del avión tiene su propio climatizador, y el aire se limpia con filtros HEPA."
+    ]},
+    {"id": "s4", "lines": [
+      "Cuanto más alto volamos, menos combustible consumimos. Por eso los aviones suben hasta unos cuarenta mil pies.",
+      "Pero allí la presión es muy baja, así que el sistema de presurización crea una atmósfera artificial dentro del avión.",
+      "Los motores meten aire, y la outflow valve lo va dejando salir. Así se controla la presión y se ventila la cabina.",
+      "Dentro, es como estar a entre seis mil y ocho mil pies de altura."
+    ]},
+    {"id": "s5", "lines": [
+      "El hielo es peligroso para el avión. El sistema antihielo calienta las zonas exteriores para que no se forme.",
+      "Se calienta, por ejemplo, el tubo pitot. Y algunos aviones llevan botas neumáticas, que se inflan y rompen el hielo.",
+      "En tierra, antes de despegar, se rocía el avión con glicol y agua caliente: es el de-icing."
+    ]},
+    {"id": "s6", "lines": [
+      "El sistema hidráulico usa líquido a presión para mover piezas pesadas.",
+      "Mueve las superficies aerodinámicas, los mandos de vuelo, las reversas, el tren de aterrizaje, y en algunos aviones, puertas y escaleras.",
+      "Sus elementos principales son la bomba, el filtro, el acumulador, la válvula selectora, la válvula de liberación y el actuador."
+    ]},
+    {"id": "s7", "lines": [
+      "El tren de aterrizaje es triciclo y retráctil: una rueda delantera y dos patas principales, que se guardan en vuelo.",
+      "Sus frenos llevan ABS y antiskid, para que las ruedas no se bloqueen.",
+      "Y la electricidad llega de varias fuentes: los generadores de los motores, la APU, las baterías, la toma de tierra GPU, y la RAT, una pequeña turbina de emergencia."
+    ]},
+    {"id": "s8", "lines": [
+      "El sistema de combustible almacena el combustible, sobre todo en las alas, y lo lleva a los motores.",
+      "Si hace falta aterrizar con menos peso, algunos aviones pueden vaciarlo en vuelo: es el fuel jettison.",
+      "Y el sistema de protección contra incendios detecta el fuego y ayuda a apagarlo."
+    ]},
+    {"id": "s9", "lines": [
+      "Por último, las luces exteriores.",
+      "La beacon, roja e intermitente, avisa de que los motores están en marcha.",
+      "Las luces de navegación son roja en el ala izquierda, verde en la derecha, y blanca en la cola.",
+      "Las strobe, blancas y muy brillantes, destellan en las puntas de las alas.",
+      "Y las luces de taxi y de aterrizaje iluminan el camino por delante."
+    ]},
+    {"id": "s10", "lines": [
+      "Aire, presión, hielo, fuerza hidráulica, electricidad y luces: sistemas que trabajan a la vez para que el vuelo sea seguro y cómodo."
+    ]}
+  ]
+}
