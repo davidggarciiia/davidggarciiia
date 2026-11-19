@@ -1,0 +1,61 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><g id="s2-h"><g transform="translate(700,400)"><g id="s2-hi"><path class="ink" fill="rgba(255,138,42,.35)" stroke-width="5" d="M-120,0 C-120,-60 -60,-80 20,-80 L120,-70 C150,-66 150,-20 120,-10 L60,20 L-80,20 C-110,20 -120,10 -120,0 Z"/><path class="ink" fill="none" stroke-width="5" d="M120,-50 L320,-40 L340,-80 L350,-40 L330,-30 M20,-80 L20,-100 M-160,-104 L200,-96 M-80,40 L80,40 M-60,20 L-60,40 M50,20 L50,40"/><path fill="rgba(66,188,240,.35)" stroke="#23307a" stroke-width="4" d="M-110,-10 C-110,-50 -70,-66 -20,-66 L-20,-10 Z"/></g></g></g><path id="s2-line" class="ink" fill="none" stroke-width="3" d="M700,440 L700,640"/><g id="s2-p"><circle cx="700" cy="650" r="16.0" fill="#ff3d96"/><path fill="#ff3d96" d="M678.0,710.0 C678.0,676.0 722.0,676.0 722.0,710.0 Z"/></g><path class="ln bl" pathLength="1" stroke-width="5" fill="none" d="M200,780 C230,762 260,798 290,780 C320,762 350,798 380,780 C410,762 440,798 470,780 C500,762 530,798 560,780 C590,762 620,798 650,780 C680,762 710,798 740,780 C770,762 800,798 830,780 C860,762 890,798 920,780 C950,762 980,798 1010,780 C1040,762 1070,798 1100,780 C1130,762 1160,798 1190,780 C1220,762 1250,798 1280,780 C1310,762 1340,798 1370,780 C1400,762 1430,798 1460,780" id="s2-w" /><g id="s2-rad"><path class="bl" fill="none" stroke-width="4" d="M1540,250 A40,40 0 0 1 1500,290"/><path class="bl" fill="none" stroke-width="4" d="M1580,250 A80,80 0 0 1 1500,330"/><path class="bl" fill="none" stroke-width="4" d="M1620,250 A120,120 0 0 1 1500,370"/><circle cx="1500" cy="250" r="12" fill="#23307a"/></g><g id="s2-box"><g transform="translate(1180,520)"><rect x="-40" y="0" width="80" height="60" rx="8" fill="rgba(255,138,42,.5)" stroke="#23307a" stroke-width="4"/><path class="ink" fill="none" stroke-width="3" d="M-40,0 L0,-60 L40,0"/></g></g><g id="s2-spk"><path class="ink" fill="rgba(255,92,168,.35)" stroke-width="4" d="M870,330 L900,330 L940,300 L940,420 L900,390 L870,390 Z"/></g></svg>
+<div id="s2-title" class="t h1" style="left:200px;top:96px;"><span class="w">1 · ¿Quién nos rescata?<span id="s2-title-hl" class="hl pink"></span></span></div><div id="s2-sar" class="t lbl" style="left:1060px;top:110px;"><span class="w">SAR<span id="s2-sarh" class="hl pink"></span></span> · búsqueda y salvamento</div><div id="s2-g" class="t sm" style="left:760px;top:560px;">grúa</div><div id="s2-r" class="t sm" style="left:1560px;top:320px;">radar</div><div id="s2-b" class="t sm" style="left:1240px;top:560px;">material lanzable</div><div id="s2-m" class="t sm" style="left:960px;top:260px;">megafonía</div><div id="s2-t1" class="t lbl" style="left:200px;top:860px;">salida: ☀ día <span class="w">≤ 30 min<span id="s2-t1h" class="hl blue"></span></span> · ☾ noche <span class="w">≤ 2 h<span id="s2-t2h" class="hl pink"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s2"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 5.217, 13.865], D=22.061;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s2-title",T[0]+0.1,0.9); hl("#s2-title-hl",T[0]+1.0); write("#s2-sar",T[0]+1.2,1.4); hl("#s2-sarh",T[0]+2.6);
+tl.set(q("#s2-line, #s2-p, #s2-rad, #s2-box, #s2-spk"),{opacity:0},0);
+draw("#s2-w",T[0]+0.4,1.0);
+tl.fromTo(q("#s2-h"),{x:-700,y:-80},{x:0,y:0,duration:2.4,ease:"power2.out"},T[0]+0.4);
+tl.to(q("#s2-h"),{y:-10,duration:0.8,yoyo:true,repeat:Math.round((D-T[0]-3)/0.8),ease:"sine.inOut"},T[0]+2.8);
+show("#s2-line",T[1]+1.4,0.3); show("#s2-p",T[1]+1.6,0.3); write("#s2-g",T[1]+1.6,0.4);
+tl.fromTo(q("#s2-p"),{y:0},{y:-140,duration:2.4,ease:"power1.inOut"},T[1]+2.4);
+tl.fromTo(q("#s2-line"),{scaleY:1,transformOrigin:"50% 0%"},{scaleY:0.3,transformOrigin:"50% 0%",duration:2.4,ease:"power1.inOut"},T[1]+2.4);
+show("#s2-rad",T[1]+4.2,0.3); write("#s2-r",T[1]+4.2,0.4);
+show("#s2-box",T[1]+5.6,0.3); tl.fromTo(q("#s2-box"),{y:-200},{y:0,duration:0.8,ease:"bounce.out"},T[1]+5.6); write("#s2-b",T[1]+6.0,0.8);
+show("#s2-spk",T[1]+7.4,0.3); write("#s2-m",T[1]+7.4,0.6);
+write("#s2-t1",T[2]+1.6,2.6); hl("#s2-t1h",T[2]+4.4,0.3); hl("#s2-t2h",T[2]+5.6,0.3);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s2"]=tl;
+})();
+</script>
+</template>

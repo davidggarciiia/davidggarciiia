@@ -1,0 +1,56 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s14" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="10" fill="none" d="M1500,450 m0,-160 a160,160 0 1 1 -0.1,0" id="s14-clk" /><path id="s14-hand" class="ink" fill="none" stroke-width="7" d="M1500,450 L1500,330"/><g id="s14-bc"><g transform="translate(1440,720)"><rect x="0" y="0" width="120" height="160" rx="16" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/><path class="ink" fill="none" stroke-width="6" d="M60,0 L60,-80"/></g></g></svg>
+<div id="s14-title" class="t h1" style="left:200px;top:96px;"><span class="w">13 · La gran decisión<span id="s14-title-hl" class="hl pink"></span></span></div><div id="s14-q" class="t lbl" style="left:200px;top:240px;">¿quedarse o moverse?</div><div id="s14-a" class="t lbl" style="left:200px;top:320px;">primeras <span class="w">48 h<span id="s14-ah" class="hl pink"></span></span>: mejor no moverse</div><div id="s14-r0" class="t sm" style="left:240px;top:430px;">· distancias grandes o desconocidas</div><div id="s14-r1" class="t sm" style="left:240px;top:502px;">· problemas de orientación</div><div id="s14-r2" class="t sm" style="left:240px;top:574px;">· clima adverso o imprevisible</div><div id="s14-r3" class="t sm" style="left:240px;top:646px;">· falta de agua</div><div id="s14-r4" class="t sm" style="left:240px;top:718px;">· terreno difícil</div><div id="s14-48" class="t lbl" style="left:1440px;top:410px;">48 h</div><div id="s14-t" class="t lbl" style="left:1180px;top:900px;">con radiobaliza: <span class="w">≈ 22 h<span id="s14-th" class="hl blue"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s14"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 7.393, 16.148], D=21.976;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s14-title",T[0]+0.1,0.9); hl("#s14-title-hl",T[0]+1.0); write("#s14-q",T[0]+1.4,1.2);
+draw("#s14-clk",T[0]+3.4,1.2); write("#s14-48",T[0]+4.0,0.5);
+tl.fromTo(q("#s14-hand"),{rotation:0,svgOrigin:"1500 450"},{rotation:720,svgOrigin:"1500 450",duration:3,ease:"power1.inOut"},T[0]+3.6);
+write("#s14-a",T[0]+3.6,1.6); hl("#s14-ah",T[0]+5.2);
+const rt=[0.8,2.8,4.4,5.8,6.8]; rt.forEach((t,i)=>write("#s14-r"+i,T[1]+t,0.9));
+tl.fromTo(q("#s14-bc"),{opacity:0,y:30},{opacity:1,y:0,duration:0.5},T[2]+0.4);
+write("#s14-t",T[2]+0.6,1.4); hl("#s14-th",T[2]+2.4);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s14"]=tl;
+})();
+</script>
+</template>

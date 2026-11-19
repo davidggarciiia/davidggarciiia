@@ -1,0 +1,60 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s9" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><rect id="s9-box" x="400" y="320" width="520" height="460" rx="24" fill="#ff8a2a" stroke="#23307a" stroke-width="6"/><rect x="440" y="360" width="440" height="120" rx="10" fill="rgba(255,255,255,.85)" stroke="#23307a" stroke-width="4"/><text x="660" y="440" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="64" fill="#23307a">KANNAD 406</text><path class="ln ink" pathLength="1" stroke-width="8" fill="none" d="M520,660 L800,660" id="s9-track" /><text x="520" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">OFF</text><text x="660" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">ARM</text><text x="800" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">ON</text><g id="s9-knob"><circle cx="520" cy="660" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="6"/></g><circle id="s9-led" cx="820" cy="560" r="22" fill="#e8364f" stroke="#23307a" stroke-width="4"/><g id="s9-buzz"><path class="bl" fill="none" stroke-width="5" d="M940,520 q20,40 0,80 M970,500 q30,60 0,120 M1000,480 q40,80 0,160"/></g></svg>
+<div id="s9-title" class="t h1" style="left:200px;top:96px;"><span class="w">8 · Radiobaliza Kannad 406<span id="s9-title-hl" class="hl blue"></span></span></div><div id="s9-a" class="t lbl" style="left:1080px;top:280px;">batería seca · <span class="w">no necesita agua<span id="s9-ah" class="hl blue"></span></span></div><div id="s9-f1" class="t lbl" style="left:1080px;top:380px;">continua: 121,5 / 243 MHz</div><div id="s9-f2" class="t lbl" style="left:1080px;top:450px;">discontinua: 406 MHz</div><div id="s9-s" class="t sm" style="left:1080px;top:560px;">OFF apagada · ARM con agua · ON encendida</div><div id="s9-z" class="t sm" style="left:1080px;top:620px;">activada: zumbido + <span class="w">luz roja<span id="s9-zh" class="hl pink"></span></span></div><div id="s9-c" class="t sm" style="left:200px;top:840px;">prevuelo: presencia y anclaje · precinto intacto · <span class="w">nunca sacarla de su sitio<span id="s9-ch" class="hl pink"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s9"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 8.545, 16.767, 26.418], D=35.617;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s9-title",T[0]+0.1,1.0); hl("#s9-title-hl",T[0]+1.1);
+tl.set(q("#s9-led, #s9-buzz"),{opacity:0},0);
+write("#s9-a",T[0]+3.6,1.6); hl("#s9-ah",T[0]+5.2);
+write("#s9-f1",T[1]+0.6,1.8); write("#s9-f2",T[1]+5.0,1.2);
+tl.to(q("#s9-knob"),{x:140,duration:0.5,ease:"power2.inOut"},T[2]+5.0);
+tl.to(q("#s9-knob"),{x:280,duration:0.5,ease:"power2.inOut"},T[2]+8.4);
+write("#s9-s",T[2]+1.4,7.0);
+tl.to(q("#s9-led"),{opacity:1,duration:0.1,yoyo:true,repeat:Math.round((D-T[2]-9.4)/0.4)},T[2]+9.4);
+tl.to(q("#s9-buzz"),{opacity:1,duration:0.15,yoyo:true,repeat:Math.round((D-T[2]-9.4)/0.3)},T[2]+9.4);
+write("#s9-z",T[2]+9.4,1.4); hl("#s9-zh",T[2]+10.8);
+write("#s9-c",T[3]+0.6,4.4); hl("#s9-ch",T[3]+5.4,0.4);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s9"]=tl;
+})();
+</script>
+</template>

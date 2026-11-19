@@ -1,0 +1,61 @@
+<template>
+<style>
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat.woff2') format('woff2');font-weight:400 700;font-display:block}
+#root{position:absolute;inset:0;font-family:'Caveat',cursive;color:#23307a}
+.stage{position:absolute;inset:0}
+svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visible}
+.ln{fill:none;stroke-dasharray:1 1}
+.t{position:absolute;white-space:nowrap;line-height:1.08;font-weight:700}
+.h1{font-size:100px}
+.lbl{font-size:56px}
+.sm{font-size:46px;font-weight:600;color:#3a3f8f}
+.big{font-size:120px}
+.w{position:relative;display:inline-block;isolation:isolate}
+.hl{position:absolute;left:-12px;right:-12px;top:34%;bottom:2%;transform-origin:0 50%;border-radius:8px 14px 10px 6px;z-index:-1;mix-blend-mode:multiply}
+.pink{background:rgba(255,92,168,.48)}
+.blue{background:rgba(66,188,240,.45)}
+.ink{stroke:#23307a}
+.inkp{stroke:#5a3fb0}
+.pk{stroke:#ff3d96}
+.bl{stroke:#1ea7e4}
+</style>
+<div id="root" data-composition-id="s8" data-width="1920" data-height="1080">
+<div class="stage">
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><ellipse id="s8-c1" cx="760" cy="600" rx="270" ry="200" fill="rgba(255,138,42,.35)" stroke="#23307a" stroke-width="6"/><ellipse id="s8-c2" cx="760" cy="600" rx="210" ry="145" fill="rgba(255,214,90,.35)" stroke="#23307a" stroke-width="6"/><g id="s8-lps"><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M1030,600 Q1074,649 1009,678"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M951,741 Q937,804 862,785"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M760,800 Q696,840 655,784"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M569,741 Q493,735 510,675"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M490,600 Q446,551 511,522"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M569,459 Q583,396 658,415"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M760,400 Q824,360 865,416"/><path class="s8-lp" fill="none" stroke="#1ea7e4" stroke-width="4" d="M951,459 Q1027,465 1010,525"/></g><g id="s8-st"><path class="ink" fill="none" stroke-width="6" d="M460,580 L500,580 M460,620 L500,620 M460,570 L460,630"/><path class="ink" fill="none" stroke-width="6" d="M1060,580 L1020,580 M1060,620 L1020,620 M1060,570 L1060,630"/></g><path class="ln ink" pathLength="1" stroke-width="4" fill="none" d="M760,400 C800,300 920,280 1060,270" id="s8-moor" /><path class="ln ink" pathLength="1" stroke-width="4" fill="none" d="M1010,720 C1090,800 1140,860 1180,900" id="s8-anc" /><path id="s8-ank" class="ink" fill="none" stroke-width="5" d="M1180,890 L1180,950 M1155,930 Q1180,960 1205,930"/><circle id="s8-heav" cx="380" cy="370" r="34" fill="none" stroke="#ff3d96" stroke-width="7"/><path class="ln pk" pathLength="1" stroke-width="4" fill="none" d="M410,390 C460,420 500,440 560,450" id="s8-hl" /></svg>
+<div id="s8-title" class="t h1" style="left:200px;top:96px;"><span class="w">7 · Balsas salvavidas<span id="s8-title-hl" class="hl pink"></span></span></div><div id="s8-r" class="t lbl" style="left:1100px;top:220px;">+120 min sobre el agua o +400 NM</div><div id="s8-r2" class="t lbl" style="left:1100px;top:290px;"><span class="w">plazas para todos<span id="s8-rh" class="hl blue"></span></span></div><div id="s8-l1" class="t sm" style="left:1260px;top:420px;">2 cámaras de aire</div><div id="s8-l2" class="t sm" style="left:1260px;top:470px;">cuerda de amarre (mooring line)</div><div id="s8-l3" class="t sm" style="left:1260px;top:520px;">líneas de salvamento</div><div id="s8-l4" class="t sm" style="left:1260px;top:570px;">cuerda de rescate (heaving line)</div><div id="s8-l5" class="t sm" style="left:1260px;top:620px;">ancla</div><div id="s8-l6" class="t sm" style="left:1260px;top:670px;">2 estaciones de abordaje</div><div id="s8-l7" class="t lbl" style="left:1260px;top:740px;"><span class="w">+ kit de supervivencia<span id="s8-l7h" class="hl pink"></span></span></div>
+</div>
+</div>
+<script>
+(function(){
+
+const host=document.querySelector('[data-composition-id="s8"]');
+const q=gsap.utils.selector(host);
+const T=[0.6, 11.083], D=22.181;
+const tl=gsap.timeline({paused:true});
+const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
+const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
+const hl=(s,t,d=0.35)=>tl.fromTo(q(s),{scaleX:0},{scaleX:1,duration:d,ease:"power2.out"},t);
+const show=(s,t,d=0.3)=>tl.fromTo(q(s),{opacity:0},{opacity:1,duration:d,ease:"none"},t);
+const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
+
+tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
+
+write("#s8-title",T[0]+0.1,0.9); hl("#s8-title-hl",T[0]+1.0);
+tl.set(q("#s8-c1, #s8-c2, #s8-lps, #s8-st, #s8-ank, #s8-heav"),{opacity:0},0);
+show("#s8-c1",T[0]+0.6,0.4); show("#s8-c2",T[0]+1.0,0.4);
+write("#s8-r",T[0]+2.6,2.2); write("#s8-r2",T[0]+7.6,1.0); hl("#s8-rh",T[0]+8.6);
+const it=[(0.8),(3.0),(4.6),(6.2),(8.0),(8.8)];
+write("#s8-l1",T[1]+0.8,0.6); tl.fromTo(q("#s8-c1, #s8-c2"),{scale:1,transformOrigin:"50% 50%"},{scale:1.04,transformOrigin:"50% 50%",duration:0.3,yoyo:true,repeat:1},T[1]+0.8);
+write("#s8-l2",T[1]+2.4,1.0); draw("#s8-moor",T[1]+2.4,0.6);
+write("#s8-l3",T[1]+4.0,0.8); show("#s8-lps",T[1]+4.0,0.4);
+write("#s8-l4",T[1]+5.4,1.0); show("#s8-heav",T[1]+5.4,0.3); draw("#s8-hl",T[1]+5.6,0.5);
+write("#s8-l5",T[1]+7.0,0.4); draw("#s8-anc",T[1]+7.0,0.5); show("#s8-ank",T[1]+7.4,0.3);
+write("#s8-l6",T[1]+8.0,0.9); show("#s8-st",T[1]+8.0,0.3);
+write("#s8-l7",T[1]+8.6,0.8); hl("#s8-l7h",T[1]+9.4);
+
+tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
+tl.set({},{},D);
+window.__timelines["s8"]=tl;
+})();
+</script>
+</template>
