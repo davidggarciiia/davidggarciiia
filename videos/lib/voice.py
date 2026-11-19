@@ -29,11 +29,14 @@ for sc in cfg["scenes"]:
     pcm, t, starts, ends, sw = b"", cfg["lead"], [], [], 2
     pcm += b"\x00\x00" * int(cfg["lead"] * RATE)
     for i, line in enumerate(sc["lines"]):
+        extra = 0.0
+        if isinstance(line, dict):  # {"text": ..., "pause": seconds of silence after it}
+            extra, line = line.get("pause", 0.0), line["text"]
         data, sw = read(tts(line))
         dur = len(data) / sw / RATE
         starts.append(round(t, 3)); ends.append(round(t + dur, 3))
         pcm += data; t += dur
-        gap = cfg["gap"] if i < len(sc["lines"]) - 1 else cfg["tail"]
+        gap = (cfg["gap"] if i < len(sc["lines"]) - 1 else cfg["tail"]) + extra
         pcm += b"\x00" * sw * int(gap * RATE); t += gap
     with wave.open(str(out / f"{sc['id']}.wav"), "wb") as w:
         w.setnchannels(1); w.setsampwidth(sw); w.setframerate(RATE); w.writeframes(pcm)

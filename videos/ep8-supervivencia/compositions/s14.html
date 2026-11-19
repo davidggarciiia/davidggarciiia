@@ -21,8 +21,8 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 </style>
 <div id="root" data-composition-id="s14" data-width="1920" data-height="1080">
 <div class="stage">
-<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="10" fill="none" d="M1500,450 m0,-160 a160,160 0 1 1 -0.1,0" id="s14-clk" /><path id="s14-hand" class="ink" fill="none" stroke-width="7" d="M1500,450 L1500,330"/><g id="s14-bc"><g transform="translate(1440,720)"><rect x="0" y="0" width="120" height="160" rx="16" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/><path class="ink" fill="none" stroke-width="6" d="M60,0 L60,-80"/></g></g></svg>
-<div id="s14-title" class="t h1" style="left:200px;top:96px;"><span class="w">13 · La gran decisión<span id="s14-title-hl" class="hl pink"></span></span></div><div id="s14-q" class="t lbl" style="left:200px;top:240px;">¿quedarse o moverse?</div><div id="s14-a" class="t lbl" style="left:200px;top:320px;">primeras <span class="w">48 h<span id="s14-ah" class="hl pink"></span></span>: mejor no moverse</div><div id="s14-r0" class="t sm" style="left:240px;top:430px;">· distancias grandes o desconocidas</div><div id="s14-r1" class="t sm" style="left:240px;top:502px;">· problemas de orientación</div><div id="s14-r2" class="t sm" style="left:240px;top:574px;">· clima adverso o imprevisible</div><div id="s14-r3" class="t sm" style="left:240px;top:646px;">· falta de agua</div><div id="s14-r4" class="t sm" style="left:240px;top:718px;">· terreno difícil</div><div id="s14-48" class="t lbl" style="left:1440px;top:410px;">48 h</div><div id="s14-t" class="t lbl" style="left:1180px;top:900px;">con radiobaliza: <span class="w">≈ 22 h<span id="s14-th" class="hl blue"></span></span></div>
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><circle class="s14-dt" cx="400" cy="380" r="16" fill="#23307a"/><circle class="s14-dt" cx="460" cy="380" r="16" fill="#23307a"/><circle class="s14-dt" cx="520" cy="380" r="16" fill="#23307a"/><rect class="s14-dt" x="620" y="368" width="80" height="24" rx="12" fill="#ff3d96"/><rect class="s14-dt" x="730" y="368" width="80" height="24" rx="12" fill="#ff3d96"/><rect class="s14-dt" x="840" y="368" width="80" height="24" rx="12" fill="#ff3d96"/><circle class="s14-dt" cx="1000" cy="380" r="16" fill="#23307a"/><circle class="s14-dt" cx="1060" cy="380" r="16" fill="#23307a"/><circle class="s14-dt" cx="1120" cy="380" r="16" fill="#23307a"/></svg>
+<div id="s14-title" class="t h1" style="left:200px;top:96px;"><span class="w">13 · SOS y códigos<span id="s14-title-hl" class="hl blue"></span></span></div><div id="s14-a" class="t big" style="left:360px;top:450px;width:180px;text-align:center">S</div><div id="s14-b" class="t big" style="left:640px;top:450px;width:280px;text-align:center">O</div><div id="s14-c" class="t big" style="left:960px;top:450px;width:180px;text-align:center">S</div><div id="s14-l" class="t sm" style="left:1260px;top:330px;">linterna: 3 cortos ·</div><div id="s14-l2" class="t sm" style="left:1260px;top:380px;">3 largos · 3 cortos</div><div id="s14-s0" class="t lbl" style="left:200px;top:700px;width:300px;white-space:normal;line-height:1.0;text-align:center"><span style="font-size:110px;color:#ff3d96">V</span><br>necesitamos ayuda</div><div id="s14-s1" class="t lbl" style="left:520px;top:700px;width:300px;white-space:normal;line-height:1.0;text-align:center"><span style="font-size:110px;color:#ff3d96">X</span><br>ayuda médica</div><div id="s14-s2" class="t lbl" style="left:840px;top:700px;width:300px;white-space:normal;line-height:1.0;text-align:center"><span style="font-size:110px;color:#ff3d96">N</span><br>no</div><div id="s14-s3" class="t lbl" style="left:1160px;top:700px;width:300px;white-space:normal;line-height:1.0;text-align:center"><span style="font-size:110px;color:#ff3d96">Y</span><br>sí</div><div id="s14-s4" class="t lbl" style="left:1480px;top:700px;width:300px;white-space:normal;line-height:1.0;text-align:center"><span style="font-size:110px;color:#ff3d96">↑</span><br>avanzamos en esta dirección</div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s14"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 7.393, 16.148], D=21.976;
+const T=[0.6, 10.387, 16.205], D=26.656;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -40,13 +40,13 @@ const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
 
 tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
-write("#s14-title",T[0]+0.1,0.9); hl("#s14-title-hl",T[0]+1.0); write("#s14-q",T[0]+1.4,1.2);
-draw("#s14-clk",T[0]+3.4,1.2); write("#s14-48",T[0]+4.0,0.5);
-tl.fromTo(q("#s14-hand"),{rotation:0,svgOrigin:"1500 450"},{rotation:720,svgOrigin:"1500 450",duration:3,ease:"power1.inOut"},T[0]+3.6);
-write("#s14-a",T[0]+3.6,1.6); hl("#s14-ah",T[0]+5.2);
-const rt=[0.8,2.8,4.4,5.8,6.8]; rt.forEach((t,i)=>write("#s14-r"+i,T[1]+t,0.9));
-tl.fromTo(q("#s14-bc"),{opacity:0,y:30},{opacity:1,y:0,duration:0.5},T[2]+0.4);
-write("#s14-t",T[2]+0.6,1.4); hl("#s14-th",T[2]+2.4);
+write("#s14-title",T[0]+0.1,0.9); hl("#s14-title-hl",T[0]+1.0);
+tl.set(q(".s14-dt"),{opacity:0},0);
+const dt=q(".s14-dt"); dt.forEach((e,i)=>tl.to(e,{opacity:1,duration:0.1},T[0]+2.4+i*0.35));
+write("#s14-a",T[0]+2.6,0.4); write("#s14-b",T[0]+3.6,0.4); write("#s14-c",T[0]+4.6,0.4);
+write("#s14-l",T[0]+6.0,1.2); write("#s14-l2",T[0]+7.4,1.2);
+const ss=[0.5,2.6,4.6,6.0,7.4];
+ss.forEach((t,i)=>write("#s14-s"+i,T[2]+t,0.8));
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

@@ -21,8 +21,8 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 </style>
 <div id="root" data-composition-id="s10" data-width="1920" data-height="1080">
 <div class="stage">
-<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="5" fill="none" d="M200,700 C230,682 260,718 290,700 C320,682 350,718 380,700 C410,682 440,718 470,700 C500,682 530,718 560,700 C590,682 620,718 650,700 C680,682 710,718 740,700 C770,682 800,718 830,700 C860,682 890,718 920,700 C950,682 980,718 1010,700" id="s10-sea" /><g id="s10-bc"><g transform="translate(560,560)"><rect x="-50" y="-40" width="100" height="220" rx="20" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/></g><g id="s10-ant"><path class="ink" fill="none" stroke-width="6" d="M560,520 L560,520"/></g></g><path id="s10-x" fill="none" stroke="#e8364f" stroke-width="10" stroke-linecap="round" d="M1300,560 L1440,700 M1440,560 L1300,700"/><g id="s10-hz"><g transform="translate(1370,640)"><rect x="-110" y="-35" width="220" height="70" rx="20" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/></g></g></svg>
-<div id="s10-title" class="t h1" style="left:200px;top:96px;"><span class="w">9 · Radiobaliza Honeywell<span id="s10-title-hl" class="hl pink"></span></span></div><div id="s10-a" class="t lbl" style="left:200px;top:250px;">cabina de pasajeros · junto a una balsa o rampa</div><div id="s10-a2" class="t lbl" style="left:200px;top:320px;"><span class="w">tierra y agua<span id="s10-ah" class="hl blue"></span></span></div><div id="s10-b" class="t sm" style="left:700px;top:430px;">electrolito + agua → se activa</div><div id="s10-b2" class="t sm" style="left:700px;top:480px;">antena autoeréctil</div><div id="s10-h" class="t sm" style="left:1180px;top:760px;color:#e8364f">en horizontal deja de emitir</div><div id="s10-c" class="t sm" style="left:200px;top:880px;">prevuelo: presencia y anclaje · antena asegurada · <span class="w">bolsa de sal<span id="s10-ch" class="hl pink"></span></span> en buen estado</div>
+<svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><rect id="s10-box" x="400" y="320" width="520" height="460" rx="24" fill="#ff8a2a" stroke="#23307a" stroke-width="6"/><rect x="440" y="360" width="440" height="120" rx="10" fill="rgba(255,255,255,.85)" stroke="#23307a" stroke-width="4"/><text x="660" y="440" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="64" fill="#23307a">KANNAD 406</text><path class="ln ink" pathLength="1" stroke-width="8" fill="none" d="M520,660 L800,660" id="s10-track" /><text x="520" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">OFF</text><text x="660" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">ARM</text><text x="800" y="736" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="44" fill="#23307a">ON</text><g id="s10-knob"><circle cx="520" cy="660" r="26" fill="#fdfdff" stroke="#23307a" stroke-width="6"/></g><circle id="s10-led" cx="820" cy="560" r="22" fill="#e8364f" stroke="#23307a" stroke-width="4"/><g id="s10-buzz"><path class="bl" fill="none" stroke-width="5" d="M940,520 q20,40 0,80 M970,500 q30,60 0,120 M1000,480 q40,80 0,160"/></g></svg>
+<div id="s10-title" class="t h1" style="left:200px;top:96px;"><span class="w">9 · Radiobaliza Kannad 406<span id="s10-title-hl" class="hl blue"></span></span></div><div id="s10-a" class="t lbl" style="left:1080px;top:280px;">batería seca · <span class="w">no necesita agua<span id="s10-ah" class="hl blue"></span></span></div><div id="s10-f1" class="t lbl" style="left:1080px;top:380px;">continua: 121,5 / 243 MHz</div><div id="s10-f1b" class="t sm" style="left:1100px;top:445px;">civil / militar</div><div id="s10-f2" class="t lbl" style="left:1080px;top:500px;">discontinua: 406 MHz (satélite)</div><div id="s10-s" class="t sm" style="left:1080px;top:600px;">OFF apagada · ARM con agua · ON encendida</div><div id="s10-z" class="t sm" style="left:1080px;top:660px;">activada: <span class="w">luz roja + señal acústica<span id="s10-zh" class="hl pink"></span></span></div><div id="s10-c" class="t sm" style="left:200px;top:840px;">prevuelo: presencia y anclaje · precinto y plomo intactos · <span class="w">nunca sacarla de su sitio<span id="s10-ch" class="hl pink"></span></span></div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s10"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 7.798, 16.319], D=23.341;
+const T=[0.6, 7.229, 15.651, 26.803, 34.989, 38.867], D=49.147;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -41,13 +41,16 @@ const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
 tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
 write("#s10-title",T[0]+0.1,1.0); hl("#s10-title-hl",T[0]+1.1);
-write("#s10-a",T[0]+1.0,2.6); write("#s10-a2",T[0]+5.4,0.9); hl("#s10-ah",T[0]+6.3);
-tl.set(q("#s10-x, #s10-hz"),{opacity:0},0); draw("#s10-sea",T[0]+0.4,1.0);
-tl.fromTo(q("#s10-bc"),{y:-300},{y:0,duration:0.8,ease:"bounce.out"},T[1]+0.6);
-tl.to(q("#s10-ant path"),{attr:{d:"M560,520 L560,300"},duration:0.8,ease:"power2.out"},T[1]+1.8);
-write("#s10-b",T[1]+0.8,1.4); write("#s10-b2",T[1]+3.2,1.0);
-show("#s10-hz",T[1]+5.4,0.3); show("#s10-x",T[1]+6.0,0.2); write("#s10-h",T[1]+6.0,1.2);
-write("#s10-c",T[2]+0.6,4.0); hl("#s10-ch",T[2]+3.6,0.3);
+tl.set(q("#s10-led, #s10-buzz"),{opacity:0},0);
+write("#s10-a",T[1]+3.4,1.6); hl("#s10-ah",T[1]+5.6);
+write("#s10-f1",T[2]+0.6,1.8); write("#s10-f1b",T[2]+3.6,0.9); write("#s10-f2",T[2]+7.0,1.6);
+write("#s10-s",T[3]+1.2,5.6);
+tl.to(q("#s10-knob"),{x:140,duration:0.5,ease:"power2.inOut"},T[3]+2.4);
+tl.to(q("#s10-knob"),{x:280,duration:0.5,ease:"power2.inOut"},T[3]+6.4);
+tl.to(q("#s10-led"),{opacity:1,duration:0.1,yoyo:true,repeat:Math.round((D-T[4]-0.4)/0.4)},T[4]+0.4);
+tl.to(q("#s10-buzz"),{opacity:1,duration:0.15,yoyo:true,repeat:Math.round((D-T[4]-0.4)/0.3)},T[4]+0.4);
+write("#s10-z",T[4]+0.2,1.4); hl("#s10-zh",T[4]+1.6);
+write("#s10-c",T[5]+0.6,5.0); hl("#s10-ch",T[5]+6.6,0.4);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);
