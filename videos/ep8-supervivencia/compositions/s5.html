@@ -22,7 +22,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <div id="root" data-composition-id="s5" data-width="1920" data-height="1080">
 <div class="stage">
 <svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="6" fill="rgba(66,188,240,.35)" d="M400,300 C340,400 320,450 320,490 C320,540 360,570 400,570 C440,570 480,540 480,490 C480,450 460,400 400,300 Z" id="s5-drop" /><path id="s5-dune" fill="rgba(220,170,90,.4)" stroke="#23307a" stroke-width="5" d="M640,760 C760,620 900,620 1020,760 Z"/><path class="ln ink" pathLength="1" stroke-width="5" fill="none" d="M1060,760 C1080,820 1160,820 1180,760" id="s5-pit" /><g id="s5-raft"><ellipse cx="1500" cy="440" rx="170" ry="60" fill="rgba(255,138,42,.4)" stroke="#23307a" stroke-width="5"/><circle cx="1420" cy="430" r="7" fill="rgba(66,188,240,.8)"/><circle cx="1470" cy="445" r="7" fill="rgba(66,188,240,.8)"/><circle cx="1530" cy="425" r="7" fill="rgba(66,188,240,.8)"/><circle cx="1580" cy="440" r="7" fill="rgba(66,188,240,.8)"/><circle cx="1500" cy="455" r="7" fill="rgba(66,188,240,.8)"/></g><g id="s5-pot"><path class="ink" fill="rgba(200,205,225,.6)" stroke-width="5" d="M1300,700 L1420,700 L1410,780 L1310,780 Z"/><path fill="rgba(255,92,168,.6)" d="M1320,810 c10,-20 20,-20 20,-30 c10,10 20,20 10,30 Z M1380,810 c10,-20 20,-20 20,-30 c10,10 20,20 10,30 Z"/><path class="s5-steam" fill="none" stroke="#9aa0b8" stroke-width="4" d="M1340,680 c10,-20 -10,-30 0,-50 M1380,680 c10,-20 -10,-30 0,-50"/></g></svg>
-<div id="s5-title" class="t h1" style="left:200px;top:96px;"><span class="w">4 · La sed<span id="s5-title-hl" class="hl blue"></span></span></div><div id="s5-a" class="t lbl" style="left:540px;top:300px;">sin agua: <span class="w">3 a 5 días<span id="s5-ah" class="hl blue"></span></span></div><div id="s5-r" class="t lbl" style="left:540px;top:380px;">retener líquidos:</div><div id="s5-r2" class="t sm" style="left:560px;top:450px;">sin ejercicio · sin fumar</div><div id="s5-r3" class="t sm" style="left:560px;top:500px;">a la sombra · sin alcohol</div><div id="s5-d" class="t sm" style="left:640px;top:780px;">pie de las dunas</div><div id="s5-p" class="t sm" style="left:1040px;top:830px;">cavar un pozo</div><div id="s5-m" class="t lbl" style="left:1340px;top:520px;">en el mar: <span class="w">rocío<span id="s5-mh" class="hl pink"></span></span></div><div id="s5-f" class="t sm" style="left:1290px;top:840px;">filtrar y hervir · pastillas</div>
+<div id="s5-title" class="t h1" style="left:200px;top:96px;"><span class="w">4 · La sed<span id="s5-title-hl" class="hl blue"></span></span></div><div id="s5-a" class="t lbl" style="left:540px;top:300px;">sin agua: <span class="w">3 a 5 días<span id="s5-ah" class="hl blue"></span></span></div><div id="s5-r" class="t lbl" style="left:540px;top:380px;">retener fluidos:</div><div id="s5-r2" class="t sm" style="left:560px;top:450px;">sin ejercicio · sin fumar</div><div id="s5-r3" class="t sm" style="left:560px;top:500px;">a la sombra · sin alcohol</div><div id="s5-d" class="t sm" style="left:640px;top:780px;">dunas</div><div id="s5-p" class="t sm" style="left:1040px;top:830px;">cavar un pozo</div><div id="s5-m" class="t lbl" style="left:1340px;top:520px;">en el mar: <span class="w">rocío<span id="s5-mh" class="hl pink"></span></span></div><div id="s5-f" class="t sm" style="left:1290px;top:840px;">filtrar y hervir</div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s5"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 8.936, 16.205, 25.971, 31.939], D=41.472;
+const T=[0.6, 10.472, 17.144, 21.149, 26.84], D=29.803;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -41,13 +41,13 @@ const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
 tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
 write("#s5-title",T[0]+0.1,0.6); hl("#s5-title-hl",T[0]+0.7);
-draw("#s5-drop",T[0]+0.6,1.0); write("#s5-a",T[0]+4.6,1.2); hl("#s5-ah",T[0]+5.8);
-write("#s5-r",T[1]+0.3,0.8); write("#s5-r2",T[1]+1.6,2.0); write("#s5-r3",T[1]+3.8,2.0);
+draw("#s5-drop",T[0]+0.6,1.0); write("#s5-a",T[0]+6.6,1.2); hl("#s5-ah",T[0]+7.8);
+write("#s5-r",T[1]+0.3,0.8); write("#s5-r2",T[1]+1.4,1.8); write("#s5-r3",T[1]+3.4,1.8);
 tl.set(q("#s5-dune, #s5-pot, #s5-raft"),{opacity:0},0);
-show("#s5-dune",T[2]+4.4,0.4); write("#s5-d",T[2]+4.4,0.8); draw("#s5-pit",T[2]+6.6,0.5); write("#s5-p",T[2]+6.6,0.7);
-show("#s5-raft",T[3]+0.6,0.4); write("#s5-m",T[3]+0.8,0.8); hl("#s5-mh",T[3]+3.4,0.3);
-show("#s5-pot",T[4]+0.4,0.4); write("#s5-f",T[4]+1.0,2.0);
-tl.fromTo(q(".s5-steam"),{y:0,opacity:0.9},{y:-20,opacity:0.2,duration:0.8,repeat:Math.max(1,Math.round((D-T[4]-1)/0.8)),ease:"none"},T[4]+1.0);
+show("#s5-dune",T[2]+1.8,0.4); write("#s5-d",T[2]+1.8,0.5); draw("#s5-pit",T[2]+2.6,0.5); write("#s5-p",T[2]+2.6,0.7);
+show("#s5-raft",T[3]+0.4,0.4); write("#s5-m",T[3]+0.6,0.8); hl("#s5-mh",T[3]+2.6,0.3);
+show("#s5-pot",T[4]+0.2,0.4); write("#s5-f",T[4]+0.4,1.0);
+tl.fromTo(q(".s5-steam"),{y:0,opacity:0.9},{y:-20,opacity:0.2,duration:0.8,repeat:Math.max(1,Math.round((D-T[4]-0.6)/0.8)),ease:"none"},T[4]+0.6);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

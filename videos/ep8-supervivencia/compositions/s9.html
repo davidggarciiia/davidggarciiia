@@ -22,7 +22,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <div id="root" data-composition-id="s9" data-width="1920" data-height="1080">
 <div class="stage">
 <svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><ellipse id="s9-c1" cx="760" cy="600" rx="270" ry="200" fill="rgba(255,138,42,.35)" stroke="#23307a" stroke-width="6"/><ellipse id="s9-c2" cx="760" cy="600" rx="210" ry="145" fill="rgba(255,214,90,.35)" stroke="#23307a" stroke-width="6"/><g id="s9-lps"><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M1030,600 Q1074,649 1009,678"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M951,741 Q937,804 862,785"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M760,800 Q696,840 655,784"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M569,741 Q493,735 510,675"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M490,600 Q446,551 511,522"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M569,459 Q583,396 658,415"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M760,400 Q824,360 865,416"/><path fill="none" stroke="#1ea7e4" stroke-width="4" d="M951,459 Q1027,465 1010,525"/></g><g id="s9-st"><path class="ink" fill="none" stroke-width="6" d="M460,580 L500,580 M460,620 L500,620 M460,570 L460,630"/><path class="ink" fill="none" stroke-width="6" d="M1060,580 L1020,580 M1060,620 L1020,620 M1060,570 L1060,630"/></g><path class="ln ink" pathLength="1" stroke-width="4" fill="none" d="M760,400 C800,300 920,280 1060,270" id="s9-moor" /><path class="ln ink" pathLength="1" stroke-width="4" fill="none" d="M1010,720 C1090,800 1140,860 1180,900" id="s9-anc" /><path id="s9-ank" class="ink" fill="none" stroke-width="5" d="M1180,890 L1180,950 M1155,930 Q1180,960 1205,930"/><circle id="s9-heav" cx="380" cy="370" r="34" fill="none" stroke="#ff3d96" stroke-width="7"/><path class="ln pk" pathLength="1" stroke-width="4" fill="none" d="M410,390 C460,420 500,440 560,450" id="s9-hl" /></svg>
-<div id="s9-title" class="t h1" style="left:200px;top:96px;"><span class="w">8 · Balsas salvavidas<span id="s9-title-hl" class="hl pink"></span></span></div><div id="s9-r" class="t lbl" style="left:1100px;top:220px;">+120 min sobre el agua o +400 NM</div><div id="s9-r2" class="t lbl" style="left:1100px;top:290px;"><span class="w">plazas para todos<span id="s9-rh" class="hl blue"></span></span></div><div id="s9-l1" class="t sm" style="left:1260px;top:410px;">2 cámaras de aire · si una falla, flota</div><div id="s9-l2" class="t sm" style="left:1260px;top:460px;">cuerda de amarre (mooring line)</div><div id="s9-l3" class="t sm" style="left:1260px;top:510px;">líneas de salvamento</div><div id="s9-l4" class="t sm" style="left:1260px;top:560px;">cuerda de rescate (heaving line)</div><div id="s9-l5" class="t sm" style="left:1260px;top:610px;">ancla · reduce la deriva</div><div id="s9-l6" class="t sm" style="left:1260px;top:660px;">2 estaciones de abordaje</div><div id="s9-l7" class="t lbl" style="left:1260px;top:740px;"><span class="w">+ kit de supervivencia<span id="s9-l7h" class="hl pink"></span></span></div>
+<div id="s9-title" class="t h1" style="left:200px;top:96px;"><span class="w">8 · Balsas salvavidas<span id="s9-title-hl" class="hl pink"></span></span></div><div id="s9-r" class="t lbl" style="left:1100px;top:220px;">120 min sobre el agua o +400 NM</div><div id="s9-r2" class="t lbl" style="left:1100px;top:290px;"><span class="w">para todos los ocupantes<span id="s9-rh" class="hl blue"></span></span></div><div id="s9-l1" class="t sm" style="left:1260px;top:410px;">2 cámaras de aire</div><div id="s9-l2" class="t sm" style="left:1260px;top:460px;">cuerda de amarre (mooring line)</div><div id="s9-l3" class="t sm" style="left:1260px;top:510px;">líneas de salvamento</div><div id="s9-l4" class="t sm" style="left:1260px;top:560px;">cuerda de rescate (heaving line)</div><div id="s9-l5" class="t sm" style="left:1260px;top:610px;">ancla</div><div id="s9-l6" class="t sm" style="left:1260px;top:660px;">2 estaciones de abordaje</div><div id="s9-l7" class="t lbl" style="left:1260px;top:740px;"><span class="w">+ kit de supervivencia<span id="s9-l7h" class="hl pink"></span></span></div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s9"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 13.309, 23.117, 31.325], D=40.176;
+const T=[0.6, 14.184, 18.317, 22.003], D=25.328;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -43,14 +43,13 @@ tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 write("#s9-title",T[0]+0.1,0.9); hl("#s9-title-hl",T[0]+1.0);
 tl.set(q("#s9-c1, #s9-c2, #s9-lps, #s9-st, #s9-ank, #s9-heav"),{opacity:0},0);
 show("#s9-c1",T[0]+0.6,0.4); show("#s9-c2",T[0]+1.0,0.4);
-write("#s9-r",T[0]+2.6,3.0); write("#s9-r2",T[0]+10.0,1.0); hl("#s9-rh",T[0]+11.0);
-write("#s9-l1",T[1]+0.6,1.2); tl.fromTo(q("#s9-c1, #s9-c2"),{scale:1,transformOrigin:"50% 50%"},{scale:1.04,transformOrigin:"50% 50%",duration:0.3,yoyo:true,repeat:1},T[1]+0.8);
-write("#s9-l2",T[1]+5.0,1.0); draw("#s9-moor",T[1]+5.0,0.8);
-write("#s9-l3",T[2]+0.4,0.8); show("#s9-lps",T[2]+0.4,0.4);
-write("#s9-l4",T[2]+3.6,1.0); show("#s9-heav",T[2]+3.6,0.3); draw("#s9-hl",T[2]+3.8,0.5);
-write("#s9-l5",T[3]+0.6,0.8); draw("#s9-anc",T[3]+0.6,0.5); show("#s9-ank",T[3]+1.0,0.3);
-write("#s9-l6",T[3]+3.4,0.9); show("#s9-st",T[3]+3.4,0.3);
-write("#s9-l7",T[3]+5.8,0.8); hl("#s9-l7h",T[3]+6.6);
+write("#s9-r",T[0]+2.6,3.0); write("#s9-r2",T[0]+8.6,1.0); hl("#s9-rh",T[0]+9.6); write("#s9-l7",T[0]+11.4,0.8); hl("#s9-l7h",T[0]+12.2);
+write("#s9-l1",T[1]+0.6,0.8); tl.fromTo(q("#s9-c1, #s9-c2"),{scale:1,transformOrigin:"50% 50%"},{scale:1.04,transformOrigin:"50% 50%",duration:0.3,yoyo:true,repeat:1},T[1]+0.8);
+write("#s9-l2",T[1]+2.0,1.0); draw("#s9-moor",T[1]+2.0,0.8);
+write("#s9-l3",T[2]+0.2,0.8); show("#s9-lps",T[2]+0.2,0.4);
+write("#s9-l4",T[2]+1.6,1.0); show("#s9-heav",T[2]+1.6,0.3); draw("#s9-hl",T[2]+1.8,0.5);
+write("#s9-l5",T[3]+0.2,0.5); draw("#s9-anc",T[3]+0.2,0.5); show("#s9-ank",T[3]+0.6,0.3);
+write("#s9-l6",T[3]+1.0,0.9); show("#s9-st",T[3]+1.0,0.3);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

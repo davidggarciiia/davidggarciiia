@@ -22,7 +22,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
 <div class="stage">
 <svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><rect class="s3-st" id="s3-s0" x="300" y="360" width="300" height="360" fill="rgba(255,92,168,.35)" stroke="#23307a" stroke-width="4"/><rect class="s3-st" id="s3-s1" x="630" y="450" width="300" height="270" fill="rgba(66,188,240,.35)" stroke="#23307a" stroke-width="4"/><rect class="s3-st" id="s3-s2" x="960" y="540" width="300" height="180" fill="rgba(66,188,240,.35)" stroke="#23307a" stroke-width="4"/><rect class="s3-st" id="s3-s3" x="1290" y="630" width="300" height="90" fill="rgba(255,92,168,.35)" stroke="#23307a" stroke-width="4"/></svg>
-<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Cuatro agresiones<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-t0" class="t lbl" style="left:300px;top:280px;width:300px;text-align:center">1. Miedo</div><div id="s3-t1" class="t lbl" style="left:630px;top:370px;width:300px;text-align:center">2. Sed</div><div id="s3-t2" class="t lbl" style="left:960px;top:460px;width:300px;text-align:center">3. Frío</div><div id="s3-t3" class="t lbl" style="left:1290px;top:550px;width:300px;text-align:center">4. Hambre</div><div id="s3-m" class="t sm" style="left:1060px;top:230px;">bloquea · malas decisiones · se contagia</div><div id="s3-o" class="t sm" style="left:1060px;top:290px;">por orden de importancia</div><div id="s3-k" class="t lbl" style="left:200px;top:800px;">herramientas: <span class="w">sentido común<span id="s3-k1" class="hl blue"></span></span> + <span class="w">capacidad de valorar<span id="s3-k2" class="hl pink"></span></span></div>
+<div id="s3-title" class="t h1" style="left:200px;top:96px;"><span class="w">2 · Cuatro agresiones<span id="s3-title-hl" class="hl blue"></span></span></div><div id="s3-t0" class="t lbl" style="left:300px;top:280px;width:300px;text-align:center">1. Miedo</div><div id="s3-t1" class="t lbl" style="left:630px;top:370px;width:300px;text-align:center">2. Sed</div><div id="s3-t2" class="t lbl" style="left:960px;top:460px;width:300px;text-align:center">3. Frío</div><div id="s3-t3" class="t lbl" style="left:1290px;top:550px;width:300px;text-align:center">4. Hambre</div><div id="s3-o" class="t sm" style="left:1060px;top:250px;">por orden de importancia</div><div id="s3-k" class="t lbl" style="left:200px;top:800px;">herramientas: <span class="w">sentido común<span id="s3-k1" class="hl blue"></span></span> + <span class="w">capacidad de valorar<span id="s3-k2" class="hl pink"></span></span></div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s3"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 4.371, 12.088, 16.456], D=25.52;
+const T=[0.6, 2.984, 4.877, 8.947], D=13.381;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -42,9 +42,9 @@ tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
 write("#s3-title",T[0]+0.1,0.9); hl("#s3-title-hl",T[0]+1.0);
 const bar=(i,t)=>{tl.fromTo(q("#s3-s"+i),{scaleY:0,transformOrigin:"50% 100%"},{scaleY:1,duration:0.5,ease:"power2.out"},t); write("#s3-t"+i,t+0.2,0.5);};
-bar(0,T[1]+0.6); write("#s3-m",T[1]+2.4,2.4);
-bar(1,T[2]+0.6); bar(2,T[2]+1.4); bar(3,T[2]+2.2); write("#s3-o",T[2]+2.6,0.8);
-write("#s3-k",T[3]+3.4,2.4); hl("#s3-k1",T[3]+5.2,0.3); hl("#s3-k2",T[3]+6.6,0.3);
+bar(0,T[1]+0.6);
+bar(1,T[2]+0.5); bar(2,T[2]+1.1); bar(3,T[2]+1.7); write("#s3-o",T[2]+2.4,0.8);
+write("#s3-k",T[3]+0.6,1.6); hl("#s3-k1",T[3]+1.6,0.3); hl("#s3-k2",T[3]+2.6,0.3);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

@@ -29,7 +29,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <path class="ln ink" pathLength="1" stroke-width="3.5" d="M494,86 L580,72 L586,82 L518,94 Z"/>
 <path class="ink" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 22" d="M128,93 L440,89"/>
 </g></g><path id="s13-dye" fill="rgba(60,220,120,.45)" d="M1000,560 C1060,500 1200,520 1240,580 C1280,640 1180,690 1090,670 C1010,650 960,610 1000,560 Z"/><path class="ln bl" pathLength="1" stroke-width="5" fill="none" d="M960,620 C990,602 1020,638 1050,620 C1080,602 1110,638 1140,620 C1170,602 1200,638 1230,620 C1260,602 1290,638 1320,620" id="s13-sea" /><rect id="s13-pan" x="1400" y="480" width="260" height="140" fill="rgba(255,92,168,.5)" stroke="#23307a" stroke-width="4"/></svg>
-<div id="s13-title" class="t h1" style="left:200px;top:96px;"><span class="w">12 · Señales visuales<span id="s13-title-hl" class="hl pink"></span></span></div><div id="s13-m" class="t lbl" style="left:200px;top:620px;"><span class="w">Espejo<span id="s13-mh" class="hl blue"></span></span> 10 × 10 cm</div><div id="s13-m1" class="t sm" style="left:200px;top:690px;">mirar por el agujero y apuntar</div><div id="s13-m2" class="t sm" style="left:200px;top:750px;"><span class="w">destello hasta 32 km<span id="s13-m2h" class="hl pink"></span></span></div><div id="s13-d" class="t lbl" style="left:960px;top:700px;">fluoresceína</div><div id="s13-d2" class="t sm" style="left:960px;top:760px;">tiñe el agua</div><div id="s13-p" class="t lbl" style="left:1400px;top:640px;">paineles</div><div id="s13-p2" class="t sm" style="left:1400px;top:700px;">mín. 2,20 m</div>
+<div id="s13-title" class="t h1" style="left:200px;top:96px;"><span class="w">12 · Señales visuales<span id="s13-title-hl" class="hl pink"></span></span></div><div id="s13-m" class="t lbl" style="left:200px;top:620px;"><span class="w">Espejo<span id="s13-mh" class="hl blue"></span></span> 10 × 10 cm</div><div id="s13-m1" class="t sm" style="left:200px;top:690px;">agujero en medio · sol, llama o foco</div><div id="s13-m2" class="t sm" style="left:200px;top:750px;"><span class="w">destello hasta 32 km<span id="s13-m2h" class="hl pink"></span></span></div><div id="s13-d" class="t lbl" style="left:960px;top:700px;">fluoresceína</div><div id="s13-d2" class="t sm" style="left:960px;top:760px;">colorante en el agua</div><div id="s13-p" class="t lbl" style="left:1400px;top:640px;">paineles</div><div id="s13-p2" class="t sm" style="left:1400px;top:700px;">señal de mín. 2,20 m</div>
 </div>
 </div>
 <script>
@@ -37,7 +37,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s13"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 5.011, 17.677, 21.427, 29.549], D=39.509;
+const T=[0.6, 2.749, 12.771, 16.243, 21.379], D=28.117;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -50,12 +50,12 @@ tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 write("#s13-title",T[0]+0.1,0.9); hl("#s13-title-hl",T[0]+1.0);
 tl.set(q("#s13-mir, #s13-pl, #s13-dye, #s13-pan"),{opacity:0},0); tl.set(q("#s13-pl .ln"),{strokeDashoffset:0},0);
 show("#s13-mir",T[1]+0.3,0.3); write("#s13-m",T[1]+0.4,1.0); hl("#s13-mh",T[1]+1.4);
-write("#s13-m1",T[1]+4.0,1.4); show("#s13-pl",T[1]+6.6,0.3); draw("#s13-ray",T[1]+7.4,0.8);
-tl.to(q("#s13-ray"),{opacity:0.3,duration:0.1,yoyo:true,repeat:9},T[1]+9.0);
-write("#s13-m2",T[2]+0.3,1.0); hl("#s13-m2h",T[2]+1.4,0.3);
+write("#s13-m1",T[1]+3.4,1.4); show("#s13-pl",T[1]+5.6,0.3); draw("#s13-ray",T[1]+6.4,0.8);
+tl.to(q("#s13-ray"),{opacity:0.3,duration:0.1,yoyo:true,repeat:9},T[1]+7.4);
+write("#s13-m2",T[2]+0.2,1.0); hl("#s13-m2h",T[2]+1.2,0.3);
 draw("#s13-sea",T[3]+0.2,0.6); tl.fromTo(q("#s13-dye"),{opacity:0,scale:0.3,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:1.4},T[3]+1.6);
-write("#s13-d",T[3]+0.4,0.8); write("#s13-d2",T[3]+3.0,0.8);
-show("#s13-pan",T[4]+0.4,0.4); write("#s13-p",T[4]+0.4,0.6); write("#s13-p2",T[4]+6.2,0.8);
+write("#s13-d",T[3]+0.2,0.8); write("#s13-d2",T[3]+2.4,0.8);
+show("#s13-pan",T[4]+0.2,0.4); write("#s13-p",T[4]+0.2,0.6); write("#s13-p2",T[4]+3.6,0.9);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

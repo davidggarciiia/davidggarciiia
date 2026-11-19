@@ -22,7 +22,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <div id="root" data-composition-id="s11" data-width="1920" data-height="1080">
 <div class="stage">
 <svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="5" fill="none" d="M200,700 C230,682 260,718 290,700 C320,682 350,718 380,700 C410,682 440,718 470,700 C500,682 530,718 560,700 C590,682 620,718 650,700 C680,682 710,718 740,700 C770,682 800,718 830,700 C860,682 890,718 920,700 C950,682 980,718 1010,700" id="s11-sea" /><g id="s11-bc"><g transform="translate(560,560)"><rect x="-50" y="-40" width="100" height="220" rx="20" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/></g><g id="s11-ant"><path class="ink" fill="none" stroke-width="6" d="M560,520 L560,520"/></g></g><path id="s11-x" fill="none" stroke="#e8364f" stroke-width="10" stroke-linecap="round" d="M1300,560 L1440,700 M1440,560 L1300,700"/><g id="s11-hz"><g transform="translate(1370,640)"><rect x="-110" y="-35" width="220" height="70" rx="20" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/></g></g></svg>
-<div id="s11-title" class="t h1" style="left:200px;top:96px;"><span class="w">10 · Radiobaliza Honeywell<span id="s11-title-hl" class="hl pink"></span></span></div><div id="s11-a" class="t lbl" style="left:200px;top:250px;">cabina de pasajeros · junto a una balsa o rampa · <span class="w">tierra y agua<span id="s11-ah" class="hl blue"></span></span></div><div id="s11-f" class="t lbl" style="left:1060px;top:330px;">121,5 / 243 MHz · ≈ 50 h</div><div id="s11-f2" class="t lbl" style="left:1060px;top:400px;">406 MHz · 24 h</div><div id="s11-b" class="t sm" style="left:700px;top:470px;">electrolito + agua → se activa</div><div id="s11-b2" class="t sm" style="left:700px;top:520px;">antena autoeréctil</div><div id="s11-h" class="t sm" style="left:1180px;top:760px;color:#e8364f">en horizontal deja de emitir</div><div id="s11-c" class="t sm" style="left:200px;top:840px;">prevuelo: presencia y anclaje · antena asegurada · <span class="w">bolsa de sal<span id="s11-ch" class="hl pink"></span></span> en buen estado</div><div id="s11-l" class="t lbl" style="left:200px;top:910px;">se lanza al agua: <span class="w">lo antes posible<span id="s11-lh" class="hl blue"></span></span></div>
+<div id="s11-title" class="t h1" style="left:200px;top:96px;"><span class="w">10 · Radiobaliza Honeywell<span id="s11-title-hl" class="hl pink"></span></span></div><div id="s11-a" class="t lbl" style="left:200px;top:250px;">cabina de pasajeros · cerca de la balsa o rampa · <span class="w">tierra y agua<span id="s11-ah" class="hl blue"></span></span></div><div id="s11-f" class="t lbl" style="left:1060px;top:330px;">continua 121,5 / 243 · 50 h</div><div id="s11-f2" class="t lbl" style="left:1060px;top:400px;">discontinua 406 MHz · 24 h</div><div id="s11-b" class="t sm" style="left:700px;top:470px;">electrolito + agua → activación</div><div id="s11-b2" class="t sm" style="left:700px;top:520px;">antena autoeréctil</div><div id="s11-h" class="t sm" style="left:1180px;top:760px;color:#e8364f">en horizontal deja de emitir</div><div id="s11-c" class="t sm" style="left:200px;top:840px;">prevuelo: presencia y anclaje · antena asegurada · <span class="w">bolsa de sal<span id="s11-ch" class="hl pink"></span></span> en buen estado</div><div id="s11-l" class="t lbl" style="left:200px;top:910px;">se lanza al agua: <span class="w">lo antes posible<span id="s11-lh" class="hl blue"></span></span></div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s11"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 9.107, 20.643, 30.195, 37.485], D=42.069;
+const T=[0.6, 8.168, 21.155, 28.403, 33.859], D=37.973;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -41,14 +41,14 @@ const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
 tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
 write("#s11-title",T[0]+0.1,1.0); hl("#s11-title-hl",T[0]+1.1);
-write("#s11-a",T[0]+1.6,4.0); hl("#s11-ah",T[0]+6.6);
-write("#s11-f",T[1]+2.4,1.6); write("#s11-f2",T[1]+7.4,1.2);
+write("#s11-a",T[0]+1.4,3.6); hl("#s11-ah",T[0]+5.4);
+write("#s11-f",T[1]+3.6,1.6); write("#s11-f2",T[1]+8.4,1.4);
 tl.set(q("#s11-x, #s11-hz"),{opacity:0},0); draw("#s11-sea",T[2],0.8);
 tl.fromTo(q("#s11-bc"),{y:-300},{y:0,duration:0.8,ease:"bounce.out"},T[2]+0.4);
-tl.to(q("#s11-ant path"),{attr:{d:"M560,520 L560,300"},duration:0.8,ease:"power2.out"},T[2]+3.4);
-write("#s11-b",T[2]+0.8,1.4); write("#s11-b2",T[2]+3.4,1.0);
-show("#s11-hz",T[2]+6.0,0.3); show("#s11-x",T[2]+6.8,0.2); write("#s11-h",T[2]+6.8,1.2);
-write("#s11-c",T[3]+0.4,4.4); hl("#s11-ch",T[3]+4.6,0.3);
+tl.to(q("#s11-ant path"),{attr:{d:"M560,520 L560,300"},duration:0.8,ease:"power2.out"},T[2]+2.6);
+write("#s11-b",T[2]+0.6,1.4); write("#s11-b2",T[2]+2.6,1.0);
+show("#s11-hz",T[2]+4.4,0.3); show("#s11-x",T[2]+5.0,0.2); write("#s11-h",T[2]+4.8,1.2);
+write("#s11-c",T[3]+0.4,3.6); hl("#s11-ch",T[3]+3.4,0.3);
 write("#s11-l",T[4]+0.3,1.0); hl("#s11-lh",T[4]+1.6);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);

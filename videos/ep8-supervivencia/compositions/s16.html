@@ -22,7 +22,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 <div id="root" data-composition-id="s16" data-width="1920" data-height="1080">
 <div class="stage">
 <svg class="dg" viewBox="0 0 1920 1080" stroke-linecap="round" stroke-linejoin="round" data-layout-ignore><path class="ln bl" pathLength="1" stroke-width="10" fill="none" d="M1500,450 m0,-160 a160,160 0 1 1 -0.1,0" id="s16-clk" /><path id="s16-hand" class="ink" fill="none" stroke-width="7" d="M1500,450 L1500,330"/><g id="s16-bc"><g transform="translate(1440,720)"><rect x="0" y="0" width="120" height="160" rx="16" fill="#ff8a2a" stroke="#23307a" stroke-width="5"/><path class="ink" fill="none" stroke-width="6" d="M60,0 L60,-80"/></g></g></svg>
-<div id="s16-title" class="t h1" style="left:200px;top:96px;"><span class="w">15 · La gran decisión<span id="s16-title-hl" class="hl blue"></span></span></div><div id="s16-q" class="t lbl" style="left:200px;top:240px;">¿quedarse o moverse?</div><div id="s16-a" class="t lbl" style="left:200px;top:320px;">primeras <span class="w">48 h<span id="s16-ah" class="hl pink"></span></span>: mejor no moverse si hay…</div><div id="s16-r0" class="t sm" style="left:240px;top:420px;">· distancias grandes o desconocidas</div><div id="s16-r1" class="t sm" style="left:240px;top:486px;">· problemas de orientación</div><div id="s16-r2" class="t sm" style="left:240px;top:552px;">· clima adverso o imprevisible</div><div id="s16-r3" class="t sm" style="left:240px;top:618px;">· falta de agua</div><div id="s16-r4" class="t sm" style="left:240px;top:684px;">· terreno difícil</div><div id="s16-d" class="t lbl" style="left:200px;top:780px;">desierto: <span class="w">no se viaja<span id="s16-dh" class="hl pink"></span></span></div><div id="s16-48" class="t lbl" style="left:1440px;top:410px;">48 h</div><div id="s16-t" class="t lbl" style="left:1180px;top:910px;">con radiobaliza: <span class="w">≈ 22 h<span id="s16-th" class="hl blue"></span></span></div>
+<div id="s16-title" class="t h1" style="left:200px;top:96px;"><span class="w">15 · La gran decisión<span id="s16-title-hl" class="hl blue"></span></span></div><div id="s16-a" class="t lbl" style="left:200px;top:320px;">no moverse las primeras <span class="w">48 h<span id="s16-ah" class="hl pink"></span></span> si hay:</div><div id="s16-r0" class="t sm" style="left:240px;top:420px;">· distancias grandes o desconocidas</div><div id="s16-r1" class="t sm" style="left:240px;top:486px;">· problemas de orientación</div><div id="s16-r2" class="t sm" style="left:240px;top:552px;">· clima adverso o imprevisible</div><div id="s16-r3" class="t sm" style="left:240px;top:618px;">· falta de agua</div><div id="s16-r4" class="t sm" style="left:240px;top:684px;">· terreno dificultoso</div><div id="s16-d" class="t lbl" style="left:200px;top:780px;">desierto: <span class="w">no viajar<span id="s16-dh" class="hl pink"></span></span></div><div id="s16-48" class="t lbl" style="left:1440px;top:410px;">48 h</div><div id="s16-t" class="t lbl" style="left:1180px;top:910px;">tiempo medio con radiobaliza: <span class="w">22 h<span id="s16-th" class="hl blue"></span></span></div>
 </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s16"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 5.032, 16.803, 25.416], D=35.717;
+const T=[0.6, 2.173, 13.453, 25.096], D=29.467;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -40,15 +40,15 @@ const hide=(s,t,d=0.3)=>tl.to(q(s),{opacity:0,duration:d,ease:"none"},t);
 
 tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
-write("#s16-title",T[0]+0.1,0.9); hl("#s16-title-hl",T[0]+1.0); write("#s16-q",T[0]+1.4,1.2);
+write("#s16-title",T[0]+0.1,0.9); hl("#s16-title-hl",T[0]+1.0);
 draw("#s16-clk",T[1]+0.2,1.2); write("#s16-48",T[1]+0.8,0.5);
 tl.fromTo(q("#s16-hand"),{rotation:0,svgOrigin:"1500 450"},{rotation:720,svgOrigin:"1500 450",duration:3,ease:"power1.inOut"},T[1]+0.4);
 write("#s16-a",T[1]+0.4,1.6); hl("#s16-ah",T[1]+2.0);
-const rt=[4.4,6.4,8.4]; rt.forEach((t,i)=>write("#s16-r"+i,T[1]+t,0.9));
-write("#s16-r3",T[2]+0.6,0.6); write("#s16-r4",T[2]+2.0,0.7);
-write("#s16-d",T[2]+3.6,1.0); hl("#s16-dh",T[2]+4.6);
-tl.fromTo(q("#s16-bc"),{opacity:0,y:30},{opacity:1,y:0,duration:0.5},T[3]+4.6);
-write("#s16-t",T[3]+5.0,1.4); hl("#s16-th",T[3]+7.6);
+const rt=[4.2,6.4,8.4]; rt.forEach((t,i)=>write("#s16-r"+i,T[1]+t,0.9));
+write("#s16-r3",T[2]+0.4,0.6); write("#s16-r4",T[2]+1.6,0.7);
+write("#s16-d",T[2]+4.4,1.0); hl("#s16-dh",T[2]+5.4);
+tl.fromTo(q("#s16-bc"),{opacity:0,y:30},{opacity:1,y:0,duration:0.5},T[3]+0.2);
+write("#s16-t",T[3]+0.4,1.4); hl("#s16-th",T[3]+2.2);
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);
 tl.set({},{},D);

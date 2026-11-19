@@ -30,7 +30,7 @@ svg.dg{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:visibl
 
 const host=document.querySelector('[data-composition-id="s14"]');
 const q=gsap.utils.selector(host);
-const T=[0.6, 10.387, 16.205], D=26.656;
+const T=[0.6, 8.317, 10.531], D=22.795;
 const tl=gsap.timeline({paused:true});
 const draw=(s,t,d=0.9,e="power1.inOut")=>tl.fromTo(q(s),{strokeDashoffset:1},{strokeDashoffset:0,duration:d,ease:e,stagger:0.12},t);
 const write=(s,t,d=0.7)=>tl.fromTo(q(s),{clipPath:"inset(-30% 100% -30% -2%)"},{clipPath:"inset(-30% -2% -30% -2%)",duration:d,ease:"none"},t);
@@ -42,10 +42,10 @@ tl.fromTo(q(".stage"),{x:700},{x:0,duration:0.55,ease:"power3.out"},0);
 
 write("#s14-title",T[0]+0.1,0.9); hl("#s14-title-hl",T[0]+1.0);
 tl.set(q(".s14-dt"),{opacity:0},0);
-const dt=q(".s14-dt"); dt.forEach((e,i)=>tl.to(e,{opacity:1,duration:0.1},T[0]+2.4+i*0.35));
-write("#s14-a",T[0]+2.6,0.4); write("#s14-b",T[0]+3.6,0.4); write("#s14-c",T[0]+4.6,0.4);
-write("#s14-l",T[0]+6.0,1.2); write("#s14-l2",T[0]+7.4,1.2);
-const ss=[0.5,2.6,4.6,6.0,7.4];
+const dt=q(".s14-dt"); dt.forEach((e,i)=>tl.to(e,{opacity:1,duration:0.1},T[0]+1.2+i*0.28));
+write("#s14-a",T[0]+1.4,0.4); write("#s14-b",T[0]+2.2,0.4); write("#s14-c",T[0]+3.0,0.4);
+write("#s14-l",T[0]+4.0,1.2); write("#s14-l2",T[0]+5.4,1.2);
+const ss=[0.4,2.6,5.0,7.0,9.0];
 ss.forEach((t,i)=>write("#s14-s"+i,T[2]+t,0.8));
 
 tl.fromTo(q(".stage"),{x:0},{x:-700,duration:0.5,ease:"power3.in",immediateRender:false},D-0.5);

@@ -8,149 +8,148 @@
   {
    "id": "s1",
    "lines": [
-    "Imagina que el avión ha tenido que aterrizar lejos de todo: en el mar, en la montaña o en el desierto.",
-    "A partir de ese momento empieza otra parte del trabajo del TCP: la supervivencia.",
-    "Se trata de un conjunto de consejos, técnicas y conductas con un único objetivo: sobrevivir el tiempo necesario hasta que llegue el rescate."
+    "Tras un accidente, el avión puede quedar en el mar o en el desierto.",
+    "Ahí entra la supervivencia.",
+    "Trata sobre facilitar una serie de consejos, técnicas y conductas, con el fin de sobrevivir el tiempo necesario."
    ]
   },
   {
    "id": "s2",
    "lines": [
-    "¿Y quién nos rescata? El SAR, el servicio de búsqueda y salvamento.",
-    "Sus helicópteros disponen de grúas, para subir a los supervivientes uno a uno desde el agua o desde el suelo.",
-    "Además llevan radares de búsqueda para localizarnos, material lanzable que nos pueden arrojar, y un servicio de megafonía, con altavoces instalados en el exterior, para darnos instrucciones.",
-    "Y una cifra que conviene recordar: una vez dada la orden de salida para una misión, las tripulaciones del SAR tienen un tiempo máximo de media hora durante el día, y de dos horas durante la noche, para iniciarla."
+    "¿Quién nos rescata? El SAR: search and rescue, búsqueda y salvamento.",
+    "Los helicópteros disponen de grúas para subir a los supervivientes.",
+    "Además, hay radares de búsqueda, material lanzable, y servicio de megafonía, con altavoces instalados en el exterior del avión.",
+    "Las tripulaciones del SAR, una vez dada la orden de salida para una misión, tienen un tiempo máximo de media hora durante el día, y de dos horas durante la noche, para iniciarla."
    ]
   },
   {
    "id": "s3",
    "lines": [
-    "Mientras llega la ayuda, hay que combatir cuatro agresiones.",
-    "La primera, y la más importante, es el miedo. El miedo bloquea, hace que tomemos malas decisiones, y se contagia a los demás.",
-    "Después vienen la sed, el frío y el hambre, por este orden de importancia.",
-    "Y para combatirlas, las mejores herramientas no están en ningún kit: son el sentido común y la capacidad de valorar la situación con calma."
+    "Hay cuatro agresiones a combatir.",
+    "La primera es el miedo.",
+    "Después, la sed, el frío y el hambre, por este orden de importancia.",
+    "Y para combatirlas: sentido común, y capacidad de valorar."
    ]
   },
   {
    "id": "s4",
    "lines": [
-    "Empecemos por el frío. El cuerpo humano se mantiene a unos treinta y siete grados.",
-    "Si sube por encima de cuarenta y dos, o baja por debajo de treinta y dos, la vida corre peligro.",
-    "Perdemos calor de tres formas: con la respiración, con el ambiente, por ejemplo el viento o el agua fría, y con la evaporación del sudor.",
-    "Y lo ganamos con la actividad muscular, con el ambiente, buscando refugio o sol, y con ropa, bebida y comida calientes.",
-    "Por eso es tan importante mantenerse seco, abrigado y resguardado del viento."
+    "El frío. El ser humano se mantiene a una temperatura de unos treinta y siete grados.",
+    "Los límites son cuarenta y dos y treinta y dos grados.",
+    "Perdemos calor por la respiración, por el ambiente, y por la evaporación del sudor.",
+    "Y lo ganamos con la actividad muscular, con el ambiente, y con ropa, bebida y comida caliente."
    ]
   },
   {
    "id": "s5",
    "lines": [
-    "La segunda gran necesidad es la sed. Hay que priorizar la hidratación, porque sin beber agua solo se sobrevive entre tres y cinco días.",
-    "Para retener los líquidos del cuerpo: evitar el ejercicio físico, no fumar, mantenerse a la sombra, y no beber alcohol.",
-    "Las técnicas para conseguir agua dependen del lugar. En el desierto se puede buscar en zonas bajas, como el pie de las dunas, y cavar un pozo hasta encontrar humedad.",
-    "En el mar, la mejor fuente de agua dulce es el rocío que se deposita en la balsa durante la noche.",
-    "Y el agua se filtra, por ejemplo con una tela, y se hierve para eliminar los gérmenes. Las pastillas potabilizadoras del kit también sirven para eso."
+    "La sed. Hay que priorizar la hidratación, con técnicas específicas según el ambiente donde nos encontremos. Sin ingerir agua, se sobrevive entre tres y cinco días.",
+    "Para retener los fluidos: evitar el ejercicio físico, no fumar, mantenerse a la sombra, y no beber alcohol.",
+    "Para conseguir agua en el desierto: las dunas, y cavar un pozo.",
+    "En el mar, el agua dulce potable se obtiene del rocío depositado en la balsa durante la noche.",
+    "Y el agua se filtra y se hierve."
    ]
   },
   {
    "id": "s6",
    "lines": [
-    "El hambre es la agresión menos urgente. El primer día de ayuno es el más duro, más por la necesidad psicológica de comer que por la física.",
-    "Con agua y sin ningún otro alimento, una persona vive de media unos diez días o algo más, según su voluntad de vivir.",
-    "Y una regla importante: si no tenemos agua, en ningún caso debemos comer, porque la digestión gasta el agua del cuerpo."
+    "El hambre. El primer día de ayuno es el más duro, por la necesidad psicológica de comer.",
+    "Sin más alimento que agua, se vive de media unos diez días o algo más, según la voluntad de vivir de cada uno.",
+    "Y si no tenemos agua, en zona desértica, en ningún caso debemos comer."
    ]
   },
   {
    "id": "s7",
    "lines": [
-    "Para poder sobrevivir, el avión lleva equipos de supervivencia.",
-    "El operador no puede volar sobre zonas donde la búsqueda y el salvamento sean difíciles, a menos que el avión lleve equipos de señalización pirotécnica de socorro,",
-    "al menos un ELT, que es el transmisor de emergencia, y equipos adicionales de supervivencia y de flotación, según el número de pasajeros a bordo."
+    "Equipos de supervivencia.",
+    "El operador no operará un avión en áreas en las que las operaciones de búsqueda o salvamento sean difíciles, a no ser que esté dotado de equipos de señalización pirotécnica de socorro,",
+    "de al menos un ELT, el transmisor de frecuencia de emergencia, y de equipos adicionales de supervivencia, según el número de pasajeros a bordo: elementos de flotación."
    ]
   },
   {
    "id": "s8",
    "lines": [
-    "Empecemos por los chalecos salvavidas. Son obligatorios cuando se sobrevuela el agua a más de cincuenta millas náuticas de la costa.",
-    "Y también al despegar o aterrizar en un aeródromo cuya trayectoria pase por encima del agua.",
-    "Deben estar al alcance de todos los ocupantes, normalmente debajo de los asientos, y se lleva un diez por ciento adicional. Para los bebés hay chalecos especiales, los infant life vest.",
-    "Y una norma fundamental: nunca se inflan dentro del avión. Si la cabina se inunda, un chaleco inflado te empuja hacia el techo y te impide salir.",
-    "Las únicas excepciones son los niños, los ancianos, las personas con movilidad reducida y las personas con miedo al agua.",
-    "En el chequeo prevuelo se comprueba que haya un chaleco bajo cada asiento, la ubicación y la cantidad de los adicionales, y los infant life vest: un diez por ciento de los asientos certificados."
+    "Los chalecos salvavidas son obligatorios siempre que se sobrevuele el agua a una distancia mayor de cincuenta millas náuticas de la costa.",
+    "Y siempre que se despegue o aterrice en un aeródromo cuya trayectoria esté por encima del agua.",
+    "Deben estar situados para fácil acceso de los ocupantes, y se lleva un diez por ciento adicional de la capacidad.",
+    "Nunca deben ser inflados dentro del avión.",
+    "Excepto: niños, ancianos, PMR e hidrofóbicos.",
+    "Chequeo prevuelo: ubicación de cada chaleco debajo de los asientos, ubicación y cantidad correcta de los chalecos adicionales, y los infant life vest: el diez por ciento de los asientos certificados."
    ]
   },
   {
    "id": "s9",
    "lines": [
-    "Las balsas salvavidas son obligatorias en vuelos de más de ciento veinte minutos sobre el agua, o cuando el avión se aleja más de cuatrocientas millas náuticas de la costa. Y debe haber plazas para todos los ocupantes.",
-    "Cada balsa tiene dos cámaras de aire, para que, si una se pincha, la otra la mantenga a flote. Y una cuerda de amarre, la mooring line, que la sujeta al avión mientras se embarca.",
-    "Alrededor lleva líneas de salvamento para agarrarse desde el agua, y una cuerda de rescate, la heaving line, que se lanza a quien esté en el agua.",
-    "También lleva un ancla, que la estabiliza y reduce la deriva, dos estaciones de abordaje para subir desde el agua, y su kit de supervivencia."
+    "Las balsas salvavidas son obligatorias con ciento veinte minutos de vuelo sobre el agua, o si se aleja más de cuatrocientas millas náuticas de la costa. Debe haber balsas mínimas para todos los ocupantes, con kit de supervivencia.",
+    "Contienen: dos cámaras de aire, y cuerda de amarre, o mooring line.",
+    "Líneas de salvamento, y cuerda de rescate, o heaving line.",
+    "Un ancla, y dos estaciones de abordaje."
    ]
   },
   {
    "id": "s10",
    "lines": [
-    "Para que el SAR nos encuentre están las radiobalizas. La primera es la Kannad cuatrocientos seis.",
-    "Emite señales a los servicios de búsqueda y salvamento. Funciona con una batería seca, y no necesita contacto con el agua para funcionar.",
-    "Emite de forma continua en ciento veintiuno coma cinco megahercios, la frecuencia civil, y doscientos cuarenta y tres, la militar. Y de forma discontinua en cuatrocientos seis, la de satélite.",
-    "Su interruptor tiene tres posiciones. Off: apagada. Arm: armada, se activa sola al entrar en contacto con el agua. Y on: encendida.",
-    "Cuando está activada, suena un zumbido y parpadea una luz roja.",
-    "En el chequeo prevuelo se revisa su presencia y su anclaje, y que el precinto y el plomo estén intactos. Y nunca se saca de su alojamiento, salvo en una emergencia."
+    "Radiobaliza Kannad cuatrocientos seis.",
+    "Emite señales a los servicios SAR. Tiene batería seca, y no requiere contacto con el agua para su funcionamiento.",
+    "Frecuencias: continua, ciento veintiuno coma cinco y doscientos cuarenta y tres megahercios, civil y militar. Discontinua, cuatrocientos seis megahercios.",
+    "Posiciones del interruptor. Off: funcionamiento detenido. Arm: se activa automáticamente con el contacto del agua. On: funcionamiento activado.",
+    "Activada: señal acústica, y luz roja parpadeante.",
+    "Chequeo prevuelo: presencia y anclaje, y precinto y plomo intactos. Nunca sacar de su alojamiento, solo en emergencia."
    ]
   },
   {
    "id": "s11",
    "lines": [
-    "La segunda radiobaliza es la Honeywell. Va en la cabina de pasajeros, cerca de una balsa o de una rampa, y sirve tanto en tierra como en el agua.",
-    "Transmite una señal continua al SAR: en ciento veintiuno coma cinco y doscientos cuarenta y tres megahercios durante unas cincuenta horas, y en cuatrocientos seis durante veinticuatro.",
-    "Se activa mediante un electrolito, al entrar en contacto con el agua, y su antena se despliega sola. Pero cuidado: si queda en posición horizontal, deja de emitir.",
-    "En el prevuelo se comprueba su presencia y anclaje, que la antena esté asegurada, y que la bolsa de sal esté en buen estado.",
-    "Y recuerda: la radiobaliza se lanza al agua lo antes posible."
+    "Radiobaliza Honeywell. Ubicada en la cabina de pasajeros, cerca de la misma balsa o rampa. Utilidad tanto en tierra como en agua.",
+    "Transmisión de señal continua a SAR. Frecuencias: continua, ciento veintiuno coma cinco y doscientos cuarenta y tres, cincuenta horas. Discontinua, cuatrocientos seis megahercios, satélite, veinticuatro horas.",
+    "Activación mediante electrolito en contacto con el agua, y antena autoeréctil. Deja de emitir en posición horizontal.",
+    "Chequeo prevuelo: presencia y anclaje, antena asegurada, y bolsa de sal en buen estado.",
+    "Y la radiobaliza se lanza al agua lo antes posible."
    ]
   },
   {
    "id": "s12",
    "lines": [
-    "El kit de supervivencia lleva, por cada cuatro ocupantes, una tableta de cien gramos de glucosa y medio litro de agua.",
-    "Y en general incluye: agua embolsada, tabletas de glucosa, una bengala de mano y un lanzador de bengalas, una tarjeta con el código morse, pastillas potabilizadoras, un heliógrafo, un silbato, una navaja, un manual de supervivencia y un botiquín de primeros auxilios.",
-    "Cada elemento tiene su función: el agua y la glucosa nos mantienen, las pastillas hacen el agua potable, y el silbato, el heliógrafo y las bengalas sirven para que nos encuentren."
+    "Kit de supervivencia. Por cada cuatro ocupantes: una tableta de cien gramos de glucosa, y quinientos mililitros de agua.",
+    "En general: agua embolsada, tabletas de glucosa, bengala de mano, lanzador de bengala, código morse, pastillas potabilizadoras, heliógrafo, silbato, navaja, manual de supervivencia, y kit de primeros auxilios.",
+    "Y un megáfono no forma parte de la bolsa de señales."
    ]
   },
   {
    "id": "s13",
    "lines": [
-    "Hacerse ver es clave. Para eso están los equipos de señales visuales.",
-    "El espejo de señales mide diez por diez centímetros, y tiene un agujero en el centro. Se mira a través de él, y se dirige el reflejo del sol, de una llama o de un foco eléctrico hacia el avión o el barco, haciendo destellos.",
-    "Su destello puede verse hasta a treinta y dos kilómetros.",
-    "Las pastillas de fluoresceína son una sustancia que, en contacto con el agua, la tiñe de un color muy llamativo, fácil de ver desde el aire.",
-    "Y los paineles son paños de colores llamativos, u hojas de poliéster, para hacer señales en el suelo. Cada señal debe medir como mínimo dos metros veinte."
+    "Equipo de señales visuales.",
+    "Espejo de señales: diez por diez centímetros, con un agujero en medio para llevar la luz del sol, una llama o un foco eléctrico a la dirección deseada, para hacer destellos.",
+    "Destello de alcance de hasta treinta y dos kilómetros.",
+    "Pastillas de fluoresceína: sustancia soluble, colorante en contacto con el agua.",
+    "Paineles: paños de colores llamativos, u hojas de poliéster. Señalización de mínimo dos metros veinte."
    ]
   },
   {
    "id": "s14",
    "lines": [
-    "La señal más conocida es el SOS: tres puntos, tres rayas y tres puntos. Con una linterna, de noche, son tres destellos cortos, tres largos y tres cortos.",
-    "Y con los paineles se forman los códigos de señales visuales, que entienden los equipos de rescate.",
-    "Uve: necesitamos ayuda. Equis: necesitamos ayuda médica. Ene: no, o negativo. I griega: sí, o afirmativo. Y una flecha: estamos avanzando en esta dirección."
+    "Señal SOS: tres puntos, tres rayas y tres puntos. Con una linterna: tres destellos cortos, tres largos, y tres cortos.",
+    "Códigos de señales visuales.",
+    "Uno, necesitamos ayuda: uve. Dos, necesitamos ayuda médica: equis. Tres, no o negativo: ene. Cuatro, sí o afirmativo: i griega. Cinco, estamos avanzando en esta dirección: una flecha."
    ]
   },
   {
    "id": "s15",
    "lines": [
-    "Los equipos de señales pirotécnicas son las bengalas. Su tubo está dividido en dos partes: una para el día y otra para la noche.",
-    "La de día suelta un humo denso de color naranja, que se ve bien con luz. La de noche da una llama roja. Cada una dura alrededor de un minuto.",
-    "Para usarla, se desenrosca la tapa del extremo elegido. La de noche es la estriada, para reconocerla al tacto en la oscuridad. Se tira de la anilla, y se sujeta a cuarenta y cinco grados, a favor del viento.",
-    "Y el lanzador de bengalas tiene el tamaño de un bolígrafo. Permite lanzar pequeñas bengalas que, al dispararse, producen luz roja.",
-    "Y las bengalas no se gastan al azar: se usan cuando se presuma que pueden ser percibidas, por ejemplo al ver o al oír un barco o un avión."
+    "Equipos de señales pirotécnicas: las bengalas. Tubo dividido en dos partes, día y noche.",
+    "De día, color denso naranja. De noche, llama roja. Duración: un minuto.",
+    "Modo de uso: desenroscar la tapa, la de noche es la estriada. Tirar de la anilla. Y posición a cuarenta y cinco grados, en dirección del viento.",
+    "El lanzador de bengalas tiene el tamaño de un boli, y permite lanzar unas pequeñas bengalas que, al dispararse, producen luz roja.",
+    "Las bengalas se usan cuando se presuma que pueden ser percibidas."
    ]
   },
   {
    "id": "s16",
    "lines": [
-    "Y llega la gran decisión: ¿quedarse junto al avión, o ponerse en marcha?",
-    "Durante las primeras cuarenta y ocho horas no es recomendable moverse si las distancias son desconocidas o grandes, si hay problemas de orientación, o si la climatología es adversa o imprevisible.",
-    "Tampoco si falta agua, o si el terreno del viaje es difícil. Y en el desierto no se viaja: sus condiciones no nos permitirían sobrevivir.",
-    "El avión se ve mucho mejor desde el aire que un grupo de personas caminando. Y con una radiobaliza activada, el tiempo medio de rescate es de unas veintidós horas."
+    "La gran decisión.",
+    "No es recomendable moverse las primeras cuarenta y ocho horas si las distancias son desconocidas o grandes, si hay problemas de orientación, o si la climatología es adversa o imprevisible.",
+    "Tampoco si falta agua, o si el terreno del viaje es dificultoso. Y no es aconsejable viajar por el desierto después de un accidente: las condiciones del desierto no nos permitirán sobrevivir.",
+    "Tiempo medio de rescate con radiobaliza: veintidós horas."
    ]
   },
   {
@@ -227,8 +226,8 @@
   {
    "id": "s18",
    "lines": [
-    "En resumen: mantener la calma, priorizar el agua, protegerse del frío, y hacerse ver.",
-    "Quedarse, hacerse visible y esperar al rescate."
+    "En resumen: miedo, sed, frío y hambre. Equipos de supervivencia, radiobalizas y señales.",
+    "Y la gran decisión: no moverse las primeras cuarenta y ocho horas."
    ]
   }
  ]
