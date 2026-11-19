@@ -311,7 +311,8 @@ svg {
    03 · PASOS (proceso en 4 columnas)
    =========================================================== */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 56px; margin-top: 60px; }
-.step { position: relative; border-top: 1px solid var(--pink); padding-top: 22px; }
+.step { position: relative; padding-top: 22px; }
+.step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--pink); transform-origin: left; }
 .step:not(:last-child)::after {
     content: ''; position: absolute; top: -13px; right: -42px; width: 26px; height: 26px;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ED3D8C' stroke-width='1.5'><path d='M3 12h18M14 5l7 7-7 7'/></svg>") center/contain no-repeat;
@@ -343,7 +344,8 @@ svg {
 .danger .do .mono { color: var(--pink); margin-bottom: 18px; }
 .danger .do li { font-size: 28px; margin-bottom: 14px; }
 .cards { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 28px 44px; height: 780px; }
-.card { position: relative; border-top: 1px solid var(--line-pink); padding-top: 18px; }
+.card { position: relative; padding-top: 18px; }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--line-pink); transform-origin: left; }
 .card-ico { position: absolute; top: 20px; right: 0; width: 104px; height: 104px; }
 .card .mono { color: var(--pink); font-size: 22px; margin-bottom: 8px; }
 .card h3 { font: 400 62px/1.05 var(--serif); color: var(--paper); padding-bottom: .06em; margin-bottom: 8px; }
@@ -417,6 +419,96 @@ svg {
 .bg-ico { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; fill: none; stroke: var(--pink); stroke-width: 1.1; opacity: .2; stroke-linecap: round; stroke-linejoin: round; }
 .art { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; }
 
+@keyframes flyCover {
+  0% { opacity:0; transform: translate(1010px,130px) rotate(77deg); }
+  10% { opacity:1; transform: translate(1079px,117px) rotate(82deg); }
+  20% { opacity:1; transform: translate(1146px,111px) rotate(88deg); }
+  30% { opacity:1; transform: translate(1212px,112px) rotate(94deg); }
+  40% { opacity:1; transform: translate(1275px,120px) rotate(100deg); }
+  50% { opacity:1; transform: translate(1336px,135px) rotate(107deg); }
+  60% { opacity:1; transform: translate(1393px,157px) rotate(115deg); }
+  70% { opacity:1; transform: translate(1446px,186px) rotate(122deg); }
+  80% { opacity:1; transform: translate(1494px,221px) rotate(130deg); }
+  90% { opacity:1; transform: translate(1537px,263px) rotate(139deg); }
+  100% { opacity:1; transform: translate(1650px,430px) rotate(150deg); }
+}
+@keyframes flyStory {
+  0% { opacity:0; transform: translate(20px,20px) rotate(106deg); }
+  10% { opacity:1; transform: translate(38px,27px) rotate(114deg); }
+  20% { opacity:1; transform: translate(55px,35px) rotate(121deg); }
+  30% { opacity:1; transform: translate(71px,46px) rotate(127deg); }
+  40% { opacity:1; transform: translate(85px,57px) rotate(130deg); }
+  50% { opacity:1; transform: translate(99px,70px) rotate(132deg); }
+  60% { opacity:1; transform: translate(113px,82px) rotate(132deg); }
+  70% { opacity:1; transform: translate(127px,94px) rotate(130deg); }
+  80% { opacity:1; transform: translate(141px,106px) rotate(126deg); }
+  90% { opacity:1; transform: translate(157px,116px) rotate(120deg); }
+  100% { opacity:1; transform: translate(250px,150px) rotate(125deg); }
+}
+
+/* ===========================================================
+   ANIMACIONES  (se reinician cada vez que la diapositiva aparece)
+   =========================================================== */
+/* Transición suave entre diapositivas */
+.slide { transition: opacity .55s ease, visibility 0s linear .55s; }
+.slide.active, .slide.visible { transition: opacity .55s ease, visibility 0s; }
+
+/* Aparición de iconos: rebote con brillo (el retraso lo pone JS con --i) */
+@keyframes pop { 0% { opacity: 0; transform: scale(.3) rotate(-14deg); } 60% { opacity: 1; transform: scale(1.14) rotate(3deg); } 100% { opacity: 1; transform: scale(1) rotate(0); } }
+@keyframes glow { 0%, 100% { filter: drop-shadow(0 0 8px rgba(237,61,140,.25)); } 50% { filter: drop-shadow(0 0 22px rgba(237,61,140,.7)); } }
+.slide.visible .ico { animation: pop .8s var(--ease) calc(.5s + var(--i, 0) * .13s) both, glow 3.2s ease-in-out calc(1.6s + var(--i, 0) * .13s) infinite; }
+
+/* Títulos grandes: el halo "respira" */
+@keyframes breathe { 0%, 100% { text-shadow: 0 0 80px rgba(237,61,140,.16); } 50% { text-shadow: 0 0 120px rgba(237,61,140,.42); } }
+.slide.visible .script { animation: breathe 4.5s ease-in-out infinite; }
+.slide.visible .serif em { animation: breathe 3s ease-in-out infinite; }
+
+/* Líneas que se dibujan */
+@keyframes line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.slide.visible .step::before, .slide.visible .card::before { animation: line 1s var(--ease) both; }
+.step:nth-child(1)::before { animation-delay: .25s !important; } .step:nth-child(2)::before { animation-delay: .4s !important; }
+.step:nth-child(3)::before { animation-delay: .55s !important; } .step:nth-child(4)::before { animation-delay: .7s !important; }
+.card:nth-child(odd)::before { animation-delay: .3s !important; } .card:nth-child(even)::before { animation-delay: .5s !important; }
+
+/* Siluetas de fondo flotando despacio */
+@keyframes floaty { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-18px) rotate(2.5deg); } }
+.slide.visible .bg-ico { animation: floaty 9s ease-in-out infinite; }
+
+/* Portada: el avión vuela por su trayectoria y la selva se mece */
+.slide.visible .cover-art .plane-glow { animation: flyCover 3.6s cubic-bezier(.45,.1,.3,1) .5s both; }
+@keyframes march { to { stroke-dashoffset: -36; } }
+.slide.visible .cover-art .trail, .slide.visible .story .trail { animation: march 2.4s linear infinite; }
+@keyframes sway { 0%, 100% { transform: skewX(-1.6deg); } 50% { transform: skewX(1.6deg); } }
+.cover-art .sw { transform-origin: 960px 1080px; }
+.slide.visible .cover-art .sw1 { animation: sway 7s ease-in-out infinite; }
+.slide.visible .cover-art .sw2 { animation: sway 5.5s ease-in-out -2s infinite; }
+.slide.visible .cover-art .sw3 { animation: sway 4.2s ease-in-out -1s infinite; }
+
+/* Historia: avión que cae, humo, rayo y relieve */
+.slide.visible .story-plane { animation: flyStory 2.8s cubic-bezier(.5,.1,.4,1) .6s both; }
+@keyframes flash { 0%, 62%, 70%, 78%, 100% { opacity: 0; } 64%, 74% { opacity: 1; } }
+.bolt { opacity: 0; }
+.slide.visible .bolt { animation: flash 3.6s linear 1.2s infinite; }
+@keyframes smoke { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: .5; } 100% { opacity: 0; transform: translateY(-26px); } }
+.slide.visible .smoke { animation: smoke 2.6s ease-out infinite; }
+.mtn { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: .5; }
+.slide.visible .mtn { animation: draw 2.2s ease-out 1.6s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.slide.visible .story .trail { animation: march 2.4s linear infinite; }
+
+/* Sed: gotas que caen */
+.fall { position: absolute; top: 160px; width: 34px; height: 34px; z-index: 1; fill: none; stroke: var(--pink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0; max-width: none; max-height: none; }
+@keyframes fall { 0% { transform: translateY(0) scale(.7); opacity: 0; } 12% { opacity: .9; } 85% { opacity: .6; } 100% { transform: translateY(560px) scale(1); opacity: 0; } }
+.slide.visible .fall { animation: fall 3.4s cubic-bezier(.5,0,.9,.6) calc(var(--dl, 0s) + .6s) infinite; }
+
+/* Frío: copos que bajan (los crea JS) */
+.flake { position: absolute; top: 90px; border-radius: 50%; background: var(--paper); opacity: 0; z-index: 1; pointer-events: none; }
+@keyframes drift { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: .55; } 100% { transform: translate(var(--dx, 30px), 880px); opacity: 0; } }
+.slide.visible .flake { animation: drift var(--t, 8s) linear var(--w, 0s) infinite; }
+
+/* Cierre: el icono del avión emite señal */
+@keyframes ping { 0% { transform: scale(.6); opacity: .8; } 100% { transform: scale(2.2); opacity: 0; } }
+
 /* ===========================================================
    CONTROLES (fuera del escenario) y MODO EDICIÓN
    =========================================================== */
@@ -440,7 +532,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 01 · PORTADA =================== -->
 <section class="slide cover active" data-tag="Exposición">
-  <svg class="cover-art" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ED3D8C" stop-opacity="0"/><stop offset="1" stop-color="#ED3D8C" stop-opacity=".22"/></linearGradient></defs><rect x="0" y="560" width="1920" height="520" fill="url(#fade)"/><path fill="rgba(237,61,140,0.07)" d="M865 1102Q737 967 544 1101Q736 1019 865 1102ZM865 1102Q741 901 544 1017Q732 935 865 1102ZM865 1102Q806 877 681 942Q777 911 865 1102ZM865 1102Q875 813 834 812Q829 818 865 1102ZM865 1102Q913 840 924 840Q864 829 865 1102ZM865 1102Q972 880 1090 920Q938 839 865 1102ZM865 1102Q969 957 1100 1002Q948 908 865 1102ZM865 1102Q1025 1020 1271 1144Q1029 981 865 1102ZM1142 1088Q970 952 716 1121Q973 994 1142 1088ZM1142 1088Q1006 812 777 948Q986 866 1142 1088ZM1142 1088Q1131 765 1068 778Q1093 774 1142 1088ZM1142 1088Q1186 816 1214 822Q1155 808 1142 1088ZM1142 1088Q1274 909 1448 976Q1255 859 1142 1088ZM1142 1088Q1325 980 1603 1112Q1328 927 1142 1088ZM-39 1088Q-176 946 -383 1077Q-177 978 -39 1088ZM-39 1088Q-125 818 -283 899Q-148 848 -39 1088ZM-39 1088Q-28 823 -81 829Q-83 832 -39 1088ZM-39 1088Q60 915 185 962Q41 882 -39 1088ZM-39 1088Q84 1007 268 1084Q83 955 -39 1088ZM315 1102Q158 936 -80 1089Q157 978 315 1102ZM315 1102Q197 903 3 1028Q184 959 315 1102ZM315 1102Q216 825 31 929Q187 873 315 1102ZM315 1102Q301 772 242 784Q271 780 315 1102ZM315 1102Q357 777 361 773Q310 771 315 1102ZM315 1102Q400 910 499 945Q377 883 315 1102ZM315 1102Q427 968 577 1026Q413 923 315 1102ZM315 1102Q462 1041 688 1159Q467 1009 315 1102ZM377 1105Q217 981 -16 1148Q223 1037 377 1105ZM377 1105Q290 835 120 928Q259 879 377 1105ZM377 1105Q392 841 345 843Q337 848 377 1105ZM377 1105Q488 912 632 969Q471 880 377 1105ZM377 1105Q560 1020 839 1166Q565 984 377 1105ZM1860 1115Q1730 1026 1545 1168Q1739 1081 1860 1115ZM1860 1115Q1762 872 1593 965Q1744 905 1860 1115ZM1860 1115Q1893 839 1895 835Q1855 834 1860 1115ZM1860 1115Q1958 875 2076 919Q1936 851 1860 1115ZM1860 1115Q2005 1025 2223 1121Q2006 971 1860 1115ZM1189 1091Q1017 993 767 1164Q1023 1030 1189 1091ZM1189 1091Q1066 875 867 995Q1054 918 1189 1091ZM1189 1091Q1186 817 1140 823Q1152 823 1189 1091ZM1189 1091Q1253 810 1290 819Q1206 792 1189 1091ZM1189 1091Q1342 842 1547 926Q1322 800 1189 1091ZM1189 1091Q1357 1029 1619 1165Q1364 989 1189 1091ZM584 1081Q445 944 238 1090Q446 1001 584 1081ZM584 1081Q485 844 308 947Q462 890 584 1081ZM584 1081Q627 785 630 782Q578 778 584 1081ZM584 1081Q712 852 880 919Q693 817 584 1081ZM584 1081Q753 1007 1014 1133Q759 954 584 1081Z"/><path fill="rgba(237,61,140,0.13)" d="M794 1112Q678 1002 507 1126Q681 1052 794 1112ZM794 1112Q717 957 583 1046Q702 1007 794 1112ZM794 1112Q759 861 650 911Q714 893 794 1112ZM794 1112Q789 866 721 885Q741 882 794 1112ZM794 1112Q835 869 853 871Q800 860 794 1112ZM794 1112Q872 974 950 995Q841 933 794 1112ZM794 1112Q893 1004 1022 1048Q878 952 794 1112ZM794 1112Q917 1057 1108 1136Q922 997 794 1112ZM472 1080Q375 984 234 1093Q378 1039 472 1080ZM472 1080Q389 923 248 1014Q375 969 472 1080ZM472 1080Q440 913 355 956Q410 941 472 1080ZM472 1080Q503 886 482 880Q448 883 472 1080ZM472 1080Q520 938 549 945Q485 918 472 1080ZM472 1080Q550 1001 658 1041Q542 964 472 1080ZM472 1080Q578 1018 738 1092Q579 983 472 1080ZM88 1119Q-21 1020 -180 1142Q-16 1077 88 1119ZM88 1119Q27 967 -90 1044Q7 1016 88 1119ZM88 1119Q91 921 34 936Q42 936 88 1119ZM88 1119Q131 936 145 938Q91 923 88 1119ZM88 1119Q171 1004 275 1040Q155 965 88 1119ZM88 1119Q184 1072 331 1130Q187 1022 88 1119ZM1242 1096Q1164 1012 1046 1097Q1164 1049 1242 1096ZM1242 1096Q1173 960 1053 1039Q1160 1004 1242 1096ZM1242 1096Q1247 918 1188 935Q1193 936 1242 1096ZM1242 1096Q1295 943 1334 954Q1262 922 1242 1096ZM1242 1096Q1307 1001 1385 1027Q1292 970 1242 1096ZM1242 1096Q1335 1051 1478 1113Q1338 1012 1242 1096ZM505 1094Q383 976 200 1097Q383 1012 505 1094ZM505 1094Q440 898 316 966Q419 929 505 1094ZM505 1094Q500 875 424 902Q445 898 505 1094ZM505 1094Q559 898 570 899Q503 879 505 1094ZM505 1094Q613 952 755 1005Q597 908 505 1094ZM505 1094Q602 1060 756 1122Q608 1006 505 1094ZM1597 1106Q1486 977 1318 1102Q1485 1039 1597 1106ZM1597 1106Q1541 920 1427 984Q1516 955 1597 1106ZM1597 1106Q1631 903 1630 900Q1588 896 1597 1106ZM1597 1106Q1666 964 1726 979Q1631 928 1597 1106ZM1597 1106Q1695 1068 1849 1140Q1700 1033 1597 1106ZM1578 1083Q1468 1000 1309 1114Q1473 1037 1578 1083ZM1578 1083Q1522 919 1405 993Q1497 967 1578 1083ZM1578 1083Q1619 895 1604 890Q1558 887 1578 1083ZM1578 1083Q1659 926 1754 959Q1638 896 1578 1083ZM1578 1083Q1674 1026 1817 1086Q1674 984 1578 1083ZM1418 1106Q1296 1003 1122 1137Q1302 1062 1418 1106ZM1418 1106Q1326 936 1169 1043Q1311 996 1418 1106ZM1418 1106Q1387 908 1301 948Q1355 932 1418 1106ZM1418 1106Q1444 909 1420 902Q1393 909 1418 1106ZM1418 1106Q1477 898 1512 906Q1434 877 1418 1106ZM1418 1106Q1516 975 1642 1019Q1498 929 1418 1106ZM1418 1106Q1528 1047 1698 1127Q1531 1012 1418 1106ZM1037 1097Q945 1014 812 1116Q949 1060 1037 1097ZM1037 1097Q955 920 811 1010Q939 965 1037 1097ZM1037 1097Q998 931 900 988Q967 972 1037 1097ZM1037 1097Q1059 926 1022 926Q1003 932 1037 1097ZM1037 1097Q1063 926 1050 921Q1023 923 1037 1097ZM1037 1097Q1109 962 1182 983Q1082 927 1037 1097ZM1037 1097Q1120 1019 1228 1052Q1107 966 1037 1097ZM1037 1097Q1137 1031 1287 1094Q1137 990 1037 1097Z"/><path fill="rgba(237,61,140,0.24)" d="M355 1101Q288 1025 190 1109Q291 1080 355 1101ZM355 1101Q307 993 216 1061Q292 1044 355 1101ZM355 1101Q337 995 271 1040Q306 1038 355 1101ZM355 1101Q378 996 333 1006Q315 1011 355 1101ZM355 1101Q389 1004 388 1002Q349 990 355 1101ZM355 1101Q408 1009 453 1019Q381 977 355 1101ZM355 1101Q407 1061 474 1079Q399 1022 355 1101ZM355 1101Q406 1094 491 1123Q413 1055 355 1101ZM736 1097Q659 1011 547 1104Q661 1067 736 1097ZM736 1097Q688 975 592 1043Q669 1025 736 1097ZM736 1097Q695 929 597 985Q665 966 736 1097ZM736 1097Q747 928 706 934Q701 936 736 1097ZM736 1097Q795 942 815 945Q740 914 736 1097ZM736 1097Q796 1003 834 1006Q755 959 736 1097ZM736 1097Q824 1009 943 1048Q813 959 736 1097ZM736 1097Q808 1058 917 1099Q809 1016 736 1097ZM276 1091Q178 1025 39 1129Q184 1063 276 1091ZM276 1091Q227 950 125 1016Q205 995 276 1091ZM276 1091Q297 943 268 941Q249 946 276 1091ZM276 1091Q336 999 398 1015Q314 963 276 1091ZM276 1091Q357 1056 483 1103Q360 1008 276 1091ZM1804 1104Q1700 1030 1560 1149Q1712 1091 1804 1104ZM1804 1104Q1767 933 1667 991Q1731 977 1804 1104ZM1804 1104Q1827 941 1798 937Q1775 943 1804 1104ZM1804 1104Q1881 996 1974 1025Q1862 955 1804 1104ZM1804 1104Q1892 1089 2037 1144Q1902 1029 1804 1104ZM1589 1096Q1479 982 1316 1106Q1481 1042 1589 1096ZM1589 1096Q1506 940 1367 1026Q1495 977 1589 1096ZM1589 1096Q1555 915 1469 956Q1527 939 1589 1096ZM1589 1096Q1613 896 1578 892Q1557 899 1589 1096ZM1589 1096Q1657 905 1696 914Q1607 876 1589 1096ZM1589 1096Q1681 977 1794 1012Q1661 927 1589 1096ZM1589 1096Q1685 1065 1835 1117Q1691 998 1589 1096ZM1245 1108Q1125 1027 960 1160Q1136 1086 1245 1108ZM1245 1108Q1158 974 1019 1063Q1151 1011 1245 1108ZM1245 1108Q1192 934 1085 994Q1169 966 1245 1108ZM1245 1108Q1238 879 1165 903Q1188 898 1245 1108ZM1245 1108Q1295 889 1305 889Q1242 874 1245 1108ZM1245 1108Q1335 968 1431 994Q1303 916 1245 1108ZM1245 1108Q1340 986 1453 1020Q1316 931 1245 1108ZM1245 1108Q1362 1023 1537 1100Q1361 981 1245 1108ZM904 1087Q819 1001 696 1099Q822 1053 904 1087ZM904 1087Q836 971 724 1050Q827 1016 904 1087ZM904 1087Q873 932 788 979Q842 965 904 1087ZM904 1087Q927 916 888 917Q868 922 904 1087ZM904 1087Q936 915 917 910Q882 911 904 1087ZM904 1087Q970 978 1024 988Q934 933 904 1087ZM904 1087Q973 1000 1054 1022Q954 955 904 1087ZM904 1087Q994 1051 1135 1109Q998 1005 904 1087ZM1555 1089Q1496 1022 1407 1092Q1496 1061 1555 1089ZM1555 1089Q1500 963 1398 1029Q1485 1001 1555 1089ZM1555 1089Q1550 960 1484 994Q1503 994 1555 1089ZM1555 1089Q1551 956 1500 976Q1515 974 1555 1089ZM1555 1089Q1594 975 1605 976Q1556 958 1555 1089ZM1555 1089Q1605 1003 1636 1006Q1570 968 1555 1089ZM1555 1089Q1625 1029 1714 1051Q1612 973 1555 1089ZM1555 1089Q1630 1063 1746 1098Q1633 1002 1555 1089Z"/><path d="M1010 130C1260 70 1500 150 1600 360" fill="none" stroke="#ED3D8C" stroke-width="2" stroke-dasharray="4 14" stroke-linecap="round" opacity=".8"/><g transform="translate(1650 430) rotate(150)" class="plane-glow"><g transform="translate(-150 -150) scale(4.7)" fill="none" stroke="#ED3D8C" stroke-width="1.5" stroke-linejoin="round"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g></svg>
+  <svg class="cover-art" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ED3D8C" stop-opacity="0"/><stop offset="1" stop-color="#ED3D8C" stop-opacity=".22"/></linearGradient></defs><rect x="0" y="560" width="1920" height="520" fill="url(#fade)"/><path class="sw sw1" fill="rgba(237,61,140,0.07)" d="M865 1102Q737 967 544 1101Q736 1019 865 1102ZM865 1102Q741 901 544 1017Q732 935 865 1102ZM865 1102Q806 877 681 942Q777 911 865 1102ZM865 1102Q875 813 834 812Q829 818 865 1102ZM865 1102Q913 840 924 840Q864 829 865 1102ZM865 1102Q972 880 1090 920Q938 839 865 1102ZM865 1102Q969 957 1100 1002Q948 908 865 1102ZM865 1102Q1025 1020 1271 1144Q1029 981 865 1102ZM1142 1088Q970 952 716 1121Q973 994 1142 1088ZM1142 1088Q1006 812 777 948Q986 866 1142 1088ZM1142 1088Q1131 765 1068 778Q1093 774 1142 1088ZM1142 1088Q1186 816 1214 822Q1155 808 1142 1088ZM1142 1088Q1274 909 1448 976Q1255 859 1142 1088ZM1142 1088Q1325 980 1603 1112Q1328 927 1142 1088ZM-39 1088Q-176 946 -383 1077Q-177 978 -39 1088ZM-39 1088Q-125 818 -283 899Q-148 848 -39 1088ZM-39 1088Q-28 823 -81 829Q-83 832 -39 1088ZM-39 1088Q60 915 185 962Q41 882 -39 1088ZM-39 1088Q84 1007 268 1084Q83 955 -39 1088ZM315 1102Q158 936 -80 1089Q157 978 315 1102ZM315 1102Q197 903 3 1028Q184 959 315 1102ZM315 1102Q216 825 31 929Q187 873 315 1102ZM315 1102Q301 772 242 784Q271 780 315 1102ZM315 1102Q357 777 361 773Q310 771 315 1102ZM315 1102Q400 910 499 945Q377 883 315 1102ZM315 1102Q427 968 577 1026Q413 923 315 1102ZM315 1102Q462 1041 688 1159Q467 1009 315 1102ZM377 1105Q217 981 -16 1148Q223 1037 377 1105ZM377 1105Q290 835 120 928Q259 879 377 1105ZM377 1105Q392 841 345 843Q337 848 377 1105ZM377 1105Q488 912 632 969Q471 880 377 1105ZM377 1105Q560 1020 839 1166Q565 984 377 1105ZM1860 1115Q1730 1026 1545 1168Q1739 1081 1860 1115ZM1860 1115Q1762 872 1593 965Q1744 905 1860 1115ZM1860 1115Q1893 839 1895 835Q1855 834 1860 1115ZM1860 1115Q1958 875 2076 919Q1936 851 1860 1115ZM1860 1115Q2005 1025 2223 1121Q2006 971 1860 1115ZM1189 1091Q1017 993 767 1164Q1023 1030 1189 1091ZM1189 1091Q1066 875 867 995Q1054 918 1189 1091ZM1189 1091Q1186 817 1140 823Q1152 823 1189 1091ZM1189 1091Q1253 810 1290 819Q1206 792 1189 1091ZM1189 1091Q1342 842 1547 926Q1322 800 1189 1091ZM1189 1091Q1357 1029 1619 1165Q1364 989 1189 1091ZM584 1081Q445 944 238 1090Q446 1001 584 1081ZM584 1081Q485 844 308 947Q462 890 584 1081ZM584 1081Q627 785 630 782Q578 778 584 1081ZM584 1081Q712 852 880 919Q693 817 584 1081ZM584 1081Q753 1007 1014 1133Q759 954 584 1081Z"/><path class="sw sw2" fill="rgba(237,61,140,0.13)" d="M794 1112Q678 1002 507 1126Q681 1052 794 1112ZM794 1112Q717 957 583 1046Q702 1007 794 1112ZM794 1112Q759 861 650 911Q714 893 794 1112ZM794 1112Q789 866 721 885Q741 882 794 1112ZM794 1112Q835 869 853 871Q800 860 794 1112ZM794 1112Q872 974 950 995Q841 933 794 1112ZM794 1112Q893 1004 1022 1048Q878 952 794 1112ZM794 1112Q917 1057 1108 1136Q922 997 794 1112ZM472 1080Q375 984 234 1093Q378 1039 472 1080ZM472 1080Q389 923 248 1014Q375 969 472 1080ZM472 1080Q440 913 355 956Q410 941 472 1080ZM472 1080Q503 886 482 880Q448 883 472 1080ZM472 1080Q520 938 549 945Q485 918 472 1080ZM472 1080Q550 1001 658 1041Q542 964 472 1080ZM472 1080Q578 1018 738 1092Q579 983 472 1080ZM88 1119Q-21 1020 -180 1142Q-16 1077 88 1119ZM88 1119Q27 967 -90 1044Q7 1016 88 1119ZM88 1119Q91 921 34 936Q42 936 88 1119ZM88 1119Q131 936 145 938Q91 923 88 1119ZM88 1119Q171 1004 275 1040Q155 965 88 1119ZM88 1119Q184 1072 331 1130Q187 1022 88 1119ZM1242 1096Q1164 1012 1046 1097Q1164 1049 1242 1096ZM1242 1096Q1173 960 1053 1039Q1160 1004 1242 1096ZM1242 1096Q1247 918 1188 935Q1193 936 1242 1096ZM1242 1096Q1295 943 1334 954Q1262 922 1242 1096ZM1242 1096Q1307 1001 1385 1027Q1292 970 1242 1096ZM1242 1096Q1335 1051 1478 1113Q1338 1012 1242 1096ZM505 1094Q383 976 200 1097Q383 1012 505 1094ZM505 1094Q440 898 316 966Q419 929 505 1094ZM505 1094Q500 875 424 902Q445 898 505 1094ZM505 1094Q559 898 570 899Q503 879 505 1094ZM505 1094Q613 952 755 1005Q597 908 505 1094ZM505 1094Q602 1060 756 1122Q608 1006 505 1094ZM1597 1106Q1486 977 1318 1102Q1485 1039 1597 1106ZM1597 1106Q1541 920 1427 984Q1516 955 1597 1106ZM1597 1106Q1631 903 1630 900Q1588 896 1597 1106ZM1597 1106Q1666 964 1726 979Q1631 928 1597 1106ZM1597 1106Q1695 1068 1849 1140Q1700 1033 1597 1106ZM1578 1083Q1468 1000 1309 1114Q1473 1037 1578 1083ZM1578 1083Q1522 919 1405 993Q1497 967 1578 1083ZM1578 1083Q1619 895 1604 890Q1558 887 1578 1083ZM1578 1083Q1659 926 1754 959Q1638 896 1578 1083ZM1578 1083Q1674 1026 1817 1086Q1674 984 1578 1083ZM1418 1106Q1296 1003 1122 1137Q1302 1062 1418 1106ZM1418 1106Q1326 936 1169 1043Q1311 996 1418 1106ZM1418 1106Q1387 908 1301 948Q1355 932 1418 1106ZM1418 1106Q1444 909 1420 902Q1393 909 1418 1106ZM1418 1106Q1477 898 1512 906Q1434 877 1418 1106ZM1418 1106Q1516 975 1642 1019Q1498 929 1418 1106ZM1418 1106Q1528 1047 1698 1127Q1531 1012 1418 1106ZM1037 1097Q945 1014 812 1116Q949 1060 1037 1097ZM1037 1097Q955 920 811 1010Q939 965 1037 1097ZM1037 1097Q998 931 900 988Q967 972 1037 1097ZM1037 1097Q1059 926 1022 926Q1003 932 1037 1097ZM1037 1097Q1063 926 1050 921Q1023 923 1037 1097ZM1037 1097Q1109 962 1182 983Q1082 927 1037 1097ZM1037 1097Q1120 1019 1228 1052Q1107 966 1037 1097ZM1037 1097Q1137 1031 1287 1094Q1137 990 1037 1097Z"/><path class="sw sw3" fill="rgba(237,61,140,0.24)" d="M355 1101Q288 1025 190 1109Q291 1080 355 1101ZM355 1101Q307 993 216 1061Q292 1044 355 1101ZM355 1101Q337 995 271 1040Q306 1038 355 1101ZM355 1101Q378 996 333 1006Q315 1011 355 1101ZM355 1101Q389 1004 388 1002Q349 990 355 1101ZM355 1101Q408 1009 453 1019Q381 977 355 1101ZM355 1101Q407 1061 474 1079Q399 1022 355 1101ZM355 1101Q406 1094 491 1123Q413 1055 355 1101ZM736 1097Q659 1011 547 1104Q661 1067 736 1097ZM736 1097Q688 975 592 1043Q669 1025 736 1097ZM736 1097Q695 929 597 985Q665 966 736 1097ZM736 1097Q747 928 706 934Q701 936 736 1097ZM736 1097Q795 942 815 945Q740 914 736 1097ZM736 1097Q796 1003 834 1006Q755 959 736 1097ZM736 1097Q824 1009 943 1048Q813 959 736 1097ZM736 1097Q808 1058 917 1099Q809 1016 736 1097ZM276 1091Q178 1025 39 1129Q184 1063 276 1091ZM276 1091Q227 950 125 1016Q205 995 276 1091ZM276 1091Q297 943 268 941Q249 946 276 1091ZM276 1091Q336 999 398 1015Q314 963 276 1091ZM276 1091Q357 1056 483 1103Q360 1008 276 1091ZM1804 1104Q1700 1030 1560 1149Q1712 1091 1804 1104ZM1804 1104Q1767 933 1667 991Q1731 977 1804 1104ZM1804 1104Q1827 941 1798 937Q1775 943 1804 1104ZM1804 1104Q1881 996 1974 1025Q1862 955 1804 1104ZM1804 1104Q1892 1089 2037 1144Q1902 1029 1804 1104ZM1589 1096Q1479 982 1316 1106Q1481 1042 1589 1096ZM1589 1096Q1506 940 1367 1026Q1495 977 1589 1096ZM1589 1096Q1555 915 1469 956Q1527 939 1589 1096ZM1589 1096Q1613 896 1578 892Q1557 899 1589 1096ZM1589 1096Q1657 905 1696 914Q1607 876 1589 1096ZM1589 1096Q1681 977 1794 1012Q1661 927 1589 1096ZM1589 1096Q1685 1065 1835 1117Q1691 998 1589 1096ZM1245 1108Q1125 1027 960 1160Q1136 1086 1245 1108ZM1245 1108Q1158 974 1019 1063Q1151 1011 1245 1108ZM1245 1108Q1192 934 1085 994Q1169 966 1245 1108ZM1245 1108Q1238 879 1165 903Q1188 898 1245 1108ZM1245 1108Q1295 889 1305 889Q1242 874 1245 1108ZM1245 1108Q1335 968 1431 994Q1303 916 1245 1108ZM1245 1108Q1340 986 1453 1020Q1316 931 1245 1108ZM1245 1108Q1362 1023 1537 1100Q1361 981 1245 1108ZM904 1087Q819 1001 696 1099Q822 1053 904 1087ZM904 1087Q836 971 724 1050Q827 1016 904 1087ZM904 1087Q873 932 788 979Q842 965 904 1087ZM904 1087Q927 916 888 917Q868 922 904 1087ZM904 1087Q936 915 917 910Q882 911 904 1087ZM904 1087Q970 978 1024 988Q934 933 904 1087ZM904 1087Q973 1000 1054 1022Q954 955 904 1087ZM904 1087Q994 1051 1135 1109Q998 1005 904 1087ZM1555 1089Q1496 1022 1407 1092Q1496 1061 1555 1089ZM1555 1089Q1500 963 1398 1029Q1485 1001 1555 1089ZM1555 1089Q1550 960 1484 994Q1503 994 1555 1089ZM1555 1089Q1551 956 1500 976Q1515 974 1555 1089ZM1555 1089Q1594 975 1605 976Q1556 958 1555 1089ZM1555 1089Q1605 1003 1636 1006Q1570 968 1555 1089ZM1555 1089Q1625 1029 1714 1051Q1612 973 1555 1089ZM1555 1089Q1630 1063 1746 1098Q1633 1002 1555 1089Z"/><path class="trail" d="M1010 130C1260 70 1500 150 1600 360" fill="none" stroke="#ED3D8C" stroke-width="2" stroke-dasharray="4 14" stroke-linecap="round" opacity=".8"/><g transform="translate(1650 430) rotate(150)" class="plane-glow"><g transform="translate(-150 -150) scale(4.7)" fill="none" stroke="#ED3D8C" stroke-width="1.5" stroke-linejoin="round"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g></svg>
   <div class="content">
     <p class="pre reveal">Supervivencia · Amazonía</p>
     <h1 class="script">
@@ -455,18 +547,18 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 <section class="slide story" data-tag="El accidente">
   <svg class="art" style="left:1380px; top:580px; width:460px; height:380px" viewBox="0 0 400 330" aria-hidden="true">
     <g fill="none" stroke="#ED3D8C" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 20C90 40 120 110 190 130" stroke-width="2" stroke-dasharray="3 12" opacity=".55"/>
-      <path d="M40 8q14 14 0 28t0 28" stroke-width="2" opacity=".35"/>
-      <g transform="translate(250 150) rotate(125)" style="filter:drop-shadow(0 0 20px rgba(237,61,140,.5))"><g transform="translate(-90 -90) scale(2.8)" stroke-width="1.8"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g>
-      <path d="M326 20l-26 40h28l-16 38" stroke-width="2.2"/>
-      <path d="M90 300l30-34 26 18 24-38 30 22 30-30 30 26 30-20 50 34" stroke-width="1.5" opacity=".5"/>
+      <path class="trail" d="M20 20C90 40 120 110 190 130" stroke-width="2" stroke-dasharray="3 12" opacity=".55"/>
+      <path class="smoke" d="M40 8q14 14 0 28t0 28" stroke-width="2"/>
+      <g class="story-plane" transform="translate(250 150) rotate(125)" style="filter:drop-shadow(0 0 20px rgba(237,61,140,.5))"><g transform="translate(-90 -90) scale(2.8)" stroke-width="1.8"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g>
+      <path class="bolt" d="M326 20l-26 40h28l-16 38" stroke-width="2.2"/>
+      <path class="mtn" pathLength="1" d="M90 300l30-34 26 18 24-38 30 22 30-30 30 26 30-20 50 34" stroke-width="1.5"/>
     </g></svg>
   <div class="content v">
     <p class="kicker reveal">Capítulo 01 · El accidente</p>
     <h2 class="serif reveal" style="--d:.1s">Una tormenta.<br>Un aterrizaje de emergencia.<br><em>Selva</em> por todas partes.</h2>
     <p class="lead reveal" style="--d:.25s">Vuelo AX-217, rumbo a Iquitos. El piloto consigue posar el avión entre los árboles. Estamos vivos, sin cobertura y a kilómetros de cualquier pueblo.</p>
     <div class="pills reveal" style="--d:.4s">
-      <span class="pill">22 pasajeros</span>
+      <span class="pill"><span class="count" data-to="22">22</span> pasajeros</span>
       <span class="pill">Bebés y una embarazada</span>
       <span class="pill dim">Sin señal</span>
     </div>
@@ -562,6 +654,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 07 · SED =================== -->
 <section class="slide" data-tag="Necesidad 01 · Agua">
+  <svg class="fall" style="left:770px; --dl:0s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg><svg class="fall" style="left:830px; --dl:1.1s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg><svg class="fall" style="left:885px; --dl:2.1s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg>
   <svg class="bg-ico" style="left:60px; top:170px; width:600px; height:600px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg>
   <div class="content need">
     <div>
@@ -620,7 +713,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 </section>
 
 <!-- =================== 09 · FRÍO =================== -->
-<section class="slide" data-tag="Necesidad 03 · Abrigo">
+<section class="slide flurry" data-tag="Necesidad 03 · Abrigo">
   <svg class="bg-ico" style="left:60px; top:130px; width:640px; height:640px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tent"/></svg>
   <div class="content need">
     <div>
@@ -701,10 +794,37 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     }
     addEventListener('resize', fit); fit();
 
+    /* --- Retraso escalonado de iconos (--i) y copos de nieve --- */
+    slides.forEach(s => {
+        s.querySelectorAll('svg.ico').forEach((el, i) => el.style.setProperty('--i', i));
+        if (s.classList.contains('flurry')) {
+            for (let n = 0; n < 16; n++) {
+                const f = document.createElement('span'), sz = 5 + Math.random() * 9;
+                f.className = 'flake';
+                f.style.cssText = 'left:' + (60 + Math.random() * 760) + 'px;width:' + sz + 'px;height:' + sz + 'px;--dx:' + (Math.random() * 80 - 40) + 'px;--t:' + (7 + Math.random() * 6) + 's;--w:' + (Math.random() * 6) + 's';
+                s.appendChild(f);
+            }
+        }
+    });
+
+    /* --- Contador animado (.count data-to) --- */
+    function runCounters(slide) {
+        slide.querySelectorAll('.count').forEach(c => {
+            const to = +c.dataset.to, t0 = performance.now() + 700;
+            c.textContent = '0';
+            (function tick(now) {
+                const k = Math.min(Math.max((now - t0) / 1300, 0), 1);
+                c.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+                if (k < 1) requestAnimationFrame(tick);
+            })(performance.now());
+        });
+    }
+
     /* --- Mostrar diapositiva --- */
     function show(i) {
         current = Math.max(0, Math.min(i, total - 1));
         slides.forEach((s, n) => { s.classList.toggle('active', n === current); s.classList.toggle('visible', n === current); });
+        runCounters(slides[current]);
         try { history.replaceState(null, '', '#' + (current + 1)); } catch (e) {}
     }
     const next = () => show(current + 1), prev = () => show(current - 1);
