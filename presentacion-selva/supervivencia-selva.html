@@ -304,7 +304,7 @@ svg {
    02 · HISTORIA
    =========================================================== */
 .story .serif { font-size: 118px; }
-.story .lead { max-width: 1350px; margin-top: 18px; font-size: 36px; }
+.story .lead { max-width: 1280px; margin-top: 18px; font-size: 36px; }
 .story .pills { display: flex; gap: 20px; margin-top: 44px; }
 
 /* ===========================================================
@@ -316,6 +316,7 @@ svg {
     content: ''; position: absolute; top: -13px; right: -42px; width: 26px; height: 26px;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ED3D8C' stroke-width='1.5'><path d='M3 12h18M14 5l7 7-7 7'/></svg>") center/contain no-repeat;
 }
+.step-ico { position: absolute; top: 18px; right: 0; }
 .step .n { font: 400 112px/1 var(--serif); color: var(--pink); padding-bottom: .08em; }
 .step h3 { font: 400 52px/1.08 var(--serif); color: var(--paper); margin: 8px 0 16px; padding-bottom: .05em; }
 .step p  { font: 300 31px/1.45 var(--sans); color: var(--soft); }
@@ -324,8 +325,13 @@ svg {
    04 · LA GRAN DECISIÓN
    =========================================================== */
 .decision .serif { font-size: 112px; white-space: nowrap; padding-bottom: .06em; }
-.decision .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 90px; margin-top: 40px; }
+.decision .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 90px; margin-top: 28px; }
+.decision .ico.lg { width: 84px; height: 84px; }
 .decision h3 { font: 400 72px/1.05 var(--serif); color: var(--paper); margin: 20px 0 26px; padding-bottom: .05em; }
+.decision .hrow { display: flex; align-items: center; gap: 24px; }
+.decision .tri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+.decision .tri > div { border-top: 1px solid var(--line-pink); padding-top: 20px; }
+.decision .tri p { font: 300 29px/1.25 var(--sans); color: var(--paper); margin-top: 14px; }
 .decision .go { margin-top: 30px; font: 400 24px/1.7 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
 .decision .go b { color: var(--pink); font-weight: 400; }
 
@@ -337,7 +343,8 @@ svg {
 .danger .do .mono { color: var(--pink); margin-bottom: 18px; }
 .danger .do li { font-size: 28px; margin-bottom: 14px; }
 .cards { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 28px 44px; height: 780px; }
-.card { border-top: 1px solid var(--line-pink); padding-top: 18px; }
+.card { position: relative; border-top: 1px solid var(--line-pink); padding-top: 18px; }
+.card-ico { position: absolute; top: 20px; right: 0; width: 104px; height: 104px; }
 .card .mono { color: var(--pink); font-size: 22px; margin-bottom: 8px; }
 .card h3 { font: 400 62px/1.05 var(--serif); color: var(--paper); padding-bottom: .06em; margin-bottom: 8px; }
 .card p  { font: 300 29px/1.4 var(--sans); color: var(--soft); }
@@ -347,9 +354,10 @@ svg {
    =========================================================== */
 .matrix .serif { font-size: 100px; }
 .grid3 { display: grid; grid-template-columns: 420px 1fr 1fr; margin-top: 24px; }
-.grid3 .cell { padding: 24px 28px; border-bottom: 1px solid var(--line-pink); font: 300 31px/1.35 var(--sans); color: var(--paper); display: flex; align-items: center; }
+.grid3 .cell { padding: 16px 28px; border-bottom: 1px solid var(--line-pink); font: 300 31px/1.35 var(--sans); color: var(--paper); display: flex; align-items: center; }
 .grid3 .head { font: 400 21px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pink); padding-bottom: 14px; }
-.grid3 .lab  { font: 400 52px/1.05 var(--serif); padding-left: 0; }
+.grid3 .lab .ico { margin-right: 22px; width: 64px; height: 64px; }
+.grid3 .lab  { font: 400 48px/1.05 var(--serif); padding-left: 0; }
 .grid3 .us   { background: rgba(237, 61, 140, 0.08); }
 .matrix .note { margin-top: 36px; font: 300 34px/1.4 var(--sans); color: var(--soft); }
 .matrix .note b { font-weight: 400; color: var(--pink); }
@@ -364,9 +372,10 @@ svg {
 .need h3 { font: 400 76px/1.06 var(--serif); color: var(--paper); padding-bottom: .08em; }
 .need h3 em { font-style: normal; color: var(--pink); }
 .rows { margin-top: 26px; }
-.row { display: grid; grid-template-columns: 90px 1fr; align-items: baseline; padding: 17px 0; border-bottom: 1px solid var(--hair); }
+.row { display: grid; grid-template-columns: 64px 1fr 62px; gap: 0 12px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--hair); }
 .row .n { font: 400 54px/1 var(--serif); color: var(--pink); }
-.row p { font: 300 33px/1.38 var(--sans); color: var(--paper); }
+.row .ico { align-self: center; justify-self: end; width: 58px; height: 58px; margin: -8px 0; }
+.row p { font: 300 30px/1.36 var(--sans); color: var(--paper); }
 
 /* ===========================================================
    08 · HAMBRE
@@ -376,8 +385,10 @@ svg {
 .hunger .rail { width: 700px; margin-bottom: 30px; }
 .hunger .rail p { font: 400 58px/1.1 var(--serif); color: var(--paper); padding-bottom: .1em; }
 .hunger .rail em { font-style: normal; color: var(--pink); }
-.hunger .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; margin-top: 50px; }
+.hunger .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; margin-top: 36px; }
 .hunger .list li { font-size: 32px; margin-bottom: 16px; }
+.hunger .colhead .ico { width: 80px; height: 80px; }
+.hunger .colhead { display: flex; justify-content: space-between; align-items: center; }
 .hunger .tip { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line-pink); font: 300 32px/1.4 var(--sans); color: var(--soft); }
 .hunger .tip b { font-weight: 400; color: var(--pink); }
 
@@ -387,10 +398,24 @@ svg {
 .closing .content { display: flex; flex-direction: column; justify-content: center; }
 .closing .serif { font-size: 150px; padding-bottom: .1em; }
 .closing .four { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 90px; margin-top: 56px; }
-.closing .item { display: grid; grid-template-columns: 90px 1fr; align-items: baseline; border-top: 1px solid var(--line-pink); padding-top: 20px; }
+.closing .item { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; border-top: 1px solid var(--line-pink); padding-top: 20px; }
 .closing .item .n { font: 400 48px/1 var(--serif); color: var(--pink); }
 .closing .item p { font: 400 50px/1.1 var(--serif); color: var(--paper); padding-bottom: .1em; }
 .closing .thanks { margin-top: 36px; }
+
+
+/* ===========================================================
+   ICONOS E ILUSTRACIONES (trazo rosa, mismo lenguaje que el resto)
+   =========================================================== */
+.ico { width: 72px; height: 72px; flex: none; fill: none; stroke: var(--pink); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;
+       max-width: none; max-height: none; filter: drop-shadow(0 0 14px rgba(237,61,140,.35)); }
+.ico.lg { width: 112px; height: 112px; }
+.ico.sm { width: 72px; height: 72px; }
+.ico.pale { stroke: var(--paper); filter: none; opacity: .85; }
+.cover-art { position: absolute; inset: 0; width: 1920px; height: 1080px; max-width: none; max-height: none; z-index: 1; pointer-events: none; }
+.cover-art .plane-glow { filter: drop-shadow(0 0 28px rgba(237,61,140,.55)); }
+.bg-ico { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; fill: none; stroke: var(--pink); stroke-width: 1.1; opacity: .2; stroke-linecap: round; stroke-linejoin: round; }
+.art { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; }
 
 /* ===========================================================
    CONTROLES (fuera del escenario) y MODO EDICIÓN
@@ -409,11 +434,13 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 </head>
 
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-plane" viewBox="0 0 64 64"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></symbol><symbol id="i-calm" viewBox="0 0 64 64"><circle cx="32" cy="32" r="6"/><circle cx="32" cy="32" r="14" opacity=".7"/><circle cx="32" cy="32" r="22" opacity=".4"/></symbol><symbol id="i-aid" viewBox="0 0 64 64"><rect x="8" y="17" width="48" height="36" rx="3"/><path d="M24 17v-6h16v6M32 26v18M23 35h18"/></symbol><symbol id="i-people" viewBox="0 0 64 64"><circle cx="32" cy="20" r="7"/><path d="M18 52c0-11 6-17 14-17s14 6 14 17z"/><circle cx="12" cy="30" r="5"/><path d="M3 52c0-8 4-12 9-12"/><circle cx="52" cy="30" r="5"/><path d="M61 52c0-8-4-12-9-12"/></symbol><symbol id="i-pin" viewBox="0 0 64 64"><path d="M32 59S14 41 14 26a18 18 0 0 1 36 0c0 15-18 33-18 33z"/><circle cx="32" cy="26" r="6"/></symbol><symbol id="i-flame" viewBox="0 0 64 64"><path d="M32 59c-12 0-18-8-18-18 0-10 8-14 10-27 6 4 8 10 8 14 3-2 4-6 4-10 8 6 14 14 14 23 0 10-6 18-18 18z"/><path d="M32 59c-5 0-8-4-8-9 0-5 5-7 8-14 3 5 8 9 8 14 0 5-3 9-8 9z"/></symbol><symbol id="i-waves" viewBox="0 0 64 64"><path d="M5 22q6.8-7 13.5 0t13.5 0 13.5 0 13.5 0M5 34q6.8-7 13.5 0t13.5 0 13.5 0 13.5 0M5 46q6.8-7 13.5 0t13.5 0 13.5 0 13.5 0"/></symbol><symbol id="i-rocks" viewBox="0 0 64 64"><path d="M5 57L22 25l9 14 8-9 20 27z"/><circle cx="46" cy="12" r="4"/><circle cx="35" cy="8" r="2.5"/><circle cx="53" cy="22" r="2.5"/></symbol><symbol id="i-snake" viewBox="0 0 64 64"><path d="M46 12c-17-3-28 3-26 13s26 7 26 20-14 11-27 8"/><path d="M46 12l9-3M46 12l8 5"/><circle cx="43" cy="12.5" r="1.2"/></symbol><symbol id="i-mosquito" viewBox="0 0 64 64"><ellipse cx="32" cy="36" rx="5" ry="11"/><circle cx="32" cy="21" r="4"/><path d="M32 17V7M27 30C14 24 10 11 20 13s8 11 7 17zM37 30c13-6 17-19 7-17s-8 11-7 17zM27 36l-14 6M27 42l-12 12M37 36l14 6M37 42l12 12"/></symbol><symbol id="i-leaf" viewBox="0 0 64 64"><path d="M10 54C8 28 24 9 55 9c1 30-14 47-40 45z"/><path d="M10 54L36 28"/></symbol><symbol id="i-storm" viewBox="0 0 64 64"><path d="M18 38a9 9 0 0 1 0-18 13 13 0 0 1 25-2 10 10 0 0 1 3 20z"/><path d="M34 36l-8 12h9l-5 13"/></symbol><symbol id="i-compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="25"/><path d="M32 12l7 20-7 20-7-20z"/><path d="M25 32h14"/></symbol><symbol id="i-bandage" viewBox="0 0 64 64"><g transform="rotate(-35 32 32)"><rect x="5" y="22" width="54" height="20" rx="10"/><rect x="22" y="22" width="20" height="20"/><path d="M29 29h.1M35 29h.1M29 35h.1M35 35h.1" stroke-width="3"/></g></symbol><symbol id="i-rain" viewBox="0 0 64 64"><path d="M18 34a9 9 0 0 1 0-18 13 13 0 0 1 25-2 10 10 0 0 1 3 20z"/><path d="M20 42l-3 8M32 42l-3 8M44 42l-3 8M26 52l-3 6M38 52l-3 6"/></symbol><symbol id="i-tree" viewBox="0 0 64 64"><circle cx="32" cy="24" r="17"/><path d="M32 41v18M32 52l-9-9M32 47l9-9"/></symbol><symbol id="i-drop" viewBox="0 0 64 64"><path d="M32 5C22 22 13 31 13 43a19 19 0 0 0 38 0C51 31 42 22 32 5z"/><path d="M23 45a9 9 0 0 0 9 9"/></symbol><symbol id="i-filter" viewBox="0 0 64 64"><path d="M7 11h50L38 34v19l-12-6V34z"/><path d="M26 58h12" opacity=".6"/></symbol><symbol id="i-pot" viewBox="0 0 64 64"><path d="M11 30h42v18a9 9 0 0 1-9 9H20a9 9 0 0 1-9-9z"/><path d="M6 30h52M22 22q-4-5 0-10M32 22q-4-5 0-10M42 22q-4-5 0-10"/></symbol><symbol id="i-bottle" viewBox="0 0 64 64"><path d="M26 6h12v9l6 8v35H20V23l6-8z"/><path d="M20 36h24"/></symbol><symbol id="i-box" viewBox="0 0 64 64"><rect x="7" y="26" width="50" height="30"/><path d="M7 26l7-14h36l7 14M32 26v30"/></symbol><symbol id="i-nomush" viewBox="0 0 64 64"><g transform="translate(10 10) scale(.62)"><path d="M7 34C7 18 19 8 32 8s25 10 25 26z"/><path d="M24 34v11c0 6 3 11 8 11s8-5 8-11V34"/></g><circle cx="32" cy="32" r="27"/><path d="M13 51L51 13"/></symbol><symbol id="i-tent" viewBox="0 0 64 64"><path d="M5 55L32 11l27 44z"/><path d="M32 55h-9l9-24 9 24z"/></symbol><symbol id="i-shirt" viewBox="0 0 64 64"><path d="M22 8L6 18l6 12 8-4v30h24V26l8 4 6-12L42 8c-2 6-6 8-10 8s-8-2-10-8z"/></symbol><symbol id="i-blanket" viewBox="0 0 64 64"><rect x="7" y="16" width="50" height="32" rx="4"/><path d="M7 27h50M7 37h50"/></symbol></defs></svg>
 <div class="deck-viewport">
 <main class="deck-stage" id="deckStage">
 
 <!-- =================== 01 · PORTADA =================== -->
 <section class="slide cover active" data-tag="Exposición">
+  <svg class="cover-art" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ED3D8C" stop-opacity="0"/><stop offset="1" stop-color="#ED3D8C" stop-opacity=".22"/></linearGradient></defs><rect x="0" y="560" width="1920" height="520" fill="url(#fade)"/><path fill="rgba(237,61,140,0.07)" d="M865 1102Q737 967 544 1101Q736 1019 865 1102ZM865 1102Q741 901 544 1017Q732 935 865 1102ZM865 1102Q806 877 681 942Q777 911 865 1102ZM865 1102Q875 813 834 812Q829 818 865 1102ZM865 1102Q913 840 924 840Q864 829 865 1102ZM865 1102Q972 880 1090 920Q938 839 865 1102ZM865 1102Q969 957 1100 1002Q948 908 865 1102ZM865 1102Q1025 1020 1271 1144Q1029 981 865 1102ZM1142 1088Q970 952 716 1121Q973 994 1142 1088ZM1142 1088Q1006 812 777 948Q986 866 1142 1088ZM1142 1088Q1131 765 1068 778Q1093 774 1142 1088ZM1142 1088Q1186 816 1214 822Q1155 808 1142 1088ZM1142 1088Q1274 909 1448 976Q1255 859 1142 1088ZM1142 1088Q1325 980 1603 1112Q1328 927 1142 1088ZM-39 1088Q-176 946 -383 1077Q-177 978 -39 1088ZM-39 1088Q-125 818 -283 899Q-148 848 -39 1088ZM-39 1088Q-28 823 -81 829Q-83 832 -39 1088ZM-39 1088Q60 915 185 962Q41 882 -39 1088ZM-39 1088Q84 1007 268 1084Q83 955 -39 1088ZM315 1102Q158 936 -80 1089Q157 978 315 1102ZM315 1102Q197 903 3 1028Q184 959 315 1102ZM315 1102Q216 825 31 929Q187 873 315 1102ZM315 1102Q301 772 242 784Q271 780 315 1102ZM315 1102Q357 777 361 773Q310 771 315 1102ZM315 1102Q400 910 499 945Q377 883 315 1102ZM315 1102Q427 968 577 1026Q413 923 315 1102ZM315 1102Q462 1041 688 1159Q467 1009 315 1102ZM377 1105Q217 981 -16 1148Q223 1037 377 1105ZM377 1105Q290 835 120 928Q259 879 377 1105ZM377 1105Q392 841 345 843Q337 848 377 1105ZM377 1105Q488 912 632 969Q471 880 377 1105ZM377 1105Q560 1020 839 1166Q565 984 377 1105ZM1860 1115Q1730 1026 1545 1168Q1739 1081 1860 1115ZM1860 1115Q1762 872 1593 965Q1744 905 1860 1115ZM1860 1115Q1893 839 1895 835Q1855 834 1860 1115ZM1860 1115Q1958 875 2076 919Q1936 851 1860 1115ZM1860 1115Q2005 1025 2223 1121Q2006 971 1860 1115ZM1189 1091Q1017 993 767 1164Q1023 1030 1189 1091ZM1189 1091Q1066 875 867 995Q1054 918 1189 1091ZM1189 1091Q1186 817 1140 823Q1152 823 1189 1091ZM1189 1091Q1253 810 1290 819Q1206 792 1189 1091ZM1189 1091Q1342 842 1547 926Q1322 800 1189 1091ZM1189 1091Q1357 1029 1619 1165Q1364 989 1189 1091ZM584 1081Q445 944 238 1090Q446 1001 584 1081ZM584 1081Q485 844 308 947Q462 890 584 1081ZM584 1081Q627 785 630 782Q578 778 584 1081ZM584 1081Q712 852 880 919Q693 817 584 1081ZM584 1081Q753 1007 1014 1133Q759 954 584 1081Z"/><path fill="rgba(237,61,140,0.13)" d="M794 1112Q678 1002 507 1126Q681 1052 794 1112ZM794 1112Q717 957 583 1046Q702 1007 794 1112ZM794 1112Q759 861 650 911Q714 893 794 1112ZM794 1112Q789 866 721 885Q741 882 794 1112ZM794 1112Q835 869 853 871Q800 860 794 1112ZM794 1112Q872 974 950 995Q841 933 794 1112ZM794 1112Q893 1004 1022 1048Q878 952 794 1112ZM794 1112Q917 1057 1108 1136Q922 997 794 1112ZM472 1080Q375 984 234 1093Q378 1039 472 1080ZM472 1080Q389 923 248 1014Q375 969 472 1080ZM472 1080Q440 913 355 956Q410 941 472 1080ZM472 1080Q503 886 482 880Q448 883 472 1080ZM472 1080Q520 938 549 945Q485 918 472 1080ZM472 1080Q550 1001 658 1041Q542 964 472 1080ZM472 1080Q578 1018 738 1092Q579 983 472 1080ZM88 1119Q-21 1020 -180 1142Q-16 1077 88 1119ZM88 1119Q27 967 -90 1044Q7 1016 88 1119ZM88 1119Q91 921 34 936Q42 936 88 1119ZM88 1119Q131 936 145 938Q91 923 88 1119ZM88 1119Q171 1004 275 1040Q155 965 88 1119ZM88 1119Q184 1072 331 1130Q187 1022 88 1119ZM1242 1096Q1164 1012 1046 1097Q1164 1049 1242 1096ZM1242 1096Q1173 960 1053 1039Q1160 1004 1242 1096ZM1242 1096Q1247 918 1188 935Q1193 936 1242 1096ZM1242 1096Q1295 943 1334 954Q1262 922 1242 1096ZM1242 1096Q1307 1001 1385 1027Q1292 970 1242 1096ZM1242 1096Q1335 1051 1478 1113Q1338 1012 1242 1096ZM505 1094Q383 976 200 1097Q383 1012 505 1094ZM505 1094Q440 898 316 966Q419 929 505 1094ZM505 1094Q500 875 424 902Q445 898 505 1094ZM505 1094Q559 898 570 899Q503 879 505 1094ZM505 1094Q613 952 755 1005Q597 908 505 1094ZM505 1094Q602 1060 756 1122Q608 1006 505 1094ZM1597 1106Q1486 977 1318 1102Q1485 1039 1597 1106ZM1597 1106Q1541 920 1427 984Q1516 955 1597 1106ZM1597 1106Q1631 903 1630 900Q1588 896 1597 1106ZM1597 1106Q1666 964 1726 979Q1631 928 1597 1106ZM1597 1106Q1695 1068 1849 1140Q1700 1033 1597 1106ZM1578 1083Q1468 1000 1309 1114Q1473 1037 1578 1083ZM1578 1083Q1522 919 1405 993Q1497 967 1578 1083ZM1578 1083Q1619 895 1604 890Q1558 887 1578 1083ZM1578 1083Q1659 926 1754 959Q1638 896 1578 1083ZM1578 1083Q1674 1026 1817 1086Q1674 984 1578 1083ZM1418 1106Q1296 1003 1122 1137Q1302 1062 1418 1106ZM1418 1106Q1326 936 1169 1043Q1311 996 1418 1106ZM1418 1106Q1387 908 1301 948Q1355 932 1418 1106ZM1418 1106Q1444 909 1420 902Q1393 909 1418 1106ZM1418 1106Q1477 898 1512 906Q1434 877 1418 1106ZM1418 1106Q1516 975 1642 1019Q1498 929 1418 1106ZM1418 1106Q1528 1047 1698 1127Q1531 1012 1418 1106ZM1037 1097Q945 1014 812 1116Q949 1060 1037 1097ZM1037 1097Q955 920 811 1010Q939 965 1037 1097ZM1037 1097Q998 931 900 988Q967 972 1037 1097ZM1037 1097Q1059 926 1022 926Q1003 932 1037 1097ZM1037 1097Q1063 926 1050 921Q1023 923 1037 1097ZM1037 1097Q1109 962 1182 983Q1082 927 1037 1097ZM1037 1097Q1120 1019 1228 1052Q1107 966 1037 1097ZM1037 1097Q1137 1031 1287 1094Q1137 990 1037 1097Z"/><path fill="rgba(237,61,140,0.24)" d="M355 1101Q288 1025 190 1109Q291 1080 355 1101ZM355 1101Q307 993 216 1061Q292 1044 355 1101ZM355 1101Q337 995 271 1040Q306 1038 355 1101ZM355 1101Q378 996 333 1006Q315 1011 355 1101ZM355 1101Q389 1004 388 1002Q349 990 355 1101ZM355 1101Q408 1009 453 1019Q381 977 355 1101ZM355 1101Q407 1061 474 1079Q399 1022 355 1101ZM355 1101Q406 1094 491 1123Q413 1055 355 1101ZM736 1097Q659 1011 547 1104Q661 1067 736 1097ZM736 1097Q688 975 592 1043Q669 1025 736 1097ZM736 1097Q695 929 597 985Q665 966 736 1097ZM736 1097Q747 928 706 934Q701 936 736 1097ZM736 1097Q795 942 815 945Q740 914 736 1097ZM736 1097Q796 1003 834 1006Q755 959 736 1097ZM736 1097Q824 1009 943 1048Q813 959 736 1097ZM736 1097Q808 1058 917 1099Q809 1016 736 1097ZM276 1091Q178 1025 39 1129Q184 1063 276 1091ZM276 1091Q227 950 125 1016Q205 995 276 1091ZM276 1091Q297 943 268 941Q249 946 276 1091ZM276 1091Q336 999 398 1015Q314 963 276 1091ZM276 1091Q357 1056 483 1103Q360 1008 276 1091ZM1804 1104Q1700 1030 1560 1149Q1712 1091 1804 1104ZM1804 1104Q1767 933 1667 991Q1731 977 1804 1104ZM1804 1104Q1827 941 1798 937Q1775 943 1804 1104ZM1804 1104Q1881 996 1974 1025Q1862 955 1804 1104ZM1804 1104Q1892 1089 2037 1144Q1902 1029 1804 1104ZM1589 1096Q1479 982 1316 1106Q1481 1042 1589 1096ZM1589 1096Q1506 940 1367 1026Q1495 977 1589 1096ZM1589 1096Q1555 915 1469 956Q1527 939 1589 1096ZM1589 1096Q1613 896 1578 892Q1557 899 1589 1096ZM1589 1096Q1657 905 1696 914Q1607 876 1589 1096ZM1589 1096Q1681 977 1794 1012Q1661 927 1589 1096ZM1589 1096Q1685 1065 1835 1117Q1691 998 1589 1096ZM1245 1108Q1125 1027 960 1160Q1136 1086 1245 1108ZM1245 1108Q1158 974 1019 1063Q1151 1011 1245 1108ZM1245 1108Q1192 934 1085 994Q1169 966 1245 1108ZM1245 1108Q1238 879 1165 903Q1188 898 1245 1108ZM1245 1108Q1295 889 1305 889Q1242 874 1245 1108ZM1245 1108Q1335 968 1431 994Q1303 916 1245 1108ZM1245 1108Q1340 986 1453 1020Q1316 931 1245 1108ZM1245 1108Q1362 1023 1537 1100Q1361 981 1245 1108ZM904 1087Q819 1001 696 1099Q822 1053 904 1087ZM904 1087Q836 971 724 1050Q827 1016 904 1087ZM904 1087Q873 932 788 979Q842 965 904 1087ZM904 1087Q927 916 888 917Q868 922 904 1087ZM904 1087Q936 915 917 910Q882 911 904 1087ZM904 1087Q970 978 1024 988Q934 933 904 1087ZM904 1087Q973 1000 1054 1022Q954 955 904 1087ZM904 1087Q994 1051 1135 1109Q998 1005 904 1087ZM1555 1089Q1496 1022 1407 1092Q1496 1061 1555 1089ZM1555 1089Q1500 963 1398 1029Q1485 1001 1555 1089ZM1555 1089Q1550 960 1484 994Q1503 994 1555 1089ZM1555 1089Q1551 956 1500 976Q1515 974 1555 1089ZM1555 1089Q1594 975 1605 976Q1556 958 1555 1089ZM1555 1089Q1605 1003 1636 1006Q1570 968 1555 1089ZM1555 1089Q1625 1029 1714 1051Q1612 973 1555 1089ZM1555 1089Q1630 1063 1746 1098Q1633 1002 1555 1089Z"/><path d="M1010 130C1260 70 1500 150 1600 360" fill="none" stroke="#ED3D8C" stroke-width="2" stroke-dasharray="4 14" stroke-linecap="round" opacity=".8"/><g transform="translate(1650 430) rotate(150)" class="plane-glow"><g transform="translate(-150 -150) scale(4.7)" fill="none" stroke="#ED3D8C" stroke-width="1.5" stroke-linejoin="round"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g></svg>
   <div class="content">
     <p class="pre reveal">Supervivencia · Amazonía</p>
     <h1 class="script">
@@ -426,6 +453,14 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 02 · LA HISTORIA =================== -->
 <section class="slide story" data-tag="El accidente">
+  <svg class="art" style="left:1380px; top:580px; width:460px; height:380px" viewBox="0 0 400 330" aria-hidden="true">
+    <g fill="none" stroke="#ED3D8C" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20C90 40 120 110 190 130" stroke-width="2" stroke-dasharray="3 12" opacity=".55"/>
+      <path d="M40 8q14 14 0 28t0 28" stroke-width="2" opacity=".35"/>
+      <g transform="translate(250 150) rotate(125)" style="filter:drop-shadow(0 0 20px rgba(237,61,140,.5))"><g transform="translate(-90 -90) scale(2.8)" stroke-width="1.8"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g>
+      <path d="M326 20l-26 40h28l-16 38" stroke-width="2.2"/>
+      <path d="M90 300l30-34 26 18 24-38 30 22 30-30 30 26 30-20 50 34" stroke-width="1.5" opacity=".5"/>
+    </g></svg>
   <div class="content v">
     <p class="kicker reveal">Capítulo 01 · El accidente</p>
     <h2 class="serif reveal" style="--d:.1s">Una tormenta.<br>Un aterrizaje de emergencia.<br><em>Selva</em> por todas partes.</h2>
@@ -444,10 +479,10 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <p class="kicker reveal">Los primeros minutos</p>
     <h2 class="script reveal" style="--d:.1s">¿Qué hacemos primero?</h2>
     <div class="steps">
-      <div class="step reveal" style="--d:.25s"><div class="n">01</div><h3>Mantener la calma</h3><p>Respirar, pensar y no dejar que el pánico decida por nosotros.</p></div>
-      <div class="step reveal" style="--d:.35s"><div class="n">02</div><h3>Revisar heridos</h3><p>Comprobar a cada persona y atender primero los casos más graves.</p></div>
-      <div class="step reveal" style="--d:.45s"><div class="n">03</div><h3>Contar a todos</h3><p>Hacer el recuento de pasajeros y proteger a bebés y embarazadas.</p></div>
-      <div class="step reveal" style="--d:.55s"><div class="n">04</div><h3>Zona segura</h3><p>Alejarnos del avión sin abandonar el lugar del accidente.</p></div>
+      <div class="step reveal" style="--d:.25s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-calm"/></svg><div class="n">01</div><h3>Mantener la calma</h3><p>Respirar, pensar y no dejar que el pánico decida por nosotros.</p></div>
+      <div class="step reveal" style="--d:.35s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-aid"/></svg><div class="n">02</div><h3>Revisar heridos</h3><p>Comprobar a cada persona y atender primero los casos más graves.</p></div>
+      <div class="step reveal" style="--d:.45s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-people"/></svg><div class="n">03</div><h3>Contar a todos</h3><p>Hacer el recuento de pasajeros y proteger a bebés y embarazadas.</p></div>
+      <div class="step reveal" style="--d:.55s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-pin"/></svg><div class="n">04</div><h3>Zona segura</h3><p>Alejarnos del avión sin abandonar el lugar del accidente.</p></div>
     </div>
   </div>
 </section>
@@ -460,7 +495,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <div class="cols">
       <div class="reveal" style="--d:.3s">
         <span class="pill solid">Lo recomendable</span>
-        <h3>Quedarnos junto al avión</h3>
+        <h3 class="hrow"><svg class="ico lg"  aria-hidden="true"><use href="#i-plane"/></svg><span>Quedarnos junto al avión</span></h3>
         <ul class="list">
           <li>El rescate nos localiza más fácilmente</li>
           <li>Evitamos perdernos en la selva</li>
@@ -471,11 +506,11 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
       <div class="rail reveal" style="--d:.45s">
         <span class="pill">Solo si hay peligro</span>
         <h3>Nos movemos si hay…</h3>
-        <ul class="list">
-          <li>Fuego o riesgo de explosión</li>
-          <li>Inundación</li>
-          <li>Peligro de derrumbe</li>
-        </ul>
+        <div class="tri">
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-flame"/></svg><p>Fuego o riesgo de explosión</p></div>
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-waves"/></svg><p>Inundación</p></div>
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-rocks"/></svg><p>Peligro de derrumbe</p></div>
+        </div>
         <p class="go">Si hay que ir: <b>juntos</b> · con <b>agua</b> y <b>botiquín</b> · dejando <b>señales</b></p>
       </div>
     </div>
@@ -500,12 +535,12 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
       </div>
     </div>
     <div class="cards">
-      <div class="card reveal" style="--d:.2s"><p class="mono">01</p><h3>Animales</h3><p>Serpientes venenosas, caimanes, arañas y jaguares.</p></div>
-      <div class="card reveal" style="--d:.3s"><p class="mono">02</p><h3>Insectos</h3><p>Mosquitos que transmiten malaria y dengue; hormigas.</p></div>
-      <div class="card reveal" style="--d:.4s"><p class="mono">03</p><h3>Vegetación</h3><p>Espinas, hojas irritantes y frutos tóxicos.</p></div>
-      <div class="card reveal" style="--d:.5s"><p class="mono">04</p><h3>Clima</h3><p>Lluvias, tormentas eléctricas, calor y humedad extremos.</p></div>
-      <div class="card reveal" style="--d:.6s"><p class="mono">05</p><h3>Terreno</h3><p>Barro, raíces, ríos que crecen… y el riesgo de perderse.</p></div>
-      <div class="card reveal" style="--d:.7s"><p class="mono">06</p><h3>Infecciones</h3><p>Una herida con humedad y suciedad se infecta pronto.</p></div>
+      <div class="card reveal" style="--d:.2s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-snake"/></svg><p class="mono">01</p><h3>Animales</h3><p>Serpientes venenosas, caimanes, arañas y jaguares.</p></div>
+      <div class="card reveal" style="--d:.3s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-mosquito"/></svg><p class="mono">02</p><h3>Insectos</h3><p>Mosquitos que transmiten malaria y dengue; hormigas.</p></div>
+      <div class="card reveal" style="--d:.4s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-leaf"/></svg><p class="mono">03</p><h3>Vegetación</h3><p>Espinas, hojas irritantes y frutos tóxicos.</p></div>
+      <div class="card reveal" style="--d:.5s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-storm"/></svg><p class="mono">04</p><h3>Clima</h3><p>Lluvias, tormentas eléctricas, calor y humedad extremos.</p></div>
+      <div class="card reveal" style="--d:.6s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-compass"/></svg><p class="mono">05</p><h3>Terreno</h3><p>Barro, raíces, ríos que crecen… y el riesgo de perderse.</p></div>
+      <div class="card reveal" style="--d:.7s"><svg class="ico card-ico"  aria-hidden="true"><use href="#i-bandage"/></svg><p class="mono">06</p><h3>Infecciones</h3><p>Una herida con humedad y suciedad se infecta pronto.</p></div>
     </div>
   </div>
 </section>
@@ -517,9 +552,9 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <h2 class="serif reveal" style="--d:.1s">Todo puede ser <em>recurso</em><br>y también peligro</h2>
     <div class="grid3 reveal" style="--d:.3s">
       <div class="head"></div><div class="head">Nos sirve para</div><div class="head">Pero cuidado con</div>
-      <div class="cell lab">El río</div><div class="cell us">Orientarnos y recoger agua</div><div class="cell">Corrientes, agua contaminada y animales</div>
-      <div class="cell lab">La lluvia</div><div class="cell us">Agua que recoger y tratar</div><div class="cell">Tormentas, frío y crecidas repentinas</div>
-      <div class="cell lab">Árboles y lianas</div><div class="cell us">Ramas, hojas y fibras para el refugio</div><div class="cell">Espinas, raíces y plantas desconocidas</div>
+      <div class="cell lab"><svg class="ico sm"  aria-hidden="true"><use href="#i-waves"/></svg><span>El río</span></div><div class="cell us">Orientarnos y recoger agua</div><div class="cell">Corrientes, agua contaminada y animales</div>
+      <div class="cell lab"><svg class="ico sm"  aria-hidden="true"><use href="#i-rain"/></svg><span>La lluvia</span></div><div class="cell us">Agua que recoger y tratar</div><div class="cell">Tormentas, frío y crecidas repentinas</div>
+      <div class="cell lab"><svg class="ico sm"  aria-hidden="true"><use href="#i-tree"/></svg><span>Árboles y lianas</span></div><div class="cell us">Ramas, hojas y fibras para el refugio</div><div class="cell">Espinas, raíces y plantas desconocidas</div>
     </div>
     <p class="note reveal" style="--d:.5s">Por eso: <b>tratamos el agua</b> antes de beberla y <b>no comemos</b> nada que no identifiquemos.</p>
   </div>
@@ -527,6 +562,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 07 · SED =================== -->
 <section class="slide" data-tag="Necesidad 01 · Agua">
+  <svg class="bg-ico" style="left:60px; top:170px; width:600px; height:600px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg>
   <div class="content need">
     <div>
       <p class="kicker reveal">Necesidad 01</p>
@@ -542,10 +578,10 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
       <h3>No bebas del río<br>sin <em>tratar</em> el agua</h3>
       <p class="lead" style="font-size:30px; margin-top:6px">Aunque parezca limpia: bacterias, virus y parásitos.</p>
       <div class="rows">
-        <div class="row"><span class="n">1</span><p>Recoger el agua</p></div>
-        <div class="row"><span class="n">2</span><p>Dejar que los sedimentos se asienten y filtrarla con una tela limpia</p></div>
-        <div class="row"><span class="n">3</span><p>Hervirla al menos un minuto</p></div>
-        <div class="row"><span class="n">4</span><p>Enfriarla y guardarla en un recipiente limpio y cerrado</p></div>
+        <div class="row"><span class="n">1</span><p>Recoger el agua</p><svg class="ico sm"  aria-hidden="true"><use href="#i-drop"/></svg></div>
+        <div class="row"><span class="n">2</span><p>Dejar que los sedimentos se asienten y filtrarla con una tela limpia</p><svg class="ico sm"  aria-hidden="true"><use href="#i-filter"/></svg></div>
+        <div class="row"><span class="n">3</span><p>Hervirla al menos un minuto</p><svg class="ico sm"  aria-hidden="true"><use href="#i-pot"/></svg></div>
+        <div class="row"><span class="n">4</span><p>Enfriarla y guardarla en un recipiente limpio y cerrado</p><svg class="ico sm"  aria-hidden="true"><use href="#i-bottle"/></svg></div>
       </div>
     </div>
   </div>
@@ -553,6 +589,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 08 · HAMBRE =================== -->
 <section class="slide hunger" data-tag="Necesidad 02 · Comida">
+  <svg class="bg-ico" style="left:1380px; top:60px; width:420px; height:420px; opacity:.16" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-nomush"/></svg>
   <div class="content v">
     <div class="top">
       <div>
@@ -563,7 +600,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     </div>
     <div class="cols">
       <div class="reveal" style="--d:.45s">
-        <span class="pill solid">Lo que sí haremos</span>
+        <div class="colhead"><span class="pill solid">Lo que sí haremos</span><svg class="ico lg"  aria-hidden="true"><use href="#i-box"/></svg></div>
         <ul class="list" style="margin-top:24px">
           <li>Recuperar la comida del avión y repartirla con orden</li>
           <li>Dar prioridad a heridos, niños y personas vulnerables</li>
@@ -571,7 +608,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
         </ul>
       </div>
       <div class="reveal" style="--d:.55s">
-        <span class="pill">Lo que no haremos</span>
+        <div class="colhead"><span class="pill">Lo que no haremos</span><svg class="ico lg"  aria-hidden="true"><use href="#i-nomush"/></svg></div>
         <ul class="list no" style="margin-top:24px">
           <li>Comer frutos, hongos, semillas o plantas desconocidas</li>
           <li>Cazar sin conocimientos: hay riesgo de lesión o intoxicación</li>
@@ -584,6 +621,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 09 · FRÍO =================== -->
 <section class="slide" data-tag="Necesidad 03 · Abrigo">
+  <svg class="bg-ico" style="left:60px; top:130px; width:640px; height:640px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tent"/></svg>
   <div class="content need">
     <div>
       <p class="kicker reveal">Necesidad 03</p>
@@ -593,12 +631,12 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <div class="reveal" style="--d:.3s">
       <p class="mono" style="color:var(--pink)">Qué haríamos</p>
       <div class="rows" style="margin-top:12px">
-        <div class="row"><span class="n">1</span><p>Buscar un lugar protegido de la lluvia y del viento</p></div>
-        <div class="row"><span class="n">2</span><p>Construir un refugio con ramas y hojas grandes, sin tocar plantas desconocidas</p></div>
-        <div class="row"><span class="n">3</span><p>Usar las mantas, la ropa y las mantas térmicas del avión</p></div>
-        <div class="row"><span class="n">4</span><p>Cambiar la ropa mojada por ropa seca</p></div>
-        <div class="row"><span class="n">5</span><p>No dormir sobre suelo húmedo: hojas secas como aislante</p></div>
-        <div class="row"><span class="n">6</span><p>Mantenernos juntos para compartir calor, cuidando a los heridos</p></div>
+        <div class="row"><span class="n">1</span><p>Buscar un lugar protegido de la lluvia y del viento</p><svg class="ico sm"  aria-hidden="true"><use href="#i-rain"/></svg></div>
+        <div class="row"><span class="n">2</span><p>Construir un refugio con ramas y hojas grandes, sin tocar plantas desconocidas</p><svg class="ico sm"  aria-hidden="true"><use href="#i-tent"/></svg></div>
+        <div class="row"><span class="n">3</span><p>Usar las mantas, la ropa y las mantas térmicas del avión</p><svg class="ico sm"  aria-hidden="true"><use href="#i-blanket"/></svg></div>
+        <div class="row"><span class="n">4</span><p>Cambiar la ropa mojada por ropa seca</p><svg class="ico sm"  aria-hidden="true"><use href="#i-shirt"/></svg></div>
+        <div class="row"><span class="n">5</span><p>No dormir sobre suelo húmedo: hojas secas como aislante</p><svg class="ico sm"  aria-hidden="true"><use href="#i-leaf"/></svg></div>
+        <div class="row"><span class="n">6</span><p>Mantenernos juntos para compartir calor, cuidando a los heridos</p><svg class="ico sm"  aria-hidden="true"><use href="#i-people"/></svg></div>
       </div>
     </div>
   </div>
@@ -610,10 +648,10 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <p class="kicker reveal">Para recordar</p>
     <h2 class="serif reveal" style="--d:.1s">Calma. Grupo. <em>Rescate.</em></h2>
     <div class="four">
-      <div class="item reveal" style="--d:.3s"><span class="n">01</span><p>Nunca caminar sin rumbo</p></div>
-      <div class="item reveal" style="--d:.4s"><span class="n">02</span><p>No separarnos del grupo</p></div>
-      <div class="item reveal" style="--d:.5s"><span class="n">03</span><p>Conservar el agua y la energía</p></div>
-      <div class="item reveal" style="--d:.6s"><span class="n">04</span><p>Esperar el rescate cerca del avión, en zona segura</p></div>
+      <div class="item reveal" style="--d:.3s"><svg class="ico sm"  aria-hidden="true"><use href="#i-compass"/></svg><p>Nunca caminar sin rumbo</p></div>
+      <div class="item reveal" style="--d:.4s"><svg class="ico sm"  aria-hidden="true"><use href="#i-people"/></svg><p>No separarnos del grupo</p></div>
+      <div class="item reveal" style="--d:.5s"><svg class="ico sm"  aria-hidden="true"><use href="#i-drop"/></svg><p>Conservar el agua y la energía</p></div>
+      <div class="item reveal" style="--d:.6s"><svg class="ico sm"  aria-hidden="true"><use href="#i-plane"/></svg><p>Esperar el rescate cerca del avión, en zona segura</p></div>
     </div>
     <p class="mono thanks reveal" style="--d:.8s">Gracias · ¿Preguntas?</p>
   </div>
