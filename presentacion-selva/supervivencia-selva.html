@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perdidos en la selva — Supervivencia en la Amazonía</title>
+<title>Supervivencia en la selva amazónica</title>
 
 <!-- ============================================================
      FUENTES (incrustadas en base64 → la presentación funciona SIN internet)
@@ -296,7 +296,7 @@ svg {
    =========================================================== */
 .cover .content { display: flex; flex-direction: column; justify-content: center; }
 .cover .pre { font: 400 28px var(--mono); letter-spacing: .42em; text-transform: uppercase; color: var(--paper); margin-bottom: 34px; }
-.cover .script { font-size: 280px; line-height: 1.02; letter-spacing: -0.015em; }
+.cover .script { font-size: 250px; line-height: 1.02; letter-spacing: -0.015em; }
 .cover .script span { display: block; }
 .cover .lead { margin-top: 28px; font-size: 34px; }
 
@@ -311,15 +311,14 @@ svg {
    03 · PASOS (proceso en 4 columnas)
    =========================================================== */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 56px; margin-top: 60px; }
-.step { position: relative; padding-top: 22px; }
-.step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--pink); transform-origin: left; }
+.step { position: relative; border-top: 1px solid var(--pink); padding-top: 22px; }
 .step:not(:last-child)::after {
     content: ''; position: absolute; top: -13px; right: -42px; width: 26px; height: 26px;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ED3D8C' stroke-width='1.5'><path d='M3 12h18M14 5l7 7-7 7'/></svg>") center/contain no-repeat;
 }
 .step-ico { position: absolute; top: 18px; right: 0; }
 .step .n { font: 400 112px/1 var(--serif); color: var(--pink); padding-bottom: .08em; }
-.step h3 { font: 400 52px/1.08 var(--serif); color: var(--paper); margin: 8px 0 16px; padding-bottom: .05em; }
+.step h3 { font: 400 52px/1.08 var(--serif); color: var(--paper); margin: 8px 0 14px; padding-bottom: .05em; }
 .step p  { font: 300 31px/1.45 var(--sans); color: var(--soft); }
 
 /* ===========================================================
@@ -344,8 +343,7 @@ svg {
 .danger .do .mono { color: var(--pink); margin-bottom: 18px; }
 .danger .do li { font-size: 28px; margin-bottom: 14px; }
 .cards { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 28px 44px; height: 780px; }
-.card { position: relative; padding-top: 18px; }
-.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--line-pink); transform-origin: left; }
+.card { position: relative; border-top: 1px solid var(--line-pink); padding-top: 18px; }
 .card-ico { position: absolute; top: 20px; right: 0; width: 104px; height: 104px; }
 .card .mono { color: var(--pink); font-size: 22px; margin-bottom: 8px; }
 .card h3 { font: 400 62px/1.05 var(--serif); color: var(--paper); padding-bottom: .06em; margin-bottom: 8px; }
@@ -399,7 +397,7 @@ svg {
    =========================================================== */
 .closing .content { display: flex; flex-direction: column; justify-content: center; }
 .closing .serif { font-size: 150px; padding-bottom: .1em; }
-.closing .four { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 90px; margin-top: 56px; }
+.closing .four { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 90px; margin-top: 44px; }
 .closing .item { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; border-top: 1px solid var(--line-pink); padding-top: 20px; }
 .closing .item .n { font: 400 48px/1 var(--serif); color: var(--pink); }
 .closing .item p { font: 400 50px/1.1 var(--serif); color: var(--paper); padding-bottom: .1em; }
@@ -419,146 +417,8 @@ svg {
 .bg-ico { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; fill: none; stroke: var(--pink); stroke-width: 1.1; opacity: .2; stroke-linecap: round; stroke-linejoin: round; }
 .art { position: absolute; z-index: 1; pointer-events: none; max-width: none; max-height: none; }
 
-@keyframes flyCover {
-  0.0% { opacity:0; transform: translate(900px,-200px) rotate(108deg); }
-  3.5% { opacity:1; transform: translate(904px,-199px) rotate(108deg); }
-  6.9% { opacity:1; transform: translate(915px,-195px) rotate(108deg); }
-  10.4% { opacity:1; transform: translate(934px,-189px) rotate(109deg); }
-  13.8% { opacity:1; transform: translate(959px,-180px) rotate(109deg); }
-  17.3% { opacity:1; transform: translate(990px,-169px) rotate(110deg); }
-  20.8% { opacity:1; transform: translate(1027px,-155px) rotate(111deg); }
-  24.2% { opacity:1; transform: translate(1069px,-138px) rotate(112deg); }
-  27.7% { opacity:1; transform: translate(1115px,-119px) rotate(114deg); }
-  31.2% { opacity:1; transform: translate(1164px,-96px) rotate(115deg); }
-  34.6% { opacity:1; transform: translate(1217px,-71px) rotate(117deg); }
-  38.1% { opacity:1; transform: translate(1270px,-41px) rotate(120deg); }
-  41.5% { opacity:1; transform: translate(1325px,-8px) rotate(123deg); }
-  45.0% { opacity:1; transform: translate(1379px,28px) rotate(126deg); }
-  48.5% { opacity:1; transform: translate(1432px,69px) rotate(129deg); }
-  51.9% { opacity:1; transform: translate(1482px,114px) rotate(134deg); }
-  55.4% { opacity:1; transform: translate(1529px,162px) rotate(138deg); }
-  58.8% { opacity:1; transform: translate(1571px,215px) rotate(144deg); }
-  62.3% { opacity:1; transform: translate(1609px,270px) rotate(149deg); }
-  65.8% { opacity:1; transform: translate(1640px,330px) rotate(155deg); }
-  69.2% { opacity:1; transform: translate(1666px,391px) rotate(161deg); }
-  72.7% { opacity:1; transform: translate(1684px,456px) rotate(167deg); }
-  76.2% { opacity:1; transform: translate(1697px,521px) rotate(172deg); }
-  79.6% { opacity:1; transform: translate(1703px,588px) rotate(177deg); }
-  83.1% { opacity:1; transform: translate(1703px,653px) rotate(182deg); }
-  86.5% { opacity:1; transform: translate(1699px,718px) rotate(186deg); }
-  90.0% { opacity:1; transform: translate(1690px,780px) rotate(190deg); }
-  100% { opacity:1; transform: translate(1690px,806px) rotate(176deg); }
-}
-@keyframes trailCover {
-  0.0% { stroke-dashoffset: 1.0000; }
-  3.5% { stroke-dashoffset: 0.9976; }
-  6.9% { stroke-dashoffset: 0.9903; }
-  10.4% { stroke-dashoffset: 0.9756; }
-  13.8% { stroke-dashoffset: 0.9560; }
-  17.3% { stroke-dashoffset: 0.9339; }
-  20.8% { stroke-dashoffset: 0.9042; }
-  24.2% { stroke-dashoffset: 0.8720; }
-  27.7% { stroke-dashoffset: 0.8372; }
-  31.2% { stroke-dashoffset: 0.7975; }
-  34.6% { stroke-dashoffset: 0.7554; }
-  38.1% { stroke-dashoffset: 0.7110; }
-  41.5% { stroke-dashoffset: 0.6670; }
-  45.0% { stroke-dashoffset: 0.6184; }
-  48.5% { stroke-dashoffset: 0.5728; }
-  51.9% { stroke-dashoffset: 0.5228; }
-  55.4% { stroke-dashoffset: 0.4756; }
-  58.8% { stroke-dashoffset: 0.4262; }
-  62.3% { stroke-dashoffset: 0.3792; }
-  65.8% { stroke-dashoffset: 0.3319; }
-  69.2% { stroke-dashoffset: 0.2837; }
-  72.7% { stroke-dashoffset: 0.2343; }
-  76.2% { stroke-dashoffset: 0.1884; }
-  79.6% { stroke-dashoffset: 0.1405; }
-  83.1% { stroke-dashoffset: 0.0931; }
-  86.5% { stroke-dashoffset: 0.0462; }
-  90.0% { stroke-dashoffset: 0.0000; }
-  100% { stroke-dashoffset: 0; }
-}
-
-/* ===========================================================
-   ANIMACIONES  (se reinician cada vez que la diapositiva aparece)
-   =========================================================== */
-/* Transición suave entre diapositivas */
-.slide { transition: opacity .55s ease, visibility 0s linear .55s; }
-.slide.active, .slide.visible { transition: opacity .55s ease, visibility 0s; }
-
-/* Aparición de iconos: rebote con brillo (el retraso lo pone JS con --i) */
-@keyframes pop { 0% { opacity: 0; transform: scale(.3) rotate(-14deg); } 60% { opacity: 1; transform: scale(1.14) rotate(3deg); } 100% { opacity: 1; transform: scale(1) rotate(0); } }
-@keyframes glow { 0%, 100% { filter: drop-shadow(0 0 8px rgba(237,61,140,.25)); } 50% { filter: drop-shadow(0 0 22px rgba(237,61,140,.7)); } }
-.slide.visible .ico { animation: pop .8s var(--ease) calc(.5s + var(--i, 0) * .13s) both, glow 3.2s ease-in-out calc(1.6s + var(--i, 0) * .13s) infinite; }
-
-/* Títulos grandes: el halo "respira" */
-@keyframes breathe { 0%, 100% { text-shadow: 0 0 80px rgba(237,61,140,.16); } 50% { text-shadow: 0 0 120px rgba(237,61,140,.42); } }
-.slide.visible .script { animation: breathe 4.5s ease-in-out infinite; }
-.slide.visible .serif em { animation: breathe 3s ease-in-out infinite; }
-
-/* Líneas que se dibujan */
-@keyframes line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.slide.visible .step::before, .slide.visible .card::before { animation: line 1s var(--ease) both; }
-.step:nth-child(1)::before { animation-delay: .25s !important; } .step:nth-child(2)::before { animation-delay: .4s !important; }
-.step:nth-child(3)::before { animation-delay: .55s !important; } .step:nth-child(4)::before { animation-delay: .7s !important; }
-.card:nth-child(odd)::before { animation-delay: .3s !important; } .card:nth-child(even)::before { animation-delay: .5s !important; }
-
-/* Siluetas de fondo flotando despacio */
-@keyframes floaty { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-18px) rotate(2.5deg); } }
-.slide.visible .bg-ico { animation: floaty 9s ease-in-out infinite; }
-
-/* Portada: el avión entra en picado, se estrella en la selva y emite señal de socorro */
-.plane-glow { opacity: 0; filter: drop-shadow(0 0 28px rgba(237,61,140,.55)); }
-.slide.visible .cover-art .plane-glow { animation: flyCover 2.9s linear .5s both; }
-.trailc { stroke-dasharray: 1 1; stroke-dashoffset: 1; }
-.slide.visible .cover-art .trailc { animation: trailCover 2.9s linear .5s both; }
-.ring { opacity: 0; transform-origin: 1690px 790px; }
-@keyframes ringPing { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(7); opacity: 0; } }
-.slide.visible .ring { animation: ringPing 2.8s ease-out 3.3s infinite; }
-.slide.visible .ring.r2 { animation-delay: 4.7s; }
-.smk { opacity: 0; }
-@keyframes rise { 0% { opacity: 0; transform: translateY(0); } 25% { opacity: .55; } 100% { opacity: 0; transform: translateY(-130px); } }
-.slide.visible .smk { animation: rise 3s ease-out calc(3.3s + var(--sd, 0s)) infinite; }
-@keyframes sway { 0%, 100% { transform: skewX(-1.6deg); } 50% { transform: skewX(1.6deg); } }
-.cover-art .sw, .story-jungle .sw { transform-origin: 960px 1080px; }
-.slide.visible .cover-art .sw1 { animation: sway 7s ease-in-out infinite; }
-.slide.visible .cover-art .sw2 { animation: sway 5.5s ease-in-out -2s infinite; }
-.slide.visible .cover-art .sw3 { animation: sway 4.2s ease-in-out -1s infinite; }
-
-/* Historia: tormenta (lluvia + relámpagos), frases una a una y selva que crece */
-.story .line { display: block; }
-.rain { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
-.rain i { position: absolute; top: -80px; width: 2px; height: 46px; opacity: 0; background: linear-gradient(rgba(237,61,140,0), #ED3D8C); }
-@keyframes rainfall { 0% { transform: translate(0,0) rotate(14deg); opacity: 0; } 10% { opacity: .38; } 100% { transform: translate(-300px,1200px) rotate(14deg); opacity: .05; } }
-.slide.visible .rain i { animation: rainfall var(--t, 1s) linear var(--w, 0s) infinite; }
-.story .flash { position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0;
-    background: radial-gradient(ellipse at 82% 25%, rgba(255,205,230,.5), rgba(237,61,140,.12) 60%, transparent); }
-@keyframes thunder { 0%, 100% { opacity: 0; } 2% { opacity: 1; } 4% { opacity: .15; } 6% { opacity: .85; } 12% { opacity: 0; } 56% { opacity: 0; } 58% { opacity: .7; } 62% { opacity: 0; } }
-.slide.visible .flash { animation: thunder 7s linear .5s infinite; }
-.storm-big { position: absolute; left: 1470px; top: 570px; width: 310px; height: 310px; z-index: 2; fill: none; stroke: var(--pink); stroke-width: 1.7;
-    stroke-linecap: round; stroke-linejoin: round; max-width: none; max-height: none; filter: drop-shadow(0 0 12px rgba(237,61,140,.35)); }
-@keyframes stormGlow { 0%, 100% { filter: drop-shadow(0 0 12px rgba(237,61,140,.35)); } 2% { filter: drop-shadow(0 0 70px rgba(255,120,190,1)); } 8% { filter: drop-shadow(0 0 12px rgba(237,61,140,.35)); } 58% { filter: drop-shadow(0 0 60px rgba(255,120,190,.9)); } 66% { filter: drop-shadow(0 0 12px rgba(237,61,140,.35)); } }
-.slide.visible .storm-big { animation: stormGlow 7s linear .5s infinite; }
-.story-jungle { position: absolute; inset: 0; width: 1920px; height: 1080px; z-index: 1; max-width: none; max-height: none; pointer-events: none; }
-.story-jungle .rise { transform: translateY(360px); }
-@keyframes grow { from { transform: translateY(360px); } to { transform: translateY(0); } }
-.slide.visible .story-jungle .rise { animation: grow 2s var(--ease) 1.1s both; }
-.slide.visible .story-jungle .st1 { animation: sway 6s ease-in-out infinite; }
-.slide.visible .story-jungle .st2 { animation: sway 4.6s ease-in-out -1.5s infinite; }
-
-/* Sed: gotas que caen */
-.fall { position: absolute; top: 160px; width: 34px; height: 34px; z-index: 1; fill: none; stroke: var(--pink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0; max-width: none; max-height: none; }
-@keyframes fall { 0% { transform: translateY(0) scale(.7); opacity: 0; } 12% { opacity: .9; } 85% { opacity: .6; } 100% { transform: translateY(560px) scale(1); opacity: 0; } }
-.slide.visible .fall { animation: fall 3.4s cubic-bezier(.5,0,.9,.6) calc(var(--dl, 0s) + .6s) infinite; }
-
-/* Frío: copos que bajan (los crea JS) */
-.flake { position: absolute; top: 90px; border-radius: 50%; background: var(--paper); opacity: 0; z-index: 1; pointer-events: none; }
-@keyframes drift { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: .55; } 100% { transform: translate(var(--dx, 30px), 880px); opacity: 0; } }
-.slide.visible .flake { animation: drift var(--t, 8s) linear var(--w, 0s) infinite; }
-
-/* Cierre: el icono del avión emite señal */
-@keyframes ping { 0% { transform: scale(.6); opacity: .8; } 100% { transform: scale(2.2); opacity: 0; } }
+.slide { transition: opacity .5s ease, visibility 0s linear .5s; }
+.slide.active, .slide.visible { transition: opacity .5s ease, visibility 0s; }
 
 /* ===========================================================
    CONTROLES (fuera del escenario) y MODO EDICIÓN
@@ -583,29 +443,23 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 01 · PORTADA =================== -->
 <section class="slide cover active" data-tag="Exposición">
-  <svg class="cover-art" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ED3D8C" stop-opacity="0"/><stop offset="1" stop-color="#ED3D8C" stop-opacity=".22"/></linearGradient></defs><rect x="0" y="560" width="1920" height="520" fill="url(#fade)"/><path class="sw sw1" fill="rgba(237,61,140,0.07)" d="M865 1102Q737 967 544 1101Q736 1019 865 1102ZM865 1102Q741 901 544 1017Q732 935 865 1102ZM865 1102Q806 877 681 942Q777 911 865 1102ZM865 1102Q875 813 834 812Q829 818 865 1102ZM865 1102Q913 840 924 840Q864 829 865 1102ZM865 1102Q972 880 1090 920Q938 839 865 1102ZM865 1102Q969 957 1100 1002Q948 908 865 1102ZM865 1102Q1025 1020 1271 1144Q1029 981 865 1102ZM1142 1088Q970 952 716 1121Q973 994 1142 1088ZM1142 1088Q1006 812 777 948Q986 866 1142 1088ZM1142 1088Q1131 765 1068 778Q1093 774 1142 1088ZM1142 1088Q1186 816 1214 822Q1155 808 1142 1088ZM1142 1088Q1274 909 1448 976Q1255 859 1142 1088ZM1142 1088Q1325 980 1603 1112Q1328 927 1142 1088ZM-39 1088Q-176 946 -383 1077Q-177 978 -39 1088ZM-39 1088Q-125 818 -283 899Q-148 848 -39 1088ZM-39 1088Q-28 823 -81 829Q-83 832 -39 1088ZM-39 1088Q60 915 185 962Q41 882 -39 1088ZM-39 1088Q84 1007 268 1084Q83 955 -39 1088ZM315 1102Q158 936 -80 1089Q157 978 315 1102ZM315 1102Q197 903 3 1028Q184 959 315 1102ZM315 1102Q216 825 31 929Q187 873 315 1102ZM315 1102Q301 772 242 784Q271 780 315 1102ZM315 1102Q357 777 361 773Q310 771 315 1102ZM315 1102Q400 910 499 945Q377 883 315 1102ZM315 1102Q427 968 577 1026Q413 923 315 1102ZM315 1102Q462 1041 688 1159Q467 1009 315 1102ZM377 1105Q217 981 -16 1148Q223 1037 377 1105ZM377 1105Q290 835 120 928Q259 879 377 1105ZM377 1105Q392 841 345 843Q337 848 377 1105ZM377 1105Q488 912 632 969Q471 880 377 1105ZM377 1105Q560 1020 839 1166Q565 984 377 1105ZM1860 1115Q1730 1026 1545 1168Q1739 1081 1860 1115ZM1860 1115Q1762 872 1593 965Q1744 905 1860 1115ZM1860 1115Q1893 839 1895 835Q1855 834 1860 1115ZM1860 1115Q1958 875 2076 919Q1936 851 1860 1115ZM1860 1115Q2005 1025 2223 1121Q2006 971 1860 1115ZM1189 1091Q1017 993 767 1164Q1023 1030 1189 1091ZM1189 1091Q1066 875 867 995Q1054 918 1189 1091ZM1189 1091Q1186 817 1140 823Q1152 823 1189 1091ZM1189 1091Q1253 810 1290 819Q1206 792 1189 1091ZM1189 1091Q1342 842 1547 926Q1322 800 1189 1091ZM1189 1091Q1357 1029 1619 1165Q1364 989 1189 1091ZM584 1081Q445 944 238 1090Q446 1001 584 1081ZM584 1081Q485 844 308 947Q462 890 584 1081ZM584 1081Q627 785 630 782Q578 778 584 1081ZM584 1081Q712 852 880 919Q693 817 584 1081ZM584 1081Q753 1007 1014 1133Q759 954 584 1081Z"/><path class="sw sw2" fill="rgba(237,61,140,0.13)" d="M794 1112Q678 1002 507 1126Q681 1052 794 1112ZM794 1112Q717 957 583 1046Q702 1007 794 1112ZM794 1112Q759 861 650 911Q714 893 794 1112ZM794 1112Q789 866 721 885Q741 882 794 1112ZM794 1112Q835 869 853 871Q800 860 794 1112ZM794 1112Q872 974 950 995Q841 933 794 1112ZM794 1112Q893 1004 1022 1048Q878 952 794 1112ZM794 1112Q917 1057 1108 1136Q922 997 794 1112ZM472 1080Q375 984 234 1093Q378 1039 472 1080ZM472 1080Q389 923 248 1014Q375 969 472 1080ZM472 1080Q440 913 355 956Q410 941 472 1080ZM472 1080Q503 886 482 880Q448 883 472 1080ZM472 1080Q520 938 549 945Q485 918 472 1080ZM472 1080Q550 1001 658 1041Q542 964 472 1080ZM472 1080Q578 1018 738 1092Q579 983 472 1080ZM88 1119Q-21 1020 -180 1142Q-16 1077 88 1119ZM88 1119Q27 967 -90 1044Q7 1016 88 1119ZM88 1119Q91 921 34 936Q42 936 88 1119ZM88 1119Q131 936 145 938Q91 923 88 1119ZM88 1119Q171 1004 275 1040Q155 965 88 1119ZM88 1119Q184 1072 331 1130Q187 1022 88 1119ZM1242 1096Q1164 1012 1046 1097Q1164 1049 1242 1096ZM1242 1096Q1173 960 1053 1039Q1160 1004 1242 1096ZM1242 1096Q1247 918 1188 935Q1193 936 1242 1096ZM1242 1096Q1295 943 1334 954Q1262 922 1242 1096ZM1242 1096Q1307 1001 1385 1027Q1292 970 1242 1096ZM1242 1096Q1335 1051 1478 1113Q1338 1012 1242 1096ZM505 1094Q383 976 200 1097Q383 1012 505 1094ZM505 1094Q440 898 316 966Q419 929 505 1094ZM505 1094Q500 875 424 902Q445 898 505 1094ZM505 1094Q559 898 570 899Q503 879 505 1094ZM505 1094Q613 952 755 1005Q597 908 505 1094ZM505 1094Q602 1060 756 1122Q608 1006 505 1094ZM1597 1106Q1486 977 1318 1102Q1485 1039 1597 1106ZM1597 1106Q1541 920 1427 984Q1516 955 1597 1106ZM1597 1106Q1631 903 1630 900Q1588 896 1597 1106ZM1597 1106Q1666 964 1726 979Q1631 928 1597 1106ZM1597 1106Q1695 1068 1849 1140Q1700 1033 1597 1106ZM1578 1083Q1468 1000 1309 1114Q1473 1037 1578 1083ZM1578 1083Q1522 919 1405 993Q1497 967 1578 1083ZM1578 1083Q1619 895 1604 890Q1558 887 1578 1083ZM1578 1083Q1659 926 1754 959Q1638 896 1578 1083ZM1578 1083Q1674 1026 1817 1086Q1674 984 1578 1083ZM1418 1106Q1296 1003 1122 1137Q1302 1062 1418 1106ZM1418 1106Q1326 936 1169 1043Q1311 996 1418 1106ZM1418 1106Q1387 908 1301 948Q1355 932 1418 1106ZM1418 1106Q1444 909 1420 902Q1393 909 1418 1106ZM1418 1106Q1477 898 1512 906Q1434 877 1418 1106ZM1418 1106Q1516 975 1642 1019Q1498 929 1418 1106ZM1418 1106Q1528 1047 1698 1127Q1531 1012 1418 1106ZM1037 1097Q945 1014 812 1116Q949 1060 1037 1097ZM1037 1097Q955 920 811 1010Q939 965 1037 1097ZM1037 1097Q998 931 900 988Q967 972 1037 1097ZM1037 1097Q1059 926 1022 926Q1003 932 1037 1097ZM1037 1097Q1063 926 1050 921Q1023 923 1037 1097ZM1037 1097Q1109 962 1182 983Q1082 927 1037 1097ZM1037 1097Q1120 1019 1228 1052Q1107 966 1037 1097ZM1037 1097Q1137 1031 1287 1094Q1137 990 1037 1097Z"/><path class="sw sw3" fill="rgba(237,61,140,0.24)" d="M355 1101Q288 1025 190 1109Q291 1080 355 1101ZM355 1101Q307 993 216 1061Q292 1044 355 1101ZM355 1101Q337 995 271 1040Q306 1038 355 1101ZM355 1101Q378 996 333 1006Q315 1011 355 1101ZM355 1101Q389 1004 388 1002Q349 990 355 1101ZM355 1101Q408 1009 453 1019Q381 977 355 1101ZM355 1101Q407 1061 474 1079Q399 1022 355 1101ZM355 1101Q406 1094 491 1123Q413 1055 355 1101ZM736 1097Q659 1011 547 1104Q661 1067 736 1097ZM736 1097Q688 975 592 1043Q669 1025 736 1097ZM736 1097Q695 929 597 985Q665 966 736 1097ZM736 1097Q747 928 706 934Q701 936 736 1097ZM736 1097Q795 942 815 945Q740 914 736 1097ZM736 1097Q796 1003 834 1006Q755 959 736 1097ZM736 1097Q824 1009 943 1048Q813 959 736 1097ZM736 1097Q808 1058 917 1099Q809 1016 736 1097ZM276 1091Q178 1025 39 1129Q184 1063 276 1091ZM276 1091Q227 950 125 1016Q205 995 276 1091ZM276 1091Q297 943 268 941Q249 946 276 1091ZM276 1091Q336 999 398 1015Q314 963 276 1091ZM276 1091Q357 1056 483 1103Q360 1008 276 1091ZM1804 1104Q1700 1030 1560 1149Q1712 1091 1804 1104ZM1804 1104Q1767 933 1667 991Q1731 977 1804 1104ZM1804 1104Q1827 941 1798 937Q1775 943 1804 1104ZM1804 1104Q1881 996 1974 1025Q1862 955 1804 1104ZM1804 1104Q1892 1089 2037 1144Q1902 1029 1804 1104ZM1589 1096Q1479 982 1316 1106Q1481 1042 1589 1096ZM1589 1096Q1506 940 1367 1026Q1495 977 1589 1096ZM1589 1096Q1555 915 1469 956Q1527 939 1589 1096ZM1589 1096Q1613 896 1578 892Q1557 899 1589 1096ZM1589 1096Q1657 905 1696 914Q1607 876 1589 1096ZM1589 1096Q1681 977 1794 1012Q1661 927 1589 1096ZM1589 1096Q1685 1065 1835 1117Q1691 998 1589 1096ZM1245 1108Q1125 1027 960 1160Q1136 1086 1245 1108ZM1245 1108Q1158 974 1019 1063Q1151 1011 1245 1108ZM1245 1108Q1192 934 1085 994Q1169 966 1245 1108ZM1245 1108Q1238 879 1165 903Q1188 898 1245 1108ZM1245 1108Q1295 889 1305 889Q1242 874 1245 1108ZM1245 1108Q1335 968 1431 994Q1303 916 1245 1108ZM1245 1108Q1340 986 1453 1020Q1316 931 1245 1108ZM1245 1108Q1362 1023 1537 1100Q1361 981 1245 1108ZM904 1087Q819 1001 696 1099Q822 1053 904 1087ZM904 1087Q836 971 724 1050Q827 1016 904 1087ZM904 1087Q873 932 788 979Q842 965 904 1087ZM904 1087Q927 916 888 917Q868 922 904 1087ZM904 1087Q936 915 917 910Q882 911 904 1087ZM904 1087Q970 978 1024 988Q934 933 904 1087ZM904 1087Q973 1000 1054 1022Q954 955 904 1087ZM904 1087Q994 1051 1135 1109Q998 1005 904 1087ZM1555 1089Q1496 1022 1407 1092Q1496 1061 1555 1089ZM1555 1089Q1500 963 1398 1029Q1485 1001 1555 1089ZM1555 1089Q1550 960 1484 994Q1503 994 1555 1089ZM1555 1089Q1551 956 1500 976Q1515 974 1555 1089ZM1555 1089Q1594 975 1605 976Q1556 958 1555 1089ZM1555 1089Q1605 1003 1636 1006Q1570 968 1555 1089ZM1555 1089Q1625 1029 1714 1051Q1612 973 1555 1089ZM1555 1089Q1630 1063 1746 1098Q1633 1002 1555 1089Z"/><path class="trailc" pathLength="1" d="M900 -200C1330 -60 1790 200 1690 780" fill="none" stroke="#ED3D8C" stroke-width="2.5" stroke-linecap="round" opacity=".55"/><circle class="ring" cx="1690" cy="790" r="16" fill="none" stroke="#ED3D8C" stroke-width="2"/><circle class="ring r2" cx="1690" cy="790" r="16" fill="none" stroke="#ED3D8C" stroke-width="2"/><g transform="translate(1664 770)"><path class="smk" style="--sd:0s" d="M0 0q9-16 0-32t0-32" fill="none" stroke="#ED3D8C" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(1690 770)"><path class="smk" style="--sd:1.0s" d="M0 0q9-16 0-32t0-32" fill="none" stroke="#ED3D8C" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(1714 770)"><path class="smk" style="--sd:2.0s" d="M0 0q9-16 0-32t0-32" fill="none" stroke="#ED3D8C" stroke-width="3" stroke-linecap="round"/></g><g class="plane-glow"><g transform="translate(-150 -150) scale(4.7)" fill="none" stroke="#ED3D8C" stroke-width="1.5" stroke-linejoin="round"><path d="M32 5l4 19 22 14v5l-22-7-1 14 7 6v3l-10-3-10 3v-3l7-6-1-14-22 7v-5l22-14z"/></g></g></svg>
+  <svg class="cover-art" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ED3D8C" stop-opacity="0"/><stop offset="1" stop-color="#ED3D8C" stop-opacity=".22"/></linearGradient></defs><rect x="0" y="560" width="1920" height="520" fill="url(#fade)"/><path fill="rgba(237,61,140,0.07)" d="M865 1102Q737 967 544 1101Q736 1019 865 1102ZM865 1102Q741 901 544 1017Q732 935 865 1102ZM865 1102Q806 877 681 942Q777 911 865 1102ZM865 1102Q875 813 834 812Q829 818 865 1102ZM865 1102Q913 840 924 840Q864 829 865 1102ZM865 1102Q972 880 1090 920Q938 839 865 1102ZM865 1102Q969 957 1100 1002Q948 908 865 1102ZM865 1102Q1025 1020 1271 1144Q1029 981 865 1102ZM1142 1088Q970 952 716 1121Q973 994 1142 1088ZM1142 1088Q1006 812 777 948Q986 866 1142 1088ZM1142 1088Q1131 765 1068 778Q1093 774 1142 1088ZM1142 1088Q1186 816 1214 822Q1155 808 1142 1088ZM1142 1088Q1274 909 1448 976Q1255 859 1142 1088ZM1142 1088Q1325 980 1603 1112Q1328 927 1142 1088ZM-39 1088Q-176 946 -383 1077Q-177 978 -39 1088ZM-39 1088Q-125 818 -283 899Q-148 848 -39 1088ZM-39 1088Q-28 823 -81 829Q-83 832 -39 1088ZM-39 1088Q60 915 185 962Q41 882 -39 1088ZM-39 1088Q84 1007 268 1084Q83 955 -39 1088ZM315 1102Q158 936 -80 1089Q157 978 315 1102ZM315 1102Q197 903 3 1028Q184 959 315 1102ZM315 1102Q216 825 31 929Q187 873 315 1102ZM315 1102Q301 772 242 784Q271 780 315 1102ZM315 1102Q357 777 361 773Q310 771 315 1102ZM315 1102Q400 910 499 945Q377 883 315 1102ZM315 1102Q427 968 577 1026Q413 923 315 1102ZM315 1102Q462 1041 688 1159Q467 1009 315 1102ZM377 1105Q217 981 -16 1148Q223 1037 377 1105ZM377 1105Q290 835 120 928Q259 879 377 1105ZM377 1105Q392 841 345 843Q337 848 377 1105ZM377 1105Q488 912 632 969Q471 880 377 1105ZM377 1105Q560 1020 839 1166Q565 984 377 1105ZM1860 1115Q1730 1026 1545 1168Q1739 1081 1860 1115ZM1860 1115Q1762 872 1593 965Q1744 905 1860 1115ZM1860 1115Q1893 839 1895 835Q1855 834 1860 1115ZM1860 1115Q1958 875 2076 919Q1936 851 1860 1115ZM1860 1115Q2005 1025 2223 1121Q2006 971 1860 1115ZM1189 1091Q1017 993 767 1164Q1023 1030 1189 1091ZM1189 1091Q1066 875 867 995Q1054 918 1189 1091ZM1189 1091Q1186 817 1140 823Q1152 823 1189 1091ZM1189 1091Q1253 810 1290 819Q1206 792 1189 1091ZM1189 1091Q1342 842 1547 926Q1322 800 1189 1091ZM1189 1091Q1357 1029 1619 1165Q1364 989 1189 1091ZM584 1081Q445 944 238 1090Q446 1001 584 1081ZM584 1081Q485 844 308 947Q462 890 584 1081ZM584 1081Q627 785 630 782Q578 778 584 1081ZM584 1081Q712 852 880 919Q693 817 584 1081ZM584 1081Q753 1007 1014 1133Q759 954 584 1081Z"/><path fill="rgba(237,61,140,0.13)" d="M794 1112Q678 1002 507 1126Q681 1052 794 1112ZM794 1112Q717 957 583 1046Q702 1007 794 1112ZM794 1112Q759 861 650 911Q714 893 794 1112ZM794 1112Q789 866 721 885Q741 882 794 1112ZM794 1112Q835 869 853 871Q800 860 794 1112ZM794 1112Q872 974 950 995Q841 933 794 1112ZM794 1112Q893 1004 1022 1048Q878 952 794 1112ZM794 1112Q917 1057 1108 1136Q922 997 794 1112ZM472 1080Q375 984 234 1093Q378 1039 472 1080ZM472 1080Q389 923 248 1014Q375 969 472 1080ZM472 1080Q440 913 355 956Q410 941 472 1080ZM472 1080Q503 886 482 880Q448 883 472 1080ZM472 1080Q520 938 549 945Q485 918 472 1080ZM472 1080Q550 1001 658 1041Q542 964 472 1080ZM472 1080Q578 1018 738 1092Q579 983 472 1080ZM88 1119Q-21 1020 -180 1142Q-16 1077 88 1119ZM88 1119Q27 967 -90 1044Q7 1016 88 1119ZM88 1119Q91 921 34 936Q42 936 88 1119ZM88 1119Q131 936 145 938Q91 923 88 1119ZM88 1119Q171 1004 275 1040Q155 965 88 1119ZM88 1119Q184 1072 331 1130Q187 1022 88 1119ZM1242 1096Q1164 1012 1046 1097Q1164 1049 1242 1096ZM1242 1096Q1173 960 1053 1039Q1160 1004 1242 1096ZM1242 1096Q1247 918 1188 935Q1193 936 1242 1096ZM1242 1096Q1295 943 1334 954Q1262 922 1242 1096ZM1242 1096Q1307 1001 1385 1027Q1292 970 1242 1096ZM1242 1096Q1335 1051 1478 1113Q1338 1012 1242 1096ZM505 1094Q383 976 200 1097Q383 1012 505 1094ZM505 1094Q440 898 316 966Q419 929 505 1094ZM505 1094Q500 875 424 902Q445 898 505 1094ZM505 1094Q559 898 570 899Q503 879 505 1094ZM505 1094Q613 952 755 1005Q597 908 505 1094ZM505 1094Q602 1060 756 1122Q608 1006 505 1094ZM1597 1106Q1486 977 1318 1102Q1485 1039 1597 1106ZM1597 1106Q1541 920 1427 984Q1516 955 1597 1106ZM1597 1106Q1631 903 1630 900Q1588 896 1597 1106ZM1597 1106Q1666 964 1726 979Q1631 928 1597 1106ZM1597 1106Q1695 1068 1849 1140Q1700 1033 1597 1106ZM1578 1083Q1468 1000 1309 1114Q1473 1037 1578 1083ZM1578 1083Q1522 919 1405 993Q1497 967 1578 1083ZM1578 1083Q1619 895 1604 890Q1558 887 1578 1083ZM1578 1083Q1659 926 1754 959Q1638 896 1578 1083ZM1578 1083Q1674 1026 1817 1086Q1674 984 1578 1083ZM1418 1106Q1296 1003 1122 1137Q1302 1062 1418 1106ZM1418 1106Q1326 936 1169 1043Q1311 996 1418 1106ZM1418 1106Q1387 908 1301 948Q1355 932 1418 1106ZM1418 1106Q1444 909 1420 902Q1393 909 1418 1106ZM1418 1106Q1477 898 1512 906Q1434 877 1418 1106ZM1418 1106Q1516 975 1642 1019Q1498 929 1418 1106ZM1418 1106Q1528 1047 1698 1127Q1531 1012 1418 1106ZM1037 1097Q945 1014 812 1116Q949 1060 1037 1097ZM1037 1097Q955 920 811 1010Q939 965 1037 1097ZM1037 1097Q998 931 900 988Q967 972 1037 1097ZM1037 1097Q1059 926 1022 926Q1003 932 1037 1097ZM1037 1097Q1063 926 1050 921Q1023 923 1037 1097ZM1037 1097Q1109 962 1182 983Q1082 927 1037 1097ZM1037 1097Q1120 1019 1228 1052Q1107 966 1037 1097ZM1037 1097Q1137 1031 1287 1094Q1137 990 1037 1097Z"/><path fill="rgba(237,61,140,0.24)" d="M355 1101Q288 1025 190 1109Q291 1080 355 1101ZM355 1101Q307 993 216 1061Q292 1044 355 1101ZM355 1101Q337 995 271 1040Q306 1038 355 1101ZM355 1101Q378 996 333 1006Q315 1011 355 1101ZM355 1101Q389 1004 388 1002Q349 990 355 1101ZM355 1101Q408 1009 453 1019Q381 977 355 1101ZM355 1101Q407 1061 474 1079Q399 1022 355 1101ZM355 1101Q406 1094 491 1123Q413 1055 355 1101ZM736 1097Q659 1011 547 1104Q661 1067 736 1097ZM736 1097Q688 975 592 1043Q669 1025 736 1097ZM736 1097Q695 929 597 985Q665 966 736 1097ZM736 1097Q747 928 706 934Q701 936 736 1097ZM736 1097Q795 942 815 945Q740 914 736 1097ZM736 1097Q796 1003 834 1006Q755 959 736 1097ZM736 1097Q824 1009 943 1048Q813 959 736 1097ZM736 1097Q808 1058 917 1099Q809 1016 736 1097ZM276 1091Q178 1025 39 1129Q184 1063 276 1091ZM276 1091Q227 950 125 1016Q205 995 276 1091ZM276 1091Q297 943 268 941Q249 946 276 1091ZM276 1091Q336 999 398 1015Q314 963 276 1091ZM276 1091Q357 1056 483 1103Q360 1008 276 1091ZM1804 1104Q1700 1030 1560 1149Q1712 1091 1804 1104ZM1804 1104Q1767 933 1667 991Q1731 977 1804 1104ZM1804 1104Q1827 941 1798 937Q1775 943 1804 1104ZM1804 1104Q1881 996 1974 1025Q1862 955 1804 1104ZM1804 1104Q1892 1089 2037 1144Q1902 1029 1804 1104ZM1589 1096Q1479 982 1316 1106Q1481 1042 1589 1096ZM1589 1096Q1506 940 1367 1026Q1495 977 1589 1096ZM1589 1096Q1555 915 1469 956Q1527 939 1589 1096ZM1589 1096Q1613 896 1578 892Q1557 899 1589 1096ZM1589 1096Q1657 905 1696 914Q1607 876 1589 1096ZM1589 1096Q1681 977 1794 1012Q1661 927 1589 1096ZM1589 1096Q1685 1065 1835 1117Q1691 998 1589 1096ZM1245 1108Q1125 1027 960 1160Q1136 1086 1245 1108ZM1245 1108Q1158 974 1019 1063Q1151 1011 1245 1108ZM1245 1108Q1192 934 1085 994Q1169 966 1245 1108ZM1245 1108Q1238 879 1165 903Q1188 898 1245 1108ZM1245 1108Q1295 889 1305 889Q1242 874 1245 1108ZM1245 1108Q1335 968 1431 994Q1303 916 1245 1108ZM1245 1108Q1340 986 1453 1020Q1316 931 1245 1108ZM1245 1108Q1362 1023 1537 1100Q1361 981 1245 1108ZM904 1087Q819 1001 696 1099Q822 1053 904 1087ZM904 1087Q836 971 724 1050Q827 1016 904 1087ZM904 1087Q873 932 788 979Q842 965 904 1087ZM904 1087Q927 916 888 917Q868 922 904 1087ZM904 1087Q936 915 917 910Q882 911 904 1087ZM904 1087Q970 978 1024 988Q934 933 904 1087ZM904 1087Q973 1000 1054 1022Q954 955 904 1087ZM904 1087Q994 1051 1135 1109Q998 1005 904 1087ZM1555 1089Q1496 1022 1407 1092Q1496 1061 1555 1089ZM1555 1089Q1500 963 1398 1029Q1485 1001 1555 1089ZM1555 1089Q1550 960 1484 994Q1503 994 1555 1089ZM1555 1089Q1551 956 1500 976Q1515 974 1555 1089ZM1555 1089Q1594 975 1605 976Q1556 958 1555 1089ZM1555 1089Q1605 1003 1636 1006Q1570 968 1555 1089ZM1555 1089Q1625 1029 1714 1051Q1612 973 1555 1089ZM1555 1089Q1630 1063 1746 1098Q1633 1002 1555 1089Z"/></svg>
   <div class="content">
-    <p class="pre reveal">Supervivencia · Amazonía</p>
+    <p class="pre reveal">Selva amazónica</p>
     <h1 class="script">
-      <span class="reveal" style="--d:.15s">Perdidos</span>
+      <span class="reveal" style="--d:.15s">Supervivencia</span>
       <span class="reveal" style="--d:.3s; padding-left:180px">en la selva</span>
     </h1>
-    <p class="lead reveal" style="--d:.5s">Una historia de supervivencia, paso a paso</p>
+    <p class="lead reveal" style="--d:.5s">Peligros y cómo afrontar la sed, el hambre y el frío</p>
   </div>
 </section>
 
 <!-- =================== 02 · LA HISTORIA =================== -->
 <section class="slide story" data-tag="El accidente">
-  <div class="rain"></div><svg class="story-jungle" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"><g class="rise"><path class="sw st1" fill="rgba(237,61,140,0.1)" d="M1206 1110Q1119 1023 989 1113Q1119 1055 1206 1110ZM1206 1110Q1153 953 1042 1024Q1128 1000 1206 1110ZM1206 1110Q1222 952 1199 948Q1184 954 1206 1110ZM1206 1110Q1279 987 1366 1017Q1261 956 1206 1110ZM1206 1110Q1297 1087 1445 1148Q1305 1037 1206 1110ZM104 1105Q26 1054 -83 1140Q32 1089 104 1105ZM104 1105Q43 995 -62 1074Q33 1048 104 1105ZM104 1105Q73 970 -9 1018Q45 1005 104 1105ZM104 1105Q123 991 83 998Q68 1002 104 1105ZM104 1105Q148 978 150 976Q97 959 104 1105ZM104 1105Q148 1014 181 1021Q122 990 104 1105ZM104 1105Q154 1049 210 1062Q139 1013 104 1105ZM104 1105Q156 1095 240 1119Q161 1046 104 1105ZM636 1092Q552 1020 432 1117Q557 1069 636 1092ZM636 1092Q558 971 432 1051Q551 1002 636 1092ZM636 1092Q616 926 552 952Q589 942 636 1092ZM636 1092Q665 951 652 947Q619 946 636 1092ZM636 1092Q673 977 688 980Q641 962 636 1092ZM636 1092Q704 1035 794 1060Q694 986 636 1092ZM636 1092Q727 1067 873 1133Q734 1028 636 1092ZM670 1101Q600 1019 497 1105Q601 1073 670 1101ZM670 1101Q605 1008 503 1078Q601 1041 670 1101ZM670 1101Q648 975 572 1022Q613 1018 670 1101ZM670 1101Q674 961 626 975Q631 975 670 1101ZM670 1101Q695 993 690 991Q661 987 670 1101ZM670 1101Q714 1019 732 1019Q675 990 670 1101ZM670 1101Q723 1059 799 1085Q719 1027 670 1101ZM670 1101Q732 1092 836 1132Q740 1051 670 1101ZM435 1104Q364 1033 264 1120Q369 1088 435 1104ZM435 1104Q370 989 261 1069Q360 1041 435 1104ZM435 1104Q408 943 321 993Q370 983 435 1104ZM435 1104Q455 942 443 937Q421 940 435 1104ZM435 1104Q486 998 509 1000Q443 967 435 1104ZM435 1104Q505 1023 583 1041Q483 971 435 1104ZM435 1104Q526 1077 671 1141Q532 1035 435 1104ZM936 1109Q854 1039 733 1127Q857 1072 936 1109ZM936 1109Q887 997 796 1055Q874 1030 936 1109ZM936 1109Q915 961 848 993Q887 983 936 1109ZM936 1109Q944 971 901 982Q900 983 936 1109ZM936 1109Q973 1004 966 1001Q923 990 936 1109ZM936 1109Q986 999 1031 1012Q963 977 936 1109ZM936 1109Q1002 1039 1082 1060Q987 993 936 1109ZM936 1109Q999 1102 1104 1135Q1008 1046 936 1109ZM1392 1118Q1317 1043 1208 1129Q1320 1088 1392 1118ZM1392 1118Q1319 985 1196 1066Q1308 1027 1392 1118ZM1392 1118Q1382 942 1310 972Q1337 967 1392 1118ZM1392 1118Q1413 944 1382 941Q1363 947 1392 1118ZM1392 1118Q1455 999 1502 1008Q1417 961 1392 1118ZM1392 1118Q1479 1037 1594 1072Q1466 982 1392 1118ZM1392 1118Q1479 1098 1620 1159Q1487 1054 1392 1118Z"/><path class="sw st2" fill="rgba(237,61,140,0.2)" d="M292 1113Q236 1066 162 1136Q244 1111 292 1113ZM292 1113Q255 1021 180 1079Q240 1068 292 1113ZM292 1113Q292 1022 243 1048Q253 1052 292 1113ZM292 1113Q319 1027 283 1030Q258 1035 292 1113ZM292 1113Q323 1025 305 1022Q272 1018 292 1113ZM292 1113Q332 1038 354 1040Q302 1013 292 1113ZM292 1113Q347 1081 414 1088Q335 1020 292 1113ZM292 1113Q345 1087 424 1114Q345 1051 292 1113ZM1896 1099Q1838 1048 1756 1115Q1842 1083 1896 1099ZM1896 1099Q1867 998 1798 1046Q1846 1037 1896 1099ZM1896 1099Q1922 985 1889 984Q1864 988 1896 1099ZM1896 1099Q1947 1041 1996 1048Q1924 998 1896 1099ZM1896 1099Q1947 1095 2033 1124Q1955 1053 1896 1099ZM551 1101Q483 1016 381 1101Q483 1073 551 1101ZM551 1101Q505 991 419 1048Q491 1026 551 1101ZM551 1101Q546 957 475 991Q495 991 551 1101ZM551 1101Q582 967 576 965Q539 959 551 1101ZM551 1101Q595 1017 631 1024Q570 990 551 1101ZM551 1101Q616 1024 700 1052Q605 988 551 1101ZM551 1101Q630 1073 755 1123Q635 1028 551 1101ZM823 1089Q771 1020 694 1093Q772 1078 823 1089ZM823 1089Q781 996 703 1061Q769 1050 823 1089ZM823 1089Q811 993 762 1020Q786 1016 823 1089ZM823 1089Q860 999 840 995Q800 989 823 1089ZM823 1089Q862 1020 863 1015Q816 995 823 1089ZM823 1089Q871 1050 933 1067Q864 1016 823 1089ZM823 1089Q875 1069 951 1088Q874 1021 823 1089ZM1081 1090Q1017 1037 927 1110Q1022 1075 1081 1090ZM1081 1090Q1046 982 968 1039Q1025 1029 1081 1090ZM1081 1090Q1059 960 985 1004Q1025 998 1081 1090ZM1081 1090Q1101 979 1063 985Q1046 989 1081 1090ZM1081 1090Q1111 971 1103 969Q1068 963 1081 1090ZM1081 1090Q1131 996 1163 1001Q1096 964 1081 1090ZM1081 1090Q1146 1025 1224 1044Q1130 976 1081 1090ZM1081 1090Q1139 1061 1224 1086Q1137 1014 1081 1090ZM1793 1116Q1756 1060 1701 1117Q1757 1111 1793 1116ZM1793 1116Q1777 1036 1724 1076Q1754 1077 1793 1116ZM1793 1116Q1809 1042 1779 1048Q1766 1051 1793 1116ZM1793 1116Q1824 1065 1825 1061Q1788 1044 1793 1116ZM1793 1116Q1829 1100 1859 1093Q1810 1046 1793 1116ZM1793 1116Q1829 1114 1889 1127Q1834 1072 1793 1116ZM1521 1116Q1471 1048 1399 1121Q1474 1110 1521 1116ZM1521 1116Q1501 1034 1444 1079Q1480 1078 1521 1116ZM1521 1116Q1520 1023 1475 1044Q1486 1045 1521 1116ZM1521 1116Q1557 1053 1536 1048Q1497 1041 1521 1116ZM1521 1116Q1560 1070 1596 1076Q1543 1039 1521 1116ZM1521 1116Q1564 1104 1630 1123Q1566 1067 1521 1116ZM205 1105Q140 1045 55 1128Q149 1104 205 1105ZM205 1105Q169 991 89 1044Q148 1031 205 1105ZM205 1105Q216 981 189 982Q181 985 205 1105ZM205 1105Q250 1019 286 1027Q225 993 205 1105ZM205 1105Q267 1076 360 1101Q266 1021 205 1105Z"/></g></svg><svg class="storm-big" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-storm"/></svg><div class="flash"></div>
   <div class="content v">
-    <p class="kicker reveal">Capítulo 01 · El accidente</p>
-    <h2 class="serif"><span class="line reveal" style="--d:.15s">Una tormenta.</span><span class="line reveal" style="--d:.65s">Un aterrizaje de emergencia.</span><span class="line reveal" style="--d:1.15s"><em>Selva</em> por todas partes.</span></h2>
-    <p class="lead reveal" style="--d:1.7s">Vuelo AX-217, rumbo a Iquitos. El piloto consigue posar el avión entre los árboles. Estamos vivos, sin cobertura y a kilómetros de cualquier pueblo.</p>
-    <div class="pills reveal" style="--d:2s">
-      <span class="pill"><span class="count" data-to="22" data-delay="2100">22</span> pasajeros</span>
-      <span class="pill">Bebés y una embarazada</span>
-      <span class="pill dim">Sin señal</span>
-    </div>
+    <p class="kicker reveal">Tras el aterrizaje</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:150px">Aterrizaje de emergencia<br>en plena <em>selva</em></h2>
+    <p class="lead reveal" style="--d:.25s; max-width:1300px; font-size:40px">Debemos tomar una decisión muy importante: permanecer junto al avión o desplazarnos.</p>
   </div>
 </section>
 
@@ -615,11 +469,12 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     <p class="kicker reveal">Los primeros minutos</p>
     <h2 class="script reveal" style="--d:.1s">¿Qué hacemos primero?</h2>
     <div class="steps">
-      <div class="step reveal" style="--d:.25s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-calm"/></svg><div class="n">01</div><h3>Mantener la calma</h3><p>Respirar, pensar y no dejar que el pánico decida por nosotros.</p></div>
-      <div class="step reveal" style="--d:.35s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-aid"/></svg><div class="n">02</div><h3>Revisar heridos</h3><p>Comprobar a cada persona y atender primero los casos más graves.</p></div>
-      <div class="step reveal" style="--d:.45s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-people"/></svg><div class="n">03</div><h3>Contar a todos</h3><p>Hacer el recuento de pasajeros y proteger a bebés y embarazadas.</p></div>
-      <div class="step reveal" style="--d:.55s"><svg class="ico lg step-ico"  aria-hidden="true"><use href="#i-pin"/></svg><div class="n">04</div><h3>Zona segura</h3><p>Alejarnos del avión sin abandonar el lugar del accidente.</p></div>
+      <div class="step reveal" style="--d:.25s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-calm"/></svg><div class="n">01</div><h3>Mantener la calma</h3></div>
+      <div class="step reveal" style="--d:.35s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-aid"/></svg><div class="n">02</div><h3>Comprobar si hay heridos</h3></div>
+      <div class="step reveal" style="--d:.45s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-people"/></svg><div class="n">03</div><h3>Contar a los pasajeros</h3><p>Asegurar a bebés y embarazadas.</p></div>
+      <div class="step reveal" style="--d:.55s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-pin"/></svg><div class="n">04</div><h3>Alejarnos del avión</h3><p>Sin abandonar la ubicación del accidente.</p></div>
     </div>
+    <p class="lead reveal" style="--d:.7s; margin-top:56px">Buscar una zona segura cerca de los restos del avión, siempre que no haya peligro de explosión.</p>
   </div>
 </section>
 
@@ -698,8 +553,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 07 · SED =================== -->
 <section class="slide" data-tag="Necesidad 01 · Agua">
-  <svg class="fall" style="left:770px; --dl:0s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg><svg class="fall" style="left:830px; --dl:1.1s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg><svg class="fall" style="left:885px; --dl:2.1s" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg>
-  <svg class="bg-ico" style="left:60px; top:170px; width:600px; height:600px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-drop"/></svg>
   <div class="content need">
     <div>
       <p class="kicker reveal">Necesidad 01</p>
@@ -726,7 +579,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 
 <!-- =================== 08 · HAMBRE =================== -->
 <section class="slide hunger" data-tag="Necesidad 02 · Comida">
-  <svg class="bg-ico" style="left:1380px; top:60px; width:420px; height:420px; opacity:.16" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-nomush"/></svg>
   <div class="content v">
     <div class="top">
       <div>
@@ -757,8 +609,7 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 </section>
 
 <!-- =================== 09 · FRÍO =================== -->
-<section class="slide flurry" data-tag="Necesidad 03 · Abrigo">
-  <svg class="bg-ico" style="left:60px; top:130px; width:640px; height:640px; opacity:.13" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tent"/></svg>
+<section class="slide" data-tag="Necesidad 03 · Abrigo">
   <div class="content need">
     <div>
       <p class="kicker reveal">Necesidad 03</p>
@@ -782,15 +633,15 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
 <!-- =================== 10 · CIERRE =================== -->
 <section class="slide closing" data-tag="Conclusión">
   <div class="content">
-    <p class="kicker reveal">Para recordar</p>
-    <h2 class="serif reveal" style="--d:.1s">Calma. Grupo. <em>Rescate.</em></h2>
+    <p class="kicker reveal">Nuestra prioridad</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:104px">Mantenernos <em>seguros</em>,<br>facilitar el rescate<br>y <em>sobrevivir</em></h2>
     <div class="four">
       <div class="item reveal" style="--d:.3s"><svg class="ico sm"  aria-hidden="true"><use href="#i-compass"/></svg><p>Nunca caminar sin rumbo</p></div>
       <div class="item reveal" style="--d:.4s"><svg class="ico sm"  aria-hidden="true"><use href="#i-people"/></svg><p>No separarnos del grupo</p></div>
       <div class="item reveal" style="--d:.5s"><svg class="ico sm"  aria-hidden="true"><use href="#i-drop"/></svg><p>Conservar el agua y la energía</p></div>
-      <div class="item reveal" style="--d:.6s"><svg class="ico sm"  aria-hidden="true"><use href="#i-plane"/></svg><p>Esperar el rescate cerca del avión, en zona segura</p></div>
+      <div class="item reveal" style="--d:.6s"><svg class="ico sm"  aria-hidden="true"><use href="#i-plane"/></svg><p>Esperar el rescate en una zona segura cerca del avión</p></div>
     </div>
-    <p class="mono thanks reveal" style="--d:.8s">Gracias · ¿Preguntas?</p>
+    
   </div>
 </section>
 
@@ -838,43 +689,10 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
     }
     addEventListener('resize', fit); fit();
 
-    /* --- Retraso escalonado de iconos (--i) y copos de nieve --- */
-    slides.forEach(s => {
-        s.querySelectorAll('svg.ico').forEach((el, i) => el.style.setProperty('--i', i));
-        const rain = s.querySelector('.rain');
-        if (rain) for (let n = 0; n < 90; n++) {
-            const d = document.createElement('i');
-            d.style.cssText = 'left:' + (Math.random() * 2300 - 100) + 'px;--t:' + (0.7 + Math.random() * 0.7) + 's;--w:' + (Math.random() * 1.6) + 's';
-            rain.appendChild(d);
-        }
-        if (s.classList.contains('flurry')) {
-            for (let n = 0; n < 16; n++) {
-                const f = document.createElement('span'), sz = 5 + Math.random() * 9;
-                f.className = 'flake';
-                f.style.cssText = 'left:' + (60 + Math.random() * 760) + 'px;width:' + sz + 'px;height:' + sz + 'px;--dx:' + (Math.random() * 80 - 40) + 'px;--t:' + (7 + Math.random() * 6) + 's;--w:' + (Math.random() * 6) + 's';
-                s.appendChild(f);
-            }
-        }
-    });
-
-    /* --- Contador animado (.count data-to) --- */
-    function runCounters(slide) {
-        slide.querySelectorAll('.count').forEach(c => {
-            const to = +c.dataset.to, t0 = performance.now() + (+c.dataset.delay || 700);
-            c.textContent = '0';
-            (function tick(now) {
-                const k = Math.min(Math.max((now - t0) / 1300, 0), 1);
-                c.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
-                if (k < 1) requestAnimationFrame(tick);
-            })(performance.now());
-        });
-    }
-
     /* --- Mostrar diapositiva --- */
     function show(i) {
         current = Math.max(0, Math.min(i, total - 1));
         slides.forEach((s, n) => { s.classList.toggle('active', n === current); s.classList.toggle('visible', n === current); });
-        runCounters(slides[current]);
         try { history.replaceState(null, '', '#' + (current + 1)); } catch (e) {}
     }
     const next = () => show(current + 1), prev = () => show(current - 1);
