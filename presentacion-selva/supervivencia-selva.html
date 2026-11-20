@@ -420,6 +420,49 @@ svg {
 .slide { transition: opacity .5s ease, visibility 0s linear .5s; }
 .slide.active, .slide.visible { transition: opacity .5s ease, visibility 0s; }
 
+
+/* ===========================================================
+   NUEVAS DIAPOSITIVAS (índice, características, consejos, caso real)
+   =========================================================== */
+.list.sm li { font-size: 28px; line-height: 1.32; margin-bottom: 12px; padding-left: 38px; }
+.list.sm li::before { width: 20px; }
+.tocgrid { display: grid; grid-template-columns: 640px 1fr; gap: 80px; align-items: center; height: 100%; }
+.tocl { list-style: none; }
+.tocl li { display: grid; grid-template-columns: 96px 1fr; align-items: baseline; border-bottom: 1px solid var(--hair); padding: 15px 0; }
+.tocl .n { font: 400 54px/1 var(--serif); color: var(--pink); }
+.tocl .t { font: 400 42px/1.1 var(--serif); color: var(--paper); padding-bottom: .06em; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; margin-top: 22px; }
+.three .grp h3 { font-size: 46px; margin-bottom: 14px; }
+.three .list.sm li { font-size: 26px; margin-bottom: 9px; }
+.three .grp .ico { width: 88px; height: 88px; margin-bottom: 10px; }
+.two   { display: grid; grid-template-columns: repeat(2, 1fr); gap: 90px; margin-top: 40px; }
+.grp { border-top: 1px solid var(--line-pink); padding-top: 26px; }
+.grp .ico { margin-bottom: 16px; }
+.grp h3 { font: 400 52px/1.06 var(--serif); color: var(--paper); margin-bottom: 20px; padding-bottom: .05em; }
+.two .list.sm li { font-size: 31px; }
+.needwrap { display: contents; }
+.rows2 { column-count: 2; column-gap: 90px; margin-top: 26px; }
+.rows2 .row { break-inside: avoid; }
+.row.n2 { grid-template-columns: 64px 1fr; }
+.rows2 .row p { font-size: 29px; }
+.objtop { display: grid; grid-template-columns: 560px 1fr; gap: 60px; align-items: center; }
+.steps.five { grid-template-columns: repeat(5, 1fr); gap: 44px; margin-top: 10px; }
+.steps.five .step:not(:last-child)::after { right: -34px; }
+.steps.five .step h3 { font-size: 42px; }
+.steps.five .step .n { font-size: 80px; }
+.steps.plan { gap: 40px; margin-top: 30px; }
+.steps.plan .step:not(:last-child)::after { right: -30px; }
+.steps.plan .step .n { font-size: 80px; }
+.steps.plan .step h3 { font-size: 42px; margin-bottom: 6px; }
+.steps.plan .sub { font: 400 19px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--pink); margin-bottom: 18px; }
+.steps.plan .list.sm li { font-size: 25px; margin-bottom: 9px; padding-left: 30px; }
+.steps.plan .list.sm li::before { width: 16px; }
+.casewrap { display: grid; grid-template-columns: 760px 1fr; gap: 80px; align-items: center; }
+.qrbox { display: flex; align-items: center; gap: 28px; margin-top: 30px; }
+.qr { width: 190px; height: 190px; background: var(--paper); padding: 12px; flex: none; }
+.qr svg { width: 100%; height: 100%; max-width: none; max-height: none; display: block; }
+.url { font: 400 30px var(--mono); color: var(--paper); margin-top: 6px; letter-spacing: .02em; }
+
 /* ===========================================================
    CONTROLES (fuera del escenario) y MODO EDICIÓN
    =========================================================== */
@@ -454,61 +497,38 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 02 · LA HISTORIA =================== -->
-<section class="slide story" data-tag="El accidente">
-  <div class="content v">
-    <p class="kicker reveal">Tras el aterrizaje</p>
-    <h2 class="serif reveal" style="--d:.1s; font-size:150px">Aterrizaje de emergencia<br>en plena <em>selva</em></h2>
-    <p class="lead reveal" style="--d:.25s; max-width:1300px; font-size:40px">Debemos tomar una decisión muy importante: permanecer junto al avión o desplazarnos.</p>
-  </div>
-</section>
-
-<!-- =================== 03 · LOS PRIMEROS MINUTOS =================== -->
-<section class="slide" data-tag="Primeros pasos">
-  <div class="content v">
-    <p class="kicker reveal">Los primeros minutos</p>
-    <h2 class="script reveal" style="--d:.1s">¿Qué hacemos primero?</h2>
-    <div class="steps">
-      <div class="step reveal" style="--d:.25s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-calm"/></svg><div class="n">01</div><h3>Mantener la calma</h3></div>
-      <div class="step reveal" style="--d:.35s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-aid"/></svg><div class="n">02</div><h3>Comprobar si hay heridos</h3></div>
-      <div class="step reveal" style="--d:.45s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-people"/></svg><div class="n">03</div><h3>Contar a los pasajeros</h3><p>Asegurar a bebés y embarazadas.</p></div>
-      <div class="step reveal" style="--d:.55s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-pin"/></svg><div class="n">04</div><h3>Alejarnos del avión</h3><p>Sin abandonar la ubicación del accidente.</p></div>
-    </div>
-    <p class="lead reveal" style="--d:.7s; margin-top:56px">Buscar una zona segura cerca de los restos del avión, siempre que no haya peligro de explosión.</p>
-  </div>
-</section>
-
-<!-- =================== 04 · LA GRAN DECISIÓN =================== -->
-<section class="slide decision" data-tag="La gran decisión">
-  <div class="content v">
-    <p class="kicker reveal">La gran decisión</p>
-    <h2 class="serif reveal" style="--d:.1s">¿Nos <em>quedamos</em> o nos movemos?</h2>
-    <div class="cols">
-      <div class="reveal" style="--d:.3s">
-        <span class="pill solid">Lo recomendable</span>
-        <h3 class="hrow"><svg class="ico lg"  aria-hidden="true"><use href="#i-plane"/></svg><span>Quedarnos junto al avión</span></h3>
-        <ul class="list">
-          <li>El rescate nos localiza más fácilmente</li>
-          <li>Evitamos perdernos en la selva</li>
-          <li>Ahorramos energía y usamos los restos como referencia y para las señales de socorro</li>
-          <li>Aprovechamos los suministros de emergencia</li>
-        </ul>
-      </div>
-      <div class="rail reveal" style="--d:.45s">
-        <span class="pill">Solo si hay peligro</span>
-        <h3>Nos movemos si hay…</h3>
-        <div class="tri">
-          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-flame"/></svg><p>Fuego o riesgo de explosión</p></div>
-          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-waves"/></svg><p>Inundación</p></div>
-          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-rocks"/></svg><p>Peligro de derrumbe</p></div>
-        </div>
-        <p class="go">Si hay que ir: <b>juntos</b> · con <b>agua</b> y <b>botiquín</b> · dejando <b>señales</b></p>
-      </div>
+<section class="slide " data-tag="Índice">
+  <div class="content">
+    <div class="tocgrid">
+      <div><p class="kicker reveal">Contenido</p><h2 class="script reveal" style="--d:.1s; font-size:240px">Índice</h2></div>
+      <ol class="tocl"><li class="reveal" style="--d:0.20s"><span class="n">01</span><span class="t">Características generales de la zona</span></li><li class="reveal" style="--d:0.28s"><span class="n">02</span><span class="t">Peligros</span></li><li class="reveal" style="--d:0.36s"><span class="n">03</span><span class="t">Cómo afrontar: sed, hambre, frío</span></li><li class="reveal" style="--d:0.44s"><span class="n">04</span><span class="t">Refugio</span></li><li class="reveal" style="--d:0.52s"><span class="n">05</span><span class="t">La gran decisión: ¿nos quedamos o nos movemos?</span></li><li class="reveal" style="--d:0.60s"><span class="n">06</span><span class="t">Consejos, prácticas y técnicas</span></li><li class="reveal" style="--d:0.68s"><span class="n">07</span><span class="t">Vídeos con ejemplos / casos reales</span></li></ol>
     </div>
   </div>
 </section>
 
-<!-- =================== 05 · PELIGROS =================== -->
+<section class="slide " data-tag="Características de la zona">
+  <div class="content v">
+    <p class="kicker reveal">Características generales de la zona</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:104px">¿Qué encontramos en el entorno?</h2>
+    <div class="three">
+      <div class="grp reveal" style="--d:.25s"><svg class="ico lg" aria-hidden="true"><use href="#i-tree"/></svg><h3>Vegetación y naturaleza</h3><ul class="list sm"><li>Árboles muy altos y vegetación densa</li><li>Lianas, raíces, palmeras, helechos y plantas tropicales</li><li>Zonas pantanosas y terrenos embarrados</li><li>Frutos silvestres y plantas de distintas especies</li></ul></div>
+      <div class="grp reveal" style="--d:.4s"><svg class="ico lg" aria-hidden="true"><use href="#i-waves"/></svg><h3>Agua</h3><ul class="list sm"><li>Ríos, arroyos, lagunas y afluentes</li><li>Zonas inundadas y agua de lluvia</li><li>Humedad ambiental muy elevada</li></ul></div>
+      <div class="grp reveal" style="--d:.55s"><svg class="ico lg" aria-hidden="true"><use href="#i-snake"/></svg><h3>Fauna</h3><ul class="list sm"><li>Monos, jaguares y aves tropicales (tucanes y guacamayos)</li><li>Serpientes, boas y anacondas</li><li>Caimanes y peces, como las pirañas</li><li>Arañas, escorpiones, hormigas, mosquitos y ranas</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Características de la zona">
+  <div class="content v">
+    <p class="kicker reveal">Características generales de la zona</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:104px">Clima y recursos naturales</h2>
+    <div class="two">
+      <div class="grp reveal" style="--d:.25s"><svg class="ico lg" aria-hidden="true"><use href="#i-storm"/></svg><h3>Clima y condiciones ambientales</h3><ul class="list sm"><li>Temperaturas elevadas y humedad muy alta</li><li>Lluvias tropicales frecuentes y tormentas eléctricas</li><li>Vegetación que reduce la luz solar en algunas zonas</li><li>Noches oscuras y cambios meteorológicos repentinos</li></ul></div>
+      <div class="grp reveal" style="--d:.4s"><svg class="ico lg" aria-hidden="true"><use href="#i-leaf"/></svg><h3>Recursos naturales</h3><ul class="list sm"><li>Ramas y madera para construir refugios</li><li>Hojas grandes para protegerse de la lluvia</li><li>Lianas y fibras vegetales</li><li>Agua de lluvia que puede recogerse y tratarse antes de consumirla</li></ul></div>
+    </div>
+  </div>
+</section>
+
 <section class="slide" data-tag="Peligros">
   <div class="content danger">
     <div>
@@ -536,7 +556,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 06 · RECURSO Y PELIGRO =================== -->
 <section class="slide matrix" data-tag="Idea clave">
   <div class="content v">
     <p class="kicker reveal">Idea clave</p>
@@ -551,7 +570,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 07 · SED =================== -->
 <section class="slide" data-tag="Necesidad 01 · Agua">
   <div class="content need">
     <div>
@@ -577,7 +595,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 08 · HAMBRE =================== -->
 <section class="slide hunger" data-tag="Necesidad 02 · Comida">
   <div class="content v">
     <div class="top">
@@ -608,7 +625,6 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 09 · FRÍO =================== -->
 <section class="slide" data-tag="Necesidad 03 · Abrigo">
   <div class="content need">
     <div>
@@ -630,7 +646,136 @@ body.editing [contenteditable="true"] { outline: 1px dashed var(--pink); outline
   </div>
 </section>
 
-<!-- =================== 10 · CIERRE =================== -->
+<section class="slide " data-tag="Refugio">
+  <div class="content need">
+    <div class="needwrap">
+      <div>
+        <p class="kicker reveal">Refugio</p>
+        <h2 class="script reveal" style="--d:.1s; font-size:200px">Refugio</h2>
+        <p class="mono reveal" style="--d:.25s; color:var(--pink); margin-bottom:14px">Materiales disponibles</p>
+        <ul class="list src reveal" style="--d:.3s"><li>Ramas y madera</li><li>Hojas grandes</li><li>Lianas y fibras vegetales</li></ul>
+      </div>
+      <div class="reveal" style="--d:.3s"><div class="rows" style="margin-top:0"><div class="row"><span class="n">1</span><p>Buscar un lugar protegido de la lluvia y del viento</p><svg class="ico sm" aria-hidden="true"><use href="#i-rain"/></svg></div><div class="row"><span class="n">2</span><p>Construirlo con los materiales disponibles, sin tocar plantas desconocidas</p><svg class="ico sm" aria-hidden="true"><use href="#i-tent"/></svg></div><div class="row"><span class="n">3</span><p>Evitar dormir sobre el suelo húmedo: hojas secas como aislamiento</p><svg class="ico sm" aria-hidden="true"><use href="#i-leaf"/></svg></div><div class="row"><span class="n">4</span><p>Primeras 6 horas: preparar refugios provisionales</p><span></span></div><div class="row"><span class="n">5</span><p>Días siguientes: mantener los refugios</p><span></span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-tag="Primeros pasos">
+  <div class="content v">
+    <p class="kicker reveal">Los primeros minutos</p>
+    <h2 class="script reveal" style="--d:.1s">¿Qué hacemos primero?</h2>
+    <div class="steps">
+      <div class="step reveal" style="--d:.25s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-calm"/></svg><div class="n">01</div><h3>Mantener la calma</h3></div>
+      <div class="step reveal" style="--d:.35s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-aid"/></svg><div class="n">02</div><h3>Comprobar si hay heridos</h3></div>
+      <div class="step reveal" style="--d:.45s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-people"/></svg><div class="n">03</div><h3>Contar a los pasajeros</h3><p>Asegurar a bebés y embarazadas.</p></div>
+      <div class="step reveal" style="--d:.55s"><svg class="ico lg step-ico" aria-hidden="true"><use href="#i-pin"/></svg><div class="n">04</div><h3>Alejarnos del avión</h3><p>Sin abandonar la ubicación del accidente.</p></div>
+    </div>
+    <p class="lead reveal" style="--d:.7s; margin-top:56px">Buscar una zona segura cerca de los restos del avión, siempre que no haya peligro de explosión.</p>
+  </div>
+</section>
+
+<section class="slide decision" data-tag="La gran decisión">
+  <div class="content v">
+    <p class="kicker reveal">La gran decisión</p>
+    <h2 class="serif reveal" style="--d:.1s">¿Nos <em>quedamos</em> o nos movemos?</h2>
+    <div class="cols">
+      <div class="reveal" style="--d:.3s">
+        <span class="pill solid">Lo recomendable</span>
+        <h3 class="hrow"><svg class="ico lg"  aria-hidden="true"><use href="#i-plane"/></svg><span>Quedarnos junto al avión</span></h3>
+        <ul class="list">
+          <li>El rescate nos localiza más fácilmente</li>
+          <li>Evitamos perdernos en la selva</li>
+          <li>Ahorramos energía y usamos los restos como referencia y para las señales de socorro</li>
+          <li>Aprovechamos los suministros de emergencia</li>
+        </ul>
+      </div>
+      <div class="rail reveal" style="--d:.45s">
+        <span class="pill">Solo si hay peligro</span>
+        <h3>Nos movemos si hay…</h3>
+        <div class="tri">
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-flame"/></svg><p>Fuego o riesgo de explosión</p></div>
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-waves"/></svg><p>Inundación</p></div>
+          <div><svg class="ico lg"  aria-hidden="true"><use href="#i-rocks"/></svg><p>Peligro de derrumbe</p></div>
+        </div>
+        <p class="go">Si hay que ir: <b>juntos</b> · con <b>agua</b> y <b>botiquín</b> · dejando <b>señales</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Consejos y técnicas">
+  <div class="content v">
+    <p class="kicker reveal">Consejos, prácticas y técnicas · Accidente aéreo</p>
+    <div class="objtop">
+      <h2 class="script reveal" style="--d:.1s; font-size:300px; line-height:.9">291</h2>
+      <p class="lead reveal" style="--d:.2s; font-size:36px">El objetivo principal es que las 291 personas sobrevivan hasta la llegada de los equipos de rescate: actuar de forma organizada, aprovechar los recursos disponibles y evitar riesgos innecesarios.</p>
+    </div>
+    <p class="mono reveal" style="--d:.35s; color:var(--pink); margin: 26px 0 8px">La regla fundamental</p>
+    <div class="steps five">
+      <div class="step reveal" style="--d:.4s"><div class="n">01</div><h3>Proteger la vida</h3></div>
+      <div class="step reveal" style="--d:.5s"><div class="n">02</div><h3>Atender a los heridos</h3></div>
+      <div class="step reveal" style="--d:.6s"><div class="n">03</div><h3>Conseguir agua</h3></div>
+      <div class="step reveal" style="--d:.7s"><div class="n">04</div><h3>Construir refugios</h3></div>
+      <div class="step reveal" style="--d:.8s"><div class="n">05</div><h3>Facilitar el rescate</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Consejos y técnicas">
+  <div class="content v">
+    <p class="kicker reveal">Consejos, prácticas y técnicas</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:110px">Organización inicial</h2>
+    <p class="lead reveal" style="--d:.15s; font-size:32px">Lo primero es evitar el caos y establecer una organización.</p>
+    <div class="rows2"><div class="row n2 reveal" style="--d:0.20s"><span class="n">1</span><p>Elegir un coordinador general del grupo</p></div><div class="row n2 reveal" style="--d:0.27s"><span class="n">2</span><p>Organizar equipos de trabajo con responsables</p></div><div class="row n2 reveal" style="--d:0.34s"><span class="n">3</span><p>Pasar lista para comprobar que están las 291 personas</p></div><div class="row n2 reveal" style="--d:0.41s"><span class="n">4</span><p>Identificar a niños, personas mayores y personas con movilidad reducida</p></div><div class="row n2 reveal" style="--d:0.48s"><span class="n">5</span><p>Mantener juntos a los pasajeros y tripulantes</p></div><div class="row n2 reveal" style="--d:0.55s"><span class="n">6</span><p>Establecer turnos de vigilancia y descanso</p></div><div class="row n2 reveal" style="--d:0.62s"><span class="n">7</span><p>Evitar que alguien se adentre solo en la selva</p></div></div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Consejos y técnicas">
+  <div class="content v">
+    <p class="kicker reveal">Consejos, prácticas y técnicas</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:110px">Atención a los heridos</h2>
+    <p class="lead reveal" style="--d:.15s; font-size:32px">Hay aproximadamente 15 personas heridas. Su atención debe ser prioritaria.</p>
+    <div class="rows2"><div class="row n2 reveal" style="--d:0.20s"><span class="n">1</span><p>Comprobar si las personas respiran y responden</p></div><div class="row n2 reveal" style="--d:0.27s"><span class="n">2</span><p>Identificar hemorragias importantes</p></div><div class="row n2 reveal" style="--d:0.34s"><span class="n">3</span><p>Aplicar presión directa sobre las heridas que sangran</p></div><div class="row n2 reveal" style="--d:0.41s"><span class="n">4</span><p>Cubrir cortes y heridas con material limpio</p></div><div class="row n2 reveal" style="--d:0.48s"><span class="n">5</span><p>Inmovilizar las posibles fracturas en la posición encontrada, sin intentar recolocar huesos</p></div><div class="row n2 reveal" style="--d:0.55s"><span class="n">6</span><p>Evitar mover a personas con sospecha de lesiones de columna, salvo peligro inmediato</p></div><div class="row n2 reveal" style="--d:0.62s"><span class="n">7</span><p>Mantener a los heridos protegidos de la lluvia y del frío</p></div><div class="row n2 reveal" style="--d:0.69s"><span class="n">8</span><p>Vigilar signos de shock: palidez, sudor frío, confusión y debilidad</p></div><div class="row n2 reveal" style="--d:0.76s"><span class="n">9</span><p>Registrar el estado y la evolución de cada herido</p></div></div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Consejos y técnicas">
+  <div class="content v">
+    <p class="kicker reveal">Consejos, prácticas y técnicas</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:104px">Señalización y técnicas<br>para facilitar el <em>rescate</em></h2>
+    <div class="rows2"><div class="row n2 reveal" style="--d:0.20s"><span class="n">1</span><p>Mantener la zona del accidente como punto de referencia</p></div><div class="row n2 reveal" style="--d:0.27s"><span class="n">2</span><p>Comprobar si funcionan las radios de emergencia y los equipos de comunicación del avión</p></div><div class="row n2 reveal" style="--d:0.34s"><span class="n">3</span><p>Revisar si existe una radiobaliza de emergencia (ELT)</p></div><div class="row n2 reveal" style="--d:0.41s"><span class="n">4</span><p>Utilizar espejos o superficies reflectantes para llamar la atención de aeronaves</p></div><div class="row n2 reveal" style="--d:0.48s"><span class="n">5</span><p>Crear señales grandes y visibles desde el aire</p></div><div class="row n2 reveal" style="--d:0.55s"><span class="n">6</span><p>Formar las letras SOS con materiales de colores llamativos</p></div><div class="row n2 reveal" style="--d:0.62s"><span class="n">7</span><p>Mantener las señales en espacios despejados</p></div><div class="row n2 reveal" style="--d:0.69s"><span class="n">8</span><p>Establecer un equipo encargado de observar y escuchar posibles aeronaves de rescate</p></div></div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Consejos y técnicas">
+  <div class="content v">
+    <p class="kicker reveal">Consejos, prácticas y técnicas</p>
+    <h2 class="serif reveal" style="--d:.1s; font-size:100px">Plan de actuación por etapas</h2>
+    <div class="steps plan"><div class="step reveal" style="--d:0.25s"><div class="n">2 h</div><h3>Primeras 2 horas</h3><p class="sub">Asegurar la supervivencia inmediata</p><ul class="list sm"><li>Evacuar y alejarse de los peligros del avión</li><li>Comprobar que todos han salido</li><li>Identificar y atender a los heridos graves</li><li>Activar los sistemas de emergencia y comunicación</li></ul></div><div class="step reveal" style="--d:0.35s"><div class="n">6 h</div><h3>Primeras 6 horas</h3><p class="sub">Organizar el campamento</p><ul class="list sm"><li>Designar responsables</li><li>Distribuir a los supervivientes en equipos</li><li>Inventariar agua, comida y material sanitario</li><li>Preparar refugios provisionales</li><li>Establecer señales visibles de rescate</li></ul></div><div class="step reveal" style="--d:0.45s"><div class="n">24 h</div><h3>Primeras 24 horas</h3><p class="sub">Cubrir necesidades básicas</p><ul class="list sm"><li>Proteger a los heridos</li><li>Organizar los espacios de descanso</li><li>Establecer turnos de vigilancia</li></ul></div><div class="step reveal" style="--d:0.55s"><div class="n">+</div><h3>Días siguientes</h3><p class="sub">Mantener la supervivencia</p><ul class="list sm"><li>Controlar las reservas de agua y alimentos</li><li>Mantener los refugios</li><li>Vigilar la salud de todos</li><li>Reforzar las señales de localización</li><li>Permanecer en contacto con los equipos de rescate</li></ul></div></div>
+  </div>
+</section>
+
+<section class="slide " data-tag="Caso real">
+  <div class="content v">
+    <div class="casewrap">
+      <div>
+        <p class="kicker reveal">Caso de la vida real</p>
+        <h2 class="script reveal" style="--d:.1s; font-size:300px; line-height:.9">40 días</h2>
+      </div>
+      <div class="reveal" style="--d:.3s">
+        <ul class="list">
+          <li>Accidente: avioneta en la Amazonía colombiana</li>
+          <li>Fecha: 1 de mayo de 2023</li>
+          <li>Cuatro niños indígenas sobrevivieron al accidente</li>
+          <li>Permanecieron 40 días en la selva</li>
+          <li>Fueron localizados gracias a una operación de búsqueda conjunta de militares y comunidades indígenas</li>
+        </ul>
+        <div class="qrbox"><div class="qr"><svg width="248" height="248" class="segno"><g transform="scale(8)"><path fill="#f5edf1" d="M0 0h31v31h-31z"/><path class="qrline" stroke="#060507" d="M1 1.5h7m3 0h3m2 0h2m1 0h2m2 0h7m-29 1h1m5 0h1m5 0h5m2 0h1m2 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m1 0h2m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h4m1 0h1m3 0h1m4 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m2 0h3m2 0h1m2 0h1m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h6m1 0h4m-20 1h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h5m1 0h1m2 0h1m1 0h2m1 0h1m-27 1h1m1 0h1m1 0h1m4 0h1m3 0h4m1 0h2m1 0h2m1 0h1m1 0h3m-29 1h3m1 0h4m1 0h10m2 0h1m1 0h1m2 0h1m1 0h1m-29 1h2m1 0h1m1 0h1m1 0h1m1 0h4m1 0h4m3 0h1m3 0h1m1 0h2m-29 1h4m1 0h3m1 0h1m1 0h1m3 0h3m2 0h1m2 0h1m4 0h1m-29 1h2m5 0h2m3 0h1m2 0h1m6 0h1m1 0h1m1 0h1m-27 1h3m2 0h6m2 0h3m1 0h1m2 0h1m1 0h1m1 0h1m3 0h1m-29 1h1m2 0h1m1 0h1m2 0h2m1 0h1m4 0h2m5 0h1m1 0h1m-25 1h3m1 0h3m2 0h6m2 0h1m2 0h1m1 0h1m3 0h2m-29 1h2m2 0h2m4 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m-27 1h1m1 0h1m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m-27 1h1m2 0h1m1 0h1m1 0h4m1 0h1m2 0h2m4 0h3m1 0h2m-29 1h2m2 0h4m1 0h1m3 0h1m1 0h1m1 0h9m1 0h2m-21 1h1m6 0h4m1 0h1m3 0h1m1 0h1m1 0h1m-29 1h7m2 0h1m1 0h1m1 0h4m1 0h3m1 0h1m1 0h1m2 0h2m-29 1h1m5 0h1m4 0h3m2 0h1m2 0h2m3 0h2m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h6m2 0h1m2 0h6m2 0h1m-28 1h1m1 0h3m1 0h1m2 0h1m1 0h1m5 0h2m4 0h1m2 0h2m-28 1h1m1 0h3m1 0h1m4 0h1m2 0h2m2 0h4m5 0h2m-29 1h1m5 0h1m1 0h1m1 0h1m2 0h5m1 0h1m2 0h2m1 0h1m1 0h2m-29 1h7m10 0h1m2 0h2m2 0h2m1 0h1"/></g></svg></div><div><p class="mono" style="color:var(--pink)">Vídeo</p><p class="url">youtu.be/Fwdht7UQXQM</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="slide closing" data-tag="Conclusión">
   <div class="content">
     <p class="kicker reveal">Nuestra prioridad</p>
